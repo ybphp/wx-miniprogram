@@ -1,0 +1,41 @@
+<!--pages/group/group.wxml-->
+
+<!-- lightning -->
+
+<view class='underway'>
+  <image src='../../img/lightning.png'></image>
+  <text class='lightning'>闪电抢 - 正在进行</text>
+</view>
+
+<!-- group-banner -->
+<block wx:for='{{goon}}' wx:key='id'>
+  <navigator url='/pages/gDetail/gDetail?t_id={{item.t_id}}'>
+    <view class='group-banner'>
+      <image src='{{imgurl+item.good_img}}'></image>
+      <text class='banner-explain'>{{item.good_name}}</text>
+    </view>
+  </navigator>
+</block>
+<!-- history-activity -->
+
+<view class='history-activity'>【历史活动】</view>
+
+<!-- histoy-list -->
+<block wx:if="{{history.length>0}}">
+  <block wx:for='{{history}}' wx:key='id'>
+    <navigator url='/pages/article/article?a_id={{item.a_id}}'>
+      <view class='history-list'>
+        <view class='history-pic'>
+          <image src='{{imgurl+item.good_img}}'></image>
+        </view>
+        <view class='history-info'>
+          <text class='history-title'><text class='point-title'>下单降价{{item.good_price-item.price_group}}元</text>{{item.good_name}}</text>
+          <text class='history-txt'>{{item.good_name}}</text>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</block>
+<block wx:else>
+  没有数据!
+</block>

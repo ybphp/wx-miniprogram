@@ -1,0 +1,43 @@
+<!--pages/collection/collection.wxml-->
+<view class='house-wrap'>
+
+  <!-- house-header -->
+  <view class='house-nav'>
+    <view class="house-history {{currentTab==0 ? 'house-active' : ''}}" data-current='0' bindtap='switchNav'>商品收藏</view>
+    <view class="house-history {{currentTab==1 ? 'house-active' : ''}}" data-current='1' bindtap='switchNav'>店铺收藏</view>
+  </view>
+
+  <!-- house-list -->
+  <swiper duration='300' current='{{currentTab}}' bindchange='houseChange' class='house-swiper' style="height: {{winHeight+'px'}}">
+    <swiper-item>
+      <view class='goods-col-cont'>
+        <block wx:for="{{goodCollect}}" wx:key='id'>
+          <navigator url='/pages/bDetail/bDetail?good_id={{item.collect_id}}'>
+            <view class='goods-col-list'>
+              <image src='{{imgurl+item.img}}'></image>
+              <view class='goods-col-info'>
+                <text class='goods-col-title'>{{item.name}}</text>
+                <text class='goods-col-price'>¥ {{item.price}}</text>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class='house-cont'>
+      <block wx:for="{{shopCollect}}" wx:key='index'>
+        <navigator url='/pages/store/store?shop_id={{item.collect_id}}'>
+          <view class='goods-col-list'>
+            <image src='{{imgurl+item.img}}'></image>
+            <view class='goods-col-info'>
+              <text class='goods-col-title'>{{item.name}}</text>
+              <text class='goods-col-enter'>进入店铺</text>
+            </view>
+          </view>
+        </navigator>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

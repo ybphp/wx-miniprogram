@@ -1,0 +1,81 @@
+/* pages/group/group.wxss */
+
+/* lightning */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.underway {
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+}
+
+.underway image {
+  width: 24rpx;
+  height: 40rpx;
+}
+
+.underway text {
+  padding: 15rpx;
+  color: #fa6400;
+}
+
+/* group-banner */
+
+.group-banner {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.group-banner image {
+  width: 710rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+}
+
+.group-banner text {
+  margin: 20rpx;
+}
+
+.history-activity {
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+  margin: 30rpx 0;
+}
+
+.history-list {
+  display: flex;
+  background-color: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.history-list image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.history-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.history-info .history-title .point-title{
+  color: #ff2828;
+  font-size: 32rpx;    
+}
+
+.history-info .history-txt {
+  font-size: 28rpx;
+  color: #666;
+}

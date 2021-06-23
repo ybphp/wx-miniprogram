@@ -1,0 +1,107 @@
+/* pages/gDetail/gDetail.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.g-wrap {
+  background-color: #fff;
+}
+.g-wrap .g-wrap-pic {
+  width: 750rpx;
+  height: 750rpx;
+}
+.g-ad {
+  position: relative;
+}
+
+
+.g-ad .g-count {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.g-ad .g-count image {
+  width: 750rpx;
+  height: 130rpx;
+  position: relative;
+}
+
+.g-ad .g-count .g-count-txt {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 130rpx;
+}
+
+.g-ad .g-count .g-count-txt .g-count-txt-price {
+  font-size: 62rpx;
+  color: #fff;
+  
+}
+
+.g-ad .g-count .g-count-txt .g-count-txt-price .g-count-txt-no {
+  font-size: 28rpx;
+  text-decoration: line-through;
+}
+
+.g-ad .g-count .g-count-txt .g-count-surplus {
+  font-size: 26rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.g-wrap .g-ad-wrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+
+.g-wrap .g-ad-wrap .g-ad-sale {
+  color: #ff271c;
+}
+
+.g-wrap .g-ad-info {
+  padding: 10rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+
+.g-detail-title {
+  width: 100%;
+  text-align: center;
+  padding: 10rpx;
+}
+
+.g-detail-title .g-detail-ac {
+  padding: 0 20rpx;
+}
+
+.g-detail-cont {
+  background-color: #fff;
+}
+
+.g-detail-cont image {
+  width: 750rpx;
+  margin-bottom: 100rpx;
+}
+
+.g-detail-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #ff271c;
+  letter-spacing: 2rpx;
+  font-size: 32rpx;
+  color: #fff;
+}

@@ -1,0 +1,160 @@
+/* pages/house/house.wxss */
+@import '../index/index.wxss';
+@import '../../weui/weui.wxss';
+
+page {
+  background-color: #eee;
+}
+
+.house-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.house-nav view {
+  width: 374rpx;
+  padding: 30rpx 0;
+  background-color: #fff;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.house-nav .house-active {
+  color: #07347e;
+  border-bottom: 1px solid #07347e;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+/* house-swpier */
+
+.house-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.house-swiper swiper-item {
+  overflow: scroll;
+}
+
+/* house-list */
+
+.house-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.house-list image {
+  width: 710rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+.house-list .house-name, .house-list .house-sub {
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+}
+
+.house-list .house-name {
+  font-size: 32rpx;
+}
+
+.house-list .house-sub {
+  color: #666;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+
+/* register-list */
+
+
+.house-banner {
+  background-color: #fff;
+}
+
+.house-banner image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.house-banner text {
+  display: block;
+  margin: 10rpx;
+  padding-bottom: 15rpx;
+  color: #0e88e5;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.register-online {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.register-online .reg-title {
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx;
+  padding: 20rpx;
+  color: #ff3e1e;
+  letter-spacing: 2rpx;
+}
+
+.reg-list view {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.reg-list view:last-child {
+  border: none;
+}
+
+.reg-list view input {
+  margin-left: 20rpx;
+  width: 78%;
+}
+
+.register-online .right-now {
+  display: flex;
+  justify-content: center;
+  padding: 5rpx 20rpx;
+  width: 260rpx;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 30rpx;
+  background-color: #0e88e5;
+  color: #fff;
+  letter-spacing: 2rpx;
+}
+
+.right-now-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 40rpx;
+}

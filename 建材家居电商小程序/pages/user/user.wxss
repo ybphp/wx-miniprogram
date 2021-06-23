@@ -1,0 +1,112 @@
+/* user */
+page {
+  background-color: #f8f8f8;
+}
+/* 头部 */
+
+.user-head {
+  position: relative;
+  text-align: center;
+  
+}
+
+.user-head .mine-bg {
+  width: 100%;
+  height: 400rpx;
+}
+
+.user-head .user-head-pic-wrap {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+}
+.user-head .user-head-pic  {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 60rpx;
+}
+
+.user-name {
+  display: block;
+  margin-top: 16rpx;
+  font-size: 32rpx;
+  color: #fff;
+  width: 150rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* nav */
+
+.user-nav {
+  display: flex;
+  justify-content: center;
+  padding: 25rpx 0;
+  background-color: #fff;
+}
+
+.nav-list {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-list image{
+  width: 68rpx;
+  height: 68rpx;
+}
+.nav-name {
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+
+.nav-list .order-pic {
+  width: 58rpx;
+}
+
+
+/* optin-list */
+
+.option-cont {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.option-list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.option-list .contact-wrap {
+  position: absolute;
+  left: 0;
+  top: 28%;
+  opacity: 0;
+}
+.left-list {
+  display: flex;
+  align-items: center;
+}
+
+.option-list image {
+  width: 40rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.option-list .option-name {
+  display: inline-block;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.right-list image{
+  width: 20rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+

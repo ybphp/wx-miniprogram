@@ -1,0 +1,19 @@
+<!--pages/about/about.wxml-->
+<view class='about-banner'> 
+  <image src='{{imgurl+setting.img}}'></image>
+</view>
+<view class='about-list'>
+  <view class='customer-phone'>
+    <image src='../../img/telephone-icon.png'></image>
+    <text>客服电话 : {{setting.mobile}}</text>
+  </view>
+  <view class='contact-phone'>
+    <image src='../../img/contact.png'></image>
+    <text>联系电话 : {{setting.telephone}}</text>
+  </view>
+  <view class='address-us'>
+    <image src='../../img/address-icon.png'></image>
+    <text>公司地址 : {{setting.address}}</text>
+  </view>
+</view>
+

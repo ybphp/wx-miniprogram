@@ -1,0 +1,73 @@
+/* pages/cancel/cancel.wxss */
+
+/* cancel-list */
+page {
+  background-color: #f8f8f8;
+}
+
+
+.cancel-list {
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  padding: 0 16rpx;
+}
+
+.cancel-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 15rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cancel-title .cancel-success {
+  color: #ff3701;
+}
+
+.cancel-info {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cancel-info image {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.cancel-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 6rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.cancel-cont .cancel-format {
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.cancel-cont .cancel-format text:nth-child(1) {
+  margin-bottom: 10rpx;
+}
+
+.cancel-total {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx;
+  padding-right: 0;
+  font-size: 28rpx;
+}
+
+.cancel-total text {
+  margin-right: 20rpx;
+}
+
+.cancel-total text:last-child {
+  color: #ff0c0c;
+  margin-right: 0;
+}

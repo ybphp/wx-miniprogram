@@ -1,0 +1,19 @@
+<!--pages/category/category.wxml-->
+<swiper duration="{{duration}}"
+        class="swiper"
+        bindchange="handleChange"
+        current="{{current}}">
+
+  <block wx:for="{{imgs}}">
+    <swiper-item bindtap="handleToDetail" class="swiper-item">
+      <view class="swiper-item-image">
+        <image src="{{item.url}}" mode="widthFix" class="swiper-image" />
+      </view>
+      <view class="iconfont icon-shengyin icon-play" bindtap="audioPlay"></view>
+    </swiper-item>
+  </block>
+
+</swiper>
+
+<audio src="{{src}}" id="myAudio"></audio>
+

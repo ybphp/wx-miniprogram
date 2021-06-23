@@ -1,0 +1,41 @@
+<!--pages/address/address.wxml 用户地址管理-->
+<!-- address-list -->
+<block wx:if='{{addressList.length>0}}'>
+    <block wx:for="{{addressList}}" wx:key='id'>
+        <view class='address-list' data-address_id="{{item.id}}" bindtap="{{item.is_default==0?'tapSetDefault':''}}">
+            <view class='address-title'>
+                <text class='add-name'>{{item.truename}}</text>
+                <text class='add-phone'>{{item.mobile}}</text>
+            </view>
+            <view class='add-detail'>{{item.pcd + item.info}}</view>
+            <view class='add-default'>
+                <block wx:if="{{item.is_default==1}}">
+                    <view class='add-left-cont  default-color'>
+                        <image src='../../img/add-icon-slt.png'></image>
+                        <text>默认地址</text>
+                    </view>
+                </block>
+                <!-- <block wx:else>
+                    <text data-address_id="{{item.id}}" bindtap="tapSetDefault">设为默认</text>
+                </block> -->
+
+                <view class='add-right-cont'>
+                    <text catchtap="tapEditAddress" data-address_id="{{item.id}}">编辑</text>
+                    <block wx:if='{{item.is_default==0}}'>
+                        <text>丨</text>
+                        <text catchtap='tapDelAddress' data-address_id="{{item.id}}">删除</text>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </block>
+</block>
+<!-- bottom-button -->
+<block wx:if="{{addressList.length<5}}">
+    <navigator url='/pages/newAdd/newAdd' hidden='{{newAddHide}}'>
+        <view class='add-address'>添加新地址</view>
+    </navigator>
+    <navigator url='/pages/user/user' open-type='switchTab' hidden='{{!newAddHide}}'>
+        <view class='add-address'>请前往地址管理中添加</view>
+    </navigator>
+</block>

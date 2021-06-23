@@ -1,0 +1,342 @@
+.tab {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.group-detail {
+  width: 50%;
+  height: 100%;
+  border-bottom: 1px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group-member {
+  width: 50%;
+  height: 100%;
+  border-bottom: 1px solid #999999;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  position: absolute;
+  background-color: black;
+  width: 90%;
+  height: 100rpx;
+  border-radius: 5px;
+  bottom: 20rpx;
+  left: 0; right: 0;
+  margin: auto auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.group-form {
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  margin-top: 20rpx;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.group-name  {
+  width: 95vw;
+  height:8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+}
+.group-name-txt {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project-name {
+  width: 95vw;
+  height:8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+.project-name-label {
+  width: 28vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+.project-name-txt {
+  width: 72vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project-start {
+  width: 95vw;
+  height:8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.project-start-label {
+  width: 28vw;
+  height: 8vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+.project-start-txt {
+  width:72vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project-end {
+  width: 95vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.project-end-label {
+  width: 28vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+.project-end-txt {
+  width: 72vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project-manager {
+  width: 95vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.project-manager-txt {
+  width: 72vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-manager-label {
+  width: 28vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+.resources {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.resources-title{
+  height: 16vh;
+  width: 28vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+.resources-detail{
+  height: 16vh;
+  width: 72vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.resources-computer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 8vh;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.resources-seat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 8vh;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.others {
+  width: 95vw;
+  height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.others-title {
+  width: 28vw;
+  height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid lightgray;
+}
+.others-txt {
+  width: 72vw;
+  height: 16vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.group-status {
+  width: 95vw;
+  height: 8vh;
+  position: absolute;
+  left: 0;right: 0;
+  margin: auto auto;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+
+
+
+
+.list {
+  width: 95%;
+  height: 100rpx;
+  /* background-color: lightblue; */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: auto auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image image {
+  height: 100rpx;
+  width: 100rpx;
+  background-color: lightgreen;
+  border-radius: 5px;
+}
+.desc {
+  flex: 80vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.choose {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.choose-confirm{
+  height: 100%;
+  width: 50%;
+  /* border-top-right-radius: 5px; */
+  background-color: lightgreen;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choose-cancel {
+  height: 100%;
+  width: 50%;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: lightcoral;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: lightseagreen; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40rpx;
+  color: black;
+}
+.time {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: lightslategrey; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  color: gray;
+}

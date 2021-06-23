@@ -1,0 +1,110 @@
+<!-- header -->
+<view class='user-head'>
+  <image src='../../img/mine-bg.jpg' class='mine-bg'></image>
+  <view class='user-head-pic-wrap'>
+    <image src='{{userInfo.avatarUrl}}' class='user-head-pic'></image>
+  <text class='user-name'>{{userInfo.nickName}}</text>
+  </view>
+</view>
+<!-- nav -->
+<view class='user-nav'>
+  <view class='nav-list'>
+    <navigator url='/pages/collection/collection' hover-class='none' >
+      <image src='../../img/collect1-icon.png'></image>
+      <view class='nav-name'>收藏</view>
+    </navigator>
+  </view>
+  <view class='nav-list'>
+    <navigator url='/pages/orders/orders' hover-class='none'>
+      <image src='../../img/order-icon.png' class='order-pic'></image>
+      <view class='nav-name'>全部订单</view>
+    </navigator>
+  </view>
+  <!-- <view class='nav-list'>
+    <navigator url='/pages/cancel/cancel' hover-class='none'>
+      <image src='../../img/return-icon.png'></image>
+      <view class='nav-name'>退货</view>
+    </navigator>
+  </view> -->
+  <view class='nav-list'>
+    <navigator url='/pages/assess/assess' hover-class='none'>
+      <image src='../../img/appraise-icon.png'></image>
+      <view class='nav-name'>评价</view>
+      </navigator>
+  </view>
+</view>
+
+<!-- option-list -->
+
+<view class='option-cont'>
+<navigator url='/pages/register/register' hover-class='none'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../img/sign-icon.png'></image>
+        <text class='option-name'>我的报名</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../img/enter-icon.png'></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator url='/pages/address/address' hover-class='none'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../img/add1-icon.png'></image>
+        <text class='option-name'>地址管理</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../img/enter-icon.png'></image>
+      </view>
+    </view>
+  </navigator>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../img/consulting-icon.png'></image>
+        <text class='option-name'>在线咨询</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../img/enter-icon.png'></image>
+      </view>
+      <view class='contact-wrap'>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+        <contact-button type='default-light' size="20" session-from="weapp"></contact-button>
+      </view>
+    </view> 
+    <view class='option-list' bindtap='contact'>
+      <view class='left-list'>
+        <image src='../../img/service-icon.png'></image>
+        <text class='option-name'>联系客服</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../img/enter-icon.png'></image>
+      </view>
+    </view> 
+  <navigator url='/pages/about/about' hover-class='none'>
+    <view class='option-list'>
+      <view class='left-list'>
+        <image src='../../img/about-icon.png'></image>
+        <text class='option-name'>关于我们</text>
+      </view>
+      <view class='right-list'>
+        <image src='../../img/enter-icon.png'></image>
+      </view>
+    </view>
+  </navigator>
+</view>

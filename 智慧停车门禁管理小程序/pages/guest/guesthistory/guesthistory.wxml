@@ -1,0 +1,11 @@
+<scroll-view style='height: {{windowHeight}}px;' scroll-y>
+  <view class='list' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" bindtap='groupDetail'>
+    <view class='group-image'>
+      <image src='{{itemName.image}}'></image>
+    </view>
+    <view class='group-desc'>
+      <view class='group-name'>{{itemName.name}}</view>
+      <view class='group-time'>{{itemName.startTime}}</view>
+    </view>
+  </view>
+</scroll-view>

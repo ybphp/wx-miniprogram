@@ -1,0 +1,35 @@
+<form bindsubmit="fankui">
+  <view class='commen-wrap'>
+    <view class='commen-detail'>
+      <text class='commen-detail-info'>订单信息：</text>
+      <text class='commen-detail-num'>{{Info[0].orderno}}</text>
+    </view>
+    <view class='commen-detail'>
+      <text class='commen-detail-info'>店铺信息：</text>
+      <text class='commen-detail-num'>{{Info[0].shop_name}}</text>
+    </view>
+    <view class='commen-list'>
+      <block wx:for="{{Info}}">
+        <view class='commen-title'>
+          <image src='{{imgurl+item.img}}'></image>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+      <view class='radio-slt'>
+        <radio-group class="radio-group" bindchange="radioChange" name="star">
+          <label class="radio">
+            <radio value="1" checked="true" />好评
+            <radio value="2" />中评
+            <radio value="3" />差评
+          </label>
+        </radio-group>
+      </view>
+      <view class='commen-area'>
+        <textarea placeholder='请输入评价' placeholder-class='place-area' name='cont'></textarea>
+      </view>
+      <view class='commen-btn'>
+        <button form-type='submit' class="weui-btn" type="default" size='mini'>提交评价</button>
+      </view>
+    </view>
+  </view>
+</form>

@@ -1,0 +1,67 @@
+<import src='../common/foot.wxml' />
+<!-- 轮播图 -->
+<swiper circular='true' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='width: {{windowWidth}}px;height: {{0.4*windowHeight}}px;'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style="width: {{windowWidth}}px;height: {{0.4*windowHeight}}px" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 公告栏 -->
+<view class='board'>
+  <view class='board-title'>
+    <text style='color: orange;font-weight: bold;'>AiWorks</text>
+    <view style='font-weight: bold;border-right: 1px solid lightgrey;padding-right: 5px;'>公告</view>
+  </view>
+
+  <view class='board-content'>
+    <swiper circular='true' autoplay="{{autoplay}}" interval="{{interval2}}" duration="{{duration2}}" style='height: 9vh;line-height:9vh;'>
+      <block wx:for="{{list}}" wx:for-index="i" wx:for-item="item">
+        <swiper-item>
+          <text bindtap='test{{i}}'>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+
+</view>
+<!-- 首页选项 -->
+<view class='buttons' style='width: {{windowWidth}}px;height: {{0.5*windowHeight}}px;'>
+  <view class='button-top' style='width: {{windowWidth}}px;height: {{0.25*windowHeight}}px'>
+    <view class='button-top-left' bindtap='toEntrance' style='width: {{btnSize}}px;height: {{0.8*btnSize}}px;'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/door.png' class='index-logo' style='height:60rpx;width:60rpx;'></image>
+      <text style='font-size: 16px;'>门禁</text>
+    </view>
+    <view class='button-top-right' style='width: {{btnSize}}px;height: {{0.8*btnSize}}px;' bindtap='toPark'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/park2.png' class='index-logo' style='height:70rpx;width:70rpx;'></image>
+      <text style='font-size: 16px;'>停车</text>
+    </view>
+  </view>
+
+  <view class='button-bottom' style='width: {{windowWidth}}px;height: {{0.25*windowHeight}}px'>
+    <view class='button-bottom-left' bindtap='toGroup' style='width: {{btnSize}}px;height: {{0.8*btnSize}}px;'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/index/group2.png' class='index-logo' style='height:70rpx;width:70rpx;'></image>
+      <text style='font-size: 16px;'>团队</text>
+    </view>
+
+    <view class='button-bottom-right' bindtap='toGuest' style='width: {{btnSize}}px;height: {{0.8*btnSize}}px;'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/visitor2.png' class='index-logo' style='height:60rpx;width:60rpx;'></image>
+      <text style='font-size: 16px;'>访客</text>
+    </view>
+  </view>
+</view>
+
+<view class='button-center' style='top: -{{0.25*windowHeight+0.5*btnSize}}px;height: {{btnSize}}px; width: {{btnSize}}px;' bindtap='toUser'>
+  <view class='button-center-two' style='height: {{0.9*btnSize}}px;width: {{0.9*btnSize}}px;background-color: #F2F2F2; border-radius: 50%;margin: auto auto;position:relative;  display: flex;flex-direction: column;justify-content: center;align-items: center;'>
+    <view class='button-center-three' style='height: {{0.8*btnSize}}px;width: {{0.8*btnSize}}px;background-color: white; border-radius: 50%;margin: auto auto;position:relative;  display: flex;flex-direction: column;justify-content: center;align-items: center;'>
+      <view class='button-center-inner' style='height: {{0.7*btnSize}}px;width: {{0.7*btnSize}}px;'>
+        <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/index/user.png' class='index-logo'></image>
+        <text>我的</text>
+      </view>
+    </view>
+  </view>
+
+
+</view>

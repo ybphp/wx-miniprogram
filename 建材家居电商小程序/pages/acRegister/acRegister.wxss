@@ -1,0 +1,34 @@
+/* pages/acRegister/acRegister.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+
+.ac-top-cont,.ac-down-cont {
+  background-color: #fff;
+  padding: 20rpx;
+  padding-bottom: 0;
+}
+
+.ac-top-cont .ac-item,.ac-down-cont .ac-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.ac-wrapper text {
+  width: 180rpx;
+}
+.ac-wrapper input {
+  margin-left: 30rpx;
+  width: 500rpx;
+}
+.ac-top-cont {
+  margin-bottom: 30rpx;
+}
+
+.ac-wrapper button {
+  margin: 20rpx;
+}

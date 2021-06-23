@@ -1,0 +1,65 @@
+<!--pages/house/house.wxml-->
+
+
+<view class='house-wrap'>
+
+    <!-- house-header -->
+    <view class='house-nav'>
+        <view class="house-history {{currentTab==0 ? 'house-active' : ''}}" data-current='0' bindtap='switchNav'>历史验房</view>
+        <view class="house-history {{currentTab==1 ? 'house-active' : ''}}" data-current='1' bindtap='switchNav'>报名验房</view>
+    </view>
+
+    <!-- house-list -->
+    <swiper duration='300' current='{{currentTab}}' bindchange='houseChange' class='house-swiper' style="height: {{winHeight+'px'}}">
+        <swiper-item>
+            <view class='house-cont'wx:for="{{yanfangList}}" wx:key='id'>
+              <navigator url="/pages/baike/baike?art_id={{item.id}}">
+                <view class='house-list'>
+                    <image src='{{imgurl+item.img}}'></image>
+                    <text class='house-name'>{{item.name}}</text>
+                    <text class='house-sub'>{{item.cont_limit}}</text>
+                </view>
+              </navigator>  
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view class='house-banner'>
+                <image src='{{imgurl+setting.baoming_img_big}}'></image>
+                <text>{{setting.baoming_logan}}</text>
+            </view>
+            <!--form start-->
+            <form bindsubmit='addBaoming'>
+                <view class='register-online'>
+
+                    <text class='reg-title'>在线报名</text>
+                    <view class='reg-list'>
+                        <view class='reg-name'>
+                            <text>姓名 : </text>
+                            <input type='text' name='truename' value='{{baoming.truename}}' placeholder='请输入报名姓名'></input>
+                        </view>
+                        <view class='reg-phone'>
+                            <text>电话 : </text>
+                            <input type='number' name='mobile' maxlength='20'  value='{{baoming.mobile}}'placeholder='请输入电话'></input>
+                        </view>
+                        <view class='reg-address'>
+                            <text>地址 : </text>
+                            <input type='text' name='address' value='{{baoming.address}}' placeholder='请输入地址'></input>
+                        </view>
+                        <view class='reg-time'>
+                            <text>验房时间 : </text>
+                            <input type='text' name='time_to' value='{{baoming.time_to}}' placeholder='请输入验房时间'></input>
+                        </view>
+                        <view class='reg-people'>
+                            <text>已参加人数 : {{setting.baoming_pnum}}</text>
+                            <!-- <input type='text'></input> -->
+                        </view>
+                    </view>
+                    <view class='right-now-wrap'>
+                        <button formType='submit' size='mini' ><block wx:if="{{baoming}}">修改报名</block><block wx:else>立即报名</block></button>
+                    </view>
+                </view>
+            </form>
+            <!--form end-->
+        </swiper-item>
+    </swiper>
+</view>

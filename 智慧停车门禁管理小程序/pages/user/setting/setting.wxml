@@ -1,0 +1,9 @@
+<view class='form' bindtap="passwordSetting">
+<view class='form-title'>修改密码</view>
+<view class="navigator-arrow" style='margin-left: 70vw;'></view>
+</view>
+
+
+ <view class='exit' bindtap="clear">
+退出登录
+</view> 

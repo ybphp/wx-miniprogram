@@ -1,0 +1,30 @@
+.container-box {
+  background-color: white;
+  height: 90vh;
+}
+.img-box {
+  padding: 32rpx;
+  background-color: #fff;
+   /* border-bottom: 1rpx solid #e5e5e5;  */
+  position: relative;
+}
+.img-box image {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+.submit {
+  margin: auto auto;
+  width: 90%;
+  height: 10vh;
+}
+.submit button {
+  color: white;
+  background-color: black;
+}
+.desc {
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}

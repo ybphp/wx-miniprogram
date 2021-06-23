@@ -1,0 +1,15 @@
+<!--pages/article/article.wxml-->
+
+<view class='article-wrap'>
+  <view class='article-title'>
+    <text>【已结束】{{article.name}}</text>
+  </view>
+
+  <text class='article-time'>{{article.update_time}}</text>
+
+  <view class='article-cont'>
+    <image src='{{imgurl+article.img}}'></image>
+    <text>{{article.cont}}</text>
+  </view>
+
+</view>

@@ -1,0 +1,58 @@
+/* pages/newAdd/newAdd.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.new-add {
+  background-color: #fff;
+}
+
+.new-add-list {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.new-add-list text {
+  width: 26%;
+}
+
+.new-add-list input {
+  padding-right: 126rpx;
+}
+
+.new-add-list image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.new-add-list .add-api {
+  display: flex;
+  align-items: center;
+  width: 74%;
+  justify-content: space-between;
+}
+
+.new-add-list .add-api textarea {
+  width: 500rpx;
+  height: 80rpx;
+}
+
+.add-btn {
+  width: 94%;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 30rpx auto;
+  background-color: #00a0e9;
+  color: #fff;
+}
+
+.new-add-list:last-child {
+  justify-content: space-between;
+}
+
+.new-add-list .switch-btn {
+  color: #00a0e9;
+}

@@ -1,0 +1,55 @@
+<!--pages/submit/submit.wxml 付订金-->
+<form bindsubmit='submitDeposit'>
+    <view class='shop-wrap'>
+        <view class='shop-title' bindtap='tapAddress'>
+            <image src='../../img/location-icon.png'></image>
+            <view class='shop-info'>
+                <block wx:if="{{address!=null}}">
+                    <view class='shop-info-top'>
+                        <text class='top-name'>姓名 : {{address.truename+' '}} </text>
+                        <text class='top-phone'> {{address.mobile}}</text>
+                    </view>
+                    <view class='down-info'>地址：{{address.pcd+' '+address.info}}</view>
+                </block>
+                <block wx:else>
+                    <view class='down-info'>请添加地址</view>
+                </block>
+            </view>
+            <image src='../../img/enter-icon.png'></image>
+        </view>
+
+        <view class='buy'>
+            <view class='buy-title'>
+                <image src='../../img/shop-iconBlack.png'></image>
+                <text class='store-name'>{{shopInfo.name}}</text>
+            </view>
+
+            <view class='buy-list'>
+                <block wx:if="{{type_==4}}">
+                    <text>订金金额 : </text>
+                    <input type='number' bindinput='inputDeposit' value="{{shopInfo.deposit}}" placeholder='请输入订金'></input>
+                </block>
+                <block wx:else>
+                    <text>全款金额 : </text>
+                    <input type='number' bindinput='inputDeposit' value="{{shopInfo.money_all}}" placeholder='请输入金额'></input>
+                </block>
+            </view>
+            <view class='buy-list'>
+                <text>备注 : </text>
+                <input type='text' name='beizhu' placeholder='请输入备注'></input>
+            </view>
+            <view class='buy-list'>
+                <text>优惠价格 : </text>
+                <text class='deposit'> ¥ {{type_==4?shopInfo.youhui:shopInfo.youhui_all}}</text>
+            </view>
+        </view>
+    </view>
+    <view class='submit-btn'>
+        <view class='left-submit'>合计金额 :
+            <text> ¥ {{sum_price}}</text>
+        </view>
+        <button form-type='submit' class='right-submit' disabled='{{sumitOrderSt}}'>提交订单</button>
+    </view>
+
+
+</form>

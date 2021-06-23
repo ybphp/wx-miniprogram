@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/entrance/entrance",
+    "pages/guest/guest",
+    "pages/group/group",
+    "pages/guest/guestdetail/guestdetail",
+    "pages/group/creategroup/creategroup",
+    "pages/group/groupdetail/groupdetail",
+    "pages/park/park",
+    "pages/user/user",
+    "pages/guest/qrcode/qrcode",
+    "pages/guest/guesthistory/guesthistory",
+    "pages/user/feedback/feedback",
+    "pages/user/setting/setting",
+    "pages/user/setting/password/password",
+    "pages/group/apply/apply",
+    "pages/group/groupjoin/groupjoin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "AiWorks",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,67 @@
+<view class='tab'>
+  <view class='group-detail' bindtap='tabOne' style='color: {{color1}}; border-bottom-color: {{bordercolor1}};'>团队管理</view>
+  <view class='group-member' bindtap='tabTwo' style='color: {{color2}}; border-bottom-color: {{bordercolor2}};'>成员</view>
+</view>
+<!-- 团队管理 -->
+<view wx:if='{{tabOne}}'>
+  <view class='group-form'>
+    <view class='group-name'>
+      <view class='group-name-txt'>{{name}}团队</view>
+    </view>
+    <view class='project-name'>
+      <label class='project-name-label'>项目名称</label>
+      <view class='project-name-txt'>{{project}}</view>
+    </view>
+    <view class='project-start'>
+      <label class='project-start-label'>项目开始</label>
+      <view class='project-start-txt'>{{startdate}}</view>
+    </view>
+    <view class='project-end'>
+      <label class='project-end-label'>项目结束</label>
+      <view class='project-end-txt'>{{enddate}}</view>
+    </view>
+    <view class='project-manager'>
+      <label class='project-manager-label'>项目经理</label>
+      <text class='project-manager-txt'>{{manager}}</text>
+    </view>
+    <view class='resources'>
+      <view class='resources-title'>项目资源</view>
+      <view class='resources-detail'>
+        <view class='resources-computer'>
+          <label>电脑</label>
+          <view>{{computer}}</view>
+          <label>台</label>
+        </view>
+        <view class='resources-seat'>
+          <label>工位</label>
+          <view>{{seat}}</view>
+          <label>个</label>
+        </view>
+      </view>
+    </view>
+    <view class='others'>
+      <view class='others-title'>其他</view>
+      <view class='others-txt'>{{resources}}</view>
+    </view>
+  </view>
+  <view class='group-status'>{{statusName}}</view>
+</view>
+
+<view wx:else='{{tabTwo}}'>
+  <scroll-view scroll-y="true">
+    <view class='list' wx:for="{{stuff}}" wx:for-index="idx" wx:for-item="itemName" bindtap='groupDetail'>
+      <!-- {{idx}}: {{itemName.message}} -->
+      <view class='image'>
+        <image src='{{itemName.headImg}}'></image>
+      </view>
+      <view class='desc'>
+        <view class='name'>{{itemName.userName}}</view>
+        <view class='time'>{{itemName.teamStatusName}}</view>
+      </view>
+      <!-- <view class='choose'>
+        <view class='choose-confirm' bindtap='confirm'>同意</view>
+        <view class='choose-cancel'>拒绝</view>
+      </view> -->
+    </view>
+  </scroll-view>
+</view>

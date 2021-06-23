@@ -1,0 +1,32 @@
+<!--pages/newAdd/newAdd.wxml-->
+<form bindsubmit="submitAddress">
+    <view class='new-add'>
+        <view class='new-add-list'>
+            <text>收货人</text>
+            <input type='text' name='truename' focus='true' placeholder='请输入姓名'></input>
+        </view>
+        <view class='new-add-list'>
+            <text>手机</text>
+            <input type='number' maxlength='11' name='mobile' placeholder='请输入手机'></input>
+        </view>
+        <view class='new-add-list'>
+            <text>收货地址</text>
+            <view class='add-api' >
+                <textarea type='text' name='pcd' placeholder='' value="{{pcd}}"></textarea>
+                <image bindtap='chooseAddr' src='../../img/location-icon1.png'></image>
+            </view>
+        </view>
+		  <view class='new-add-list'>
+            <text>补充信息：</text>
+            <input type='text' name='info' placeholder='如：某小区等'></input>
+        </view>
+        <view class='new-add-list'>
+            <text>设为默认地址</text>
+            <view class='switch-btn'>
+                <switch name='is_default' color='#00a0e9'></switch>
+            </view>
+        </view>
+    </view>
+
+    <button formType="submit" hover-class='none' class='add-btn'>确认地址</button>
+</form>

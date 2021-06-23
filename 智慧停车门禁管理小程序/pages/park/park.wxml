@@ -1,0 +1,66 @@
+<!-- 空车位展示 -->
+<view class='status'>
+  空车位总数
+  <view class='num'>{{num}}</view>
+  （当前时段收费5元/小时）
+</view>
+<!-- 添加车牌 -->
+<!-- 车牌选择 -->
+ <view class='cards' wx:if="{{inputstate == 1}}">
+  <view class='card' style='font-size: 28rpx;text-align: center;color: {{plateId1color}}' bindtap='plateId1Handle'>{{plateId1}}</view>
+  <view class='card' style='font-size: 28rpx;text-align: center;color: {{plateId2color}}' bindtap='plateId2Handle'>{{plateId2}}</view>
+  <view class='card' style='font-size: 28rpx;text-align: center;color: {{plateId3color}}' bindtap='plateId3Handle'>{{plateId3}}</view>
+  <view class='add' bindtap='addcard' wx:if='{{button == "add"}}'>添加</view>
+  <view class='add' bindtap='subcard' wx:if='{{button == "sub"}}'>解绑</view>
+</view> 
+ <!-- <view class='cards' wx:if='{{inputstate == 1}}'>
+  <view class='card' style='font-size: 28rpx;text-align: center;color: {{i.color}}' wx:for='{{car}}' wx:for-item='i' bindtap='carHandle' id="{{i}}">{{i.plateId}}</view>
+  <view class='add' bindtap='addcard'>添加</view>
+</view>  -->
+<!-- 输入车牌 -->
+<view class='cardinput' wx:if="{{inputstate == 2}}">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" style='width:15%;height: 50rpx;font-size: 30rpx;text-align: center;line-height:50rpx;'>
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}" style='width:15%;height: 50rpx;font-size: 33rpx;text-align: center;line-height:50rpx;margin-left:10rpx;border-left: 1px solid gray'>
+    <view class="picker">
+      {{array2[index2]}}
+    </view>
+  </picker>
+  <input placeholder='请输入车牌' bindinput='carInput'></input>
+  <view class='cardinputcancel' bindtap='cardinputcancel'>取消</view>
+  <view class='cardinputconfirm' bindtap='cardinputconfirm'>确定</view>
+</view>
+<!-- 解绑车牌 -->
+<view class='cardinput' wx:if="{{inputstate == 3}}">
+<picker value='{{index3}}' range="{{car}}" bindchange='unbindPickerChange'>
+<view class='subpicker'>
+{{car[index3]}}
+</view>
+</picker>
+  <view class='cardinputcancel' bindtap='subcardinputcancel'>取消</view>
+  <view class='cardinputconfirm' bindtap='subcardinputconfirm'>确定</view>
+</view>
+
+<!-- 用户特权展示 -->
+<view class='coupon'>
+  <label>用户特权</label>
+  <view class='coupon-type'>{{coupon}}</view>
+</view>
+<!-- 停车券 -->
+<!-- <view class='ticket'>
+  <label>停车券</label>
+  <view class='ticket-type'>{{ticket}}</view>
+</view> -->
+<!-- 停车费展示 -->
+<view class='park'>
+  <view>{{state}}停入</view>
+  <view style='margin-left: 50rpx;'>{{state2}}需缴费{{fee}}</view>
+  <view wx:if='{{fee !== ""}}'>元</view>
+</view>
+<!-- 缴费 -->
+<view class='button'>
+  <button>缴费</button>
+</view>

@@ -1,0 +1,55 @@
+
+/* commen-head */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.commen-wrap {
+  background-color: #fff;
+}
+.commen-detail {
+  padding-left: 40rpx;
+  padding-top: 20rpx;
+  display: flex;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.commen-title {
+  display: flex;
+  align-items: center;
+}
+
+.commen-title image {
+  width: 90rpx;
+  height: 90rpx;
+  padding: 20rpx;
+  padding-left: 40rpx;
+}
+
+.commen-title text {
+  font-size: 32rpx;
+}
+
+.radio-slt {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.commen-area textarea {
+  width: 90%;
+  height: 300rpx;
+  margin: 10rpx auto;
+  border: 1px solid #eee;
+  padding: 10rpx;
+}
+
+.commen-btn {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+}

@@ -1,0 +1,91 @@
+<!-- 背景图 -->
+<view class="section-one">
+  <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/banner.png' mode='scaleToFill' style='height:100%; width:100%;'></image>
+</view>
+<view class='title'>
+  <view class='title-one' bindtap='sectionTwo'>
+    <text>登录</text>
+    <!-- <view class='triangle-border'>ddd</view> -->
+  </view>
+  <view class='title-two' bindtap='sectionThree'>
+    <text>注册</text>
+  </view>
+</view>
+<view class='triangle-border' style='left: {{triLeft*windowWidth}}px;'></view>
+<!-- 表单 -->
+<!-- 登录 -->
+<view class='section-two' wx:if='{{sectionTwo}}'>
+  <view class='section-two-form'>
+    <view class='section-two-username'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/username.png' style='height:50rpx;width:50rpx;'></image>
+      <input placeholder='请输入手机号' placeholder-class='input' bindinput='sectionTwoPhone' type='number' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+    </view>
+    <view class='section-two-password'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/password.png' style='height:50rpx;width:50rpx;'></image>
+      <input placeholder='请输入密码' placeholder-class='input' bindinput='sectionTwoPassword' type='password' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+    </view>
+  </view>
+  <view class='section-two-button' bindtap='loginHandle'>登录</view>
+</view>
+
+<!-- 注册 -->
+<view class='section-three' wx:if='{{sectionThree}}'>
+  <view class='section-three-switch'>
+    <view class='button-circle' bindtouchmove='buttonCircleInnerHandle' wx:if='{{profile=="员工"}}'></view>
+    <text>{{profile}}</text>
+    <view class='button-circle' bindtouchmove='buttonCircleInnerHandle' wx:if='{{profile=="访客"}}'></view>
+  </view>
+
+  <!-- 访客 -->
+  <view class='section-three-visitor' wx:if='{{profile == "访客"}}'>
+    <view class='section-three-form'>
+      <view class='section-three-username'>
+        <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/username.png' style='height:50rpx;width:50rpx;'></image>
+        <input placeholder='请输入手机号' placeholder-class='input' bindinput='sectionThreeVisitorPhone' type='number' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+      </view>
+      <view class='section-three-password'>
+        <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/password.png' style='height:50rpx;width:50rpx;'></image>
+        <input placeholder='请输入密码' placeholder-class='input' bindinput='sectionThreeVisitorPassword' type='password' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+      </view>
+    </view>
+    <view class='section-three-button' bindtap='registerHandle'>注册</view>
+  </view>
+
+  <!-- 员工 -->
+  <view class='section-three-employee' wx:if='{{profile == "员工"}}'>
+
+    <!-- step1 -->
+    <view class='step1' wx:if='{{step==1}}'>
+      <view class='section-three-form'>
+        <view class='section-three-username'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/username.png' style='height:50rpx;width:50rpx;'></image>
+          <input placeholder='请输入手机号' placeholder-class='input' bindinput='sectionThreeEmployeePhone' type='number' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+        </view>
+        <view class='section-three-password'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/password.png' style='height:50rpx;width:50rpx;'></image>
+          <input placeholder='请输入密码' placeholder-class='input' bindinput='sectionThreeEmployeePassword' type='password' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+        </view>
+      </view>
+      <view class='section-three-button' bindtap='stepHandle'>下一步</view>
+    </view>
+
+    <!-- step2 -->
+    <view class='step2' wx:if='{{step==2}}'>
+      <view class='section-three-form'>
+        <view class='section-three-username'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/organization.png' style='height:50rpx;width:50rpx;'></image>
+          <input placeholder='请输入部门' placeholder-class='input' bindinput='sectionThreeEmployeeOrganization' type='number' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+        </view>
+        <view class='section-three-password'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/name.png' style='height:50rpx;width:50rpx;'></image>
+          <input placeholder='请输入姓名' placeholder-class='input' bindinput='sectionThreeEmployeeName' type='text' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+        </view>
+        <view class='section-three-password'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/login/id.png' style='height:50rpx;width:50rpx;'></image>
+          <input placeholder='请输入身份证号' placeholder-class='input' bindinput='sectionThreeEmployeeId' type='idcard' style='margin-left: 30rpx;border-bottom: 1px solid gray;'></input>
+        </view>
+      </view>
+      <view class='section-three-button' bindtap='registerHandle'>注册</view>
+    </view>
+  </view>
+</view>

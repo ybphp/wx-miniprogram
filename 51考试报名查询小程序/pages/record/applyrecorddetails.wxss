@@ -1,0 +1,14 @@
+/* pages/record/applyrecorddetails.wxss */
+.item-avatar-right {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.status .item-icon-left .iconfont {
+    font-size: 1rem !important;
+}
+
+.status .item .p {
+    font-size: 0.6rem !important;
+}
+

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/category/category",
+    "pages/detail/detail",
+    "pages/about/about"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/assets/imgs/home.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/assets/imgs/user.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "/assets/imgs/user.png",
+        "text": "客户"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

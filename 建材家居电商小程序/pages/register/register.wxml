@@ -1,0 +1,32 @@
+<!--pages/register/register.wxml 报名列表-->
+
+<view class='sign-list'>
+    <!-- <navigator url='/pages/house/house'> -->
+    <view class='sign-pic'>
+        <image src='{{imgurl+setting.wode_baoming_img}}'></image>
+    </view>
+    <view class='sign-info'>
+        <text class='sign-truename'>{{baoming.truename}}</text>
+        <text class='sign-mobile'>{{baoming.mobile}}</text>
+        <text class='sign-add'>{{baoming.address}}</text>
+        <text class='sign-title'>{{baoming.st}}</text>
+        <text class='sign-time'>验房时间: {{baoming.time_to}}</text>
+    </view>
+    <!-- </navigator> -->
+</view>
+
+
+<view class='sign-list' wx:for='{{attendList}}' wx:key='id'>
+    <!-- <navigator url='/pages/house/house'> -->
+    <view class='sign-pic'>
+        <image src='{{imgurl+item.activity_img}}'></image>
+    </view>
+    <view class='sign-info'>
+        <text class='sign-title'>活动名称： {{item.activity_name}}</text>  
+        <text class='sign-add'>活动地址：{{item.activity_address}}</text>
+        <text class='sign-truename'>{{item.truename}} </text>
+        <text class='sign-mobile'>{{item.mobile}} </text>
+        <text class='sign-xiaoqu'>{{item.xiaoqu}}</text>
+    </view>
+    <!-- </navigator> -->
+</view>

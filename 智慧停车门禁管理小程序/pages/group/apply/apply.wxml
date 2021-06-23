@@ -1,0 +1,11 @@
+<view class='title'>
+  {{name}}
+</view>
+<image src='http://aiworks.oss-cn-beijing.aliyuncs.com/group/groupdes.png' mode='scaleToFill' style='width: 100%; height: 120rpx;'></image>
+<view class='desc'>
+{{des}}
+</view>
+<view class='buttons' wx:if="{{status !== '0'}}">
+  <view class='submit' bindtap='apply'>加入</view>
+  <view class='follow' bindtap='focus'>关注</view>
+</view>

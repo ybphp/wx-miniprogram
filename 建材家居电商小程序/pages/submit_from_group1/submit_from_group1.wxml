@@ -1,0 +1,61 @@
+<!--pages/submit/submit.wxml 这个抢购订单页不要了 -->
+<view class='shop-wrap'>
+    <view class='shop-title' bindtap='tapAddress'>
+        <image src='../../img/location-icon.png'></image>
+        <view class='shop-info'>
+            <block wx:if="{{address!=null}}">
+                <view class='shop-info-top'>
+                    <text class='top-name'>收货人 : {{address.truename}}</text>
+                    <text class='top-phone'>{{address.mobile}}</text>
+                </view>
+                <view class='down-info'>收货地址：{{address.pcd+' '+address.info}}</view>
+            </block>
+            <block wx:else>
+                <view class='down-info'>请添加地址</view>
+            </block>
+        </view>
+        <image src='../../img/enter-icon.png'></image>
+    </view>
+
+    <view class='buy'>
+        <view class='buy-title'>
+            <image src='../../img/shop-iconBlack.png'></image>
+            <text class='store-name'>{{goodGroup.shop_name}}(团购商家)</text>
+        </view>
+        <view class='buy-list'>
+            <view class='goods-pic'>
+                <image src='{{imgurl+goodGroup.img}}'></image>
+            </view>
+            <view class='goods'>
+                <view class='top-goods'>
+                    <view class='goods-name'>{{goodGroup.good_name}}</view>
+                    <view class='format'>单位：{{goodGroup.unit}}</view>
+                </view>
+                <view class='bottom-goods'>
+                    <view class='goods-price'>
+                        <text class='price'>团购价： ¥{{goodGroup.price_group}} </text>
+                        <text class='price'>原价： ¥{{goodGroup.good_price}} </text>
+                        <text class='price'>订金： ¥{{goodGroup.deposit}} </text>
+                        <!-- <text class='number'> x {{goodGroup.num}}</text> -->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='submit-btn'>
+    <block wx:if="{{type_=='6'}}">
+    <view class='left-submit'>付尾款:
+        <text> ¥ {{goodGroup.price_group-goodGroup.deposit}}</text>
+    </view>
+    <button class='right-submit' disabled='{{sumitOrderSt}}' bindtap='tapAddOrder'>提交订单</button>
+    </block>
+    <block wx:else>
+        <view class='left-submit'>付订金:
+            <text> ¥ {{goodGroup.deposit}}</text>
+        </view>
+        <button class='right-submit' disabled='{{sumitOrderSt}}' bindtap='tapAddOrder'>提交订单</button>
+    </block>
+
+
+</view>

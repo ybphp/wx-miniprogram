@@ -1,0 +1,71 @@
+<!--index.wxml-->
+
+<!-- 轮播图  -->
+<swiper indicator-dots="{{indicatorDots}}" class='swiper' indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular='{{circular}}'>
+    <block wx:for="{{advs}}" wx:key="index">
+        <swiper-item>
+            <navigator url='{{item.url}}'>
+                <image src="{{IMGURL+item.img}}" class="slide-image" />
+            </navigator>
+        </swiper-item>
+    </block>
+</swiper>
+
+<!-- 导航区 -->
+<view class='nav'>
+    <view class='conlumn'>
+        <navigator url="/pages/goods/goods" hover-class='none'>
+            <image src='../../img/shop-bg.png' class='nav-pic'>
+                <view class='icon-wrap'>
+                    <image src='../../img/shop-icon.png'></image>
+                    <view>建材商城</view>
+                </view>
+            </image>
+        </navigator>
+        <navigator url='/pages/groupList/groupList' hover-class='none'>
+            <image src='../../img/activity-bg.png' class='nav-pic'>
+                <view class='icon-wrap'>
+                    <image src='../../img/activity-icon.png'></image>
+                    <view>团购活动</view>
+                </view>
+            </image>
+        </navigator>
+    </view>
+    <view class='conlumn'>
+        <navigator url='/pages/house/house' hover-class='none'>
+            <image src='../../img/home-bg.png' class='nav-pic'>
+                <view class='icon-wrap'>
+                    <image src='../../img/home-icon.png'></image>
+                    <view>{{message}}</view>
+                </view>
+            </image>
+        </navigator>
+        <navigator url='/pages/teamBuy/teamBuy' hover-class='none'>
+            <image src='../../img/online-bg.png' class='nav-pic'>
+                <view class='icon-wrap'>
+                    <image src='../../img/online-icon.png'></image>
+                    <view>线上拼团</view>
+                </view>
+            </image>
+        </navigator>
+    </view>
+</view>
+
+<!-- 内容区 -->
+
+<view class='index-cont'>
+    <view class='cont-title'>
+        <view class='main-title'>装修百科</view>
+        <view class='sub-head'>Decoration Pedia</view>
+    </view>
+    <view class='cont-wrap'>
+        <block wx:for='{{decorate}}' wx:key='index'>
+            <navigator url="/pages/baike/baike?art_id={{item.id}}">
+                <view class='cont-photo'>
+                    <image src='{{IMGURL+item.img}}'></image>
+                    <view class='pedia-title'>{{item.name}}</view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>

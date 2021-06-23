@@ -1,0 +1,49 @@
+<!--pages/acRegister/acRegister.wxml 添加报名-->
+
+<view class='ac-wrapper'>
+    <view class='ac-top-cont'>
+        <view class='ac-item'>
+            <text>活动标题</text>
+
+            <input type='text' value="{{rowActivity.name}}" disabled=''></input>
+        </view>
+        <view class='ac-item'>
+            <text>活动时间</text>
+            <input value="{{rowActivity.start_time}} 至 {{rowActivity.end_time}}" disabled=''></input>
+        </view>
+        <view class='ac-item'>
+            <text>活动地址</text>
+            <input type='text' value="{{rowActivity.address}}" disabled=''></input>
+        </view>
+    </view>
+    <form bindsubmit='addActivityAttend'>
+        <view class='ac-down-cont'>
+            <view class='ac-item'>
+                <text>姓名 :</text>
+                <input type='text' name='truename' value="{{rowAttend.truename}}" focus='true' placeholder='请输入姓名'></input>
+            </view>
+            <view class='ac-item'>
+                <text>电话 :</text>
+                <input type='number' maxlength='11' name='mobile' value="{{rowAttend.mobile}}" placeholder='请输入手机或座机'></input>
+            </view>
+            <view class='ac-item'>
+                <text>小区名称 :</text>
+                <input type='text' name='xiaoqu' value="{{rowAttend.xiaoqu}}" placeholder='小区名称'></input>
+            </view>
+            <view class='ac-item'>
+                <text>购买商 :</text>
+                <input type='text' name='nigou' value="{{rowAttend.nigou}}" placeholder='请输入购买商'></input>
+            </view>
+        </view>
+
+        <button type='primary' form-type='submit'>
+            <block wx:if="{{rowAttend!=null}}">
+                 修改报名
+            </block>
+            <block wx:else>
+                立即报名
+            </block>
+        </button>
+
+    </form>
+</view>

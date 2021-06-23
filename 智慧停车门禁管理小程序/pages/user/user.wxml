@@ -1,0 +1,69 @@
+<view class='profile'>
+  <view class='avatar'>
+  <image src='{{head_img}}' style='height: 200rpx; width: 200rpx;border-radius: 50%;' mode='scaleToFill'></image>
+  </view>
+  <view class='detail'>
+    <view class='name'>{{nickname}}</view>
+    <!-- <view class='desc'>简介</view> -->
+  </view>
+</view>
+
+<view class='form' bindtap='toEntrance'>
+  <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/entrance.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>我的门禁</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toVisitor'>
+ <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/visitor.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>我的访客</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toGroup'>
+ <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/group.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>我的团队</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toPark'>
+ <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/car.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>我的车辆</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='setting'>
+  <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/setting.png' style='height: 60rpx;width: 60rpx;'></image>
+    </view>
+    <view class='form-item-title'>设置</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>
+
+<view class='form' bindtap='toFeedback'>
+  <view class='form-item'>
+    <view class='form-item-image'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/user/feedback.png' style='height: 50rpx;width: 50rpx;'></image>
+    </view>
+    <view class='form-item-title'>意见反馈</view>
+    <view class="navigator-arrow" style='margin-left: 130rpx;'></view>
+  </view>
+</view>

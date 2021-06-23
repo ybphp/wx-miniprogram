@@ -1,0 +1,65 @@
+<!--pages/shopCart/shopCart.wxml 购物车列表-->
+
+<view class='shopCart-wrap'>
+    <block wx:if="{{shopAndGoodList.length>0}}">
+        <view class='buy' wx:for="{{shopAndGoodList}}" wx:for-item='shop' wx:key='shop_id'>
+            <view class='buy-title'>
+                <!-- <checkbox value='buy-store' ></checkbox> -->
+                <view class='buy-title-wrap'>
+                    <image src='../../img/shop-iconBlack.png'></image>
+                    <text class='store-name'>{{shop.shop_name}}</text>
+                </view>
+            </view>
+            <view class='buy-list' wx:for="{{shop.shop_goods}}" wx:for-item="good" wx:key="good_id">
+                <!-- <checkbox value='value' ></checkbox> -->
+                <view class='goods-wrap'>
+                    <navigator url='/pages/bDetail/bDetail?good_id={{good.good_id}}'>
+                        <view class='goods-pic'>
+                            <image src='{{imgurl+good.img}}'></image>
+                        </view>
+                    </navigator>
+                    <view class='goods'>
+                        <view class='top-goods'>
+                            <view class='goods-name'>{{good.good_name}}</view>
+                            <view class='format'>{{good.unit}}</view>
+                        </view>
+                        <view class='bottom-goods'>
+                            <view class='goods-price'>
+                                <view class='left-price'>
+                                    <text class='price'> ¥ {{good.price}} </text>
+                                    <text class='number'>*{{good.num}}</text>
+                                </view>
+                                <view class='right-price'>
+                                    <text class='price'>总价: {{good.num * good.price}}</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='delete'>
+                        <text bindtap='tapDelCartGood' data-cart_good_id="{{good.cart_good_id}}">删除</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+
+<block wx:if="{{shopAndGoodList.length>0}}">
+<view class='pay-wrap'>
+    <view class='cart-pay'>
+        <view class='pay-acount'>
+            <view class='left-count'>
+                <!-- <checkbox></checkbox>
+                <text class='total-slt'>全选</text> -->
+            </view>
+            <view class='right-count'>
+                <text class='total-money'>合计: ¥<text class='red-money'>{{sum_price_all}}</text></text>
+            </view>
+        </view>
+        <view class='pay-btn' bindtap='tapGoSubmit'>结算</view>
+    </view>
+</view>
+</block>
+<block wx:else>
+<view class='no-goods'>没有更多啦~</view>
+</block>

@@ -1,0 +1,45 @@
+/* pages/teamBuy/teamBuy.wxss */
+
+@import '../house/house.wxss';
+
+.house-nav .team-active {
+  color: #ff1818;
+  border-bottom: 1px solid #ff1818;
+}
+
+.house-swiper swiper-item {
+  overflow: scroll;
+}
+
+.house-list .team-wrap {
+  display: flex;
+  width: 94%;
+  margin: 14rpx auto;
+  justify-content: space-between;
+  color: #666;
+}
+
+.house-list .team-wrap .team-price {
+  font-size: 36rpx;
+}
+
+.house-list .team-wrap text:last-child {
+  font-size: 30rpx;
+  letter-spacing: 2rpx;
+}
+
+
+.house-list .house-list-pic image {
+  position: absolute;
+  top: 0;
+  width: 218rpx;
+  height: 156rpx;
+}
+
+.house-list .team-wrap-bg {
+  color: #ff1818;
+  display: flex;
+  width: 94%;
+  margin: 14rpx auto;
+  justify-content: space-between;
+}

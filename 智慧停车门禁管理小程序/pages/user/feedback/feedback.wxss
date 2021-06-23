@@ -1,0 +1,152 @@
+@import '../../common/index.wxss';
+
+.textarea {
+  margin-top: 30rpx;
+  width: 100vw;
+  /* background-color: yellow; */
+  height: 35vh;
+  padding-top: 2vh solid green;
+  border-bottom: 1px solid lightgray;
+  margin: auto auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.textarea textarea {
+  height: 80%;
+  width: 90%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: gray;
+  font-size: 40rpx;
+  /* background-color: green; */
+}
+.tips {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20rpx;
+  position: relative;
+  top: -34vh;
+}
+
+.character {
+  font-size: 20rpx;
+  color: lightgray;
+  position: relative;
+  width: 97vw;
+  text-align: end;
+  top: -7vh;
+}
+
+.button {
+  width: 75vw;
+  height: 6vh;
+  margin: auto auto;
+  background-color: black;
+  color: white;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 6vh;
+}
+
+/* .button button {
+  height: 100%;
+  background-color: black;
+  color: white;
+} */
+
+.category {
+  width: 100vw;
+  height: 8vh;
+  position: relative;
+  top: -79rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid lightgray;
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.picker-title {
+  height: 10vh;
+  width: 20vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picker-content {
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  color: lightgray;
+}
+.contact {
+    width: 100vw;
+  height: 8vh;
+  position: relative;
+  top: -79rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid lightgray;
+}
+.contact-title {
+  height: 10vh;
+  width: 28vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-input {
+  width: 62vw;
+  height: 10vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  color: lightgray;
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.phone{
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+}
+.call {
+  width: 50vw;
+  height: 7vh;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  border-radius: 5px;
+}
+.phone-tips {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  color: gray;
+}

@@ -1,0 +1,44 @@
+/* pages/register/register.wxss */
+
+page {
+  background-color: #F8F8F8;
+}
+
+/* sign-list */
+
+.sign-list {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  display: flex;
+}
+
+.sign-list image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.sign-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 30rpx;
+  width: 480rpx;
+}
+.sign-info text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sign-info .sign-title {
+  margin-right: 10rpx;
+}
+
+
+.sign-info .sign-time {
+  font-size: 26rpx;
+  color: #666;
+}

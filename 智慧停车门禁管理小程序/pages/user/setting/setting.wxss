@@ -1,0 +1,32 @@
+@import '../../common/index.wxss';
+
+.form {
+  width: 100vw;
+  height: 8vh;
+  border-top: 10rpx solid lightgray;
+  border-bottom: 10rpx solid lightgray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-title {
+  width: 30vw;
+  /* background-color: red; */
+  text-align: center;
+}
+
+.exit {
+position: absolute;
+left: 0;right: 0;
+width: 90vw;
+height: 8vh;
+background-color: black;
+color: white;
+border-radius: 5px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+bottom: 30rpx;
+margin: auto auto;
+}

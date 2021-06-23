@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="category">
+  <view wx:for="{{categories}}" class="category-item category-{{item.typePinYin}}" bindtap="handleToCategory" data-type="{{item.typePinYin}}">
+    <text class="category-item-name">{{item.type}}</text>
+    <view class="category-item-circle"></view>
+  </view>
+</view>

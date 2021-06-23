@@ -1,0 +1,63 @@
+<!--pages/cancel/cancel.wxml-->
+<view class='cancel-wrap'>
+  <view class='cancel-list'>
+    <view class='cancel-title'>
+      <text>大自然家居</text>
+      <text class='cancel-success'>退货成功</text>
+    </view>
+    <view class='cancel-info'>
+      <image src='../../img/collect-pic.jpg'></image>
+      <view class='cancel-cont'>
+        <text class='cancel-cont-title'>裸板大自然野生原木地板纯实木地板</text>
+        <view class='cancel-format'>
+          <text>规格 :</text>
+          <text>数量 : 1</text>
+        </view>
+      </view>
+    </view>
+    <view class='cancel-total'> 
+      <text>共1件商品</text> 
+      <text>合计:</text> 
+      <text>¥320</text></view>
+  </view>
+  <view class='cancel-list'>
+    <view class='cancel-title'>
+      <text>大自然家居</text>
+      <text class='cancel-success'>退货成功</text>
+    </view>
+    <view class='cancel-info'>
+      <image src='../../img/collect-pic.jpg'></image>
+      <view class='cancel-cont'>
+        <text class='cancel-cont-title'>裸板大自然野生原木地板纯实木地板</text>
+        <view class='cancel-format'>
+          <text>规格 :</text>
+          <text>数量 : 1</text>
+        </view>
+      </view>
+    </view>
+    <view class='cancel-total'> 
+      <text>共1件商品</text> 
+      <text>合计:</text> 
+      <text>¥320</text></view>
+  </view>
+  <view class='cancel-list'>
+    <view class='cancel-title'>
+      <text>大自然家居</text>
+      <text class='cancel-success'>退货成功</text>
+    </view>
+    <view class='cancel-info'>
+      <image src='../../img/collect-pic.jpg'></image>
+      <view class='cancel-cont'>
+        <text class='cancel-cont-title'>裸板大自然野生原木地板纯实木地板</text>
+        <view class='cancel-format'>
+          <text>规格 :</text>
+          <text>数量 : 1</text>
+        </view>
+      </view>
+    </view>
+    <view class='cancel-total'> 
+      <text>共1件商品</text> 
+      <text>合计:</text> 
+      <text>¥320</text></view>
+  </view>
+</view>

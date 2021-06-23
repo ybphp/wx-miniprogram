@@ -1,0 +1,46 @@
+<view class='tab' style='height: {{0.08*windowHeight}}px'>
+  <view class='tab-one' bindtap='tabOne' style='border-bottom: 1px solid {{borderOne}};color: {{colorOne}};'>我的团队</view>
+  <view class='tab-two' bindtap='tabTwo' style='border-bottom: 1px solid {{borderTwo}};color: {{colorTwo}};'>搜索</view>
+</view>
+<!-- 我的团队 -->
+<view wx:if='{{tabOne}}'>
+  <scroll-view style='height: {{0.82*windowHeight}}px' scroll-y='true'>
+    <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class='list' bindtap='groupDetail' id='{{idx}}'>
+        <view class='group-image'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/group/group2.png' style='height: 70rpx; width: 80rpx;'></image>
+        </view>
+        <view class='group-desc'>
+          <view class='group-name'>{{itemName.teamName}}</view>
+          <view class='group-time'>创建时间：{{itemName.startTime}}</view>
+        </view>
+        <view class='group-status' style='background-color: {{itemName.bgcolor}};color: white;'>{{itemName.teamStatusName}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view style='height: {{0.08*windowHeight}}px;' class='button' bindtap='toCreategroup'>团队创建</view>
+</view>
+
+<!-- 搜索 -->
+<view wx:else="{{tabTwo}}">
+  <view class='searchbar'>
+    <view class='searchinput' style='width: {{width}}%'>
+      <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/group/search.png' style='height: 50rpx;width: 50rpx;'></image>
+      <input placeholder='搜索团队' style='margin-left: 30rpx;font-size: 30rpx;width: {{width}}%;' bindinput='searchinput' bindconfirm='inputconfirm' confirm-type='search' value='{{keyword}}'></input>
+    </view>
+    <view wx:if='{{width == 80}}' class='searchbutton' style='width: {{100-width}}%' bindtap='cancelHandle'>取消</view>
+  </view>
+  <scroll-view style='height: {{0.81*windowHeight}}px;' scroll-y>
+    <view style='margin-top: 0;margin-bottom: 9rpx;' wx:for="{{search}}" wx:for-index="idx" wx:for-item="itemName">
+      <view class='list' bindtap='toApply' id='{{idx}}'>
+        <view class='group-image'>
+          <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/group/group2.png' style='width: 80rpx;height: 70rpx;'></image>
+        </view>
+        <view class='group-desc'>
+          <view class='group-name'>{{itemName.name}}</view>
+          <view class='group-time'>创建时间：{{itemName.startTime}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

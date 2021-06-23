@@ -1,0 +1,10 @@
+
+<view class='button' bindtap='toDetail'>
+<image src='./resource/order.png' style='height: 80rpx;width: 80rpx; background-color: yellow;'></image>
+<text>马上预约</text>
+</view>
+
+<view class='button'>
+<image src='./resource/history.png' style='height: 80rpx;width: 80rpx; background-color: yellow;'></image>
+<text>访客历史</text>
+</view>

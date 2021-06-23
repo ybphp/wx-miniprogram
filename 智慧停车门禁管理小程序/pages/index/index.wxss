@@ -1,0 +1,116 @@
+page {
+  height: 100%;
+  width: 100%;
+}
+.buttons {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto auto;
+  background-color: #FFFFFF;
+}
+.button-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.button-top-left {
+  width: 290rpx;
+  height: 290rpx;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-top-right {
+  width: 290rpx;
+  height: 290rpx;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.button-bottom-left {
+  width: 290rpx;
+  height: 290rpx;
+  background-color: #F2F2F2;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-bottom-right {
+  width: 290rpx;
+  height: 290rpx;
+  background-color: #F2F2F2;
+  
+  border-radius: 15px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-center{
+  background-color: #FFFFFF;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.button-center-inner {
+  width: 80%;
+  height: 80%;
+  background-color: #F2F2F2;
+  border-radius: 50%;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index-logo {
+  width: 86rpx;
+  height: 86rpx;
+}
+
+/* 公告 */
+.board {
+  height: 9vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 4px solid lightgray;
+}
+.board-title {
+  
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+.board text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+.board-content {
+  font-size: 25rpx;
+  flex:1;
+  height: 100%;
+  line-height: 100%;
+}

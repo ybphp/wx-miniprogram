@@ -1,0 +1,7 @@
+.buy-list .s-goods {
+  width: 500rpx;
+}
+
+.buy-list .s-price {
+  width: 100%;
+}

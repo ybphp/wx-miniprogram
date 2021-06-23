@@ -1,0 +1,117 @@
+/* pages/goodDetail/goodDetail.wxss */
+page {
+  background-color: #f8f8f8;
+}
+
+.g-banner {
+  background-color: #fff;
+}
+
+.g-banner swiper {
+  height: 750rpx;
+  width: 100%;
+}
+.g-banner image{
+  width: 750rpx;
+  height: 750rpx;
+}
+
+.count-down {
+  margin: 10rpx;
+  display: flex;
+  justify-content: center;
+  color: #ff2116;
+  font-size: 32rpx;
+}
+
+.count-down .count-down-time {
+  margin-left: 40rpx;
+}
+
+.g-group {
+  margin-left: 20rpx;
+}
+
+.g-group {
+  color: #ff0652;
+}
+
+.g-group .g-group-title {
+  color: #000;
+  letter-spacing: 2rpx;
+}
+
+.g-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+   color: #ff2116;
+}
+
+.g-info .g-price {
+  color: #ff2116;
+  font-size: 36rpx;
+  margin-left: 14rpx;
+}
+
+.g-info .g-price .g-price-line {
+  font-size: 30rpx;
+  color: #666;
+  text-decoration: line-through;
+  margin-left: 14rpx;
+}
+
+.good-detail-title {
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0;
+  font-size: 32rpx;
+}
+.good-detail {
+  background-color: #fff;
+  padding-bottom: 100rpx;
+}
+.good-detail image {
+  width: 100%;
+}
+
+.good-detail text {
+  color: #666;
+}
+
+.bottom-option {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  color: #fff;
+}
+
+.bottom-option image {
+  width: 32rpx;
+  height: 32rpx;
+  color: #fff;
+}
+
+.good-favorate {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffb541;
+}
+
+.good-favorate text{
+  margin-left: 6rpx;
+}
+
+.good-enter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff182e;
+}
+

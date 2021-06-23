@@ -1,0 +1,168 @@
+.section-one {
+  height: 50vh;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+}
+
+.title {
+  position: relative;
+  margin-top: -10vh;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.title-one {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid white;
+}
+.title-two {
+  width: 50%;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.triangle-border {
+  position: relative;
+  opacity: 0.6;
+  margin-top: -14px;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width:7px;
+  border-style:solid dashed dashed dashed; 
+  border-color: transparent transparent white transparent;
+}
+
+
+
+/* 注视 */
+.section-two {
+  height: 50vh;
+  width: 100%;
+  /* background-color: blue; */
+  position: absolute;
+  bottom: 0;
+}
+
+.section-three {
+  height: 50vh;
+  width: 100%;
+  /* background-color: yellow; */
+  position: absolute;
+  bottom: 0;
+}
+.section-two-form {
+  /* background-color: lightblue; */
+  height: 30vh;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-two-username {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section-two-password {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.section-two-button {
+  padding: .3em 2em .3em;
+  color: #d7d7d7;
+  background-color: black;
+  text-align: center;
+  width: 50%;
+  border: solid 1px #333;
+  border-radius: 2em;
+  /* margin-top: 50rpx; */
+  bottom: 30rpx;
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0;
+}
+.section-three-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightblue; */
+  height: 30vh;
+  margin-top: 10vh;
+}
+.section-three-switch {
+
+  border: solid 1px #0062B3;
+  width: 250rpx;
+  height: 70rpx;
+  border-radius: 2em;
+  background-color: #0062B3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin: auto auto;
+  left: 0; right: 0;
+  top: 50rpx;
+}
+.section-three-username {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section-three-password {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.section-three-button {
+  padding: .3em 2em .3em;
+  color: #d7d7d7;
+  background-color: black;
+  text-align: center;
+  width: 50%;
+  border: solid 1px #333;
+  border-radius: 2em;
+  /* margin-top: 50rpx; */
+  bottom: 30rpx;
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0;
+}
+
+.button-circle {
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50%;
+  background-color: white;
+}
+.section-three-switch text {
+  width: 160rpx;
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,151 @@
+{
+  "description": "项目配置文件。",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "1.6.0",
+  "projectname": "%E5%8D%8E%E4%BA%91%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "test",
+          "pathName": "pages/test/test",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "index",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "group",
+          "pathName": "pages/group/group",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "groupdetail",
+          "pathName": "pages/group/groupdetail/groupdetail",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "login",
+          "pathName": "pages/login/login",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "entrance",
+          "pathName": "pages/entrance/entrance",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "user",
+          "pathName": "pages/user/user",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "guestdetail",
+          "pathName": "pages/guest/guestdetail/guestdetail",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "park",
+          "pathName": "pages/park/park",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "guesthistory",
+          "pathName": "pages/guest/guesthistory/guesthistory",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "feedback",
+          "pathName": "pages/user/feedback/feedback",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "setting",
+          "pathName": "pages/user/setting/setting",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "password",
+          "pathName": "pages/user/setting/password/password",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "groupjoin",
+          "pathName": "pages/group/groupjoin/groupjoin",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "apply",
+          "pathName": "pages/group/apply/apply",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "creategroup",
+          "pathName": "pages/group/creategroup/creategroup",
+          "query": ""
+        }
+      ]
+    }
+  }
+}

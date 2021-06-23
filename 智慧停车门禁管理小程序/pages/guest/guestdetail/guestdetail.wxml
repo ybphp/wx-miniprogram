@@ -1,0 +1,43 @@
+<view class='form'>
+  <view class='form-items'>
+    <view class='form-item'>
+      <label>访客姓名</label>
+      <input placeholder='请输入访客姓名' bindinput='nameInput'></input>
+    </view>
+    <view class='form-item'>
+      <label>访客手机</label>
+      <input placeholder='请输入访客手机号码' type='number' bindinput='phoneInput'></input>
+    </view>
+    <view class='form-item'>
+      <label>到访日期</label>
+      <picker mode="date" value="{{date}}" start="2017-10-01" end="2019-10-01" bindchange="bindDateChange" style='height: 90rpx;'>
+       <view class="picker" style='height: 90rpx;'>
+      {{date}}
+    </view>
+      </picker>
+    </view>
+    <view class='form-item'>
+      <label>到访时间</label>
+      <picker mode="time" value="{{time}}" start="00:00" end="24:00" bindchange="bindTimeChange" style='height: 90rpx;'>
+          <view class="picker" style='height: 90rpx;'>
+      {{time}}
+    </view></picker>
+    </view>
+    <view class='form-item'>
+      <label>访客数量</label>
+      <input placeholder='请输入访客数量' type='number' bindinput='numInput'></input>
+    </view>
+    <view class='form-item'>
+      <label>是否驾车</label>
+      <input placeholder='请输入车牌' bindinput='carInput'></input>
+      <switch></switch>
+    </view>
+  </view>
+</view>
+
+  <view class='link' bindtap='toHistory'>
+    <text>访问历史</text>
+  </view>
+  <view class='submit' bindtap='buttonHandle'>
+    <button>预约</button>
+  </view>

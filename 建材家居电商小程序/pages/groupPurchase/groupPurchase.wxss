@@ -1,0 +1,42 @@
+/* pages/groupPurchase/groupPurchase.wxss */
+
+.purchase-wrap {
+  padding-bottom: 90rpx;
+  color: #666;
+}
+.purchase-wrap image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.purchase-list {
+  padding: 20rpx;
+}
+.purchase-list .purchase-item{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.purchase-list .purchase-item .purchase-title {
+  width: 26%;
+}
+
+.purchase-list .purchase-item .purchase-info {
+  width: 70%;
+  line-height: 50rpx;
+}
+
+.purchase-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fd6920;
+  color: #fff;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

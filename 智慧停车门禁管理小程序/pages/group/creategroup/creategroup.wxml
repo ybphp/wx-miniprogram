@@ -1,0 +1,13 @@
+<view>
+  <view class='title'>
+    <input placeholder='请输入团队名称' bindinput='nameInput'></input>
+  </view>
+  <view class='desc'>
+    <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/group/groupdes.png' mode='scaleToFill' style='width: 100%; height: 120rpx;'></image>
+  </view>
+  <view class='txt'>
+    <textarea placeholder='请输入团队简介' bindinput='descInput'></textarea>
+  </view>
+  <view class='btn' bindtap='createGroup'>创建团队
+  </view>
+</view>

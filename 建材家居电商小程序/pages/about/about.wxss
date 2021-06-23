@@ -1,0 +1,38 @@
+/* pages/about/about.wxss */
+
+/* about-banner */
+page {
+  background-color: #f8f8f8;
+}
+.about-banner {
+  margin-bottom: 20rpx;  
+}
+
+.about-banner image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.about-list {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-list view {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #eee;
+}
+
+.about-list image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 12rpx;
+}
+
+.about-list text {
+  margin-left: 20rpx;
+  width: 78%;
+}

@@ -1,0 +1,58 @@
+<!--pages/submit_from_orders/submit_from_orders.wxml 订单列表页去支付-->
+
+<view class='shop-wrap'>
+
+    <view class='shop-title'>
+        <image src='../../img/location-icon.png'></image>
+        <view class='shop-info'>
+            <block wx:if="{{orderAddress!=null}}">
+                <view class='shop-info-top'>
+                    <text class='top-name'>收货人 : {{orderAddress.truename}}</text>
+                    <text class='top-phone'>{{orderAddress.mobile}}</text>
+                </view>
+                <view class='down-info'>收货地址：{{orderAddress.pcd+' '+orderAddress.info}}</view>
+            </block>
+            <block wx:else>
+                <view class='down-info'>请添加地址</view>
+            </block>
+        </view>
+        <!-- <image src='../../img/enter-icon.png'></image> -->
+    </view>
+
+    <view class='buy'>
+        <view class='buy-title'>
+            <image src='../../img/shop-iconBlack.png'></image>
+            <text class='store-name'>{{orderGoodList.order.shop_name}}</text>
+        </view>
+        <view class='buy-list' wx:for="{{orderGoodList.order_goods}}" wx:for-item='good' wx:key='good_id'>
+            <view class='goods-pic'>
+                <image src='{{imgurl+good.img}}'></image>
+            </view>
+            <view class='goods'>
+                <view class='top-goods'>
+                    <view class='goods-name'>{{good.good_name}}</view>
+                    <view class='format'>单位：{{good.unit}}</view>
+                </view>
+                <view class='bottom-goods'>
+                    <view class='goods-price'>
+                        <text class='price'> 原价： ¥{{good.price}}</text>
+                        <text class='price'>x{{good.num}}</text>
+                           <!-- <text class='price'>{{good.num}} </text> -->
+                      <block wx:if="{{orderGoodList.order.type=='限人' ||orderGoodList.order.type=='限人尾款'}}">
+                       <text class='price'> 团购价：¥{{good.price_group}}</text>
+                       <text class='price'> 订金：¥{{good.group_deposit}}</text>
+                      </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='submit-btn'>
+    <view class='left-submit {{from_=="look_detail" ? "s-submit" : ""}}' >合计金额 :
+        <text> ¥ {{orderGoodList.order.sum_price}}</text>
+    </view>
+    <block wx:if="{{from_=='to_pay'}}">
+        <button class='right-submit' disabled='{{payNowSt}}' bindtap='tapPayNow'>立即支付</button>
+    </block>
+</view>

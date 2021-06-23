@@ -1,0 +1,50 @@
+<!--pages/submit/submit.wxml-->
+<view class='shop-wrap'>
+
+        <view class='shop-title' bindtap='tapAddress'>
+            <image src='../../img/location-icon.png'></image>
+            <view class='shop-info'>
+                <block wx:if="{{address!=null}}">
+                    <view class='shop-info-top'>
+                        <text class='top-name'>收货人 : {{address.truename}}</text>
+                        <text class='top-phone'>{{address.mobile}}</text>
+                    </view>
+                    <view class='down-info'>收货地址：{{address.pcd+' '+address.info}}</view>
+                </block>
+                <block wx:else>
+                    <view class='down-info'>请添加地址</view>
+                </block>
+            </view>
+            <image src='../../img/enter-icon.png'></image>
+        </view>
+	
+    <view class='buy' wx:for='{{shopGoodList}}' wx:for-item='shop' wx:key='cart_id'>
+        <view class='buy-title'>
+            <image src='../../img/shop-iconBlack.png'></image>
+            <text class='store-name'>{{shop.shop_name}}</text>
+        </view>
+        <view class='buy-list' wx:for="{{shop.shop_goods}}" wx:for-item='good' wx:key='cart_good_id'>
+            <view class='goods-pic'>
+                <image src='{{imgurl+good.img}}'></image>
+            </view>
+            <view class='goods s-goods'>
+                <view class='top-goods'>
+                    <view class='goods-name'>{{good.good_name}}</view>
+                    <view class='format'>{{good.unit}}</view>
+                </view>
+                <view class='bottom-goods'>
+                    <view class='goods-price'>
+                        <text class='price s-price'> ¥ {{good.price}} </text>
+                        <text class='number'> x {{good.num}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='submit-btn'>
+    <view class='left-submit'>合计金额 :
+        <text> ¥ {{sum_price_all}}</text>
+    </view>
+    <button class='right-submit' disabled='{{sumitOrderSt}}' bindtap='tapAddOrder'>提交订单</button>
+</view>

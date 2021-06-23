@@ -1,0 +1,11 @@
+<!--pages/main/index.wxml-->
+<view class="container-box">
+  <view class="img-box">
+    <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas" />
+  </view>
+</view>
+
+ <!-- <view class='desc'>保存二维码到相册分享给好友</view> -->
+ <view class='submit' bindtap='buttonHandle'>
+    <button>保存到相册</button>
+  </view>

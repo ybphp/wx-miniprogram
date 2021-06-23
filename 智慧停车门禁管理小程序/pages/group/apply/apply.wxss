@@ -1,0 +1,56 @@
+.title {
+  width: 60vw;
+  height: 10vh;
+  border-radius: 5px;
+  margin: 20rpx auto 20rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+}
+
+.desc {
+  width: 95vw;
+  height: 60vh;
+  /* background-color: red; */
+  border: 1px solid lightgray;
+  margin: auto auto;
+  border-radius: 5px;
+}
+
+.buttons {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0; right: 0;
+  margin: auto auto;
+  bottom: 20rpx;
+}
+
+.submit {
+  width: 30vw;
+  height: 8vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.follow {
+  width: 30vw;
+  height: 8vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}

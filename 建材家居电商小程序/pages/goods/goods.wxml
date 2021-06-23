@@ -1,0 +1,65 @@
+<!--pages/goods/goods.wxml 商家列表页-->
+<!-- searchBar -->
+
+<view class='search-bar'>
+  <input type='text' placeholder='输入店铺名称' placeholder-class='input' confirm-type='search' bindconfirm='keywords'></input>
+  <image src='../../img/search-icon.png'></image>
+</view>
+
+<!-- scroll-nav -->
+<view class='nav-area'>
+  <view class='goods-nav'>
+    <text class="goods-total {{ isAll == 1 ? 'cateColor' : '' }}" bindtap='bindCate' data-select='0'>全部分类</text>
+    <scroll-view scroll-x class='classify '>
+      <block wx:for='{{getCate}}' wx:key='id'>
+        <view data-select='{{item.id}}' class="{{ item.id == cateSlt ? 'cateColor' : '' }}" bindtap='bindCate'>{{item.name}}</view>
+      </block>
+    </scroll-view>
+    <view class='classify-icon '>
+      <image src='../../img/down-icon.png ' bindtap='downNav'></image>
+    </view>
+  </view>
+  <view class='subnav '>
+    <view>商家排行</view>
+    <view data-nav='' class="{{busNav =='' ? 'active' : '' }}" bindtap='busNav'>销量</view>
+    <view data-nav='fankuinum' class="{{busNav =='fankuinum' ? 'active' : '' }}" bindtap='busNav'>好评</view>
+    <view data-nav='hot' class="{{busNav =='hot' ? 'active' : '' }}" bindtap='busNav'>热门</view>
+  </view>
+  <view class="{{showNav ? 'modal-nav' : 'modal-nav-hide' }}">
+    <block wx:for='{{getCate}}' wx:key='index'>
+      <view data-select='{{item.id}}' bindtap='bindSubnav'>{{item.name}}</view>
+    </block>
+  </view>
+</view>
+
+<!-- goods-content -->
+<block wx:if='{{getBus.length>0}}'>
+  <view class='goods-wrap '>
+    <block>
+    <view class='store-address-wrap' wx:for='{{getBus}}' wx:key="id">
+      <navigator url='/pages/store/store?shop_id={{item.shop_id}}' hover-class='none' >
+        <view class='goods-list '>
+          <image src='{{IMGURL + item.img}}' mode='aspectFill' ></image>
+          <text class='store-name'>{{item.shop_name}}</text>
+          <view class='store-info'>
+            <text class='goods-order'>订单数: {{item.ordernum}}</text>
+            <text class='goods-trade'>交易数: {{item.tradenum}}</text>
+          </view>
+          <view class='enter'>进入店铺</view>
+        </view>
+      </navigator>
+      </view>
+    </block>
+    <block wx:if= '{{current_page < last_page}}'>
+      <view class="weui-loadmore">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+      </view>
+    </block>
+  </view>
+</block>

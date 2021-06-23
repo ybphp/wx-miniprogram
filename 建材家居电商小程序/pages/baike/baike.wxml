@@ -1,0 +1,18 @@
+<!--pages/baike/baike.wxml-->
+
+<view class='article-wrap'>
+  <view class='article-title'>
+    <text>{{articleList.name}}</text>
+  </view>
+  <view class='article-subTitle'>
+    <text class='article-time'>{{articleList.update_time}}</text>
+    <image src='../../img/eye.png'></image>
+    <text>{{articleList.clicks}}</text>
+  </view>
+
+  <view class='article-cont'>
+    <image src='{{imgurl+articleList.img}}'></image>
+    <text>{{articleList.cont}}
+    </text>
+  </view>
+</view>

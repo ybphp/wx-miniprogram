@@ -1,0 +1,54 @@
+/* pages/collection/collection.wxss */
+
+@import '../house/house.wxss';
+
+.house-nav .house-active {
+  color: #ff4310;
+  border-bottom: 1px solid #ff4310;
+}
+
+.goods-col-list {
+  background-color: #fff;
+  display: flex;
+  padding: 0 20rpx;
+  padding-bottom: 10rpx;
+  align-items: center;
+}
+
+.goods-col-list image {
+  width: 180rpx;
+  height: 180rpx;
+  padding: 20rpx;
+  padding-right: 0;
+}
+
+.goods-col-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20rpx;
+  width: 460rpx;
+  height: 180rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.goods-col-info text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.goods-col-info .goods-col-price {
+  color: #ff4310;
+  margin-bottom: 10rpx;
+}
+
+.goods-col-info .goods-col-enter {
+  width: 140rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #ff4310;
+  border: 1px solid #ff4310;
+  border-radius: 30rpx;
+  margin-bottom: 20rpx;
+}

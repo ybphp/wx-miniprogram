@@ -1,0 +1,38 @@
+<!--pages/gDetail/gDetail.wxml-->
+
+<view class='g-wrap'>
+  <image src='{{imgurl+list.img_big}}' class='g-wrap-pic'></image>
+    <view class='g-ad'>
+      <view class='g-count'>
+        <image src='../../img/count-bg.png'>
+          <view class='g-count-txt'>
+            <text class='g-count-txt-price'>¥{{list.price_group}} <text class='g-count-txt-no'>¥{{list.good_price}}</text></text>
+            <text class='g-count-surplus'>距结束还剩 \n<text class='g-count-time'>{{clock}}</text></text> 
+          </view>
+        </image>
+      </view>
+  </view>  
+  <view class='g-ad-wrap'>
+    <text class='g-ad-title'>{{list.name}}</text>
+    <text class='g-ad-sale'>已售 {{list.already_sales}} 件</text>
+  </view>
+  <view class='g-ad-info'>装修无需苦等，上午买漆下午送到，多乐士邀您极速焕新家！店内优惠券/赠品/活动不间断</view>
+</view>
+
+<view class='g-detail-title'>
+  <text>一</text>
+  <text class='g-detail-ac'>图文详情</text>
+  <text>一</text>
+</view>
+<block wx:if='{{list.which_info == 1}}'>
+  <view class='g-detail-cont'>
+    <text class='g-detail-ac'>{{list.desc}}</text>
+  </view>
+</block>
+<block wx:if='{{list.which_info == 2}}'>
+  <view class='g-detail-cont'>
+    <image src='{{imgurl+list.imgs}}' mode='widthFix'></image>
+  </view>
+</block>
+
+<view class='g-detail-bottom' bindtap='tapGoOrderConfirm'>立即抢购</view>

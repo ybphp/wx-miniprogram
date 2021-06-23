@@ -1,0 +1,73 @@
+@import '../common/index.wxss';
+.profile {
+  width: 100%;
+  height: 20vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 10px solid #EEECED;
+}
+.avatar {
+  height: 200rpx;
+  width: 200rpx;
+  background-color: lightblue;
+  border-radius: 50%;
+}
+.detail {
+  width: 50%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.name {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50rpx;
+}
+.desc {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  color: gray;
+}
+ page {
+   width: 100%;
+   height: 100%;
+   background-color: white;
+} 
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+  border-bottom: 1px solid #EEECED;
+}
+.form-item {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-item-image {
+  width: 20vw;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-item-title {
+  width: 80vw;
+  height: 8vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30rpx;
+  line-height: 8vh;
+  margin-left: 40rpx;
+}

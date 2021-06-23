@@ -1,0 +1,25 @@
+<!--pages/assess/assess.wxml-->
+  <view class='assess-nav'>
+    <view class='assess-total'>全部</view>
+    <view>好评({{getList.evalute.best==null?'0':getList.evalute.best}})</view>
+    <view>中评({{getList.evalute.mid==null?'0':getList.evalute.mid}})</view>
+    <view>差评({{getList.evalute.bad==null?'0':getList.evalute.bad}})</view>
+  </view>
+
+
+<view class='assess-wrap'>
+  <block wx:for="{{getList}}" wx:key="id">
+    <view class='evalution-list'>
+      <view class='evalution-title'>
+        <view class='evalution-user'>
+          <image src='{{item.vistar}}'></image>
+          <text>{{item.nickname}}</text>
+        </view>
+        <view class='evalution-date'>{{item.create_time}}</view>
+      </view>
+      <view class='textarea'>
+        {{item.cont}}
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/teamBuy/teamBuy.wxml-->
+
+<view class='team-wrap'>
+  <!-- house-header -->
+  <view class='house-nav'>
+    <view class="house-history {{currentTab==0 ? 'team-active' : ''}}" data-current='0' bindtap='switchNav'>立即拼团</view>
+    <view class="house-history {{currentTab==1 ? 'team-active' : ''}}" data-current='1' bindtap='switchNav'>历史拼团</view>
+  </view>
+
+  <swiper duration='300' current='{{currentTab}}' bindchange='houseChange' class='house-swiper' style="height: {{winHeight+'px'}}">
+    <swiper-item>
+      <view class='house-cont'>
+        <block wx:for="{{list}}" wx:key='id'>
+        <navigator url='/pages/goodDetail/goodDetail?t_id={{item.t_id}}'>
+          <view class='house-list'>
+            <image src='{{imgurl+item.good_img}}' class='house-list-pic'>
+              <image src='../../img/ongoing-bg.png'></image>
+            </image>
+            <text class='house-name'>{{item.good_name}}</text>
+            <view class='team-wrap team-wrap-bg'>
+              <text class='team-price'>¥{{item.price_group}}</text>
+              <text>此活动仅需{{item.pnum}}人!</text>
+            </view>
+          </view>
+        </navigator>
+        </block>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <block wx:for="{{history}}" wx:key='id'>
+      <navigator url='/pages/article/article?a_id={{item.a_id}}'>
+      <view class='house-cont'>
+        <view class='house-list'>
+          <image src='{{imgurl+item.good_img}}' class='house-list-pic'>
+            <image src='../../img/end-bg.png'></image>
+          </image>
+          <text class='house-name'>{{item.good_name}}</text>
+          <view class='team-wrap'>
+            <text class='team-price'>¥{{item.price_group}}</text>
+            <text>此活动仅需{{item.pnum}}人!</text>
+          </view>
+        </view> 
+      </view>
+      </navigator>
+      </block>
+    </swiper-item>
+  </swiper>
+</view>

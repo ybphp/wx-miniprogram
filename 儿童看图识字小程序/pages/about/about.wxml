@@ -1,0 +1,7 @@
+
+<contact-button 
+  type="default-dark" 
+  size="100"
+  session-from="weapp"
+>
+</contact-button>

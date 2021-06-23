@@ -1,0 +1,33 @@
+<view class='textarea'>
+  <textarea show-confirm-bar='true' bindinput='textareaInput' value='{{content}}'></textarea>
+</view>
+<view class='tips'>
+  <view style='color: red;font-size: 30rpx;'>*</view>
+  <view style='font-size: 20rpx; color: lightgray;margin-left: 20rpx; color: #C0C0C0;'>您的意见是我们前进得动力</view>
+</view>
+<view class='character' style='color: #C0C0C0;'>{{characterNum}}/140</view>
+
+<view class='category'>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}">
+    <view class='picker'>
+      <view class='picker-title'>类型</view>
+      <view class='picker-content'>{{list[index]}}</view>
+      <view class="navigator-arrow" style='margin-left: 40rpx;'></view>
+    </view>
+  </picker>
+</view>
+<view class='contact'>
+<view class='contact-title'>联系电话</view>
+<view class='contact-input'><input placeholder='选填' placeholder-style='color: lightgray;' bindinput='phoneInput'></input></view>
+
+</view>
+<view class='button' bindtap='submit'>提交
+</view>
+
+<view class='phone'>
+  <view class='call' bindtap='makePhoneCall'>
+    <image src='http://aiworks.oss-cn-beijing.aliyuncs.com/index/contact.png' style='height: 60rpx; width: 60rpx;'></image>
+    <text>客服电话</text>
+  </view>
+  <view class='phone-tips'>如有任何问题请拨打电话</view>
+</view>

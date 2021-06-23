@@ -1,0 +1,4 @@
+/* pages/record/applyrecord.wxss */
+.icon-lajixiang {
+    font-size: 1.1rem!important;
+}

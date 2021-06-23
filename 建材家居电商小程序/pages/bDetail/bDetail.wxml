@@ -1,0 +1,62 @@
+<!--pages/bDetail/bDetail.wxml 商品详情-->
+
+<view class='b-banner'>
+<swiper indicator-dots="true" class='swiper' indicator-color="#fff" indicator-active-color="#d1a87a" interval="true" duration="1000" circular='true'>
+  <block wx:if="{{good.img_big_st == 1}}">
+    <block wx:for="{{goodImg}}">
+      <swiper-item>
+        <image src="{{imgurl+item.img_big}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </block>
+  <block wx:else>
+      <swiper-item>
+        <image src="{{imgurl+good.img_big}}" class="slide-image" />
+      </swiper-item>
+  </block>
+</swiper>
+  <text class='b-title'>{{good.name}}</text>
+  <text class='b-price'>¥ {{good.price}}</text>
+</view>
+
+<view class='b-format'>
+  <text>购买数量：</text>
+  <view class='input-buy'>
+    <text bindtap='decrease' class='{{decrease}}'>-</text>
+    <input type='text' placeholder='{{inputNum}}' placeholder-class='input-place' maxlength='3' binchange='placeChange' disabled='true'></input>
+    <text bindtap='increase'>+</text>
+  </view>
+</view>
+
+<view class='b-inner'>
+  <text class='b-inner-title'>详情展示</text>
+  <block wx:if="{{good.which_info==1}}">
+    <text class='b-inner-title'>{{good.desc}}</text>
+  </block>
+  <block wx:else>
+    <image src='{{imgurl+good.imgs}}' mode='widthFix'></image>
+  </block>
+
+</view>
+
+<view class='b-bottom-option'>
+    <view class='b-comment'>
+        <image src='../../img/message-icon.png'></image>
+        <text>留言</text>
+    </view>
+    <view class='b-favorate' bindtap='tapCollectGood' data-good_id="{{good.id}}">
+        <image src='../../img/{{collect_star}}'></image>
+        <text class="{{Collect ? 'isCollect' : ''}}">收藏</text>
+    </view>
+    <view class='b-cart' >
+        <text bindtap='tapAddCartGood' data-good_id="{{good.id}}">加入购物车</text>
+    </view>
+
+    <view class='b-enter'>
+
+            <text bindtap='tapAddCartGood' data-mai='true' data-good_id="{{good.id}}">立即购买</text>
+      
+    </view>
+
+
+</view>

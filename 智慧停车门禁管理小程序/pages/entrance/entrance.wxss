@@ -1,0 +1,20 @@
+.face {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400rpx;
+  width: 400rpx;
+  margin: auto auto;
+  margin-top: 200rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.desc {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}

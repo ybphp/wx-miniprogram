@@ -1,0 +1,178 @@
+<!--pages/store/store.wxml 商家详情-全部宝-->
+
+<!-- store-header -->
+<view class='store-header'>
+  <view class='store-info'>
+    <view class='left-info'>
+      <image src='{{imgurl+shopInfo.img}}'></image>
+      <view class='store-header-info'>
+        <text class='store-header-name'>{{shopInfo.name}} <text class='city'>{{shopInfo.city}}</text></text>
+        <view class='mark'>
+          <image src='../../img/medal.png'></image>
+          <image src='../../img/medal.png'></image>
+          <image src='../../img/medal.png'></image>
+          <image src='../../img/medal.png'></image>
+          <text>团购商家</text>
+        </view>
+      </view>
+    </view>
+    <view class='right-info'>
+      <view class='info-sale'>销量: {{shopInfo.ordernum}}</view>
+      <view class='info-assess'>评价: 0</view>
+    </view>
+  </view>
+  <view class='store-tag'>{{shopInfo.info}}</view>
+</view>
+<!-- swiper -->
+<view class='swiper-scroll-wrap'>
+  <view class='swiper-wrap'>
+    <image src='../../img/bugle-icon.png'></image>
+    <text class='discount-info'>优惠资讯 : </text>
+    <swiper circular='true' autoplay="true" interval="3000" duration="500" class='store-swiper' vertical='true'>
+      <block wx:for="{{information}}" wx:key='index'>
+        <swiper-item>
+          <text>{{item.textUrl}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<!-- store-nav -->
+
+<view class='store-nav'>
+  <view class="{{currentTab==0 ? 'nav-active' : ''}}" data-current='0' bindtap='switchNav'>全部宝贝</view>
+  <view class="{{currentTab==1 ? 'nav-active' : ''}}" data-current='1' bindtap='switchNav'>门店地址</view>
+  <view class="{{currentTab==2 ? 'nav-active' : ''}}" data-current='2' bindtap='switchNav'>商家详情</view>
+  <view class="{{currentTab==3 ? 'nav-active' : ''}}" data-current='3' bindtap='switchNav'>全部评价</view>
+</view>
+
+<!-- goods-list -->
+<!-- <swiper duration='300' current='{{currentTab}}' bindchange='storeChange' class='store-content-swiper' style="height: {{winHeight+'px'}}" bindchange='storeChange'> -->
+
+<!-- total-goods -->
+<!-- <swiper-item> -->
+<view class='switch-wrap'>
+  <view class="{{currentTab==0 ? ' show ' : ' hide '}}" data-current='0'>
+    <view class='goods-detail-wrap '>
+      <block wx:if="{{shopGoods.length>0}}">
+        <view class='store-address-wrap' wx:for="{{shopGoods}}" wx:key="id">
+          <navigator url='/pages/bDetail/bDetail?good_id={{item.id}}'>
+            <view class='goods-list '>
+              <image src="{{imgurl+item.img}}" mode='aspectFill'></image>
+              <text class='store-name '>{{item.name}}</text>
+              <view class='store-price'>{{item.price}}
+                <block wx:if="{{item.unit}}">/{{item.unit}}</block>
+              </view>
+            </view>
+          </navigator>
+        </view>
+        <block wx:if='{{current_page < last_page}}'>
+          <view class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">我是有底线的</view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+  <!-- </swiper-item> -->
+
+  <!-- store-address -->
+  <!-- <swiper-item> -->
+  <view class="{{currentTab==1 ? ' show ' : ' hide '}}" data-current='1'>
+    <block wx:if="{{shopAddr.length>0}}">
+      <view class='store-address-wrap' wx:for="{{shopAddr}}" wx:key="id">
+        <view class='address-msg'>
+          <view class='address-msg-name'>{{item.name_}}</view>
+          <view class='bussiness-detail'>
+            <view class='bus-list'>
+              <text>联系人 :</text>
+              <text>{{item.truename_}}</text>
+            </view>
+            <view class='bus-list'>
+              <text>电　话 :</text>
+              <text>{{item.mobile_}}</text>
+            </view>
+            <view class='bus-list'>
+              <text>座　机 :</text>
+              <text>{{item.zuoji}}</text>
+            </view>
+            <view class='bus-list'>
+              <text>地　址 :</text>
+              <text>{{item.address_}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- <image src='../../img/store.jpg'></image> -->
+      </view>
+    </block>
+  </view>
+  <!-- </swiper-item> -->
+
+  <!-- bussiness-detail -->
+  <!-- <swiper-item> -->
+  <view class="{{currentTab==2 ? ' show ' : ' hide '}}" data-current='2'>
+    <view class='bussiness-detail'>
+      <view class='bus-list'>
+        <text>所在地 :</text>
+        <text>{{shopInfo.addr}}</text>
+      </view>
+      <view class='bus-list'>
+        <text>联系电话 :</text>
+        <text>{{shopInfo.phone}}</text>
+      </view>
+      <view class='bus-list'>
+        <text class='bus-list-info'>商家简介 :</text>
+        <text class='bus-list-sub'> {{shopInfo.info}}</text>
+      </view>
+      <view class='bus-list'>
+        <text>经营品牌 :</text>
+        <text> {{shopInfo.brand}}</text>
+      </view>
+      <view class='bus-list'>
+        <text>二维码 :</text>
+        <image src='../../img/collect-pic.jpg'></image>
+      </view>
+    </view>
+  </view>
+  <!-- </swiper-item> -->
+
+  <!-- total-evalution -->
+  <!-- <swiper-item> -->
+  <view class="evalution-wrap {{currentTab==3 ? ' show ' : ' hide '}}" data-current='3'>
+    <block wx:if="{{ShopEvalute.length>0}}">
+      <view class='evalution-list' wx:for="{{ShopEvalute}}">
+        <view class='evalution-title'>
+          <view class='evalution-user'>
+            <image src='{{item.vistar}}'></image>
+            <text>{{item.nickname}}</text>
+          </view>
+          <view class='evalution-date'>{{item.create_time}}</view>
+        </view>
+        <view class='textarea'>
+          {{item.cont}}
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<!-- </swiper-item>
+</swiper> -->
+
+<view class='bottom-goods-slt'>
+  <view class='comments'>
+    <image src='../../img/message-icon.png'></image>
+    <text>留言</text>
+  </view>
+  <view class='b-favorate' bindtap='tapCollectShop' data-shop_id="{{shop_id}}">
+    <image src='../../img/{{collect_star}}'></image>
+    <text class="{{Collect ? 'isCollect' : ''}}">收藏</text>
+  </view>
+  <view class='earnest' bindtap='tapOrderConfirmDeposit'>付订金</view>
+  <view class='purchase' bindtap='tapOrderConfirmAllMoney'>付全款</view>
+</view>

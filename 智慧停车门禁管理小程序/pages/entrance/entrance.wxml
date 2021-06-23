@@ -1,0 +1,9 @@
+<view class="face" bindtap="scanCode">
+<image src="http://aiworks.oss-cn-beijing.aliyuncs.com/entrance/scan.png" style="width:270rpx; height: 270rpx;"></image>
+<text>扫码开锁</text>
+</view>
+
+<view class='desc'>
+<text>请点击上方按钮扫描二维码开启门禁</text>
+<text>未认证员工需联系管理员进行认证</text>
+</view>

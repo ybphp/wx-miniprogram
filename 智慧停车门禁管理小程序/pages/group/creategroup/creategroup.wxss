@@ -1,0 +1,38 @@
+.title {
+  width: 60vw;
+  height: 10vh;
+  margin: 20rpx auto 20rpx auto;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: gainsboro 1px solid;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.desc {
+  width: 100%;
+  height: 120rpx;
+  margin-top: 30rpx;
+}
+.txt {
+  width: 95vw;
+  height: 60vh;
+  margin: 20rpx auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.btn {
+  height: 8vh;
+  width: 95vw;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20rpx;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0; right: 0;
+  margin: auto auto;
+}

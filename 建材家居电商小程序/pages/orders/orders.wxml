@@ -1,0 +1,144 @@
+<!--pages/orders/orders.wxml-->
+
+<view class='order-wrap'>
+    <view class='order-nav'>
+        <view class="{{currentTab==0 ? 'order-active' : ''}}" data-current='0' bindtap='switchNav'>全部订单</view>
+        <view class="{{currentTab==1 ? 'order-active' : ''}}" data-current='1' bindtap='switchNav'>待付款</view>
+        <view class="{{currentTab==2 ? 'order-active' : ''}}" data-current='2' bindtap='switchNav'>已付款</view>
+    </view>
+    <swiper duration='300' current='{{currentTab}}' bindchange='houseChange' class='house-swiper' style="height: {{winHeight+'px'}}">
+        <!-- 所有订单 -->
+        <swiper-item>
+            <!-- 订单循环-->
+            <view class='order-list' wx:for='{{orders}}' wx:key='id' wx:for-item='shop'>
+                <view class='order-title'>
+                    <text>{{shop.shop_name}}</text>
+
+                    <text class='order-success'>{{shop.st}}</text>
+                </view>
+                <!-- 订单商品循环 -->
+                <view class='order-info' wx:for="{{shop.goods}}" wx:key='good_id' wx:for-item='good' wx:for-index='good_index'>
+                    <navigator url="/pages/bDetail/bDetail?good_id={{good.good_id}}">
+                        <image src='{{imgurl+good.img}}'></image>
+                    </navigator>
+                    <view class='order-cont'>
+                        <text class='order-cont-title'>{{good.name}}</text>
+                        <view class='order-format'>
+                            <text>规格 :{{good.unit}}</text>
+                             <text>单价 : {{good.price}}</text>
+                            <text>数量 : {{good.num}}</text>
+                            <block wx:if="{{shop.st=='已支付'}}">
+                                <text>物流 : {{good.st}}</text>
+                            </block>
+                      <text>订单号:{{shop.orderno}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='order-total'>
+<block wx:if="{{shop.type=='普通'}}">
+   <text>共{{shop.good_num}}件商品</text>
+</block>
+                 
+   <text>类型:</text>
+                    <text>{{shop.type}}</text>
+                    <text>合计:</text>
+                    <text>¥{{shop.sum_price}}</text>
+                </view>
+                <view class='select-btn'>
+                    <block wx:if="{{shop.st=='已支付' && shop.goodst=='已收货'}}">
+                        <text class='point-slt' bindtap="tapOrderFankui" data-order_id="{{shop.id}}">评价</text>
+                    </block>
+                    <block wx:if="{{shop.st=='已支付' && shop.goodst=='已发货'}}">
+                        <text class='point-slt' bindtap="tapGoodConfirm" data-order_id="{{shop.id}}">确认收货</text>
+                    </block>
+                    <block wx:if="{{(shop.st=='用户取消') || shop.goodst=='已收货' || shop.goodst=='已评价'}}">
+                        <text class='point-slt' bindtap="tapOrderDelete" data-order_id="{{shop.id}}">删除</text>
+                    </block>
+                    <text data-type_="{{shop.type}}" data-order_id="{{shop.id}}" data-address_id="{{shop.address_id}}" bindtap="tapLookDetail">订单详情</text>
+                    <block wx:if="{{shop.st=='待支付'}}">
+                        <text bindtap="tapCancelOrder" data-order_id="{{shop.id}}">取消订单</text>
+                        <text class='point-slt' bindtap="tapGoOrderConfirm" data-order_id="{{shop.id}}" data-address_id="{{shop.address_id}}" data-type_="{{shop.type}}">去支付</text>
+                    </block>
+                </view>
+            </view>
+        </swiper-item>
+        <!-- 待付款 -->
+        <swiper-item>
+
+            <view class='order-list' wx:for="{{order_no_pay}}" wx:for-item='shop' wx:key='id'>
+                <view class='order-title'>
+                    <text>{{shop.shop_name}}</text>
+                    <text class='order-success'>{{shop.st}}</text>
+                </view>
+
+                <view class='order-info' wx:for="{{shop.goods}}" wx:key='good_id' wx:for-item='good'>
+                    <image src='{{imgurl+good.img}}'></image>
+                    <view class='order-cont'>
+                        <text class='order-cont-title'>{{}}</text>
+                        <view class='order-format'>
+                            <text>规格 :{{good.unit}}</text>
+                              <text>单价 : {{good.price}}</text>
+                            <text>数量 : {{good.num}}</text>
+                          <text>订单号:{{shop.orderno}}</text>
+                        </view>
+                    </view>
+                </view>
+
+                <view class='order-total'>
+                    <text>共{{shop.good_num}}件商品</text>
+                    <text>合计:</text>
+                    <text>¥{{shop.sum_price}}</text>
+                </view>
+                <view class='select-btn'>
+                    <text data-order_id="{{shop.id}}" data-address_id="{{shop.address_id}}" bindtap="tapLookDetail" data-type_="{{shop.type}}">订单详情</text>
+                    <text bindtap="tapCancelOrder" data-order_id="{{shop.id}}">取消订单</text>
+                    <text class='point-slt' bindtap="tapGoOrderConfirm" data-order_id="{{shop.id}}" data-address_id="{{shop.address_id}}" data-type_="{{shop.type_}}">去支付</text>
+                </view>
+            </view>
+        </swiper-item>
+
+        <!-- 已付款 -->
+        <swiper-item>
+            <view class='order-list' wx:for="{{order_paid}}" wx:for-item='shop' wx:key='id'>
+                <view class='order-title'>
+                    <text>{{shop.shop_name}}</text>
+                    <text class='order-success'>{{shop.st}}</text>
+                </view>
+
+                <view class='order-info' wx:for="{{shop.goods}}" wx:key='good_id' wx:for-item='good'>
+                    <image src='{{imgurl+good.img}}'></image>
+                    <view class='order-cont'>
+                        <text class='order-cont-title'>{{}}</text>
+                        <view class='order-format'>
+                            <text>规格 :{{good.unit}}</text>
+                            <text>单价 : {{good.price}}</text>
+                            <text>数量 : {{good.num}}</text>
+                            <text>物流 : {{good.st}}</text>
+                            <text>订单号 : {{shop.orderno}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class='order-total'>
+                    <text>共{{shop.good_num}}件商品</text>
+                    <text>合计:</text>
+                    <text>¥{{shop.sum_price}}</text>
+                </view>
+                <view class='select-btn'>
+                    <text data-order_id="{{shop.id}}" data-address_id="{{shop.address_id}}" bindtap="tapLookDetail" data-type_="{{shop.type}}">订单详情</text>
+                    <block wx:if="{{shop.st=='已支付' && shop.goodst=='已收货'}}">
+                        <text class='point-slt' bindtap="tapOrderFankui" data-order_id="{{shop.id}}" data-shop_id="{{shop.shop_id}}">评价</text>
+                    </block>
+                         <block wx:if="{{shop.goodst=='已收货'}}">
+                        <text class='point-slt' bindtap="tapOrderDelete" data-order_id="{{shop.id}}">删除</text>
+                    </block>
+                    <block wx:if="{{shop.st=='已支付' && shop.goodst=='已发货'}}">
+                        <text class='point-slt' bindtap="tapGoodConfirm" data-order_id="{{shop.id}}">确认收货</text>
+                    </block>
+
+                </view>
+            </view>
+
+
+        </swiper-item>
+    </swiper>
+</view>

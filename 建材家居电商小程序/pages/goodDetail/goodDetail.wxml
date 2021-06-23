@@ -1,0 +1,85 @@
+<!--pages/goodDetail/goodDetail.wxml-->
+
+<view class='g-wrap'>
+    <view class='g-banner'>
+        <swiper indicator-dots="true" class='swiper' indicator-color="#fff" indicator-active-color="#d1a87a" interval="true" duration="1000" circular='true'>
+            <block wx:if="{{getList.img_big_st == 1}}">
+                <block wx:for="{{goodImg}}">
+                    <swiper-item>
+                        <image src="{{imgurl+item.img_big}}" class="slide-image" />
+                    </swiper-item>
+                </block>
+            </block>
+            <block wx:else>
+                <swiper-item>
+                    <image src="{{imgurl+getList.img}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <!-- <view class='count-down'>
+      <text class='count-title'>距活动结束还有: </text>
+      <text class='count-down-time'>{{clock}}</text>
+    </view> -->
+        <text class='g-group'>【{{getList.pnum}}人团】 <text class='g-group-title'>{{getList.good_name}}</text></text>
+        <view class='g-info'>
+            <text class='g-price'>¥{{getList.price_group}} <text class='g-price-line'>¥{{getList.good_price}}</text></text>
+            <text class='g-people'>已有{{getList.attend_pnum}}人参团</text>
+        </view>
+    </view>
+
+    <text class='good-detail-title'>宝贝详情</text>
+    <block wx:if='{{getList.which_info == 1}}'>
+        <view class='good-detail'>
+            <text>{{getList.desc}}</text>
+        </view>
+    </block>
+    <block wx:if='{{getList.which_info == 2}}'>
+        <view class='good-detail'>
+            <image src='{{imgurl+getList.imgs}}' mode='widthFix'></image>
+        </view>
+    </block>
+
+</view>
+
+<view class='bottom-option'>
+    <!-- <view class='good-favorate'>
+    <image src='../../img/collect2-icon.png'></image>
+    <text>收藏</text>
+  </view> -->
+    <block wx:if='{{orderDeposit && orderFinal==null && orderDeposit.st=="待支付"}}'>
+        <view class='good-enter' bindtap='tapGogoPayDeposit'>
+            <text>您已下了订金订单，请先支付</text>
+        </view>
+    </block>
+     <block wx:if='{{orderDeposit && orderFinal && orderFinal.st=="待支付" && orderDeposit.st=="已支付" && getList.group_st=="活动成功"}}'>
+        <view class='good-enter' bindtap='tapGogoPayFinal'>
+            <text>您已下了尾款订单，请先支付</text>
+        </view>
+    </block>
+        <block wx:if='{{orderFinal && orderFinal.st=="已支付" }}'>
+        <view class='good-enter' bindtap='tapGoToOrders'>
+            <text>您的团购已成功，商家会在48小时内发货</text>
+        </view>
+    </block>
+      <block wx:if='{{orderFinal && orderFinal.goodst=="已收货" || orderFinal.goodst=="已评价" }}'>
+        <view class='good-enter' >
+            <text>您的团购已成功</text>
+        </view>
+    </block>
+      <block wx:if='{{orderDeposit && orderDeposit.st=="已支付"  && orderFinal==null && getList.group_st=="正在进行"}}'>
+        <view class='good-enter' >
+            <text>您已支付过订金，请等待活动成功再付尾款</text>
+        </view>
+    </block>
+      <block wx:if='{{orderDeposit && orderFinal==null && orderDeposit.st=="已支付" && getList.group_st=="活动成功"}}' >
+        <view class='good-enter' bindtap='tapOrderGroupFinal'>
+            <text>已付订金，活动成功，去付尾款</text>
+        </view>
+    </block>
+         
+    <block wx:if='{{orderDeposit==null && orderFinal==null}}'>
+        <view class='good-enter' bindtap='orderConfirmGroupDeposit'>
+            <text>我要参团,付订金（{{getList.deposit}}元）</text>
+        </view>
+    </block>
+</view>

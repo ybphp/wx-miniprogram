@@ -1,0 +1,38 @@
+<!--pages/submit/submit.wxml 付订金-->
+
+    <view class='shop-wrap'>
+        <view class='shop-title' >
+            <image src='../../img/location-icon.png'></image>
+            <view class='shop-info'>
+                <block wx:if="{{address!=null}}">
+                    <view class='shop-info-top'>
+                        <text class='top-name'>姓名 : {{address.truename+' '}} </text>
+                        <text class='top-phone'> {{address.mobile}}</text>
+                    </view>
+                    <view class='down-info'>地址：{{address.pcd+' '+address.info}}</view>
+                </block>
+                <block wx:else>
+                    <view class='down-info'>请添加地址</view>
+                </block>
+            </view>
+            <!-- <image src='../../img/enter-icon.png'></image> -->
+        </view>
+
+        <view class='buy'>
+            <view class='buy-title'>
+                <image src='../../img/shop-iconBlack.png'></image>
+                <text class='store-name'>{{orderDetail.shop_name}}</text>
+            </view>
+
+                   </view>
+    </view>
+    <view class='submit-btn'>
+
+        <view class='left-submit  {{from_!="to_pay" ? "s-submit" : ""}}'>{{texttip}} :
+
+            <text> ¥ {{orderDetail.sum_price}}</text>
+        </view>
+            <block wx:if="{{from_=='to_pay'}}">
+        <button  class='right-submit' disabled='{{payNowSt}}'  bindtap='tapPayNow'>立即支付</button>
+         </block>
+    </view>
