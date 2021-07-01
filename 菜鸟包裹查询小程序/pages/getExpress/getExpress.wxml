@@ -1,0 +1,18 @@
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+     <view class="text-xxl text-blue" style="text-align: center;">妈妈驿站</view>
+      <view class="padding flex text-center text-grey bg-white shadow-warp">
+      <view class="flex flex-sub flex-direction">
+        <view class="text-xl text-green">18-22</view>
+        <view class="margin-top-m">
+          <text>淘宝|护目镜防飞溅...</text>
+        </view>
+        <view class="margin-top-sm">
+          <text>圆通速递：YT111111</text>
+        </view>
+        <view class="margin-top-sm">
+         <text>入站时间：03-18 4:14:22</text>
+        </view>
+
+      </view>
+    </view>
+  </view>

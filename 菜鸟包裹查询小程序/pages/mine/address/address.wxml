@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="dizhi">
+    <view class="padding-lr bg-white margin-top">
+      <view class="solid-bottom padding">
+      <text class="text-blue text-bold">LiLI
+    </text>
+      <text class="text-ABC">15133339999</text>
+      </view>
+      <view class="padding">江苏省苏州市昆山市浦东软件园</view>
+    </view>
+    <view class="padding-lr bg-white margin-top">
+      <view class="solid-bottom padding">
+      <text class="text-blue text-bold">HuZX</text>
+      <text class="text-ABC">15133339999</text>
+      </view>
+      <view class="padding">江苏省苏州市昆山市浦东软件园</view>
+   </view>
+  </view>
+</view>

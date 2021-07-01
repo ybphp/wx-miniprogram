@@ -1,0 +1,32 @@
+<scroll-view scroll-y class="scrollPage">
+<view class="UCenter-bg">
+    <view class="margin-top-sm">
+      <button id="btn" size="small" style="width:70px;" class="cu-btn round cuIcon-location">400m</button>
+    </view>
+    <view class="text-xl">广东某某5号店</view>
+    <view class="margin-top-sm">
+      <text>广东广州白云区aa</text>
+    </view>
+</view>
+
+<view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm">
+        <text></text>联系驿站</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm">
+        <text></text> 用户评价</view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <text style="margin-left:1em">附近驿站：</text>
+      <view class="padding flex text-center text-grey bg-white shadow-warp">
+      <view class="flex flex-sub flex-direction">
+        <view class="text-l text-green">广州驿站</view>
+        <view class="margin-top-sm">
+          <text></text>广州某某学院</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

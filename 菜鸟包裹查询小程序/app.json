@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/post/post",
+    "pages/getExpress/getExpress",
+    "pages/goExpress/goExpress",
+    "pages/mine/address/address",
+    "pages/mine/mine",
+    "pages/mine/fanKui/fanKui"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "仿菜鸟裹裹",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/shouye1.png",
+        "selectedIconPath": "images/icon/shouye.png"
+      },
+      {
+        "pagePath": "pages/getExpress/getExpress",
+        "text": "取件",
+        "iconPath": "images/icon/qujian1.png",
+        "selectedIconPath": "images/icon/qujian.png"
+      },
+      {
+        "pagePath": "pages/goExpress/goExpress",
+        "text": "寄件",
+        "iconPath": "images/icon/jijian1.png",
+        "selectedIconPath": "images/icon/jijian.png"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "text": "驿站",
+        "iconPath": "images/icon/yizhanxiangqing_o1.png",
+        "selectedIconPath": "images/icon/yizhanxiangqing_o.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/icon/renwu1.png",
+        "selectedIconPath": "images/icon/renwu.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

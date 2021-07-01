@@ -1,0 +1,17 @@
+/* pages/mine/mine.wxss */
+.UCenter-bg{
+  background-color: rgb(205, 233, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#imageTop{
+  margin-top: 2rem;
+  /* flex: 1; */
+  margin-bottom: 2rem;
+}
+#textTop{
+  flex: 2;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}

@@ -1,0 +1,62 @@
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box {  
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.weui-tabbar {
+  display: flex;
+  position: absolute;
+  top:50px;
+  width: 100%;
+  z-index: 500;
+  /* background-color: #F7F7FA; */
+}
+.weui-tabbar__item {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  /* 顺时针 */
+  padding: 5px 0 0;
+  font-size: 0;
+  color: #808080;
+}
+/* .weui-tabbar__item > span {
+  display: inline-block;
+  position: relative;
+} */
+.weui-tabbar__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.weui-tabbar__label{
+  font-family: sans-serif;
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  color: #808080;
+  text-align: center;
+  line-height: 1;
+  /* font-weight: 1000; */
+  /*相对于font—size*/
+
+}
+.lunbo{
+  width: 90%;
+  margin-top: 2em;
+}
+.navChoose{
+  width: 100%;
+  margin-top: 1em;
+}
+.navContent{
+  width: 100%;
+}

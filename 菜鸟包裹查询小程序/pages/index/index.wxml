@@ -1,0 +1,186 @@
+<view class="container">
+  <view class="box">
+  <!-- 搜索框 -->
+    <view class="cu-bar search bg-white">
+      <view class="cu-avatar " style="width:50rpx;height:50rpx;background-image:url(https://636c-cloud-912718-1257892962.tcb.qcloud.la/images2/saoma.jpg?sign=22ecf7d2269084181e8ace24c1319b06&t=1542775996);"></view>
+      <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="全网包裹一键查" confirm-type="search"></input>
+      </view>
+       <view class="cu-avatar " style="margin-right:0.5rem;width:50rpx;height:50rpx;background-image:url(https://636c-cloud-912718-1257892962.tcb.qcloud.la/images2/5.jpg?sign=62596b8fb882fafa4735a7bb02ec48cf&t=1542775874);"></view>
+    </view>
+  </view>
+  <!-- 第一排图标 -->
+  <view class="weui-tabbar" style="background:white">
+    <icon href="#" class="weui-tabbar__item weui-tabbar__item_on">
+      <icon>
+        <image mode="aspectFit" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1681163837,3822879690&fm=26&gp=0.jpg" alt="" class="weui-tabbar__icon"></image>
+      </icon>
+      <icon class="weui-tabbar__label" bindtap='scanCode'>会员</icon>
+    </icon>
+    <icon href="#" class="weui-tabbar__item weui-tabbar__item_on" >
+      <icon>
+        <image mode="aspectFit" src="https://636c-cloud-912718-1257892962.tcb.qcloud.la/images2/2.jpg?sign=2c956d50da50cdf22b74812d1cc51b12&t=1542776039" alt="" class="weui-tabbar__icon"></image>
+      </icon>
+      <icon class="weui-tabbar__label" >跑腿代购</icon>
+    </icon>
+    <icon href="#" class="weui-tabbar__item weui-tabbar__item_on" >
+      <icon>
+        <image mode="aspectFit" src="https://636c-cloud-912718-1257892962.tcb.qcloud.la/images2/3.jpg?sign=a9cbe061ac103a8e380f73f8c56cec2c&t=1542776057" alt="" class="weui-tabbar__icon"></image>
+      </icon>
+      <icon class="weui-tabbar__label">精灵书屋</icon>
+    </icon>
+    <icon href="#" class="weui-tabbar__item weui-tabbar__item_on" >
+      <icon>
+        <image mode="aspectFit" src="https://636c-cloud-912718-1257892962.tcb.qcloud.la/images2/4.jpg?sign=da2382ecf07e72710947db853406d600&t=1542776076" alt="" class="weui-tabbar__icon"></image>
+      </icon>
+      <icon class="weui-tabbar__label">领裹酱</icon>
+    </icon>
+  </view>
+  <!-- 轮播 -->
+  <view class="lunbo">
+    <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{swiperList}}" wx:key>
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </swiper-item>
+    </swiper>
+  </view>
+  <!-- nav多选 -->
+  <view class="navChoose">
+    <scroll-view scroll-x class="bg-white nav">
+      <view class="flex text-center">
+        <view class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+           {{tabNav[index]}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+<!-- nav内容 -->
+<block wx:if="{{TabCur==0}}">
+  <view class="navContent">
+   <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3879362015,2860370572&fm=26&gp=0.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">运输中</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class=" text-red  margin-right-xs">天猫 | 艾尔全价猫粮</text>
+							<text class=" text-grey  margin-right-xs"></text>圆通快递：【邯郸市】河北省邯郸市 已发出
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cu-tag round bg-grey sm">5</view> -->
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4003680228,3155194230&fm=26&gp=0.jpg);">
+        <view class="cu-tag badge">共两件</view>
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">运输中</text>
+          <view class="cu-tag round bg-orange sm">亲友</view>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">中通快递：【盘锦市】盘锦中转 已发出</text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cuIcon-notice_forbid_fill text-gray"></view> -->
+      </view>
+    </view>
+   </view>
+    
+  </view>
+</block>
+  
+<block wx:if="{{TabCur==1}}">
+    <view class="navContent">
+   <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582477867125&di=6e874e71e27eddffd40e18846ee2b666&imgtype=0&src=http%3A%2F%2Fimg002.hc360.cn%2Fy4%2FM04%2F23%2F1A%2FwKhQiFT6Ab-EFOxSAAAAAHpOdcU709.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">未发货</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class=" text-red  margin-right-xs">天猫 | 护目镜</text>
+							<text class=" text-grey  margin-right-xs"></text>暂无物流信息
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cu-tag round bg-grey sm">5</view> -->
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582477840362&di=72acb3380dafe1f89a8048748c04f7bd&imgtype=0&src=http%3A%2F%2Fimg008.hc360.cn%2Fm2%2FM07%2F11%2F3A%2FwKhQclQ__JKEamTUAAAAANPnLKU424.jpg);">
+        <view class="cu-tag badge">共两件</view>
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">未发货</text>
+          <view class="cu-tag round bg-orange sm">亲友</view>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">暂无物流信息</text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cuIcon-notice_forbid_fill text-gray"></view> -->
+      </view>
+    </view>
+   </view>
+    
+  </view>
+
+</block>
+<block wx:if="{{TabCur==2}}">
+    <view class="navContent">
+   <view class="cu-list menu-avatar">
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582477968331&di=db2e914e60f7ae17dc029dc780cd2ee5&imgtype=0&src=http%3A%2F%2Fimg011.hc360.cn%2Fhb%2FMTQ2MTQ1NDUzMTcyOTU3NzU4NTc5Mw%3D%3D.jpg);"></view>
+      <view class="content">
+        <view class="text-grey">已签收</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class=" text-red  margin-right-xs"></text>
+							<text class=" text-grey  margin-right-xs"></text>顺丰速运：已签收：感谢使用顺丰。
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cu-tag round bg-grey sm">5</view> -->
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="cu-avatar radius lg" style="background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582477840362&di=72acb3380dafe1f89a8048748c04f7bd&imgtype=0&src=http%3A%2F%2Fimg008.hc360.cn%2Fm2%2FM07%2F11%2F3A%2FwKhQclQ__JKEamTUAAAAANPnLKU424.jpg);">
+        <view class="cu-tag badge">共三件</view>
+      </view>
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut">已签收</text>
+          <view class="cu-tag round bg-orange sm">亲友</view>
+        </view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">韵达快递：【代收点】您的快递已从妈妈驿站取出。</text>
+        </view>
+      </view>
+      <view class="action">
+        <!-- <view class="text-grey text-xs">22:20</view>
+        <view class="cuIcon-notice_forbid_fill text-gray"></view> -->
+      </view>
+    </view>
+   </view>
+    
+  </view>
+
+</block>
+</view>

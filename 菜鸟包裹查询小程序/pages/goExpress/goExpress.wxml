@@ -1,0 +1,39 @@
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">收货地址</view>
+		<input placeholder="您想寄到哪里？"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">发货地址</view>
+		<input placeholder="从哪里寄？"></input>
+		<text class="cuIcon-locationfill text-orange"></text>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">收货人手机号码</view>
+		<input placeholder="请输入手机号"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+   <view class="cu-form-group">
+		<view class="title">寄件人手机号码</view>
+		<input placeholder="请输入手机号"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+  <view style="margin-top:2em;text-align:center">
+	  <button class="cu-btn bg-green shadow">下单</button>
+  </view>
+
+</form>

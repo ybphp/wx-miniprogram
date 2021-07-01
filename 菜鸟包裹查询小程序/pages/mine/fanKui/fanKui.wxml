@@ -1,0 +1,49 @@
+
+<view class="container"></view>
+<view class="radioChoose">
+  <radio-group class="block">
+      <view class="cu-form-group margin-top">
+        <view class="title">请选择反馈问题的类型</view>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">功能异常</view>
+        <radio class="blue radio"></radio>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">其他问题</view>
+        <view>
+          <radio class="blue radio"></radio>
+
+        </view>
+      </view>
+    </radio-group>
+    <view class="cu-form-group align-start">
+		<view class="title">问题和意见</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="请描述使用时遇到的问题"></textarea>
+	</view>
+  
+<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/4
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+  <view style="margin-top:2em;text-align:center">
+	  <button class="cu-btn bg-green shadow">提交</button>
+  </view>
+</view>
