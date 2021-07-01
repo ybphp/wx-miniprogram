@@ -1,0 +1,15 @@
+.carousel{
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.carousel_swiper{
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #f4f4f4;
+}
+.carouselImg{
+  width: 100%;
+  height: inherit;
+
+}

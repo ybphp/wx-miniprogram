@@ -1,0 +1,6 @@
+<view class="advertisement">
+    <view class="advertisement-title">推荐课程</view>
+    <view class="advertisement-desc">学习促使进步，学习促使进步学习促使进步！</view>
+</view>
+<view class="spacing-box"></view>
+<list-item wx:for="{{course_list}}" item="{{ item }}" wx:key="key"></list-item>

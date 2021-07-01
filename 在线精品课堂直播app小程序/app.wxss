@@ -1,0 +1,21 @@
+/**app.wxss**/
+.spacing-box{
+    height:30rpx;
+    width:100%;
+    background: #fafafb;
+    border:1px solid #efefef;
+    border-left:0;
+    border-right:0;
+}
+
+.advertisement{
+    padding:32rpx 50rpx;
+}
+.advertisement .advertisement-title{
+    font-size:32rpx;
+}
+.advertisement .advertisement-desc{
+    margin-top:16rpx;
+    font-size:26rpx;
+    color:#999;
+}

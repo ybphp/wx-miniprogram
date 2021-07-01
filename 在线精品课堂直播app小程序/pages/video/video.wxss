@@ -1,0 +1,38 @@
+video{width:100%;}
+
+
+.course-detail-desc-title{
+    padding:30rpx 30rpx;
+    font-size:32rpx;
+    font-weight: bold;
+}
+.course-detail-desc-title text{
+    font-size: 24rpx;
+    font-weight: lighter;
+    margin-top:8rpx;
+    color: #999;
+}
+
+.curriculum-scroll{
+    margin-top:30rpx;
+    white-space: nowrap;
+}
+.curriculum-scroll .curriculum-item{
+    margin-left:30rpx;
+    display: inline-block;
+    width:300rpx;
+    height:180rpx;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-line;
+    padding:0 30rpx;
+    box-sizing: border-box;
+    font-size:26rpx;
+    background: #e9e9e9;
+}
+
+.curriculum-scroll .this-curriculum-item{
+    background: none;
+    border:2rpx solid #56bfb3;
+    color: #56bfb3;
+}

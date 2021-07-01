@@ -1,0 +1,33 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/video/video",
+        "pages/course/course",
+        "pages/list/list",
+        "pages/detail/detail",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#56bfb3",
+        "navigationBarTitleText": "精品课堂",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "color": "#333333",
+        "selectedColor": "#56bfb3",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/images/tabbar1.png",
+            "selectedIconPath": "/images/tabbar1_selected.png"
+        },{
+            "pagePath": "pages/course/course",
+            "text": "课程",
+            "iconPath": "/images/tabbar2.png",
+            "selectedIconPath": "/images/tabbar2_selected.png"
+        }]
+    }
+}

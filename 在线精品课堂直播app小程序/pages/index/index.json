@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "banner": "/components/banner/banner",
+      "list-item": "/components/list-item/list-item"
+  }
+}

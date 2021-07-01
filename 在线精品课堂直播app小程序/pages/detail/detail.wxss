@@ -1,0 +1,69 @@
+.explain-group{
+    width:100%;
+    height:360rpx;
+    padding-top:90rpx;
+    box-sizing: border-box;
+    text-align: center;
+    background: #00443d;
+    color: #fff;
+}
+.explain-group .explain-name{
+    font-size:24rpx;
+}
+.explain-group .study-btn{
+    width:180rpx;
+    height:60rpx;
+    padding:10rpx;
+    font-size:26rpx;
+    margin-top:30rpx;
+    background: none;
+    color: #56bfb3;
+    border:2rpx solid #56bfb3;
+}
+
+.course-detail-bar-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-detail-bar-box .course-detail-bar{
+    font-size:28rpx;
+    line-height:80rpx;
+}
+.course-detail-bar-box .course-detail-bar-self{
+    color: #56bfb3;
+    border-bottom:6rpx solid #56bfb3;
+}
+
+.course-detail-desc-title{
+    padding:30rpx 30rpx;
+    font-size:32rpx;
+    font-weight: bold;
+}
+.course-detail-desc-title text{
+    font-size: 24rpx;
+    font-weight: lighter;
+    margin-top:8rpx;
+}
+
+.course-detail-desc-box{
+    padding:0 30rpx;
+    width:100%;
+    box-sizing: border-box;
+}
+.course-detail-desc-box .desc{
+  margin-top:1rem;
+  font-size:0.85rem;
+}
+.course-detail-desc-box .desc_img{
+  margin-top:1rem;
+  width:100%;
+}
+
+.course-detail-catalog{
+    padding:10rpx 30rpx;
+}
+.course-detail-catalog .course-detail-catalog-item{
+    padding:20rpx 0;
+    font-size:26rpx;
+}

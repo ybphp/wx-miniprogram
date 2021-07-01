@@ -1,0 +1,11 @@
+<view class='carousel'> 
+        <swiper class='carousel_swiper' indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='2000' circular='true'>
+            <block wx:for="{{banner_list}}" wx:key="key">
+                <navigator url="{{item.url}}">
+                    <swiper-item bindtap='carouselClick' data-id='{{item.id}}'>
+                            <image class="carouselImg" src='{{item.img}}' mode='aspectFill'></image>
+                </swiper-item>
+            </navigator>
+            </block>
+        </swiper>
+    </view>

@@ -1,0 +1,37 @@
+<banner banner_list="{{banner_list}}"></banner>
+<view class="nav-bar-group">
+    <view class="nav-bar-item">
+        <navigator url="/pages/list/list?type=1">
+            <image src="/images/nav-bar/nav-bar1.png"></image>
+            <text>今日课程</text>
+        </navigator>
+    </view>
+    <view class="nav-bar-item">
+        <navigator url="/pages/list/list?type=2">
+            <image src="/images/nav-bar/nav-bar2.png"></image>
+            <text>课程分类</text>
+       </navigator>
+    </view>
+    <view class="nav-bar-item">
+        <navigator url="/pages/list/list?type=3">
+            <image src="/images/nav-bar/nav-bar3.png"></image>
+            <text>我的课程</text>
+        </navigator>
+    </view>
+    <view class="nav-bar-item">
+        <navigator url="/pages/list/list?type=4">
+            <image src="/images/nav-bar/nav-bar4.png"></image>
+            <text>更多课程</text>
+        </navigator>
+    </view>
+</view>
+<view class="spacing-box"></view>
+<view class="advertisement">
+    <view class="advertisement-title">推荐课程</view>
+    <view class="advertisement-desc">学习促使进步，学习促使进步学习促使进步！</view>
+</view>
+<view class="spacing-box"></view>
+
+<view class="course-group">
+    <list-item wx:for="{{course_list}}" item="{{item}}" wx:key="key"></list-item>
+</view>

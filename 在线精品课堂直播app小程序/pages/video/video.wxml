@@ -1,0 +1,14 @@
+<video src="{{video_url}}"></video>
+<view class="course-detail-desc-title">
+    {{ title }}
+    <text>
+        {{ class_hour }}
+    </text>
+</view>
+<view class="spacing-box"></view>
+
+<scroll-view scroll-x="true" class="curriculum-scroll" bindscroll="scroll">
+    <navigator wx:for="{{ curriculum_items }}" wx:key="key" class="curriculum-item {{ item.id == id? 'this-curriculum-item' : ''}}" url="pages/video/video?id={{item.id}}"> 
+            {{item.title}}
+    </navigator>
+</scroll-view>

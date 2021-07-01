@@ -1,0 +1,20 @@
+.nav-bar-group{
+    display: flex;
+    justify-content: space-evenly;
+    padding:30rpx 0;
+}
+.nav-bar-group .nav-bar-item image{
+    width:100rpx;
+    height: 100rpx;
+    display:block;
+}
+.nav-bar-group .nav-bar-item text{
+    display:block;
+    text-align: center;
+    font-size:26rpx;
+    margin-top:20rpx;
+}
+
+.course-group{
+    padding:0 30rpx;
+}

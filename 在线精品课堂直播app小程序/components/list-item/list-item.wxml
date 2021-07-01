@@ -1,0 +1,12 @@
+<navigator url="/pages/detail/detail?id={{item.id}}">
+    <view class="item-box">
+        <view class="item-img">
+            <image src="{{item.img}}"></image>
+        </view>
+        <view class="item-data-group">
+            <view class="item-data-title">{{item.title}}</view>
+            <view class="item-data-desc">{{item.desc}}</view>
+            <view class="item-data-price">{{item.price_text}}</view>
+        </view>
+    </view>
+</navigator>

@@ -1,0 +1,41 @@
+<view class="explain-group">
+    <text class="explain-name">最近学到：01【PS基础】认识ps</text>
+    <navigator url="/pages/video/video?id=1"><button class="study-btn">进入学习</button></navigator>
+</view>
+
+
+<view class="course-detail-bar-box">
+    <view bindtap="setDetailBar" data-index="0" class="course-detail-bar {{detail_bar == 0 ? 'course-detail-bar-self' :''}}">介绍</view>
+    <view bindtap="setDetailBar" data-index="1" class="course-detail-bar {{detail_bar == 1 ? 'course-detail-bar-self' :''}}">目录</view>
+</view>
+
+<view class="course-detail-desc-title">
+    {{ detail_data.title }}
+    <text>
+        {{ detail_data.num_text }}
+    </text>
+</view>
+<view class="spacing-box"></view>
+
+<view class="course-detail-desc" hidden="{{ detail_bar != 0 }}">
+    <view class="course-detail-desc-box">
+        <block wx:for="{{detail_data.desc_items}}" wx:key="desc">
+            <block wx:if="{{item.type == 1}}">
+                <text class="desc">
+                {{item.desc}}
+                </text>
+            </block>
+            <block wx:else>
+                <image class="desc_img" mode="widthFix" src="{{item.desc}}"></image>
+            </block>
+        </block>
+    </view>
+</view>
+
+<view class="course-detail-catalog" hidden="{{ detail_bar != 1 }}">
+    <navigator wx:for="{{detail_data.curriculum_items}}" wx:key="key" url="/pages/video/video?id={{item.id}}">
+        <view class="course-detail-catalog-item">
+            {{item.title}}
+        </view>
+    </navigator>
+</view>
