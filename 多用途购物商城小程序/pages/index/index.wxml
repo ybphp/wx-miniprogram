@@ -1,0 +1,96 @@
+<!--pages/index.wxml-->
+<view class="container">
+  <swiper indicator-dots="true" autoplay="true" interval="{{swiper.interval}}" circular="{{swiper.circular || true }}" duration="{{swiper.duration}}"
+   indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="rgb(255, 80, 0)">
+    <block wx:for="{{swiper.imgsUrl}}" wx:key="index_swiper">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="DFrames">
+  
+    <view class="layOut">
+      <block wx:for="{{DFrames.layOut}}" wx:key="index_DFrames">
+        <view class="layOut-item" data-route="{{item.route}}" bindtap='goto'>
+          <image src="{{item.imgUrl}}"></image>
+          <text class="layOut-item-text">{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="layOut-bg" style="background-image: url({{DFrames.bg}});"></view>
+  </view>
+  <view class="topLine">
+    <swiper circular="true" autoplay="true" interval="{{topLine.interval}}" duration="{{topLine.duration}}"
+     vertical="true">
+      <block wx:for="{{topLine.tips}}" wx:key="index_topLine">
+        <swiper-item>
+          <view class="topline-item">
+            <view class="topline-item-text">
+              <text class="topline-item-category">{{item.category1}}</text>
+              <text class="topline-item-content">{{item.text1}}</text>
+            </view>
+            <view class="topLine-item-text">
+              <text class="topline-item-category">{{item.category2}}</text>
+              <text class="topline-item-content">{{item.text2}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="recommend">
+    <block wx:for="{{recommend}}" wx:key="index_recommend">
+      <view class="rcd-item">
+        <view class="rcd-item-left">
+          <view class="rcd-item-title" style="background-image: url({{item.title}})"></view>
+          <view class="rcd-item-subTitle" wx:if="item.subTitle">{{item.subTitle}}</view>
+          <image src="{{item.imgUrl1}}"></image>
+        </view>
+        <view class="rcd-item-right">
+          <view class="rcd-item-right-bg" style="background-image: url({{item.imgUrl2}})"></view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="TBlive">
+    <view class="live-show">
+      <view class="live-show-top">
+        <view class="show_top_title" style="background-image: url({{TBlive.top_bg}})"></view>
+        <view class="show-top-left">
+          <view class="show-top-left-content" style="background-image: url({{TBlive.top_left_bg}})">
+            <view class="show_bg_mask" style="background-image: url({{TBlive.bg_mask}})"></view>
+            <text class="top_left_title">{{TBlive.top_left_title}}</text>
+            <text class="top_left_subTitle">{{TBlive.top_left_subTitle}}</text>
+            <view class="show_top_heart" style="background-image: url({{TBlive.top_heart}})"></view>
+          </view>
+        </view>
+        <view class="show-top-right">
+          <view class="show-top-right-content" style="background-image: url({{TBlive.top_right_bg}})">
+            <view class="show_bg_mask" style="background-image: url({{TBlive.bg_mask}})"></view>
+            <text class="top_left_title">{{TBlive.top_right_title}}</text>
+            <text class="top_left_subTitle">{{TBlive.top_right_subTitle}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="live-show-bottom">
+        <view class="live-show-btm-content">
+          <block wx:for="{{TBlive.btm}}" wx:key="TBliveBottom">
+            <!-- <block v-if="{{index == 1}}">
+            </block> -->
+            <view class="show-btm-item {{index == 1 ? 'show-btm-item-center' : ''}}">
+              <view class="show-btm-item-top" style="background-image: url({{item.bg}})">
+                <view class="btm-live-bg" style="background-image: url({{TBlive.btm_live_bg}})"></view>
+              </view>
+              <view class="show-btm-item-btm">
+                <view><text class="show-btm-title">{{item.title}}</text></view>
+                <view><text class="show-btm-subTitle">{{item.subTitle}}</text></view>
+                <view></view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

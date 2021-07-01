@@ -1,0 +1,18 @@
+<view class="params-box {{show ? 'animated' : ''}}" catchtouchmove="prevent">
+    <scroll-view scroll-y class="main">
+        <view class="box-header">{{params.title}}</view>
+        <view class="box-body">
+            <block wx:for="{{params.content}}" wx:key="{{index}}">
+                <view class="params-item">
+                    <view class="key">{{item.key}}</view>
+                    <view class="val">{{item.val}}</view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+    <view class="box-footer">
+        <view class="btn-confirm" catchtap="slide">确定</view>
+    </view>
+</view>
+
+<cus-mask id="mask" bind:closeSelf="slide"></cus-mask>

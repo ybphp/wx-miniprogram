@@ -1,0 +1,38 @@
+page,
+#order-list {
+  width: 100%;
+  height: auto;
+}
+page {
+  background: #f5f5f5;
+}
+.tab-head {
+  background-color: #eee;
+}
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center
+}
+.title-item {
+  padding: 20rpx 0;
+  flex: 0 0 20%;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.current {
+  border-bottom: 2px solid red;
+}
+.tab-body,
+.swiper,
+.swiper-item {
+  width: 100%;
+}
+.swiper {
+  position: relative;
+  min-height: calc(100vh - 88rpx);
+}
+.swiper-item {
+  position: absolute;
+}

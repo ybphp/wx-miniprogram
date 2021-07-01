@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "no-content": "/components/noContent/noContent",
+    "cus-checkbox": "/components/checkbox/checkbox"
+  }
+}

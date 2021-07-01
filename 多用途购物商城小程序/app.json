@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/tianmao/tianmao",
+    "pages/category/category",
+    "pages/commodity/commodity",
+    "pages/comments/comments"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ccc",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assert/imgs/index.png",
+        "selectedIconPath": "assert/imgs/index_selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "assert/imgs/cart.png",
+        "selectedIconPath": "assert/imgs/cart_selected.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "assert/imgs/order.png",
+        "selectedIconPath": "assert/imgs/order_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "assert/imgs/user.png",
+        "selectedIconPath": "assert/imgs/user_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

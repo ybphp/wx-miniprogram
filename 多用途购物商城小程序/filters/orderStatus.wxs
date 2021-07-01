@@ -1,0 +1,22 @@
+function filterOrderStatus(status) {
+  switch (status) {
+    case "pay":
+      return "买家待付款"
+      break;
+    case "delivery":
+      return "卖家待发货"
+      break;
+    case "waiting":
+      return "卖家已发货"
+      break;
+    case "comment":
+      return "交易成功"
+      break;
+  }
+}
+
+
+
+module.exports = {
+  filterOrderStatus: filterOrderStatus
+}

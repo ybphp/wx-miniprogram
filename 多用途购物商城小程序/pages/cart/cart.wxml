@@ -1,0 +1,72 @@
+<!--pages/cart/cart.wxml-->
+<view id="cart">
+
+    <block wx:if="!!app.globalData.userInfo">
+        
+        <no-content wx:if="{{commodities.length == 0}}" types="cart" title="购物车里暂时还没有东西哦" subTitle="快去购买吧"></no-content>
+
+        <block wx:else>
+            <block wx:for="{{commodities}}" wx:for-item="shop" wx:key="{{index}}">
+                <!-- 购物车商品 -->
+                <view class="commodity-box">
+                    <view class="box-header flex">
+                        <view class="checkbox" data-shopIdx="{{index}}" data-type="shop" catchtap="checked"><cus-checkbox checked="{{shop.selected}}"></cus-checkbox></view>
+                        <view class="shop flex">
+                            <view class="shop-logo {{shop.shopType || 'qiye'}}"></view>
+                            <view class="shop-name text-sm text-333">{{shop.shopName}}</view>
+                            <view class="icon icon-more"></view>
+                        </view>
+                        <view class="eidt text-sm text-333" data-shopIdx="{{index}}" catchtap="edit">{{shop.isEdit ? '完成' : '编辑'}}</view>
+                    </view>
+                    <view class="box-body flex">
+                        <block wx:for="{{shop.commodity}}" wx:for-item="commodity" wx:for-index="idx" wx:key="{{idx}}">
+                            <view class="item">
+                                <view class="commodity-item flex {{ shop.isEdit ? 'animated' : '' }}">
+                                <view class="checkbox" data-shopidx="{{index}}" data-index="{{idx}}" data-type="commodity" catchtap="checked"><cus-checkbox checked="{{commodity.selected}}"></cus-checkbox></view>
+                                <view class="commodity-img"><image class="img" src="http:////gw.alicdn.com/tfscom/TB1AfYzJVXXXXcxXFXXorbaIVXX-80-80.jpg_q75"></image></view>
+                                <view class="commodity-info flex">
+                                    <view class="commodity-name line2 text-sm text-333">{{commodity.name}}</view>
+                                    <view class="commodity-params text-sm" wx:if="{{commodity.params}}">{{commodity.params}}</view>
+                                    <view class="commodity-price flex">
+                                        <view class="price text-normal"><text class="text-sm price">￥</text>{{commodity.price}}</view>
+                                        <view class="btn-group flex flex-center">
+                                            <view class="btn btn-decrease" data-shopidx="{{index}}" data-index="{{idx}}" data-event="{{'decrease'}}" catchtap="change">-</view>
+                                            <view class="btn btn-count text-normal">{{commodity.count}}</view>
+                                            <view class="btn btn-increase" data-shopidx="{{index}}" data-index="{{idx}}" data-event="{{'increase'}}" catchtap="change">+</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                            <view data-shopIdx="{{index}}" data-index="{{idx}}" class="btn-remove flex flex-center" catchtap="delCommodity">删除</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+
+            </block>
+
+
+    <!-- 底部结算栏 -->
+    <view class="accounts flex">
+        <view class="checkAll flex text-normal" catchtap="checkedAll"><view class="checkbox"><cus-checkbox checked="{{checkedAll}}"></cus-checkbox></view>全选</view>
+        <view class="account flex">
+            <text class="text-normal">合计：</text><view class="price">{{accountInfo.allAccount}}.<text class="decimal">00</text></view>
+            <view class="balance text-lg text-fff">结算 ({{accountInfo.allCount}})</view>
+        </view>
+    </view>
+        </block>
+    
+    </block>
+
+    <no-content wx:else types="cart" title="登录账号才能看到购物车哦" subTitle="登录失效" btn="马上登录"></no-content>
+    
+    
+    
+  
+  
+    
+  
+    
+
+
+</view>

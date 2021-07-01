@@ -1,0 +1,53 @@
+.purchaser-profile {
+    width: 48rpx;
+    height: 48rpx;
+}
+.purchaser-name,
+.commodity-info,
+.isVip,
+.comment-time {
+    color: #999;
+    font-size: 24rpx;
+}
+.isVip {
+    padding-left: 10rpx;
+    color: #C09459;
+}
+
+.comment-header {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.comment-header.padding {
+    padding-bottom: 20rpx;
+}
+.comment-body {
+    font-size: 28rpx;
+    color: #333;
+}
+.comment-content {
+    display: -webkit-box;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.append {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+}
+.append-title {
+    padding-bottom: 4rpx;
+    color: #ff0036;
+}
+.append-content {
+    color: #666;
+}
+
+.comment.border {
+    border-bottom: 2rpx solid #eee;
+    padding: 40rpx 0;
+}

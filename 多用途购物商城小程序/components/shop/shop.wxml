@@ -1,0 +1,22 @@
+<view>
+    <view class="media">
+        <view class="media-left">
+            <image class="shop-image" src="http:////img.alicdn.com/imgextra//b9/e0/TB1uujZFVXXXXbTXVXXSutbFXXX.jpg_120x120Q50s50.jpg_.webp"></image>
+        </view>
+        <view class="media-right">
+            <view class="shop-name">完整店名完整店名</view>
+            <view class="shop-cate">
+                <image class="cate" src="http:////img.alicdn.com/tfs/TB1u5sBnlfH8KJjy1XbXXbLdXXa-198-36.png_120x120Q90s50.jpg_.webp?getAvatar=avatar"></image>
+            </view>
+        </view>
+    </view>
+
+    <view class="shop-grade">
+        <view class="grade-item">宝贝描述<text class="grade down">4.9</text></view>
+        <view class="grade-item">卖家服务<text class="grade down">4.9</text></view>
+        <view class="grade-item">物流服务<text class="grade down">4.9</text></view>
+    </view>
+
+    <view class="shop-link"></view>
+
+</view>

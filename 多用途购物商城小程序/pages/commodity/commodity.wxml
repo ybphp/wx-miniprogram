@@ -1,0 +1,119 @@
+<view class="container">
+
+    <!-- 顶部固定栏 -->
+    <view class="catalogue flex text-normal text-999">
+        <view wx:for="{{sections}}" wx:key="{{index}}" class="catalogue-item {{ currSection === (index + 1) ? 'active' : '' }}">{{item}}</view>
+        <!-- <view class="catalogue-item active">商品</view>
+        <view class="catalogue-item">评价</view>
+        <view class="catalogue-item">详情</view> -->
+    </view>
+
+    <view class="observe" data-observe="1">
+        <!-- 轮播图 -->
+        <view class="section-top">
+            <swiper class="swiper" indicator-dots="false" indicator-color="transparent" indicator-active-color="transparent" autoplay="{{false}}" duration="300" bindchange="swiperChange">
+                <swiper-item wx:for="{{swiper}}" wx:key="{{index}}">
+                    <image src="{{item}}" class="slide-image"/>
+                </swiper-item>
+            </swiper>
+            <view class="swiper-curr">{{currSwiper}}/{{swiper.length}}</view>
+        </view>
+
+        <!-- 商品信息 -->
+        <view class="section">
+            <view><text class="price">￥399.00</text></view>
+            <view><text class="introd">唐狮2019春秋新款工装男外套青少年立领运动港风</text></view>
+        </view>
+
+        <!-- 选择和参数 -->
+        <view class="section">
+            <view class="section-item text-normal" bindtap="showSelectBox"><text class="text-sm">选择 </text>请选择颜色尺码<image class="more" src="../../assert/imgs/more.png"></image></view>
+            <view class="section-item text-normal" bindtap="showParamsBox"><text class="text-sm">参数 </text>品牌 尺码...<image class="more" src="../../assert/imgs/more.png"></image></view>
+        </view>
+    </view>
+
+    <view class="observe" data-observe="2">
+        <!-- 商品评价 -->
+        <view class="section">
+            <view class="box-header">
+                <text class="comment text-normal">商品评价 ({{commentLen || 0}})</text>
+                <navigator url="/pages/comments/comments" class="text-danger text-normal pull-right">
+                    <view >查看全部<image class="more" src="../../assert/imgs/more.png"></image></view>
+                </navigator>
+            </view>
+            <view class="box-body">
+                <comment></comment>
+            </view>
+        </view>
+
+        <!-- 店家信息 -->
+        <view class="section">
+            <shop></shop>
+        </view>
+
+        <!-- 看了又看 -->
+        <wxs module="common" src="../../filters/common.wxs"></wxs>
+        <view class="section">
+            <view class="box-header"><text class="text-sm text-333">看了又看</text></view>
+            <view class="box-body">
+                <view class="flex recomend">
+                    <block wx:for="{{recomends}}" wx:key="{{index}}">
+                        <view class="recomend-item {{ index == 0 ? 'text-left' : index == 1 ? 'text-center' : 'text-right'}}">
+                            <image class="recomend-img" src="{{item.img}}"></image>
+                            <text class="recomend-text text-sm line2 text-333">{{item.text}}</text>
+                            <view class="recomend-oldPrice lineThrough text-sm text-ccc">{{common.num2Money(item.oldPrice)}}</view>
+                            <view class="recomend-newPrice text-sm text-333">{{common.num2Money(item.newPrice)}}</view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!-- 详情 -->
+    <view class="observe" data-observe="3">
+        <view class="details flex">
+            <view class="bar"></view>
+            <view class="text-sm text-ccc details-text">详情</view>
+            <view class="bar"></view>
+        </view>
+
+        <!-- 商品标题 -->
+        <view class="section text-center">
+            <text class="text-lg">"简约不简单 夏季好搭配"</text>
+        </view>
+
+        <!-- 商品详情图片 -->
+        <view>
+            <image wx:for="{{detailImgs}}" wx:key="{{index}}" src="{{item}}" class="detail-imgs-item" mode="widthFix"></image>
+        </view>
+    </view>
+
+    <!-- 底部固定栏 加入购物车 -->
+    <view class="buy flex">
+        <view class="buy-item flex">
+            <view class="link flex">
+                <view class="icon icon-shop"></view>
+                <text class="text-sm">店铺</text>
+            </view>
+            <view class="link flex">
+                <view class="icon icon-service"></view>
+                <text class="text-sm">客服</text>
+            </view>
+            <view class="link flex" bindtap="collect">
+                <view class="icon {{ iscollected ? 'icon-collected' : 'icon-collect' }}"></view>
+                <text class="text-sm">收藏</text>
+            </view>
+        </view>
+        <view class="buy-item flex flex-center bg-yellow text-lg text-fff" data-footerType="true" bindtap="showSelectBox">加入购物车</view>
+        <view class="buy-item flex flex-center bg-red text-lg text-fff" data-footerType="true" bindtap="showSelectBox">立即购买</view>
+
+    </view>
+
+    <!-- 商品规格选择弹窗 -->
+    <select-box shopInfo="{{shopInfo}}" id="selectBox"></select-box>
+
+    <!-- 参数弹窗 -->
+    <params-box id="paramsBox"></params-box>
+
+</view>

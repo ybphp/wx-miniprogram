@@ -1,0 +1,32 @@
+<!-- <view id="category">
+  <view class="nav">
+    <view class="nav-top"></view>
+    <view class="nav-list"></view>
+    <view class="nav-bottom"></view>
+  </view>
+</view> -->
+
+<view id="category">
+  <scroll-view id="cate_scroll" scroll-y style="" bindscroll="scroll">
+      <view wx:for="{{categorys}}" wx:key="tianmao_categery" data-index="{{index}}" class="cate-item {{ index == current ? 'selected' : '' }}" bindtap='selCate'>{{item.category}}</view>
+      <!-- <view id="green" class="scroll-view-item bc_green"></view>
+      <view id="red"  class="scroll-view-item bc_red"></view>
+      <view id="yellow" class="scroll-view-item bc_yellow"></view>
+      <view id="blue" class="scroll-view-item bc_blue"></view> -->
+      <view wx:if="{{showTop}}" class="cate-item cate-mask cate-top">{{categorys[current].category}}</view>
+      <view wx:if="{{showBtm}}" class="cate-item cate-mask cate-bottom">{{categorys[current].category}}</view>
+  </scroll-view>
+  <view id="cate_contain">
+    <block wx:if="{{categorys[current].content}}" wx:key="current_cate_info">
+      <view class="box" wx:for="{{categorys[current].content}}" wx:key="cate_current">
+        <text class="box-title">{{item.cate}}</text>
+        <view class="box-contain">
+          <view class="box-item" wx:for="{{item.cont}}" wx:for-item="i" wx:key="current_cate_det">
+            <image class="box-item-img" src="{{i.img}}"></image>
+            <text class="box-item-info">{{i.name}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

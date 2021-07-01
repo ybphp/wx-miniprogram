@@ -1,0 +1,14 @@
+function num2Money(num) {
+    
+    // console.log(window.isNaN)
+    // function isNaN(n) {
+    //   return (typeof n === 'number' && window.isNaN(n));
+    // }
+
+    // console.log(isNaN(NaN))
+    return "￥" + num;
+  }
+
+  module.exports = {
+    num2Money: num2Money
+  }

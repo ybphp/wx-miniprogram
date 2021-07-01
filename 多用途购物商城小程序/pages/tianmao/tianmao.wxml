@@ -1,0 +1,33 @@
+<!--pages/tianmao/tianmao.wxml-->
+<view id="tianmao">
+  <view class="search {{ animate ? 'box-animate' : '' }}">
+    <view class="search-top">
+      <view class="brand {{ animate ? 'brand-animate' : '' }}">
+        <image class="brand-img" src="{{brand}}"></image>
+      </view>
+      <view class="search-category {{ animate ? 'icon-animate' : '' }}">
+        <navigator url="/pages/category/category" hover-class="navigator-hover">
+          <image class="category-icon" src="../../assert/imgs/category.png"></image>
+        </navigator>
+      </view>
+      <view class="search-login {{ animate ? 'icon-animate' : '' }}">登录</view>
+    </view>
+    <view class="search-btm {{ animate ? 'search-animate' : '' }}">
+      <view class="search-input">
+        <!-- <view class="search-tip"> -->
+          <image src='../../assert/imgs/search.png' class="search-icon"></image>
+          <text class="placehold">搜索商品、品牌</text>
+        <!-- </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="ad" v-if="discount_bg">
+    <image class="ad-bg" src='{{discount_bg}}'></image>
+  </view>
+  <view class="content">
+    <view class="content-title">猜你喜欢</view>
+    <view class="main">
+      <goods-item wx:for="{{goods}}" wx:key="index" goods="{{item}}" data-item="{{index}}" class="main-item {{'main-item' + index}}" style="margin-right: {{index % 2 == 0 ? '26rpx' : '0'}}" />
+    </view>
+  </view>
+</view>

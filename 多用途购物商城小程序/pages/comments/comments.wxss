@@ -1,0 +1,23 @@
+.comments {
+    padding: 0 20rpx;
+}
+.comments-header {
+    padding: 20rpx 0;
+    font-size: 24rpx;
+}
+.comments-key {
+    display: inline-block;
+    margin: 0 20rpx 20rpx 0;
+    padding: 16rpx 28rpx;
+    color: #666;
+    border-radius: 18rpx;
+    -webkit-border-radius: 18rpx;
+    background: #fee;
+}
+.comments-all {
+    color: #fff!important;
+    background: #ff0036!important;
+}
+
+
+.comments-body {}

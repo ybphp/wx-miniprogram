@@ -1,0 +1,109 @@
+/* pages/tianmao/tianmao.wxss */
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20rpx 0;
+  width: 100%;
+  background-color: rgb(255, 0, 54);
+  transition: all 0.2s linear;
+}
+.box-animate {
+  transform: translateY(-86rpx);
+}
+.search-top {
+  position: relative;
+  padding: 10rpx 0;
+}
+.brand {
+  margin-top: 10rpx;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.brand-animate {
+  transform: translateY(-120rpx) scale(0);
+}
+.brand-img {
+  width: 260rpx;
+  height: 44rpx;
+}
+.category-icon {
+  width: 66rpx;
+  height: 66rpx;
+}
+.search-category,
+.search-login {
+  position: absolute;
+  top: 20rpx;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+.search-category {
+  top: 10rpx;
+  left: 10rpx;
+}
+.search-login {
+  right: 20rpx;
+  font-size: 32rpx;
+}
+.icon-animate {
+  transform: translateY(80rpx);
+}
+.search-btm {
+  position: relative;
+  transition: all 0.2s linear;
+}
+.search-animate {
+  transform: scale(0.8);
+}
+.search-input {
+  margin: 0 auto;
+  width: 700rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  text-indent: 40rpx;
+}
+.search-tip {
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  z-index: 9999;
+  vertical-align: middle;
+  text-align: left;
+}
+.search-icon {
+  margin-right: 20rpx;
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+.placehold {
+  font-size: 30rpx;
+  color: rgba(0, 0, 0, 0.3);
+  vertical-align: middle;
+}
+
+.ad {
+  margin-top: 230rpx;
+  text-align: center;
+}
+.ad-bg {
+  width: 100%;
+  height: 398rpx;
+}
+
+
+.content {}
+.content-title {
+  margin-bottom: 30rpx;
+  padding-left: 30rpx;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 26rpx;
+}

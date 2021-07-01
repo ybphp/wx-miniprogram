@@ -1,0 +1,24 @@
+<view class="comment {{isPage ? 'border' : ''}}">
+    <view class="comment-header {{isPage ? 'padding' : '' }}">
+        <view>
+            <image wx:if="{{pruchaser-profile}}" class="purchaser-profile"></image>
+            <text class="purchaser-name">{{comment.author}}</text>
+            <text wx:if="{{comment.isVip}}" class="isVip">超级会员</text>
+        </view>
+        <view class="comment-time">{{comment.time}}</view>
+    </view>
+    <view class="comment-body">
+        <view class="comment-content">{{comment.content}}</view>
+
+        <!-- 追评 -->
+        <view wx:if="{{comment.append.time}}" class="append">
+            <view class="append-title">{{comment.append.time}}</view>
+            <view class="append-content">{{comment.append.content}}</view>
+        </view>
+
+
+    </view>
+    <view class="comment-footer">
+        <text class="commodity-info"><text wx:if="{{!isPage}}" class="comment-item">{{comment.time}}</text> {{comment.params}}</text>
+    </view>
+</view>

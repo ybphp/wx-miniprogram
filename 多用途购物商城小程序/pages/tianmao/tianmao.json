@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "天猫购物",
+  "usingComponents": {
+    "goods-item": "/components/goodsItem/goodsItem"
+  }
+}

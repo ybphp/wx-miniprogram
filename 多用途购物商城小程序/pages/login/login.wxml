@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+<view class="user">
+    <view id="index-page">
+    <button wx:if="{{ !userInfo.nickName }}" class='open-type btn-getUserInfo' open-type='getUserInfo' bindgetuserinfo='handleGetUserInfo'>点击登录</button>
+    <block wx:else>
+      <view class="userInfo">
+        <image class="user-profile" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+    </block>
+  </view>
+</view>

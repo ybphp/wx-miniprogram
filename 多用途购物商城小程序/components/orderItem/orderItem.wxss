@@ -1,0 +1,121 @@
+/* components/orderItem/orderItem.wxss */
+.order-item {
+  margin: 20rpx 0;
+}
+.order-content {
+}
+.order-head {
+  margin: 0 20rpx;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  background-color: #fff;
+}
+.sell-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sell-type {
+  width: 34rpx;
+  height: 34rpx;
+}
+.sell-name {
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+.more {
+  width: 36rpx;
+  height: 36rpx;
+}
+.order-status {
+  padding-right: 40rpx;
+  font-size: 24rpx;
+  color: #ff5000;
+}
+
+.order-body {
+  background-color: #F5F5F5;
+  min-height: 30px;
+  width: 100%;
+}
+.goods-item {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-startl;
+}
+.goods-img {
+  flex: 0 0 24%
+}
+.img {
+  width: 132rpx;
+  height: 132rpx;
+}
+.goods-title {
+  font-size: 24rpx;
+}
+.goods-remark {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #aaa;
+}
+.goods-icon {
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.g-icon {
+  margin-right: 20rpx;
+  padding: 4rpx 8rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: #ff5000;
+  text-align: center;
+}
+.goods-price {
+  flex: 0 0 20%;
+  text-align: right;
+}
+.price {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.count {
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+.order-foot {
+  background: #fff;
+}
+.total {
+  padding: 20rpx;
+  text-align: right;
+  font-size: 28rpx;
+  border-bottom: 1px solid #e7e7e7;
+}
+.blod {
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.order-tools {
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.tool {
+  margin-left: 10rpx;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  border: 1px solid #999;
+  background-color: #fff;
+}
+.tool-focus {
+  color: #ff5000;
+  border: 1px solid #ff5000;
+}

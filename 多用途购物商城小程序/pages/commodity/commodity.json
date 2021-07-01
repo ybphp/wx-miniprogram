@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "商品",
+    "usingComponents": {
+        "comment": "/components/comment/comment",
+        "shop": "/components/shop/shop",
+        "select-box": "/components/selectBox/selectBox",
+        "params-box": "/components/paramsBox/paramsBox"
+    }
+}

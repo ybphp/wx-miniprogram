@@ -1,0 +1,49 @@
+<!--components/orderItem/orderItem.wxml-->
+<wxs module="filter" src="../../filters/orderStatus.wxs"></wxs>
+<view class="order-item">
+  <view class="order-content">
+    <view class="order-head">
+      <view class="sell-info">
+        <image class="sell-type" src="{{order.sellType}}"></image>
+        <text class="sell-name">{{order.sellName}}</text>
+        <image class="more" src='/assert/imgs/more.png'></image>
+      </view>
+      <view class="order-status"><text>{{filter.filterOrderStatus(order.status)}}</text></view>
+    </view>
+    <view class="order-body">
+      <view class="goods">
+        <block wx:for="{{order.goods}}" wx:key="goods">
+          <view class="goods-item">
+            <view class="goods-img"><image class="img" src="{{item.img}}"></image></view>
+            <view class="goods-info">
+              <view class="goods-title"><text>{{item.title}}</text></view>
+              <view class="goods-remark"><text>{{item.remark}}</text></view>
+              <view class="goods-icon">
+                <view wx:if="item.TianMao" class="g-icon">天猫无忧购</view>
+                <view wx:if="item.SevenDay" class="g-icon">七天退换</view>
+              </view>
+            </view>
+            <view class="goods-price">
+              <view class="price"><text>￥{{item.price}}</text></view>
+              <view class="count"><text>x{{item.count}}</text></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="order-foot">
+      <view class="total">
+        共 <text class="blod">{{order.allCount}}</text>件商品
+        <text class="total-price">合计: ￥<text class="blod">{{order.allPrice}}</text> </text>
+      </view>
+      <view class="order-tools">
+        <view class="tool">删除订单</view>
+        <view class="tool">查看物流</view>
+        <view class="tool tool-focus" wx:if="{{order.status != 'comment' || order.status != 'done'}}">确认收货</view>
+        <view class="tool" wx:if="{{order.status == 'comment' || order.status =='done'}}">卖了换钱</view>
+        <view class="tool tool-focus" wx:if="{{order.status == 'comment'}}">评价</view>
+        
+      </view>
+    </view>
+  </view>
+</view>

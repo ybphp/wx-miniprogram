@@ -1,0 +1,10 @@
+<view class="comments">
+    <view class="comments-header">
+        <text class="comments-key comments-all">全部</text>
+        <text class="comments-key">追加</text>
+        <text class="comments-key" wx:for="{{comments.commentsKey}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <view class="comments-body">
+        <comment wx:for="{{comments.content}}" wx:key="{{index}}" comment="{{item}}" isPage="{{true}}"></comment>
+    </view>
+</view>

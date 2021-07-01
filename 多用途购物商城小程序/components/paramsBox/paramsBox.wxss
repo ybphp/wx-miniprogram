@@ -1,0 +1,67 @@
+.params-box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100vw;
+    max-height: 85vh;
+    box-sizing:border-box;
+    background: #fff;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    overflow: hidden;
+}
+.params-box.animated {
+    transform: translateY(0)!important;
+    -webkit-transform: translateY(0)!important;
+    z-index: 99;
+    -moz-transform: translateY(0)!important;
+    -ms-transform: translateY(0)!important;
+    -o-transform: translateY(0)!important;
+}
+.main {
+    max-height: 85vh;
+    overflow: scroll;
+}
+.box-header,
+.box-body {
+    padding: 20rpx 30rpx;
+    font-size: 26rpx;
+}
+.params-item {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom: 2rpx solid #eee;
+    text-align: left;
+}
+.key {
+    width: 160rpx;
+    color: #888
+}
+.val {
+    flex: 1;
+    color: #555;
+}
+.box-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-confirm {
+    flex: 1 0 0;
+    padding: 26rpx 0;
+    color: #fff;
+    font-size: 32rpx;
+    text-align: center;
+    background: #FF0036;
+}

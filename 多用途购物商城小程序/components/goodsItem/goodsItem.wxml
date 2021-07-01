@@ -1,0 +1,17 @@
+<!-- components/goodsItem/goodsItem.wxml -->
+<navigator url="{{'/pages/commodity/commodity?id=' + goods.id }}">
+    <view class="goods">
+        <image class="goods-img" src="{{goods.imgSrc || ''}}"></image>
+        <view class="goods-brand" style="background: {{ goods.goods_brand.bg_color }}">
+            <image wx:if="{{goods.goods_brand.img}}" src="{{goods.goods_brand.img}}" class="brand-img"></image>
+            <!-- <view class="brand-img" wx:if="{{goods.goods_brand.img}}" style='background-image: url({{goods.goods_brand.img}})'></view> -->
+            <text>{{goods.goods_brand.brand}}</text>
+        </view>
+        <view class="goods-intro">{{goods.intro}}</view>
+        <view class="goods-discount"></view>
+        <view class="goods-meta">
+            <text class="goods-price">￥{{goods.price}}</text>
+            <view class="goods-simi">看相似</view>
+        </view>
+    </view>
+</navigator>

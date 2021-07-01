@@ -1,0 +1,11 @@
+<!--components/noContent/noContent.wxml-->
+<view class="noContent">
+  <view class="noContent-img">
+    <image class="img" src="../../assert/imgs/{{types}}.png"></image>
+  </view>
+  <view class="noContent-info">
+    <view class="title">{{title || '暂时没有内容哦' }}</view>
+    <view wx:if="{{ !!subTitle }}" class="subTitle">{{subTitle}}</view>
+    <button wx:if="{{ !!btn }}" size="mini" class="btn-custom">{{btn}}</button>
+  </view>
+</view>

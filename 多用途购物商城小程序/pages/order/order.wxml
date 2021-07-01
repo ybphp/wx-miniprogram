@@ -1,0 +1,25 @@
+<!-- page order wxml-->
+<view id="order-list">
+  <view class="tab-head">
+    <view class="list-title">
+      <view wx:for="{{titles}}" wx:key="tab_title" data-current="{{index}}" class="title-item {{ currentTab == index ? 'current' : ''}}" bindtap='changeTab'>{{item}}</view>
+    </view>
+  </view>
+  <view class="tab-body" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd'>
+    <view class="swiper">
+      <block wx:for="{{lists}}" wx:key="tab_list">
+        <view class="swiper-item" data-current="{{index}}" style="left: {{item.left}}px">
+          <!-- <order-item types="{{item.types}}" /> -->
+          <block wx:if="{{item.content && item.content.length > 0}}">
+            <block wx:for="{{item.content}}" wx:for-item="o" wx:key="order_list">
+              <order-item types="{{item.types}}" order="{{o}}" />
+            </block>
+          </block>
+          <block wx:elif="{{item.content && item.content.length == 0}}">
+            <no-content types="list" title="您还没有相关的订单" subTitle="可以去看看有哪些想买" btn="随便逛逛"></no-content>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

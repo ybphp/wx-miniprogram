@@ -1,0 +1,67 @@
+<!--pages/user/user.wxml-->
+<view id="user">
+  <view class="user-info">
+    <view class="user-profile">
+      <view class="default-profile" wx:if="userInfo.avatarUrl" style="background-image: url({{userInfo.avatarUrl}})"></view>
+      <view class="default-profile" wx:else style="background-image: url({{default_profile}})"></view>
+    </view>
+    <view class="user-nickName">
+      <text class="user-setName" wx:if="userInfo.nickName">{{userInfo.nickName}}</text>
+      <text class="user-setName" wx:else>设置淘宝昵称</text>
+      <view class="user-dear" style="background-image: url({{dear_count}})"></view>
+    </view>
+    <view class="user-setting">
+      <view class="user-setting-icon" style="background-image: url({{user_setting_list}})"></view>
+      <view class="user-setting-icon" style="background-image: url({{user_setting_defaut}})"></view>
+    </view>
+  </view>
+  <view class="user-meta">
+    <block wx:for="{{meta}}" wx:key="user_meta">
+      <view class="meta-item">
+        <view class="meta-count"><text>{{item.count}}</text></view>
+        <view class="meta-type"><text>{{item.types}}</text></view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="user-container">
+  <view class="user-content">
+    <!-- 订单 -->
+    <view class="card">
+      <view class="card-title">
+        <text class="left-title">我的订单</text>
+        <text class="right-title">查看全部订单 ></text>
+      </view>
+      <view class="card-body">
+        <view class="order">
+          <block wx:for="{{order}}" wx:key="user_order">
+            <view class="order-item">
+              <view class="order-bg" style="background-image: url({{item.bg}})">
+                <view wx:if="{{item.count>0}}" class="order-count">{{item.count}}</view>
+              </view>
+              <view class="order-type"><text>{{item.text}}</text></view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <!-- 必备工具 -->
+    <view class="card">
+      <view class="card-title">
+        <text class="left-title">必备工具</text>
+        <text class="right-title">查看全部工具 ></text>
+      </view>
+      <view class="card-body">
+        <view class="tools">
+          <block wx:for="{{tools}}" wx:key="user_tools">
+            <view class="tools-item">
+              <view class="tools-bg" style="background-image: url({{item.bg}})">
+              </view>
+              <view class="tools-type"><text>{{item.text}}</text></view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

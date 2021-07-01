@@ -1,0 +1,236 @@
+/* pages/index.wxss */
+.slide-image {
+  width: 100%;
+  height: 290rpx;
+}
+
+/* DFrames */
+.DFrames {
+  position: relative;
+  height: 316rpx;
+  padding-bottom: 20rpx;
+  background: #fff;
+}
+.layOut {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.layOut-item {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 152rpx;
+  text-align: center;
+}
+.layOut-item image {
+  width: 100%;
+}
+.layOut-item-text {
+  padding-top: 6rpx;
+  font-size: 24rpx;
+  color: rgb(102, 102, 102);
+}
+.layOut-bg {
+  position: absolute;
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  top: -28rpx;
+  left: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* topLine */
+.topLine {
+  margin-bottom: 20rpx;
+  padding: 0 20rpx;
+  height: 120rpx;
+  overflow: hidden;
+  background: #fff;
+}
+.topLine-item-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topline-item-category {
+  margin-right: 6rpx;
+  font-size: 24rpx;
+  border: 2rpx solid rgba(255, 0, 0, .8);
+  color: red;
+  border-radius: 10rpx;
+}
+.topline-item-content {
+  font-size: 26rpx;
+}
+
+/* recommend */
+.recommend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+}
+.rcd-item {
+  display: flex;
+  width: 50%;
+  box-sizing: border-box;
+}
+.rcd-item:nth-child(2n + 1) {
+  border-right: 1px solid #eee;
+}
+.rcd-item-left {
+  display: flex;
+  flex-direction: column;
+  width: 207rpx;
+}
+.rcd-item-title {
+  width: 100%;
+  height: 60rpx;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rcd-item-subTitle {
+  font-size: 26rpx;
+  color: rgb(153, 153, 153);
+  text-indent: 26rpx;
+  height: 30rpx;
+  padding: 6rpx 0;
+}
+.rcd-item-left image {
+  width: 148.978rpx;
+  height: 128.06rpx;
+  margin-left: 20rpx;
+}
+.rcd-item-right {
+  width: 100%;
+  margin: 26rpx;
+}
+.rcd-item-right-bg {
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* TBlive */
+.TBlive {
+  margin-top: 40rpx;
+}
+.show_bg_mask {
+  width: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.live-show-top {
+  position: relative;
+  display: flex;
+  height: 252rpx;
+}
+.show_top_title {
+  position: absolute;
+  top: -30rpx;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 64rpx;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.show-top-left {
+  flex: 2;
+  display: flex;
+}
+.show-top-right-content,
+.show-top-left-content {
+  position: relative;
+  display: flex;
+  width: calc(100% - 4rpx);
+  background-size: 102%;
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+.top_left_title {
+  position: absolute;
+  font-size: 28rpx;
+  bottom: 56rpx;
+  left: 20rpx;
+  color: #fff;
+}
+.top_left_subTitle {
+  position: absolute;
+  font-size: 26rpx;
+  bottom: 20rpx;
+  left: 20rpx;
+  color: #eee;
+}
+.show_top_heart {
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  width: 44rpx;
+  height: 44rpx;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.show-top-right {
+  flex: 1;
+  display: flex
+}
+.show-top-right-content {
+  width: 100%;
+}
+.live-show-btm-content {
+  display: flex;
+  margin-top: 2rpx;
+}
+.show-btm-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.show-btm-item-center {
+  width: calc(100% - 8rpx);
+  border-left: 4rpx solid #fff;
+  border-right: 4rpx solid #fff;
+}
+.show-btm-item-top {
+  position: relative;
+  width: 100%;
+  height: 252rpx;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.btm-live-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 66rpx;
+  height: 32rpx;
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.show-btm-item-btm {
+  padding: 16rpx 0 0 16rpx;
+  height: 120rpx;
+}
+.show-btm-title {
+  font-size: 28rpx;
+  color: #333;
+}
+.show-btm-subTitle {
+  font-size: 26rpx;
+  color: #bbb;
+}

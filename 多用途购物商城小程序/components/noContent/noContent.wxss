@@ -1,0 +1,38 @@
+/* components/noContent/noContent.wxss */
+.noContent {
+  margin: 150rpx 0;
+  text-align: center;
+}
+.noContent-img {
+  margin: 0 auto;
+  width: 240rpx;
+  height: 240rpx;
+  line-height: 240rpx;
+  background-color: #ccc;
+  border-radius: 100%;
+  text-align: center;
+}
+.img {
+  width: 130rpx;
+  height: 130rpx;
+  vertical-align: middle;
+}
+.noContent-info {
+  margin: 20rpx 0;
+  text-align: center;
+}
+.title {
+  font-size: 26rpx;
+}
+.subTitle {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #aaa;
+}
+.btn-custom {
+  margin-top: 20rpx;
+  width: 218rpx;
+  background-color: transparent;
+  border: 1px solid #666;
+  font-size: 24rpx;
+}
