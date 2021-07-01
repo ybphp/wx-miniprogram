@@ -1,0 +1,238 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+            </view>
+
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                <!-- 选项一的内容 -->
+                <!-- listsAll.length == 0 -->
+                <view wx:if='{{listsAll.length == 0}}' class='noData'>
+                <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+                <view  class='allData'>抱歉，没有查询到相关的订单哦</view>
+                <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+                </view>
+                
+                <block wx:for="{{listsAll}}" wx:key="{{index}}">
+                <view class='list'>
+                <view class='listTitle'>
+                  <text>订单编号：<text class='num'>123473289374</text></text>
+                  <text>待付款</text>
+                </view>
+                  <block wx:for="{{listItem}}" wx:key="{{index}}">
+                        <view class='listItem'>
+                            <view class='detail'> 
+                              <image src='{{item.img}}'></image>
+                              <view class='detail_r'>
+                                <view class='detail_rT'>
+                                  <text>{{item.title}}</text>
+                                  <text>{{item.attr}}</text>
+                                </view>
+                                <view class='detail_rB'>
+                                  <text>¥{{item.price}}</text>
+                                  <view class="stepper">
+                                    数量：1
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class='orderTotal'>
+                      <text>总计2件商品  合计：￥71.00（含运费￥0.00）</text>
+                      <view>
+                        <button bindtap='toDetail'>查看详情</button>
+                        <button>去付款</button>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <!-- 选项一的内容 -->
+                <!-- listsPay.length == 0 -->
+                <view wx:if='{{listsPay.length == 0}}' class='noData'>
+                <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+                <view  class='allData'>抱歉，没有查询到相关的订单哦</view>
+                <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+                </view>
+                
+                <block wx:for="{{listsPay}}" wx:key="{{index}}">
+                <view class='list'>
+                <view class='listTitle'>
+                  <text>订单编号：<text class='num'>123473289374</text></text>
+                  <text>待付款</text>
+                </view>
+                  <block wx:for="{{listItem}}" wx:key="{{index}}">
+                        <view class='listItem'>
+                            <view class='detail'> 
+                              <image src='{{item.img}}'></image>
+                              <view class='detail_r'>
+                                <view class='detail_rT'>
+                                  <text>{{item.title}}</text>
+                                  <text>{{item.attr}}</text>
+                                </view>
+                                <view class='detail_rB'>
+                                  <text>¥{{item.price}}</text>
+                                  <view class="stepper">
+                                    数量：1
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class='orderTotal'>
+                      <text>总计2件商品  合计：￥71.00（含运费￥0.00）</text>
+                      <view>
+                        <button  bindtap='toDetail'>查看详情</button>
+                        <button>去付款</button>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                <!-- 选项三的内容 -->
+                <!-- listsSend.length == 0 -->
+                <view wx:if='{{listsSend.length == 0}}' class='noData'>
+                <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+                <view  class='allData'>抱歉，没有查询到相关的订单哦</view>
+                <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+                </view>
+                
+                <block wx:for="{{listsSend}}" wx:key="{{index}}">
+                <view class='list'>
+                <view class='listTitle'>
+                  <text>订单编号：<text class='num'>123473289374</text></text>
+                  <text>待付款</text>
+                </view>
+                  <block wx:for="{{listItem}}" wx:key="{{index}}">
+                        <view class='listItem'>
+                            <view class='detail'> 
+                              <image src='{{item.img}}'></image>
+                              <view class='detail_r'>
+                                <view class='detail_rT'>
+                                  <text>{{item.title}}</text>
+                                  <text>{{item.attr}}</text>
+                                </view>
+                                <view class='detail_rB'>
+                                  <text>¥{{item.price}}</text>
+                                  <view class="stepper">
+                                    数量：1
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class='orderTotal'>
+                      <text>总计2件商品  合计：￥71.00（含运费￥0.00）</text>
+                      <view>
+                        <button  bindtap='toDetail'>查看详情</button>
+                        <button>去付款</button>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                <!-- 选项四的内容 -->
+                <!-- listsGet.length == 0 -->
+                <view wx:if='{{listsGet.length == 0}}' class='noData'>
+                <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+                <view  class='allData'>抱歉，没有查询到相关的订单哦</view>
+                <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+                </view>
+                
+                <block wx:for="{{listsGet}}" wx:key="{{index}}">
+                <view class='list'>
+                <view class='listTitle'>
+                  <text>订单编号：<text class='num'>123473289374</text></text>
+                  <text>待付款</text>
+                </view>
+                  <block wx:for="{{listItem}}" wx:key="{{index}}">
+                        <view class='listItem'>
+                            <view class='detail'> 
+                              <image src='{{item.img}}'></image>
+                              <view class='detail_r'>
+                                <view class='detail_rT'>
+                                  <text>{{item.title}}</text>
+                                  <text>{{item.attr}}</text>
+                                </view>
+                                <view class='detail_rB'>
+                                  <text>¥{{item.price}}</text>
+                                  <view class="stepper">
+                                    数量：1
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class='orderTotal'>
+                      <text>总计2件商品  合计：￥71.00（含运费￥0.00）</text>
+                      <view>
+                        <button  bindtap='toDetail'>查看详情</button>
+                        <button>去付款</button>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 4}}">
+                <!-- 选项五的内容 -->
+                <!-- listsJudge.length == 0 -->
+                <view wx:if='{{listsJudge.length == 0}}' class='noData'>
+                <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+                <view  class='allData'>抱歉，没有查询到相关的订单哦</view>
+                <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+                </view>
+                
+                <block wx:for="{{listsJudge}}" wx:key="{{index}}">
+                <view class='list'>
+                <view class='listTitle'>
+                  <text>订单编号：<text class='num'>123473289374</text></text>
+                  <text>待付款</text>
+                </view>
+                  <block wx:for="{{listItem}}" wx:key="{{index}}">
+                        <view class='listItem'>
+                            <view class='detail'> 
+                              <image src='{{item.img}}'></image>
+                              <view class='detail_r'>
+                                <view class='detail_rT'>
+                                  <text>{{item.title}}</text>
+                                  <text>{{item.attr}}</text>
+                                </view>
+                                <view class='detail_rB'>
+                                  <text>¥{{item.price}}</text>
+                                  <view class="stepper">
+                                    数量：1
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+                        </view>
+                    </block>
+                    <view class='orderTotal'>
+                      <text>总计2件商品  合计：￥71.00（含运费￥0.00）</text>
+                      <view>
+                        <button  bindtap='toDetail'>查看详情</button>
+                        <button>去付款</button>
+                      </view>
+                    </view>
+                  </view>
+                </block>
+                
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

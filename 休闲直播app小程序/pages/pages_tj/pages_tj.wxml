@@ -1,0 +1,85 @@
+<!--导航条-->
+<view class="navbar">
+ <text  wx:for="{{navbar}}"
+        data-idx="{{index}}"
+        class="item {{currentTab==index ? 'active' : ''}}"
+        wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<!--推荐-->
+<view hidden="{{currentTab!==0}}">
+  <view class="recommend" >
+    <view class="swiper-container">
+      <swiper autoplay="auto" interval="5000" duration="1000" current="{{swiperCurrent}}"
+       bindchange="swiperChange" class="swiper">
+        <block wx:for="{{slider}}" wx:key="">
+          <swiper-item data-id="{{item.id}}">
+            <image src="{{item.picUrl}}" class="img"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">
+      <block wx:for="{{slider}}" wx:key="">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  </view>
+<view class="recommend_tr">
+ <block wx:for = "{{image}}" wx:key="">
+    <view bindtap="recommend_tr_tap"
+    class="recommend_tr_img">
+      <image class="image" id="{{item.id}}" src="{{item.img}}" mode="aspectFit"></image>
+      <text class="coin">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+<view class="recommend_tr_desc">
+<text>热门</text>
+<image class="image_icon" src="../image/热门.png" mode="aspectFit"></image>
+</view>
+<view class="recommend_sp">
+  <block wx:for = "{{image_sp}}" wx:key="{{title}}">
+    <view style= "width:350rpx;" class="recommend_sp_img">
+      <image class="image1" src="{{item.img}}" mode="aspectFill"></image>
+      <text class="shiping">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+</view>
+
+<!--手游-->
+<view hidden="{{currentTab!==1}}">
+  <view class="page1-top">
+    <swiper class="navban" duration="1000" indicator-dots="true" indicator-active-color="#FFCE43">
+          <swiper-item>
+              <block wx:for="{{navs}}" key="">
+                  <view class="navbox">
+                      <image class="navimg" src="{{item.img}}"></image>
+                      <text class="navtext">{{item.name}}</text>
+                  </view>
+               </block>
+          </swiper-item>
+          <swiper-item>
+              <block wx:for="{{navs}}" key="">
+                  <view class="navbox">
+                      <image class="navimg" src="{{item.img}}"></image>
+                      <text class="navtext">{{item.name}}</text>
+                  </view>
+               </block>
+          </swiper-item>
+  </swiper>
+</view>
+<view class="recommend_tr_desc">
+<text>热门</text>
+<image class="image_icon" src="../image/热门.png" mode="aspectFit"></image>
+</view>
+<view class="recommend_sp">
+  <block wx:for = "{{image_sp}}" wx:key="{{title}}">
+    <view style= "width:350rpx;" class="recommend_sp_img">
+      <image class="image1" src="{{item.img}}" mode="aspectFill"></image>
+      <text class="shiping">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+</view>

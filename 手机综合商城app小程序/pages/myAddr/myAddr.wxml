@@ -1,0 +1,33 @@
+<!--pages/myAddr/myAddr.wxml-->
+<view class='list'>
+ 
+
+  <block wx:for="{{addrs}}" wx:key='{{index}}'>
+     <view class='listItem' catchtap='toDetail' data-id="{{index}}">
+    <view>
+     <view><button class='{{item.flag==true?"cRed":"cGreen"}}' data-index="{{index}}" catchtap='setDefault'>{{item.flag==true?"默认地址":"设为默认"}}</button></view> 
+      <view><button catchtap='delAddr'>删除</button></view>
+    </view>
+    <view>
+      <text>收货人：{{item.name}}</text>
+      <text>{{item.phone}}</text>
+    </view>
+    <view>
+      <text>收件地址：{{item.addr}}</text>
+      <image class='image2' src='../../assets/icons/per_header_ic_more.png'></image>
+    </view>
+  </view>
+  </block>
+</view>
+
+ <!-- addrs.length == 0 -->
+  <view wx:if='{{addrs.length == 0}}' class='noData'>
+    <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+    <view class='allData'>抱歉，这里是空的哦</view>
+  </view>
+
+ <view class='bottomCont'>
+    <view bindtap='toAddAddr'>+ 新增收货地址
+    </view>
+    <view bindtap='myaddr'>使用微信地址</view>
+</view>

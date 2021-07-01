@@ -1,0 +1,9 @@
+<!--pages/search/search.wxml-->
+<view class='serach'>
+<view class="searchB" bindtap='enterSearch'>
+<image src='../../assets/icons/search.png'></image>
+<input type="text" auto-focus='true' placeholder="搜索商品" bindinput="bindKeyInput" placeholder-class="input-text"/> 
+<!-- <text class='txtColor'>请输入商品关键词进行搜索</text> -->
+</view>
+<button class='searchBtn' bindtap='searchC'>搜索</button>
+</view>

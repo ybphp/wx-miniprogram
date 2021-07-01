@@ -1,0 +1,105 @@
+/* pages/myAddr/myAddr.wxss */
+.list{
+  background-color: #fff;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+}
+.list .listItem{
+  height:180rpx;
+  border-bottom: 2rpx solid #EFEFF4;
+  padding:0 24rpx;
+
+}
+.list .listItem:last-child{
+  border-bottom: none
+}
+.list .listItem view{
+  display: flex;
+  align-items: center
+}
+.list .listItem view:nth-child(3){
+  color:#C5C5C5;
+  margin-top: 16rpx;
+}
+.list .listItem view view,.list .listItem text{
+  flex: 1;
+}
+.list .listItem text:nth-child(2){
+  text-align: right
+}
+.list .listItem view view button{
+  font-size: 20rpx;
+  border-radius: 18rpx;
+  padding:0;
+  margin: 24rpx 0;
+}
+.list .listItem view view:nth-child(1) button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:120rpx;
+  height:36rpx;
+  color: #fff;
+}
+.list .listItem view view:nth-child(2){
+  display: flex;
+  justify-content: flex-end;
+}
+.list .listItem view view:nth-child(2) button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100rpx;
+  height:36rpx;
+  background-color:#fff ;
+  color: #F44225;
+  border:2rpx solid #F44225;
+}
+.image2{
+  width:16rpx;
+  height:26rpx;
+}
+.cRed{
+  background-color: #F44225;
+}
+.cGreen{
+  background-color: #2CA640
+}
+
+/* 底部固定 */
+.bottomCont{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  bottom:0;
+  width:100%;
+}
+.bottomCont view{
+ height:98rpx;
+ font-size: 24rpx;
+ color: #282828;
+ flex:1;
+ display: flex;
+ justify-content: center;
+ align-items: center
+}
+.bottomCont view:nth-child(1){
+  border-right: 2rpx solid #EFEFF4
+}
+/* 没有数据显示 */
+.noData{
+  text-align: center;
+}
+.noData image{
+  width:98rpx;
+  height:98rpx;
+  margin-top:160rpx;
+  margin-bottom:24rpx;
+}
+.allData{
+padding:24rpx;
+text-align: center;
+color:#C5C5C5;
+font-size:24rpx;
+}

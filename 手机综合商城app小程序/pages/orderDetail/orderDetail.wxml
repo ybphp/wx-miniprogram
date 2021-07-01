@@ -1,0 +1,57 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class='restTime'>
+  <view>订单状态</view>
+  <view>请于23小时1分内完成付款操作</view>
+</view>
+<view class='logistics'>
+  <view>
+    <image src='../../assets/icons/myorder_details_ic_cart.png'></image> 物流运转信息，调用接口</view>
+  <image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='addr'>
+  <image src='../../assets/icons/myorder_details_ic_pint.png'></image>
+  <view class='oUser'>
+    <view  class='orderUser'>
+      <text>收货人：姓名</text>
+      <text>18928928928</text>
+    </view>
+    <view class='addrs'>收货地址：四川省 成都市 武侯区 什么街道什么号</view>
+  </view>
+</view>
+
+<view class='list'>
+  <view class='listTitle'>
+    <text>订单编号：<text class='num'>123473289374</text></text>
+  </view>
+  <block wx:for="{{listItem}}" wx:key="{{index}}">
+    <view class='listItem'>
+      <view class='detail'>
+        <image src='{{item.img}}'></image>
+        <view class='detail_r'>
+          <view class='detail_rT'>
+            <text>{{item.title}}</text>
+            <text>{{item.attr}}</text>
+          </view>
+          <view class='detail_rB'>
+            <text>¥{{item.price}}</text>
+            <view class="stepper">
+              数量：1
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='orderTotal'>
+    <view class='allmoney'>总计2件商品 合计：￥71.00（含运费￥0.00）</view>
+    <view>下单时间：2018-12-23 23:11:56</view>
+    <view>发货时间：-</view>
+    <view>收货时间：-</view>
+    <view>买家留言：-</view>
+  </view>
+</view>
+
+<view class='bottomCont'>
+  <button>取消订单</button>
+  <button bindtap='toConfirm'>去付款</button>
+</view>

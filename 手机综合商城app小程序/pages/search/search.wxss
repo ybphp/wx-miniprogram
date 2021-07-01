@@ -1,0 +1,57 @@
+/* pages/search/search.wxss */
+page{
+  background-color: #fff
+}
+.serach{
+  width:100%;
+  height:88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+.searchB{
+  width:548rpx;
+  height: 56rpx;
+  background-color: #EFEFF4;
+  border-radius: 28rpx;
+  z-index: 1000;
+  text-align: left;
+  padding:0 26rpx;
+  margin:0 auto;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchB image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right:10rpx;
+  
+}
+.input-text{
+  font-size: 28rpx;
+}
+.searchB input{
+  width: 100%;
+  display:block;
+  font-size: 28rpx;
+  height: 56rpx;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 56rpx;
+}
+.searchBtn{
+  width:100rpx;
+  height:56rpx;
+  line-height:56rpx;
+  color:#888;
+  background-color: #EFEFF4;
+  border:none;
+  font-size: 24rpx;
+  padding:0;
+}
+.searchBtn::after{
+  border:none
+}

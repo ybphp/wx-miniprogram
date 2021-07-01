@@ -1,0 +1,38 @@
+/* pages/balance/balance.wxss */
+.totalMoney{
+  height:168rpx;
+  background-color: #2ca640;
+  color:#FFFEFE;
+  padding:24rpx;
+}
+.totalMoney text{
+  font-size: 26rpx;
+}
+.totalMoney view{
+  font-size: 60rpx;
+  margin-top: 32rpx;
+}
+
+.list{
+  background-color: #fff;
+  font-size:26rpx;
+  padding-left:24rpx;
+  color:#282828;
+}
+.list image{
+  width:16rpx;
+  height:26rpx;
+}
+.list .listItem{
+  height:98rpx;
+  padding-right:24rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFF4;
+}
+.list .listItem:last-child{
+  border-bottom: none;
+}
+.list .listItem label{
+  flex: 1;
+}

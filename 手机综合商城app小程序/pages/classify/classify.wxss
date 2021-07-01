@@ -1,0 +1,128 @@
+/* pages/classify/classify.wxss */
+/* 搜索 */
+.serach{
+  height:88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding:0 24rpx;
+  position: absolute;
+  top: 0;
+}
+.searchB{
+  width:594rpx;
+  height: 56rpx;
+  background-color: #EFEFF4;
+  border-radius: 28rpx;
+  z-index: 1000;
+  text-align: left;
+  padding-left:26rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchB image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right:10rpx;
+  
+}
+.searchB .txtColor{
+  color: #B2B2B2
+}
+.searchImg{
+  width: 42rpx;
+  height: 38rpx;
+  margin-left:38rpx;
+}
+
+.classify{
+  margin-top:100rpx;
+    }
+.left-navbar{
+    position:absolute;
+    left: 0;
+    width: 27%;
+    height: 91%;
+    background-color: #EFEFF4;
+    font-size: 30rpx;
+}
+.left-navbar view{
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color:#282828;
+    font-size:26rpx;
+    border-bottom: 2rpx solid #fff;
+}
+.left-navbar view:last-child{
+  border-bottom: none;
+}
+/* 商品样式 */
+#right{
+    position: absolute;
+    right: 0;
+    width: 73%;
+    height: 91%;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+.goods-banner{
+    width: 100%;
+}
+.img-banner{
+    width: 524rpx;
+    margin: 20rpx auto;
+    height: 180rpx;
+    display: block;
+}
+.goods-title{
+    text-align: center;
+    font-size: 24rpx;
+    color: #222;
+}
+.goods-title text{
+    color: #dfdfdf;
+    margin: 0 15rpx;
+}
+.goods-list{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin: 30rpx auto;
+    width: 90%;
+}
+.goods-list-item{
+    display: flex;
+    width: 33.33%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rpx;
+    color:#282828;
+    font-size:24rpx;
+}
+
+.showp-img{
+    width: 98rpx;
+    height: 98rpx;
+    border-radius: 49rpx;
+}
+.goods-list-text{
+    text-align: center;
+    width: 150rpx;
+    height: 70rpx;
+    overflow: hidden;
+    display: block;
+    font-size: 26rpx;
+    color: #101010;
+    margin-top:20rpx;
+    word-break:break-all;
+}
+.activt{
+    border-left:8rpx solid red;
+    background-color: #fff;
+    color:#F44225 !important;
+}

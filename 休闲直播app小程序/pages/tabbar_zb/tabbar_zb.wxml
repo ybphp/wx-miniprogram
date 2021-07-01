@@ -1,0 +1,28 @@
+<swiper class="navban_zb" duration="1000">
+  <swiper-item>
+<view class="navbar">
+ <text  wx:for="{{navbarpageone}}"
+        data-idx="{{index}}"
+        class="item {{currentTab==index ? 'active' : ''}}"
+        wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+</swiper-item>
+<swiper-item>
+<view class="navbar">
+<text  wx:for="{{navbarpagetwo}}"
+      data-idx="{{index}}"
+      class="item {{currentTab==index ? 'active' : ''}}"
+      wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+</swiper-item>
+</swiper>
+<view hidden="{{currentTab!==0}}">
+<view class="recommend_sp">
+  <block wx:for = "{{image_sp}}" wx:key="{{title}}">
+    <view style= "width:350rpx;" class="recommend_sp_img">
+      <image class="image1" src="{{item.img}}" mode="aspectFill"></image>
+      <text class="shiping">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+</view>

@@ -1,0 +1,72 @@
+<!--pages/person/person.wxml-->
+<view class='myHeader'>
+<!-- <view wx:if="{{!hasUserInfo && canIUse}}"><button class=''  open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> </view> -->
+<!--  
+ <image src='{{userInfo.avatarUrl==undefined?"../../assets/icons/per_header_ic_portrait_def.png":userInfo.avatarUrl}}'></image> -->
+ <view class='userinfo-avatar'>
+ <open-data  type="userAvatarUrl"></open-data> 
+</view>
+ <view>
+
+ <open-data  class='name' type="userNickName" lang="zh_CN"></open-data>
+ <view class='income'>
+  <view>余额：¥55</view>
+  <view>积分：100</view>
+ </view>
+ </view>
+  <!-- bindtap='showSign' -->
+ <view class='jfSign'>
+   <image src='../../assets/icons/per_header_ic_sign.png'></image>
+   <view><text>积分签到</text><text>第20天</text></view> 
+ </view>
+</view>
+<view class='myOrder'>
+
+  <view class='orderTitle'>
+    <text>我的订单</text>
+    <view bindtap='toOrder' data-page='0'><text>全部订单</text><image src='../../assets/icons/per_header_ic_more.png'></image></view>
+  </view>
+  <view class='orderCont'>
+    <view bindtap='toOrder' data-page='1'>
+      <image src='../../assets/icons/per_order_ic_pay.png'></image>
+      <text>待付款</text>
+    </view>
+    <view bindtap='toOrder' data-page='2'>
+      <image src='../../assets/icons/per_order_ic_transit.png'></image>
+      <text>待发货</text>
+    </view>
+    <view bindtap='toOrder' data-page='3'>
+      <image src='../../assets/icons/per_order_ic_shipped.png'></image>
+      <text>待收货</text>
+    </view>
+    <view bindtap='toOrder' data-page='4'>
+      <image src='../../assets/icons/per_order_ic_repair.png'></image>
+      <text>退换货</text>
+    </view>
+  
+  </view>
+
+</view>
+
+<view class='myService'>
+<view class='orderTitle'>我的服务</view>
+<view class='serviceCont'>
+<block wx:for="{{service}}" wx:key='{{index}}'>
+    <view data-page='{{item.page}}' bindtap='toPage'>
+      <image src='{{item.img}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+  </view>
+</view>
+
+<view class='sign' hidden='{{sign}}'>
+<view class='signCont'>
+<image src='../../assets/imgs/per_pop_sgin_ic_coin.png'>
+</image>
+<view>签到成功</view>
+<view>恭喜，您获得了20积分</view>
+<view>积分可用于商品付款抵扣，<text bindtap='toIndex'>去首页看看></text> </view>
+<button bindtap='closeSign'>确定</button>
+</view>
+</view>

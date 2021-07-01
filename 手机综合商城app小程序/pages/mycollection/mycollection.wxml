@@ -1,0 +1,22 @@
+<!--pages/mycollection/mycollection.wxml-->
+<view class='list'>
+
+<block wx:for="{{collections}}" wx:key='{{index}}'>
+ <view class='listItem' bindtap='togoodsDetail'>
+<image class='image1' src='{{item.img}}'></image>
+<view class='content'>
+<label>{{item.title}}</label>
+<view>¥{{item.price}}</view>
+</view>
+<image class='image2' src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+  </block>
+</view>
+
+
+  <!-- collections.length == 0 -->
+  <view wx:if='{{collections.length == 0}}' class='noData'>
+    <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+    <view class='allData'>抱歉，没有找到相关的商品</view>
+    <button class='toHome' bindtap='toHomePage'>去首页逛逛</button>
+  </view>

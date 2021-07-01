@@ -1,0 +1,48 @@
+.navbar{
+ position:fixed;
+ flex: none;
+ display: flex;
+ width: 100%;
+ background: #fff;
+ z-index: 999;
+}
+.navbar .item{
+ position: relative;
+ flex: auto;
+ text-align: center;
+ line-height: 80rpx;
+}
+.navbar .item.active{
+ color: #FFCC00;
+}
+.navbar .item.active:after{
+ content: "";
+ display: block;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 4rpx;
+ background: #FFCC00;
+}
+.navban_zb{
+  height: 100rpx;
+}
+.recommend_sp{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow:hidden;
+}
+.recommend_sp_img{
+  position: relative;
+  margin:12rpx;
+  font-size: 24rpx;
+  overflow: scroll;
+}
+.recommend_sp_img .image1{
+  width:350rpx;
+  height:200rpx;
+  border-radius: 5px;
+}

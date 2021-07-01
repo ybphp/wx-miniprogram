@@ -1,0 +1,145 @@
+page{
+ display: flex;
+ /*flex-direction: column;*/
+ height: 100%;
+}
+.navbar{
+ position:fixed;
+ flex: none;
+ display: flex;
+ width: 100%;
+ background: #fff;
+ z-index: 999;
+}
+.navbar .item{
+ position: relative;
+ flex: auto;
+ text-align: center;
+ line-height: 80rpx;
+}
+.navbar .item.active{
+ color: #FFCC00;
+}
+.navbar .item.active:after{
+ content: "";
+ display: block;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 4rpx;
+ background: #FFCC00;
+}
+.swiper-container{
+  position: relative;
+  margin-top:85rpx;
+}
+.swiper-container .swiper{
+  height: 300rpx;
+}
+.swiper-container .swiper .img{
+  width: 100%;
+  height: 100%;
+}
+.swiper-container .dots{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+.swiper-container .dots .dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #fff;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+.swiper-container .dots .dot.active{
+  width: 24rpx;
+  background: #f80;
+}
+.recommend_tr {
+margin-top: 5rpx;
+height: 150rpx;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+border-bottom: 15rpx solid #D8D8D8;
+}
+.recommend_tr .recommend_tr_img image{
+  padding:10rpx;
+  width:60rpx;
+  height: 60rpx;
+  text-align: center;
+}
+.recommend_tr .recommend_tr_img text{
+  display: flex;
+  font-size: 24rpx;
+  align-items: center;
+  justify-content: center;
+}
+.recommend_tr_desc .image_icon{
+  position:relative;
+  top: 6rpx;
+  left: 6rpx;
+}
+.recommend_tr_desc image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.recommend_tr_desc text{
+  font-size: 24rpx;
+}
+.recommend_sp{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow:hidden;
+}
+.recommend_sp_img{
+  position: relative;
+  margin:12rpx;
+  font-size: 24rpx;
+  overflow: scroll;
+}
+.recommend_sp_img .image1{
+  width:350rpx;
+  height:200rpx;
+  border-radius: 5px;
+}
+.recommend_tr_desc{
+  margin-left:20rpx;
+  margin-top: 5rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+
+}
+.navban{
+    height: 300rpx;
+}
+.page1-top{
+  margin-top: 100rpx;
+  height: 300rpx;
+  width:746rpx;
+  border-bottom: 15rpx solid #D8D8D8;
+}
+.page1-top .navbox{
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+}
+.navbox image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.navbox text{
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+}

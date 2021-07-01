@@ -1,0 +1,197 @@
+/* pages/cart/cart.wxss */
+.list{
+  margin-top: 24rpx;
+  background-color: #fff;
+  padding:0 24rpx;
+  margin-bottom:98rpx;
+}
+.list .listItem{
+  height:189rpx;
+  display: flex;
+  align-items: center;
+}
+.listItem .detail{
+ height:100%;
+ flex:1;
+ border-bottom: 2rpx solid #efeff4;
+ display: flex;
+ align-items: center;
+}
+.listItem:last-child .detail{
+  border:none;
+}
+.detail_r{
+  flex:1;
+  height:140rpx;
+  font-size:24rpx;
+  color:#282828
+}
+.detail_r text{
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width:478rpx;
+}
+.detail_r .detail_rT text:nth-child(1){
+  padding:14rpx 0;
+}
+.detail_r text:nth-child(2){
+ font-size: 20rpx;
+ color:#c5c5c5;
+}
+.detail_rT{
+  margin-bottom: 20rpx;
+}
+.detail_rB{
+  display: flex;
+  width:478rpx;
+  align-items: center
+}
+.detail_rB text{
+  flex:1
+}
+/* .detail_rB view{
+  flex:1;
+  text-align: right;
+} */
+
+.listItem image{
+  width:140rpx;
+  height:140rpx;
+  border-radius: 8rpx;
+  margin-right:24rpx;
+}
+
+/* 复选框 */
+checkbox .wx-checkbox-input{
+    border-radius: 11px;
+    height: 20px;
+    width: 20px;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    border-radius: 16px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    height: 28.5px;
+    width: 28px;
+    background-color: #F44225;
+    color:white;
+    margin-top: -1rpx;
+    border:2rpx solid white;
+}
+
+/* 加减 */
+/*主容器*/
+.stepper {
+	width:136rpx;
+	height:42rpx;
+	/*给主容器设一个边框*/
+	border: 2rpx solid #c5c5c5;
+	border-radius: 18rpx;
+}
+ 
+/*加号和减号*/
+.stepper text {
+	width:40rpx;
+	line-height: 42rpx;
+	text-align: center;
+	float: left;
+}
+ 
+/*数值*/
+.stepper input {
+	width:50rpx;
+	height: 42rpx !important;
+  min-height: 42rpx !important;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 24rpx;
+	/*给中间的input设置左右边框即可*/
+	border-left: 2rpx solid #c5c5c5;
+	border-right: 2rpx solid #c5c5c5;
+}
+ 
+/*普通样式*/
+.stepper .normal{
+	color: black;
+}
+ 
+/*禁用样式*/
+.stepper .disabled{
+	color: #c5c5c5;
+}
+
+/* 合计，下单 */
+.bottomCont{
+  display: flex;
+  align-items: center;
+  height:98rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  border-bottom: 2rpx solid #e5e5e5
+
+}
+.bottomCont .bottomContL{
+ font-size: 26rpx;
+ flex:1;
+ display: flex;
+ padding:0 24rpx;
+}
+.bottomCont .bottomContL view{
+  flex:1;
+  display: flex;
+  align-items: center;
+}
+.bottomCont .bottomContL view:nth-child(2){
+  justify-content: flex-end;
+  color: #F44225;
+}
+.bottomCont .bottomContR{
+ font-size: 30rpx;
+ background-color: #F44225;
+ color:#fff;
+ width:200rpx;
+ height:100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.bcGray{
+  background-color: #C5C5C5 !important;
+}
+
+/* 没有数据显示 */
+.noData{
+  text-align: center;
+}
+.noData image{
+  width:98rpx;
+  height:98rpx;
+  margin-top:160rpx;
+  margin-bottom:24rpx;
+}
+.allData{
+padding:24rpx;
+text-align: center;
+color:#C5C5C5;
+font-size:24rpx;
+}
+/* 去首页逛逛 */
+.toHome{
+  width:260rpx;
+  height:60rpx;
+  border:2rpx solid #F44225;
+  color: #F44225;
+  font-size:26rpx;
+  border-radius: 30rpx;
+  background-color: #EFEFF4;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top:24rpx;
+}

@@ -1,0 +1,42 @@
+/* pages/addrMan/addrMan.wxss */
+.addr{
+  background-color: #fff;
+  height:118rpx;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  padding:0 24rpx;
+}
+.addr .addrUser{
+display: flex;
+padding:24rpx 0 0 0 ;
+}
+.addr .addrUser text,.addr .addrs text{
+  flex:1
+}
+.addr .addrUser text:nth-child(2){
+  text-align: right
+}
+.addr .addrs{
+  color:#C5C5C5;
+  padding-top:10rpx;
+}
+.addr .addrs{
+  display: flex;
+}
+.addr image{
+  width:16rpx;
+  height:26rpx;
+}
+/* 合计 */
+.bottomCont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:98rpx;
+  font-size: 24rpx;
+  background-color: #f9f9f9;
+  position: fixed;
+  bottom:0;
+  width:100%;
+  border-bottom: 2rpx solid #e5e5e5
+}

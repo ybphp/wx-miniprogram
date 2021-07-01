@@ -1,0 +1,191 @@
+/* pages/goodsList/goodsList.wxss */
+page{
+  background-color: #fff;
+}
+/* 搜索 */
+.serach{
+  height:88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding:0 24rpx;
+  position: absolute;
+  top: 0;
+}
+.searchB{
+  width:594rpx;
+  height: 56rpx;
+  background-color: #EFEFF4;
+  border-radius: 28rpx;
+  z-index: 1000;
+  text-align: left;
+  padding-left:26rpx;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchB image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right:10rpx;
+  
+}
+.searchB .txtColor{
+  color: #B2B2B2
+}
+.searchImg{
+  width: 42rpx;
+  height: 38rpx;
+  margin-left:38rpx;
+}
+/* 筛选bar */
+.myFilter{
+  background-color: #EFEFF4;
+  padding-top:12rpx;
+  margin-top:88rpx;
+}
+.myFilter .bar1{
+  height:88rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  justify-items:center;
+  align-items: center;
+}
+.myFilter .bar1 view{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.myFilter .bar1 view view{
+  display: inline-block;
+  width:16rpx;
+  margin-left:10rpx;
+}
+.myFilter .bar1 .img2{
+  width:16rpx;
+  height:16rpx;
+  margin-left:10rpx;
+}
+.myFilter .bar1 .img1{
+  width:16rpx;
+  height:8rpx;
+  display: block;
+  margin-top: 4rpx;
+}
+.myFilter .bar1 .choose{
+  color:#F44225
+}
+
+.myFilter .bar2{
+  height:88rpx;
+  font-size: 24rpx;
+  display:flex;
+  justify-content: center;
+  align-items: center
+}
+.myFilter .bar2 text:nth-child(1){
+  margin-right:24rpx;
+}
+.myFilter .bar2 .text{
+  color:#C5C5C5
+}
+.myFilter .bar2 input{
+  width:120rpx;
+  height:42rpx;
+  min-height:42rpx;
+  background-color: #fff;
+  color:#C5C5C5;
+  border-radius: 6rpx;
+  margin:0 12rpx 0 12rpx;
+  text-align:center;
+}
+.myFilter .bar2 button{
+  width:100rpx;
+  height:42rpx;
+  border:none;
+  background-color: #F44225;
+  color:#fff;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  padding:0;
+  margin:0;
+  display:flex;
+  justify-content: center;
+  align-items: center
+}
+.place-holder{
+  color:#C5C5C5
+}
+/* 商品列表 */
+.goodsList{
+  padding:0 24rpx;
+}
+.goodsList .listItem{
+  height:248rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFF4;
+}
+.goodsList .listItem .itemRight{
+  flex:1;
+  height:200rpx;
+  display: flex;
+  flex-direction: column ;
+}
+.goodsList .listItem .title{
+  color:#282828;
+  font-size: 24rpx;
+  flex: 1;
+  margin-top:12rpx;
+}
+.goodsList .listItem .itemB{
+ display: flex;
+ align-items: flex-end;
+ height:50rpx;
+}
+.goodsList .listItem .price{
+  color:#F44225;
+  font-size: 30rpx;
+  flex: 1;
+}
+.goodsList .listItem image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 8rpx;
+  margin-right:20rpx;
+}
+.goodsList .listItem button{
+  width:160rpx;
+  height:42rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22rpx;
+  border:2rpx solid #F44225;
+  background-color: #fff;
+  color:#F44225;
+  font-size:24rpx;
+  padding:0;
+  margin:0;
+}
+/* 加载全部 */
+.allData{
+padding:24rpx;
+text-align: center;
+color:#C5C5C5;
+font-size:24rpx;
+}
+/* 没有数据显示 */
+.noData{
+  text-align: center;
+}
+.noData image{
+  width:98rpx;
+  height:98rpx;
+  margin-top:160rpx;
+  margin-bottom:24rpx;
+}

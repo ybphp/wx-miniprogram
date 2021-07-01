@@ -1,0 +1,28 @@
+<view class='serach'>
+<view class="searchB" bindtap='enterSearch'>
+<!-- <input type="text" placeholder="搜索商品" placeholder-class="input-text"/>  -->
+<image src='../../assets/icons/search.png'></image>
+<text class='txtColor'>请输入商品关键词进行搜索</text>
+</view>
+<image class="searchImg" src='../../assets/icons/msg.png'></image>
+</view>
+
+<view class="classify">
+ <scroll-view class="left-navbar" scroll-y="true">
+        <view wx:for-index="index" class="list-item {{classIndex==index?'activt':''}}"  wx:for="{{class}}"   wx:key="{{item.id}}"  bindtap="classTap" data-index="{{index}}" data-id="{{item.id}}" data-title="{{item.title}}">{{item.title}}</view>
+    </scroll-view>
+
+    <scroll-view id="right" scroll-y="true" scroll-top="{{scrollTop}}">
+        <!-- 商品展示 -->
+        <view class="goods-list">
+            <view class="goods-list-item" wx:for="{{classType}}" wx:key="{{item.id}}" data-id="{{item.id}}"  bindtap='toGoodList'>
+                <view class="goods-list-img">
+                    <image class="showp-img" src="{{item.img}}" mode="aspectFill"></image>
+                </view>
+                <text class="goods-list-text">{{item.title}}</text>
+            </view>
+        </view>
+    </scroll-view>
+
+
+</view>

@@ -1,0 +1,87 @@
+/* pages/mycollection/mycollection.wxss */
+.list{
+  background-color: #fff;
+  font-size:24rpx;
+  padding-left:24rpx;
+  color:#282828;
+  margin-top: 12rpx
+}
+.list .image1{
+  width:140rpx;
+  height:140rpx;
+  border-radius: 8rpx;
+  margin-right: 22rpx;
+}
+.list .image2{
+  width:16rpx;
+  height:26rpx;
+   margin-left: 20rpx;
+}
+.list .listItem{
+  height:188rpx;
+  padding-right:24rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFF4;
+}
+.list .listItem:last-child{
+  border-bottom: none;
+}
+.list .listItem .content{
+  flex: 1;
+  height:140rpx;
+  display: flex;
+  flex-direction: column;
+
+}
+.list .listItem .content label{
+  flex: 1;
+   word-break: break-all;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+
+}
+.list .listItem .content view{
+  color: #ff5b40;
+  flex: 1;
+  display: flex;
+  align-items: flex-end
+
+}
+
+/* 没有数据显示 */
+.noData{
+  text-align: center;
+}
+.noData image{
+  width:98rpx;
+  height:98rpx;
+  margin-top:160rpx;
+  margin-bottom:24rpx;
+}
+.allData{
+padding:24rpx;
+text-align: center;
+color:#C5C5C5;
+font-size:24rpx;
+}
+/* 去首页逛逛 */
+.toHome{
+  width:260rpx;
+  height:60rpx;
+  border:2rpx solid #F44225;
+  color: #F44225;
+  font-size:26rpx;
+  border-radius: 30rpx;
+  background-color: #EFEFF4;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top:24rpx;
+}

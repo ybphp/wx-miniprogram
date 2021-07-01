@@ -1,0 +1,29 @@
+<!--pages/balance/balance.wxml-->
+<view class='totalMoney'>
+<text>账户余额（元）</text>
+<view>220.00</view>
+</view>  
+
+<view class='list'>
+<view class='listItem'>
+<label>账户充值</label>
+<image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='listItem'>
+<label>余额提现</label>
+<image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='listItem'>
+<label>余额明细</label>
+<image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='listItem'>
+<label>提现记录</label>
+<image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='listItem'>
+<label>我的银行卡</label>
+<image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+
+</view>

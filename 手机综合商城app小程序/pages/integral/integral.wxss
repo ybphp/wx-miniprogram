@@ -1,0 +1,52 @@
+/* pages/integral/integral.wxss */
+.totalMoney{
+  height:168rpx;
+  background-color: #ff5b40;
+  color:#FFFEFE;
+  padding:24rpx;
+}
+.totalMoney text{
+  font-size: 26rpx;
+}
+.totalMoney view{
+  font-size: 60rpx;
+  margin-top: 32rpx;
+}
+
+.list{
+  background-color: #fff;
+  font-size:26rpx;
+  padding-left:24rpx;
+  color:#282828;
+}
+.list .listItem{
+  height:98rpx;
+  padding-right:24rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFF4;
+}
+.list .listItem:last-child{
+  border-bottom: none;
+}
+.list .listItem label{
+  flex: 1
+}
+.list .listItem  .listItemL,.list .listItem  .listItemR{
+  flex: 1
+}
+.list .listItem  .listItemR{
+  text-align: right;
+  font-size: 30rpx;
+}
+.list .listItem  .listItemL view{
+  color: #C5C5C5;
+  font-size: 20rpx;
+  margin-top: 12rpx;
+}
+.cGreen{
+  color:#2CA640
+}
+.cRed{
+  color: #ff5b40
+}

@@ -1,0 +1,178 @@
+/* pages/orderConfirm/orderConfirm.wxss */
+.oC_addr{
+  height:88rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color:#C5C5C5;
+  font-size: 24rpx;
+  padding:0 24rpx;
+}
+.oC_addr view{
+  flex:1;
+  display: flex;
+  align-items: center;
+}
+.oC_addr view image{
+height:28rpx;
+width:20rpx;
+margin-right:26rpx;
+}
+.image{
+height:26rpx;
+width:16rpx;
+margin-left:24rpx;
+} 
+
+/* 列表 */
+/* list */
+.list{
+  background-color: #fff;
+  padding-bottom:120rpx;
+  margin-top:12rpx;
+}
+.list .listTitle{
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  height:80rpx;
+  padding:0 24rpx;
+  border-bottom: 2rpx solid #EFEFF4;
+}
+.list .listTitle text{
+  flex:1;
+}
+.list .listTitle .num{
+  color:#C5C5C5
+}
+.list .listItem{
+  height:250rpx;
+  display: flex;
+  align-items: center;
+  padding:0 24rpx;
+}
+.listItem .detail{
+ height:100%;
+ flex:1;
+ border-bottom: 2rpx solid #efeff4;
+ display: flex;
+ align-items: center;
+}
+.detail_r{
+  flex:1;
+  height:200rpx;
+  font-size:24rpx;
+  color:#282828;
+  display: flex;
+  flex-direction: column;
+}
+.detail_r text{
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.detail_r .detail_rT text:nth-child(1){
+  padding:14rpx 0;
+}
+.detail_r text:nth-child(2){
+ font-size: 24rpx;
+ color:#c5c5c5;
+}
+.detail_rT{
+  margin-bottom: 10rpx;
+  flex: 2;
+}
+.detail_rB{
+  display: flex;
+  align-items: center;
+  flex: 1
+}
+.detail_rB text{
+  flex:2;
+  font-size: 30rpx;
+  color:#f44225;
+}
+.detail_rB .stepper{
+  flex: 1;
+  text-align: right;
+  color:#c5c5c5;
+  font-size: 24rpx;
+}
+.listItem image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 8rpx;
+  margin-right:24rpx;
+}
+.b-B{
+  border-bottom: 2rpx solid #efeff4;
+  font-size: 24rpx;
+  height:96rpx;
+  display: flex;
+  align-items: center;
+  margin:0 24rpx;
+}
+.b-B label{
+  color:#282828;
+}
+.b-B text{
+  color:#C5C5C5;
+}
+.coupon label,.coupon view{
+flex: 1
+}
+.coupon view{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.allActiv label{
+flex: 1
+}
+.allActiv text{
+  flex: 3
+}
+.allMoney label,.leaveMsg label{
+flex: 1
+}
+.allMoney text{
+ flex: 1;
+ text-align: right;
+ color:#f44225;
+}
+.leaveMsg input{
+ flex:3;
+}
+
+/* 合计 */
+.bottomCont{
+  display: flex;
+  align-items: center;
+  height:98rpx;
+  background-color: #f9f9f9;
+  position: fixed;
+  bottom:0;
+  width:100%;
+
+}
+.bottomCont .bottomContL{
+ font-size: 26rpx;
+ flex:1;
+ display: flex;
+ padding:0 24rpx;
+ justify-content: flex-end;
+ color: #F44225;
+ font-weight: 500;
+}
+
+.bottomCont .bottomContR{
+ font-size: 30rpx;
+ background-color: #F44225;
+ color:#fff;
+ width:200rpx;
+ height:100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}

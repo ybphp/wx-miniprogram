@@ -1,0 +1,18 @@
+<!--pages/addrMan/addrMan.wxml-->
+<block wx:for="{{listItem}}" wx:key="{{index}}">
+<view class='addr' data-item='{{item}}' bindtap='backOrder'>
+  <view class='addrUser'>
+    <text>收货人：{{item.name}}</text>
+    <text>{{item.phone}}</text>
+  </view>
+  <view class='addrs'>
+    <text>收货地址：{{item.addr}}</text>
+    <image src='../../assets/icons/per_header_ic_more.png'></image>
+  </view>
+</view>
+</block>
+
+
+<view class='bottomCont' bindtap='addAddr'>
+  + 新增收货地址
+</view>

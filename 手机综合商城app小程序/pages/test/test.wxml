@@ -1,0 +1,8 @@
+
+<!-- 生成图片的画布 -->
+  <canvas class='firstCanvas' 
+          style="width:{{windowWidth}}px;height:{{windowHeight}}px;box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.05);" 
+          canvas-id="firstCanvas">
+</canvas>
+<!-- 按钮 -->
+<button bindtap='buildPosterSaveAlbum'>生成海报</button>

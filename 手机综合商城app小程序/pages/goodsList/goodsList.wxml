@@ -1,0 +1,66 @@
+<!--pages/goodsList/goodsList.wxml-->
+<view class='serach'>
+  <view class="searchB" bindtap='enterSearch'>
+    <!-- <input type="text" placeholder="搜索商品" placeholder-class="input-text"/>  -->
+    <image src='../../assets/icons/search.png'></image>
+    <text class='txtColor'>请输入商品关键词进行搜索</text>
+  </view>
+  <image class="searchImg" src='../../assets/icons/msg.png'></image>
+</view>
+
+<view class='myFilter'>
+  <view class='bar1'>
+    <view bindtap='comprehensive' >
+      综合
+      <view>
+        <!-- <image class='img1' src='../../assets/icons/list_screen_ic_down_def.png'></image> -->
+        <image class='img1' src="../../assets/icons/{{comp?'list_screen_ic_down_pre.png':'list_screen_ic_down_def.png'}}"></image>
+      </view>
+    </view>
+    <view>
+      销量
+      <view>
+        <image bindtap='saleSort' data-key='up' class='img1' src="../../assets/icons/{{saleS1?'list_screen_ic_down_preT.png':'list_screen_ic_up_def.png'}}"></image>
+        <image bindtap='saleSort' data-key='down' class='img1' src="../../assets/icons/{{saleS2?'list_screen_ic_down_pre.png':'list_screen_ic_down_def.png'}}"></image>
+      </view>
+    </view>
+    <view>
+      价格
+      <view>
+        <image bindtap='priceSort' data-key='up' class='img1' src="../../assets/icons/{{priceS1?'list_screen_ic_down_preT.png':'list_screen_ic_up_def.png'}}"></image>
+        <image bindtap='priceSort' data-key='down' class='img1' src="../../assets/icons/{{priceS2?'list_screen_ic_down_pre.png':'list_screen_ic_down_def.png'}}"></image>
+      </view>
+    </view>
+    <view class='choose' bindtap='showPrice'>筛选
+      <image class='img2' src='../../assets/icons/list_screen_ic_screen_pre.png'></image>
+    </view>
+  </view>
+  <view class='bar2' wx:if="{{showPrice}}">
+    <text>价格区间 （元）</text>
+    <input placeholder-class="place-holder" type='number' class="weui-input" placeholder="最低价" bindinput="bindKeyInput1" value='{{minPrice}}' />
+    <text class='text'>-</text>
+    <input placeholder-class="place-holder" type='number' class="weui-input" placeholder="最高价" bindinput="bindKeyInput2" value='{{highPrice}}' />
+    <button bindtap='priceList'>确定</button>
+  </view>
+</view>
+
+<view class='goodsList'>
+  <block wx:for="{{goodsList}}" wx:key='{{index}}'>
+    <view class='listItem'>
+      <image src='{{item.img}}'></image>
+      <view class='itemRight'>
+        <text class='title'>{{item.title}}</text>
+        <view class='itemB'>
+          <text class='price'>￥{{item.price}}</text>
+          <button bindtap='addToCart'>加入购物车</button>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view wx:if='{{goodsList.length != 0}}' class='allData'>已加载全部</view>
+  <!-- goodsList.length == 0 -->
+  <view wx:if='{{goodsList.length == 0}}' class='noData'>
+    <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+    <view class='allData'>抱歉，没有找到相关的商品</view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="landing" style="opacity:{{opacity}};">
+<view class="landing_desc">
+    <image src="../image/未登录.jpg"></image>
+    <text>登录后才能看到你喜欢的主播哦~</text>
+</view>
+<view class="landing_tab"  bindtap="tablanding">
+    <text class="landingtab">点击登录</text>
+</view>
+</view>
+<view class="toplanding" style="display:{{display}};">
+<view class="toplanding_img">
+    <image src="../image/登录.jpg"></image>
+</view>
+<view class="toplanding_desc">
+    <text>用户名:</text><input type="text" bindinput="userNameInput"/>
+    <text>密码:</text><input type="text" bindinput="userPasswordInput" password="true"/>
+</view>
+<view class="btn" style="margin-top:30rpx;">
+    <button bindtap="yes">确定</button>
+</view>
+</view>

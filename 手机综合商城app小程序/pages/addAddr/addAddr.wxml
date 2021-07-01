@@ -1,0 +1,29 @@
+<!--pages/addAddr/addAddr.wxml-->
+<view class='list'>
+<view class='listItem'>
+<label>姓名</label>
+<input placeholder='请输入姓名'></input>
+</view>
+<view class='listItem'>
+<label>手机号码</label>
+<input placeholder='请输入手机号码'></input>
+</view>
+<view class='listItem addr'>
+<label>所在地区</label>
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <text>{{region[0]}},{{region[1]}},{{region[2]}}</text>
+   
+</picker>
+ <image src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+<view class='listItem'>
+<label>详细地址</label>
+<input placeholder='请输入详细地址'></input>
+</view>
+<view class='listItem'>
+<label>默认设置</label>
+<switch checked bindchange="switch1Change" />
+</view>
+</view>
+<button class='saveAddr'>保 存</button>
+

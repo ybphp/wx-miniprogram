@@ -1,0 +1,87 @@
+<!--pages/sharecode/sharecode.wxml-->
+<view class='cont cont1'>
+  <view class='t1'>我的邀请码</view>
+  <view class='t1'>221296</view>
+  <view class='t2'>分享您的邀请码，让更多好友加入我们， 同时您也可以获得奖励
+  </view>
+  <view class='t3'>
+    <view class='view1'>
+      <view class='view2'>
+        <image src='../../assets/icons/sharecode_pic_money.png'></image>
+        <view class='view3'>
+          <text>获得收益</text>
+          <text>￥200</text>
+        </view>
+      </view>
+    </view>
+    <view class='view1'>
+      <view class='view2'>
+        <image src='../../assets/icons/sharecode_pic_people.png'></image>
+        <view class='view3'>
+          <text>邀请人数</text>
+          <text>18</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='cont cont2'>
+  <view>输入邀请码</view>
+  <view>
+    <input placeholder='点击输入' placeholder-style='color:#C5C5C5'></input>
+    <button>确定</button>
+  </view>
+</view>
+
+
+
+
+
+<view class='bottomCont'>
+  <view bindtap='toAddAddr'>
+      <button open-type="share">
+        <image src='../../assets/imgs/details_share_pop_ic_wechat.png'></image><text>分享给朋友</text>
+        </button> 
+  </view>
+  <view bindtap='showPoster'>
+    <image src='../../assets/imgs/details_share_pop_ic_poster.png'></image>
+    <text>生成海报</text>
+  </view>
+</view>
+
+
+<view class="wx-popup" hidden="{{flagPoster}}">
+<view class='popC'>
+
+  <canvas canvas-id="canvas" class="popup-containerP"></canvas>
+
+  <!-- <view class='popup-containerP' catchtap='showPoster'>
+    <view class='userInfo'>
+      <image src='../../assets/icons/details_share_poster_ic_head_def.png'></image>
+      <view>
+        <text>用户名</text>
+        <text>广告词描述</text>
+      </view>
+    </view>
+    <view class='contPop'>
+      <image src='../../assets/imgs/miniPro.png' mode="widthFix" data-src="../../assets/imgs/miniPro.png" bindtap="previewImage"></image>
+      <view class='miniName'>小程序名称</view>
+      <view class='notice'>
+        长按图片识别图中二维码进入“小程序名称” 一起寻找好物
+      </view>
+      <view class='InvitationCode'>
+        <text>我的专属邀请码</text>
+        <view>292345</view>
+      </view>
+    </view>
+  </view> -->
+
+
+
+  <view class='twoBtn'>
+  <view><button catchtap='saveImg'>保存到本地</button></view>
+  <view><button catchtap='hidePoster'>关闭</button></view>   
+  </view>
+  </view>
+</view>

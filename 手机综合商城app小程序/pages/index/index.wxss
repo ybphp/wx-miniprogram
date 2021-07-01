@@ -1,0 +1,189 @@
+/**index.wxss**/
+@import '/assets/css/weui.wxss';
+/* 搜索 */
+.serach{
+  width:100%;
+  height:88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index:100;
+  background-color: #efeff4;
+}
+.searchB{
+  width:700rpx;
+  height: 56rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 28rpx;
+  z-index: 1000;
+  text-align: center;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchB image{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right:10rpx;
+  
+}
+.searchB .txtColor{
+  color: #B2B2B2
+}
+.myCont{
+  margin-top:88rpx;
+}
+/* swiper */
+swiper{
+  width:100%;
+  height:320rpx;
+}
+swiper-item{
+  width:100%;
+  height:100%;
+}
+swiper-item image{
+  height:100%;
+  width:100%
+}
+.wx-swiper-dot{
+    height: 12rpx !important;
+    width: 12rpx !important;
+}
+.wx-swiper-dot-active{
+    width:44rpx !important; 
+    height:12rpx !important;
+    border-radius: 6rpx !important;
+}
+
+/* hotList */
+.hotList{
+  display: flex;
+  height:190rpx;
+  width:100%;
+  background-color: #fff;
+  font-size: 24rpx;
+  color:#282828
+}
+.hotList view{
+  flex:1;
+  text-align: center;
+}
+.hotList view image{
+  width:88rpx;
+  height:88rpx;
+  display: block;
+  margin:30rpx  auto 14rpx;
+}
+
+/* shop list */
+.shopSection{
+  width:100%;
+  height:auto;
+}
+
+.shopSection .shopTitle{
+  width:100%;
+  height:108rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color:#282828;
+}
+.shopSection .shopTitle image{
+  width: 26rpx;
+  height: 30rpx;
+  margin-right:12rpx;
+}
+.shopSection .shopList{
+  padding:15rpx;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr);
+  justify-items:center;
+}
+.shopSection .shopList .listItem{
+ width:340rpx;
+ height:504rpx;
+ background-color: #fff;
+ border-radius: 12rpx;
+ font-size:24rpx;
+ margin-bottom: 40rpx;
+ position: relative;
+}
+.shopList .listItem image{
+  width: 340rpx;
+  height: 340rpx;
+}
+.shopList .listItem .itemBottom{
+  padding:0 24rpx;
+}
+.shopList .listItem .itemBottom .title{
+  word-break: break-all;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom:26rpx;
+}
+.shopList .listItem .itemBottom .price{
+  /* position: absolute;
+  bottom:24rpx; */
+  display: flex;
+  align-items: flex-end;
+}
+.itemBottom .price view{
+  flex:1;
+}
+.itemBottom .price view text:nth-child(1){
+  color:#F44225 ;
+  margin-right:24rpx;
+
+}
+.itemBottom .price view text:nth-child(2){
+  color:#C5C5C5;
+  font-size:18rpx;
+  text-decoration:line-through;
+}
+.shopList .listItem .itemBottom button{
+  width: 80rpx;
+  height: 42rpx;
+  border-radius: 12rpx;
+  background-color:#F44225 ;
+  color:#fff;
+  font-size:24rpx;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 底线 */
+.bottomLine{
+  color:#C5C5C5;
+  font-size:24rpx;
+  text-align: center;
+  padding:42rpx;
+  position: relative;
+}
+.bottomLine:before, .bottomLine:after { 
+    content: ''; 
+    position: absolute;   
+    top: 50%; 
+    background: #C5C5C5;  
+    width:64rpx;           
+    height: 2rpx;  
+} 
+.bottomLine:before{
+  left:206rpx;
+}
+.bottomLine:after{
+  right:206rpx;
+}

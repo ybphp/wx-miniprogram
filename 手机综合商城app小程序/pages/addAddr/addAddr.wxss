@@ -1,0 +1,50 @@
+/* pages/addAddr/addAddr.wxss */
+.list{
+background-color: #fff;
+font-size:26rpx;
+padding-left:24rpx;
+margin-top:12rpx;
+}
+.list .listItem{
+  height:98rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #EFEFF4;
+  padding-right:20rpx;
+}
+.list .listItem.addr image{
+width:16rpx;
+height:26rpx;
+}
+.list picker{
+  flex: 3;
+}
+.list picker text{
+  flex: 1;
+}
+.list picker image{
+flex: 1;
+}
+
+.list .listItem:last-child{
+  border-bottom:none
+}
+.list .listItem label{
+  flex:1
+}
+.list .listItem input{
+  flex:3
+
+}
+.saveAddr{
+  width:702rpx;
+  height:80rpx;
+  line-height:80rpx;
+  background-color:#F44225 ;
+  color: #fff;
+  border-radius: 40rpx;
+  padding:0;
+  margin-top:40rpx;
+  text-align: center;
+  font-size:30rpx;
+}

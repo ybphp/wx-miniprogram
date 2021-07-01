@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/classify/classify",
+    "pages/cart/cart",
+    "pages/person/person",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/goodsList/goodsList",
+    "pages/goodsDetail/goodsDetail",
+    "pages/orderDetail/orderDetail",
+    "pages/orderConfirm/orderConfirm",
+    "pages/orderPay/orderPay",
+    "pages/addAddr/addAddr",
+    "pages/addrMan/addrMan",
+    "pages/balance/balance",
+    "pages/integral/integral",
+    "pages/mycollection/mycollection",
+    "pages/myAddr/myAddr",
+    "pages/myCoupon/myCoupon",
+    "pages/sharecode/sharecode",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "手机商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7b7b7b",
+    "selectedColor": "#f44225",
+    "backgroundColor": "#F9F9F9",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "./assets/icons/home_nav_ic_home_def.png",
+        "selectedIconPath": "./assets/icons/home_nav_ic_home_pre.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./assets/icons/home_nav_ic_list_def.png",
+        "selectedIconPath": "./assets/icons/home_nav_ic_list_pre.png",
+        "pagePath": "pages/classify/classify",
+        "text": "分类"
+      },
+      {
+        "iconPath": "./assets/icons/home_nav_ic_cart_def.png",
+        "selectedIconPath": "./assets/icons/home_nav_ic_cart_pre.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "./assets/icons/home_nav_ic_my_def.png",
+        "selectedIconPath": "./assets/icons/home_nav_ic_my_pre.png",
+        "pagePath": "pages/person/person",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,25 @@
+<!--pages/integral/integral.wxml-->
+<view class='totalMoney'>
+  <text>积分余额</text>
+  <view>3600</view>
+</view>
+
+<view class='list'>
+  <view class='listItem'>
+    <label>积分明细</label>
+  </view>
+  <view class='listItem'>
+    <view class='listItemL'>
+      <label>签到收入</label>
+      <view>2018-12-25 20:22</view>
+    </view>
+    <view class='listItemR cGreen'>+20</view>
+  </view>
+  <view class='listItem'>
+    <view class='listItemL'>
+      <label>购物支出</label>
+      <view>2018-12-25 20:22</view>
+    </view>
+    <view class='listItemR cRed'>-120</view>
+  </view>
+</view>

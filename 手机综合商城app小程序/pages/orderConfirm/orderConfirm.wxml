@@ -1,0 +1,57 @@
+<!--pages/orderConfirm/orderConfirm.wxml-->
+<view class='oC_addr'>
+  <view bindtap='toAddr'>
+    <image src='../../assets/icons/oder_ic_pint.png'></image>
+    <text>{{addr.addr ? addr.addr : "请选择收获地址"}}</text>
+  </view>
+  <image class='image' src='../../assets/icons/per_header_ic_more.png'></image>
+</view>
+
+<view class='list'>
+  <block wx:for="{{listItem}}" wx:key="{{index}}">
+    <view class='listItem'>
+      <view class='detail'>
+        <image src='{{item.img}}'></image>
+        <view class='detail_r'>
+          <view class='detail_rT'>
+            <text>{{item.title}}</text>
+            <text>{{item.attr}}</text>
+          </view>
+          <view class='detail_rB'>
+            <text>¥{{item.price}}</text>
+            <view class="stepper">
+              数量：1
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='b-B coupon'>
+    <label>优惠券</label>
+    <view>
+      <text>未选中</text>
+      <image class='image' src='../../assets/icons/per_header_ic_more.png'></image>
+    </view>
+  </view>
+  <view class='b-B allActiv'>
+    <label>订单活动</label>
+    <text>可用0积分，可抵扣0元，共有0积分</text>
+    <image class='image' src='../../assets/icons/per_header_ic_more.png'></image>
+  </view>
+  <view class='b-B allMoney'>
+    <label>总计金额</label>
+    <text>¥48.00</text>
+  </view>
+  <view class='b-B leaveMsg'>
+    <label>买家留言</label>
+    <input placeholder='50字以内（选填）' placeholder-style='color:#C5C5C5'></input>
+  </view>
+</view>
+
+<view class='bottomCont'>
+    <view class='bottomContL'>
+     需付:¥48.00
+    </view>
+    <view class='bottomContR' bindtap='toPay'>立即支付</view>
+  </view>

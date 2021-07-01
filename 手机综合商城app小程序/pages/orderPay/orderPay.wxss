@@ -1,0 +1,62 @@
+/* pages/orderPay/orderPay.wxss */
+.list{
+  background-color: #fff;
+  font-size: 26rpx;
+  padding-left:24rpx;
+  margin-top:12rpx;
+}
+.listItem{
+  height:98rpx;
+  display:flex;
+  align-items: center;
+  padding-right: 24rpx;
+}
+.listItem label{
+  color:#282828;
+  flex: 1
+}
+.listItem.b_B{
+  border-bottom: 2rpx solid #efeff4; 
+}
+.listItem text{
+  color:#C5C5C5;
+  flex: 1;
+  text-align: right
+}
+.listItem text.cred{
+  color:#f44225
+}
+/* 微信支付 */
+.wechatBtn{
+  height:102rpx;
+  width:702rpx;
+  border-radius: 10rpx;
+  margin:26rpx aut0;
+  background-color:#2ca640 ;
+  color:#fff;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  margin-top:26rpx;
+  margin-left:24rpx;
+}
+.wechatBtn .image1{
+width:66rpx;
+height:60rpx;
+margin-right:24rpx;
+margin-left:40rpx;
+} 
+.image{
+height:26rpx;
+width:16rpx;
+margin-left:24rpx;
+margin-right:40rpx;
+} 
+
+.wechatBtn .payL,.wechatBtn .payR{
+  flex: 1;
+  display: flex;
+  align-items: center
+}
+.wechatBtn .payR{
+  justify-content: center}

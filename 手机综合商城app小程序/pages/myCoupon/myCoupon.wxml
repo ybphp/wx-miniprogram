@@ -1,0 +1,98 @@
+<!--pages/myCoupon/myCoupon.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class='list'>
+            <!-- coupon1.length == 0 -->
+            <view wx:if='{{coupon1.length == 0}}' class='noData'>
+              <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+              <view class='allData'>抱歉，这里是空的哦</view>
+            </view>
+            <block wx:for="{{coupon1}}" wx:key='{{index}}'>
+              <view class='listItem'>
+                <view class='bgImg'>
+                  <view> ¥
+                    <text>{{item.price}}</text>
+                  </view>
+                </view>
+                <view class='cont'>
+                  <view>{{item.title}}</view>
+                  <view>
+                    <text>期限：{{item.time}}</text>
+                    <button class='cRed'>去使用</button>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='list'>
+            <!-- coupon2.length == 0 -->
+            <view wx:if='{{coupon2.length == 0}}' class='noData'>
+              <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+              <view class='allData'>抱歉，这里是空的哦</view>
+            </view>
+            <block wx:for="{{coupon2}}" wx:key='{{index}}'>
+              <view class='listItem'>
+                <view class='bgImg bgImg2'>
+                  <view> ¥
+                    <text>{{item.price}}</text>
+                  </view>
+                </view>
+                <view class='cont'>
+                  <view>{{item.title}}</view>
+                  <view>
+                    <text>期限：{{item.time}}</text>
+                    <button class='cGray'>已使用</button>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class='list'>
+            <!-- coupon3.length == 0 -->
+            <view wx:if='{{coupon3.length == 0}}' class='noData'>
+              <image src='../../assets/icons/list_screen_ic_empty.png'></image>
+              <view class='allData'>抱歉，这里是空的哦</view>
+            </view>
+            <block wx:for="{{coupon3}}" wx:key='{{index}}'>
+              <view class='listItem'>
+                <view class='bgImg bgImg2'>
+                  <view> ¥
+                    <text>{{item.price}}</text>
+                  </view>
+                </view>
+                <view class='cont'>
+                  <view>{{item.title}}</view>
+                  <view>
+                    <text>期限：{{item.time}}</text>
+                    <button class='cGray'>已失效</button>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

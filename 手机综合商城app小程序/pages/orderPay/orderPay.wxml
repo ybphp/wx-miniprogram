@@ -1,0 +1,22 @@
+<!--pages/orderPay/orderPay.wxml-->
+<view class='list'>
+  <view class='listItem b_B'>
+    <label>订单编号</label>
+    <text>12903891723971029</text>
+  </view>
+  <view class='listItem'>
+    <label>订单金额</label>
+    <text class='cred'>48¥</text>
+  </view>
+</view>
+
+<view class='wechatBtn'>
+  <view class='payL'>
+    <image class='image1' src='../../assets/icons/order_pay_pay.png'></image>
+    <text>微信支付</text>
+  </view>
+  <view class='payR'>
+    <text>点击使用微信付款</text>
+    <image class='image' src='../../assets/icons/order_pay_ic_more.png'></image>
+  </view>
+</view>
