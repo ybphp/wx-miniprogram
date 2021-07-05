@@ -1,0 +1,69 @@
+<!--pages/account/organizingdata.wxml-->
+<import src="../util/addresstemplate.wxml"/>
+<import src="../util/searchaddresstemplate.wxml"/>
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<template wx:if="{{isShowPCC}}" is="address" data="{{addressinfo}}"/>
+<template wx:if="{{isShowSearch}}" is="searchaddress" data="{{addresspois}}"/>
+<form bindsubmit="organizingdataSubmit" wx:if="{{!(isShowPCC||isShowSearch)}}">
+    <view class="list">
+        <view class="item item-input">
+            <text class=" iconfont  icon-changshang placeholder-icon"></text>
+            <input type="text" bindinput="bindChange" id="shopname" name="shopname"
+                   placeholder="工作单位" maxlength="15"/>
+        </view>
+        <view class="item item-input" bindtap="getAddressPCCList">
+            <text class=" iconfont  icon-location placeholder-icon"></text>
+            <input type="text" disabled value="{{addresspcd}}"
+                   placeholder="单位地址(省市县)"/>
+        </view>
+        <view class="item item-input">
+            <text class=" iconfont  icon-location placeholder-icon"></text>
+            <input type="text" bindinput="bindChange" id="addrdetail" name="addrdetail"
+                   placeholder="详细地址(街道 门牌号等)" value="{{addressname}}"/>
+            <view bindtap="getCurrentCity" class="positive padding-horizontal">
+                <text class="iconfont icon-locationfill"></text>
+            </view>
+        </view>
+        <view class="item item-input">
+            <text class=" iconfont icon-phone placeholder-icon"></text>
+            <input type="number" bindinput="bindChange" id="user" name="user" maxlength="11"
+                   placeholder="联系电话(固话格式:075523485305)"/>
+        </view>
+        <view class="item item-input" bindtap="uploadActionSheet">
+            <text class=" iconfont icon-pic placeholder-icon"></text>
+            <input type="text" disabled placeholder="上传工作证(请参考示例 误传请重新传)"/>
+            <text class="padding-horizontal  iconfont icon-add positive"></text>
+        </view>
+    </view>
+    <!--    <view class="list  " style="margin-bottom: 5px;">
+            <view class="item">
+                <text class=" iconfont icon-yonghuleixing placeholder-icon"></text>
+                <text class="h3"> 用户类型</text>
+                <view class="inline ">
+                    <radio-group class="radio-group" data-current="0" bindchange="radioChange">
+                        <label class="radio padding-left" wx:for="{{usertype}}">
+                            <radio value="{{item.value}}" color="#00ACFF" checked="{{item.checked}}"/>
+                            {{item.name}}
+                        </label>
+                    </radio-group>
+                </view>
+
+                &lt;!&ndash;         <view class="padding-top">
+                             <radio-group class="radio-group row row-horizontal-between" data-current="1" bindchange="radioChange">
+                                 <label class="radio " wx:for="{{utitem}}">
+                                     <radio value="{{item.value}}" color="#00ACFF" checked="{{item.checked}}"/>{{item.name}}
+                                 </label>
+                             </radio-group>
+                         </view>&ndash;&gt;
+            </view>
+        </view>-->
+
+    <view class="padding-horizontal">
+        <button formType="submit" class="positive-bg light " hover-class="button-hover">提交</button>
+    </view>
+
+</form>
+
+

@@ -1,0 +1,83 @@
+/**index.wxss**/
+#index {
+    width: 100%;
+    overflow: hidden;
+}
+
+.topbj {
+    /*    background: url(../../images/topbj.png) 100% 100%;*/
+    background-color: #00ACFF;
+    background-size: cover;
+    height: 16rem;
+    padding-top: 0.8rem;
+}
+
+.total {
+    margin: auto;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    padding-top: 3rem;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0px 1px 2px rgba(136, 136, 136, 0.5);
+    box-shadow: 0px 1px 2px rgba(136, 136, 136, 0.5);
+}
+
+.total .num {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sub-total {
+    margin-top: 1rem;
+}
+
+.sub-total .p:first-child {
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    margin: 0 0 0.1rem 0;
+    height: 1.6rem;
+}
+
+.main-list {
+    text-align: center;
+}
+
+.main-list navigator {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+}
+
+.main-list navigator .h5, .main-list navigator .p {
+    margin: 0.3rem;
+}
+
+.main-list navigator .p {
+    font-size: 0.7rem !important;
+    color: #888888;
+}
+
+.main-list navigator .iconfont {
+    font-size: 2.2rem !important;
+}
+
+.sub-menu navigator {
+    padding: 1rem 0 0 1.2rem;
+    color: #585858;
+}
+
+.sub-menu navigator .iconfont {
+    vertical-align: middle;
+}
+
+.kefu {
+    height: 3.6rem;
+}
+
+.kefu-bottom {
+    height: 2rem;
+}

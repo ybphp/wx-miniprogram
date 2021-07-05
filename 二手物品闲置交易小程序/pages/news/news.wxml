@@ -1,0 +1,23 @@
+<!--pages/news/news.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view>
+    <view wx:if="{{isNotData}}" class="isNotDataHint">
+        <view class="iconfont icon-xiaoxi"></view>
+        <text>暂无消息</text>
+    </view>
+    <view class="list">
+        <view class="item" wx:for="{{newsList}}" wx:for-item="item" wx:key="*this">
+            <view class="h2">
+                <text class="iconfont icon-markfill {{item.look==0?'energized':'grey'}} "
+                      style="font-size: 1rem!important;"></text>
+                {{item.title}}
+                <text class="status">{{item.look==0?'未读':'已读'}}</text>
+                <text class="item-note right-1">{{item.createdate }}</text>
+            </view>
+            <view class="p" style="padding-left: 1.1rem; white-space: normal;">{{item.content}}</view>
+        </view>
+    </view>
+    <view class="padding-top"></view>
+</view>

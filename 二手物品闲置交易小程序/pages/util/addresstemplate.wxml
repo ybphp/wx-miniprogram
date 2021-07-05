@@ -1,0 +1,16 @@
+<!--pages/util/addresstemplate.wxml-->
+<template name="address">
+    <scroll-view id="address" scroll-y enable-back-to-top >
+        <view class=" list">
+            <view wx:if="{{false}}" class="isNotDataHint">
+                <view class="iconfont icon-xiaoxi"></view>
+                <view>无法获取地区</view>
+            </view>
+            <block wx:for="{{addressinfo}}" wx:for-item="item" wx:key="*this">
+                <view class="item" bindtap="getAddressPCCList" data-item="{{item}}">
+                    {{item.Name}}
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</template>

@@ -1,0 +1,28 @@
+<!--pages/wallet/recharge.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<form bindsubmit="paymentSubmit">
+    <view class="padding-top"></view>
+    <view class="list">
+        <label class="item item-input">
+            <view class="input-label "> 充值金额</view>
+            <input type="digit" bindinput="bindChange" id="money" name="money"  placeholder="请输入充值金额"/>
+        </label>
+        <view class="padding-top"></view>
+        <view class="item item-divider item-borderless">支付方式</view>
+        <radio-group class="item  item-icon-right radio-group padding">
+            <label class="radio" wx:for="{{paytype}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}"/>
+                {{item.name}}
+                <text class=" iconfont icon-weixin  balanced"></text>
+            </label>
+        </radio-group>
+    </view>
+
+    <view class="padding light-bg bottom-0">
+        <button class="positive-bg light "
+                formType="submit">充值
+        </button>
+    </view>
+</form>

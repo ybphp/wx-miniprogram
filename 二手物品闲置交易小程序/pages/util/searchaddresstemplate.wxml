@@ -1,0 +1,24 @@
+<!--pages/util/searchaddresstemplate.wxml-->
+<template name="searchaddress">
+    <scroll-view id="searchaddress" scroll-y enable-back-to-top scroll-top="{{scrollTop}}">
+        <view class=" list">
+            <view class=" item-input light-bg border-b card">
+                <text class=" iconfont icon-search placeholder-icon" style="font-size: 0.9rem!important;"></text>
+                <input type="text" bindinput="bindChange" id="serachcontent"
+                       placeholder="您要搜索的地址"/>
+                <!--            <button class="affirm-btn positive-bg light ">确定</button>-->
+            </view>
+            <view wx:if="{{false}}" class="isNotDataHint">
+                <view class="iconfont icon-xiaoxi"></view>
+                <view>无法获取附近地址</view>
+            </view>
+            <block wx:for="{{addresspois}}" wx:for-item="item" wx:key="*this">
+                <view class="item item-icon-left" bindtap="getAddressPois" data-items="{{item}}">
+                    <text class="icon iconfont icon-location"></text>
+                    {{item.name}}
+                    <view class="p">{{item.address}}</view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</template>

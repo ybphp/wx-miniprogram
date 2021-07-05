@@ -1,0 +1,9 @@
+/* pages/wallet/recharge.wxss */
+
+.radio-group{
+    background-color: #fff!important;
+}
+.iconfont {
+    font-size: 1.5rem !important;
+    vertical-align: middle;
+}

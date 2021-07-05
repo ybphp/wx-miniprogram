@@ -1,0 +1,8 @@
+<!--pages/util/help.wxml-->
+<view>
+    <view class="list">
+        <view class="item item-body item-image ">
+            <rich-text  nodes="{{helpdata.Content}}" class="helpContent" ></rich-text>
+        </view>
+    </view>
+</view>

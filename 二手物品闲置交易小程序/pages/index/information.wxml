@@ -1,0 +1,66 @@
+<!--pages/index/information.wxml-->
+<import src="../util/addresstemplate.wxml"/>
+<import src="../util/searchaddresstemplate.wxml"/>
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<template wx:if="{{isShowPCC}}" is="address" data="{{addressinfo}}"/>
+<template wx:if="{{isShowSearch}}" is="searchaddress" data="{{addresspois}}"/>
+<view wx:if="{{!(isShowPCC||isShowSearch)}}">
+    <view class="item-divider item-divider-bg item-icon-right border-bottom  padding-top" bindtap="">
+        <view class="h2 border-left">选择品类</view>
+        <!--        <text class="{true:'ion-ios-arrow-right',false:'ion-ios-arrow-down'}[showme]"
+                   class="icon  iconfont"></text>-->
+    </view>
+
+    <checkbox-group bindchange="checkboxChange"
+                    class="row  row-center row-wrap text-center light-bg select-category padding-top">
+        <label class="checkbox col-25 " wx:for="{{productList}}" wx:for-item="item"
+               wx:key="*this" wx:for-index="index" data-index="{{index}}">
+            <view class="border-label {{item.checked?'border-label-checked':''}}">
+                <text class="iconfont {{item.imgurl}}"></text>
+                <checkbox hidden value="{{index}}"/>
+                <view class="{{item.checked?'color-p':''}} " style="font-size:85%;">{{item.name}}</view>
+                <view class="{{item.checked?'show-span':'span'}}"></view>
+            </view>
+
+        </label>
+    </checkbox-group>
+    <view class="padding-top"></view>
+    <view class="item-divider light-bg item-icon-right border-b  padding-top">
+        <view class="h2 border-left">货主联系信息</view>
+    </view>
+    <view class="">
+        <view class="row row-no-padding">
+            <view class="item item-input col-40">
+                <input type="text" bindinput="bindChange" id="name" name="name"
+                       placeholder="姓名" maxlength="15"/>
+            </view>
+            <view class="item item-input col-60">
+                <input type="number" bindinput="bindChange" id="motel" name="motel" maxlength="11"
+                       placeholder="手机号"/>
+            </view>
+        </view>
+
+        <view class="item item-input" bindtap="getAddressPCCList">
+            <input type="text" disabled value="{{addresspcd}}"
+                   placeholder="省市县"/>
+        </view>
+        <view class="item item-input ">
+            <input type="text" bindinput="bindChange" id="addrdetail" name="addrdetail"
+                   placeholder="街道 门牌号(必填)" value="{{addressname}}"/>
+            <view bindtap="getCurrentCity" class="positive padding-horizontal">
+                <text class="iconfont icon-locationfill"></text>
+            </view>
+        </view>
+
+    </view>
+    <view class="padding-top"></view>
+    <view class="item-divider light-bg item-icon-right border-b  padding-top">
+        <view class="h2 border-left">活动类型</view>
+    </view>
+    <view class="padding-top"></view>
+    <view class="item-divider light-bg item-icon-right border-b  padding-top">
+        <view class="h2 border-left">所属厂商</view>
+    </view>
+</view>

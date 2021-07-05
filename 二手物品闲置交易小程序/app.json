@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/information",
+    "pages/referenceprice/referenceprice",
+    "pages/order/order",
+    "pages/wallet/wallet",
+    "pages/wallet/recharge",
+    "pages/news/news",
+    "pages/account/account",
+    "pages/account/login",
+    "pages/account/register",
+    "pages/account/accountinfo",
+    "pages/account/organizingdata",
+    "pages/account/findpassword",
+    "pages/account/setting",
+    "pages/util/help",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#00ACFF",
+    "navigationBarTitleText": "收收",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#00ACFF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabs/home-off.png",
+        "selectedIconPath": "images/tabs/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/referenceprice/referenceprice",
+        "iconPath": "images/tabs/referenceprice-off.png",
+        "selectedIconPath": "images/tabs/referenceprice-on.png",
+        "text": "参考价"
+      },
+      {
+        "pagePath": "pages/wallet/wallet",
+        "iconPath": "images/tabs/money_bag.png",
+        "selectedIconPath": "images/tabs/money_bag_fill.png",
+        "text": "钱包"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "images/tabs/news-off.png",
+        "selectedIconPath": "images/tabs/news-on.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "images/tabs/account-off.png",
+        "selectedIconPath": "images/tabs/account-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 60000
+  },
+  "sitemapLocation": "sitemap.json"
+}

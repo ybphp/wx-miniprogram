@@ -1,0 +1,9 @@
+/* pages/wallet/wallet.wxss */
+.icon:not(.icon-right), .iconfont:not(.icon-right) {
+    color: #00ACFF;
+    font-size: 1.5rem !important;
+}
+.header{
+    height: 6rem;
+    background-color: #00ACFF;
+}

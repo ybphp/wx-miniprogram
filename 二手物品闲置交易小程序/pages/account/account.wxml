@@ -1,0 +1,80 @@
+<!--pages/account/account.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view>
+    <view class="list">
+        <navigator url="accountinfo" open-type="navigate" class="item item-positive item-avatar item-icon-right user">
+            <image src="{{userdata.userfigure||'../../images/head.jpg'}}" alt=""></image>
+            <view class="h2 {{(userdata.username==null&&userdata.nickname==null)?'padding-top':''}}">
+                {{userdata.username||userdata.nickname}}
+            </view>
+            <view class="p">{{userdata.mobile}}</view>
+            <text class="icon-accessory iconfont icon-right "></text>
+        </navigator>
+
+        <view class="item item-icon-left   order money">
+            <text class="icon iconfont icon-moneybag" style="color: #4cd964;"></text>
+            <view class="h2 ">我的钱包
+                <navigator url="../wallet/recharge" open-type="navigate" class="button button-positive button-outline">
+                    提现
+                </navigator>
+                <navigator url="../wallet/recharge" open-type="navigate"
+                           class="button button-energized  button-outline">充值
+                </navigator>
+            </view>
+        </view>
+        <view class="row row-no-padding light-bg  row-center text-center order-item">
+            <navigator url="../wallet/wallet" open-type="switchTab" class="item item-icon-right col ">
+                <view>账号余额</view>
+                <view style="color: #f26604">{{orderSum.account||0.00}}</view>
+                <text class="icon iconfont icon-balance " style="color: #f26604"></text>
+            </navigator>
+            <navigator url="" open-type="navigate" class="item   item-icon-right col item-borderless">
+                <view>银行卡</view>
+                <view style="color: #f26604">{{orderSum.banknum||0}}张</view>
+                <text class="icon iconfont icon-yinxingqia " style="color: #00ACFF"></text>
+            </navigator>
+        </view>
+        <view class="padding-top"></view>
+        <navigator url="../order/order" open-type="navigate" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-form" style="color: #11c1f3"></text>
+            <view class="h2">我登记的信息及货源</view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </navigator>
+        <navigator url="../wallet/wallet" open-type="switchTab" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-moneybag" style="color: #FFD700"></text>
+            <view class="h2">我的钱包
+                <view class="item-note">余额 ：
+                    <text class="balanced ">{{orderSum.account || 0}}</text>
+                </view>
+            </view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </navigator>
+        <navigator url="../news/news" open-type="switchTab" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-mark" style="color: #0ab66a"></text>
+            <view class="h2">消息</view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </navigator>
+        <view class="padding-top"></view>
+        <navigator url="../util/help?id=22" open-type="navigate" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-guanyuwomen" style="color: #ffc900"></text>
+            <view class="h2">关于收收</view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </navigator>
+        <button open-type="share" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-share" style="color: #4cae4c"></text>
+            <view class="h2">分享给我的朋友</view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </button>
+        <navigator url="setting" open-type="navigate" class="item item-icon-left item-icon-right">
+            <text class="icon iconfont icon-settings" style="color: #1b6d85"></text>
+            <view class="h2">设置</view>
+            <text class="icon-accessory iconfont icon-right"></text>
+        </navigator>
+        <view class="padding-top"></view>
+    </view>
+
+
+</view>
+

@@ -1,0 +1,45 @@
+/* pages/account/account.wxss */
+
+.icon:not(.icon-right), .iconfont:not(.icon-right) {
+    color: #00ACFF;
+    font-size: 1.5rem !important;
+}
+
+.user {
+    height: 2.2rem !important;
+}
+
+.user .h2, .user .p, .user .icon-right {
+    color: #fff !important;
+}
+
+.user image {
+    border: 1px solid #fff;
+}
+
+.order {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.3) !important;
+}
+
+.order-item navigator {
+    margin-top: 1px;
+    padding: 0.3rem !important;
+}
+
+.order-item navigator:first-of-type {
+    margin-right: 1px;
+    border-right: 1px solid rgba(221, 221, 221, 0.3) !important;
+}
+
+.money .button {
+    display: inline-block;
+    float: right;
+    margin-left: 1.5rem;
+    min-height: 23px;
+    line-height: 23px;
+}
+
+button.item {
+    text-align: left;
+    line-height: 20px;
+}

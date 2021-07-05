@@ -1,0 +1,66 @@
+<!--pages/account/login.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<form bindsubmit="loginSubmit">
+    <view class="list card margin-top">
+
+        <view class="header row row-horizontal-around row-no-padding">
+            <view class="col-35 header-tab {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+                手机验证登录
+            </view>
+
+            <text class="border-r"></text>
+            <view class="col-35 header-tab {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+                账号密码登录
+            </view>
+        </view>
+        <!-- 手机验证登录 -->
+        <view wx:if="{{currentTab==0}}">
+            <view class="item item-input">
+                <text class=" iconfont icon-my placeholder-icon"></text>
+                <input type="number" bindinput="bindChange" id="user" name="user" maxlength="11" placeholder="手机号码"
+                       />
+            </view>
+
+            <view class="item item-input">
+                <text class=" iconfont  icon-unlock placeholder-icon"></text>
+                <input type="number" bindinput="bindChange" id="verifycode" name="verifycode" placeholder="验证码"/>
+                <button bindtap="getVerifyCode" disabled="{{vcdisabled}}"
+                        class="positive-bg light verify-code col-30 button-small" hover-class="button-hover">
+                    {{paracont}}
+                </button>
+            </view>
+        </view>
+
+        <!-- 账号密码登录 -->
+        <view wx:if="{{currentTab==1}}">
+            <view class="item item-input">
+                <text class=" iconfont icon-my placeholder-icon"></text>
+                <input type="number" bindinput="bindChange" id="account" maxlength="11" name="account"
+                       placeholder="手机号码"
+                       />
+            </view>
+
+            <view class="item item-input">
+                <text class=" iconfont  icon-lock placeholder-icon"></text>
+                <input type="text" bindinput="bindChange" password="true" id="password" maxlength="18" name="password"
+                       placeholder="密码"/>
+            </view>
+        </view>
+
+
+    </view>
+
+    <view class="padding-horizontal">
+        <button formType="submit" hover-class="button-hover" class="positive-bg light ">登录</button>
+    </view>
+    <view class="row row-horizontal-center  margin-top">
+        <navigator url="register" open-type="navigate" hover-class="none"
+                   class="col-30 positive text-right padding-right  border-r">注册收收
+        </navigator>
+        <navigator url="findpassword" open-type="navigate" hover-class="none" class="col-30 padding-left">忘记密码
+        </navigator>
+    </view>
+</form>
+

@@ -1,0 +1,6 @@
+/* pages/util/searchaddresstemplate.wxss */
+
+.affirm-btn{
+    position: absolute;
+    right: 1em;
+}

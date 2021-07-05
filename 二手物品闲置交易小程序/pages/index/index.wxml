@@ -1,0 +1,76 @@
+<!--index.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view id="index">
+    <view class="topbj light text-center">
+        <view class="total ">
+            <view class="p num">{{cargoQuantity.num||0}}</view>
+            <view class="p">总回收量(台)</view>
+        </view>
+        <view class="row sub-total row-no-padding">
+            <view class="col">
+                <view class="p">{{cargoQuantity?cargoQuantity.informatenum :0}}</view>
+                <view class="p">信息总量(单)</view>
+            </view>
+            <view class="col">
+                <view class="p">{{cargoQuantity?cargoQuantity.goodsnum:0 }}</view>
+                <view class="p">总货源量(单)</view>
+            </view>
+        </view>
+    </view>
+    <view style="margin-top: -2.2rem;">
+        <view class="card">
+            <view class="row  light-bg row-center main-list">
+                <navigator url="information" open-type="navigate" class="col border-rb">
+                    <text class="icon iconfont icon-dengjixinxi energized"></text>
+                    <view>
+                        <view class="h5">信息登记</view>
+                        <view class="p">提供回收信息就赚钱</view>
+                    </view>
+                </navigator>
+                <navigator url="../order/order" open-type="navigate" class="col border-b">
+                    <text class="icon iconfont icon-jiedanshouhuo positive"></text>
+                    <view>
+                        <view class="h5">已登记信息</view>
+                        <view class="p">查看登记订单的状态</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="row  light-bg row-center  main-list">
+                <navigator url="" open-type="navigate" class="col border-r">
+                    <text class="icon iconfont icon-sponsorfill positive"></text>
+                    <view>
+                        <view class="h5">信息费收入</view>
+                        <view class="p">随时查看收入明细</view>
+                    </view>
+                </navigator>
+                <navigator url="" open-type="navigate" class="col">
+                    <text class="icon iconfont icon-friendaddfill royal"></text>
+                    <view>
+                        <view class="h5">邀请同行好友</view>
+                        <view class="p">邀请下单有现金奖励</view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="card">
+        <view class="row text-center light-bg row-center sub-menu border-b">
+            <navigator url="../util/help?id=23" open-type="navigate" class="col border-r ">
+                <text class="icon iconfont icon-wenti balanced"></text>
+                <view class="p" class="inline dark"> 我能做什么?</view>
+            </navigator>
+
+            <navigator navigator url="../util/help?id=24" open-type="navigate" class="col">
+                <text class="icon iconfont icon-question1 balanced"></text>
+                <view class="p" class="inline dark"> 我要做什么?</view>
+            </navigator>
+        </view>
+        <view href="tel:400-700-0097">
+            <image src="../../images/index/kefu.png" class="kefu full-image light-bg" alt="客服电话"></image>
+        </view>
+    </view>
+    <image src="../../images/index/buttom.png" class="kefu-bottom full-image" alt="让回收更简单"></image>
+
+</view>

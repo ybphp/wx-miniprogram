@@ -1,0 +1,74 @@
+<!--pages/account/register.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<form bindsubmit="registerSubmit">
+    <view class="list card ">
+        <view class="item item-input">
+            <text class=" iconfont icon-my placeholder-icon"></text>
+            <input type="number" bindinput="bindChange" id="user" name="user" maxlength="11" placeholder="手机号码"/>
+        </view>
+
+        <view class="item item-input">
+            <text class=" iconfont  icon-lock placeholder-icon"></text>
+            <input type="text" bindinput="bindChange" password="true" id="password" name="password" maxlength="18"
+                   placeholder="密码 (请输入6~18位字母或数字)"/>
+        </view>
+        <view class="item item-input">
+            <text class=" iconfont  icon-lock placeholder-icon"></text>
+            <input type="text" bindinput="bindChange" password="true" id="confirmpassword" name="confirmpassword"
+                   maxlength="18"
+                   placeholder="确认密码 (请保持与上面的密码一致)"/>
+        </view>
+        <view class="item item-input">
+            <text class=" iconfont  icon-unlock placeholder-icon"></text>
+            <input type="number" bindinput="bindChange" id="verifycode" name="verifycode" placeholder="验证码"/>
+            <button bindtap="getVerifyCode" disabled="{{vcdisabled}}"
+                    class="positive-bg light verify-code col-30 button-small"
+                    hover-class="button-hover">{{paracont}}
+            </button>
+        </view>
+        <view class="item item-input">
+            <text class=" iconfont  icon-unlock placeholder-icon"></text>
+            <input type="number" bindinput="bindChange" id="invitecode" name="invitecode" placeholder="邀请码"/>
+        </view>
+    </view>
+    <view class="list card " style="margin-bottom: 5px;">
+        <view class="item">
+            <text class=" iconfont icon-yonghuleixing placeholder-icon"></text>
+            <text class="h3"> 用户类型</text>
+            <view class="inline ">
+                <radio-group class="radio-group" data-current="0" bindchange="radioChange">
+                    <label class="radio padding-left" wx:for="{{usertype}}">
+                        <radio value="{{item.value}}" color="#00ACFF" checked="{{item.checked}}"/>
+                        {{item.name}}
+                    </label>
+                </radio-group>
+            </view>
+
+            <!--         <view class="padding-top">
+                         <radio-group class="radio-group row row-horizontal-between" data-current="1" bindchange="radioChange">
+                             <label class="radio " wx:for="{{utitem}}">
+                                 <radio value="{{item.value}}" color="#00ACFF" checked="{{item.checked}}"/>{{item.name}}
+                             </label>
+                         </radio-group>
+                     </view>-->
+        </view>
+    </view>
+    <view class="row row-center ">
+        <navigator url="../util/help?id=25" open-type="navigate" hover-class="none"
+                   class="col positive " style="font-size: 0.9rem">什么是用户类型?
+        </navigator>
+        <radio-group class="radio-group col text-right padding-right" data-current="2" bindchange="radioChange">
+            <label class="radio ">
+                <radio value="" color="#00ACFF" checked="true"/>
+                同意用户使用协议
+            </label>
+        </radio-group>
+    </view>
+    <view class="padding-horizontal">
+        <button formType="submit" class="positive-bg light " hover-class="button-hover">注册</button>
+    </view>
+
+</form>
+

@@ -1,0 +1,77 @@
+<!--pages/order/order.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view class="stv-container">
+    <view class="tab-bar">
+        <view wx:for="{{tabs}}" wx:key="unique" data-index=
+                "{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+            <text>{{item}}</text>
+        </view>
+        <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+    </view>
+    <view class="scroll-view">
+        <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+            <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
+                <scroll-view style="height:100%" scroll-y>
+                    <view wx:for="{{newsList}}" wx:for-item="item" wx:key="*this">
+                        <view wx:if="{{isNotData}}" class="isNotDataHint">
+                            <view class="iconfont icon-xiaoxi"></view>
+                            <text>暂无未完成订单</text>
+                        </view>
+                        <view class="list">
+                            <view class="item" >
+                                <view class="h2">
+                                    <text class="iconfont icon-markfill {{item.look==0?'energized':'grey'}} "
+                                          style="font-size: 1rem!important;"></text>
+                                    {{item.title}}
+                                    <text class="status">{{item.look==0?'未读':'已读'}}</text>
+                                    <text class="item-note right-1">{{item.createdate }}</text>
+                                </view>
+                                <view class="p" style="padding-left: 1.1rem; white-space: normal;">{{item.content}}</view>
+                            </view>
+                        </view>
+                        <view class="padding-top"></view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+</view>
+<!--
+<view class="swiper-tab row row-no-padding row-horizontal-around border-b">
+    <view class="col-35 swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">未完成订单</view>
+    <view class="col-35 swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">所有订单</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="200" style="height:{{newsList.length*81}}px"
+        bindchange="bindChange">
+    &lt;!&ndash; 未完成订单 &ndash;&gt;
+    <swiper-item >
+
+    </swiper-item>
+    &lt;!&ndash; 所有订单 &ndash;&gt;
+    <swiper-item>
+        <view class="list">
+            <view wx:if="{{isNotData}}" class="isNotDataHint">
+                <view class="iconfont icon-xiaoxi"></view>
+                <text>暂无所有订单</text>
+            </view>
+            <view class="list">
+                <view class="item" wx:for="{{newsList}}" wx:for-item="item" wx:key="*this">
+                    <view class="h2">
+                        <text class="iconfont icon-markfill {{item.look==0?'energized':'grey'}} "
+                              style="font-size: 1rem!important;"></text>
+                        {{item.title}}
+                        <text class="status">{{item.look==0?'未读':'已读'}}</text>
+                        <text class="item-note right-1">{{item.createdate }}</text>
+                    </view>
+                    <view class="p" style="padding-left: 1.1rem; white-space: normal;">{{item.content}}</view>
+                </view>
+            </view>
+            <view class="padding-top"></view>
+        </view>
+    </swiper-item>
+
+</swiper>
+-->

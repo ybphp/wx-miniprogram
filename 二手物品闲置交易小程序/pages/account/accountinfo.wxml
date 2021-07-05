@@ -1,0 +1,33 @@
+<!--pages/account/accountinfo.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view class="list  ">
+    <navigator url="" open-type="navigate" class="item item-avatar item-icon-right  ">
+        <image src="{{userdata.userfigure||'../../images/head.jpg'}}" alt=""></image>
+        <view class="p padding-top">头像</view>
+        <text class="icon-accessory iconfont icon-right "></text>
+    </navigator>
+    <navigator url="" open-type="navigate" class="item item-icon-right">
+        <view class="h2">昵称 <text class="item-note">{{userdata.nickname}}</text></view>
+        <text class="icon-accessory iconfont icon-right "></text>
+    </navigator>
+    <navigator url="" open-type="navigate" class="item item-icon-right">
+        <view class="h2">手机号码 <text class="item-note">{{userdata.mobile}}</text></view>
+        <text class="icon-accessory iconfont icon-right "></text>
+    </navigator>
+    <navigator url="" open-type="navigate" class="item item-icon-right">
+        <view class="h2">会员类型 <view class="item-note ">{{usertype!=0?servicesstr:''}}  <text class="positive">{{!isOrganizingData?'去完善信息':''}}</text></view>
+        </view>
+        <text class="icon-accessory iconfont icon-right "></text>
+    </navigator>
+
+    <navigator url="" open-type="navigate"  class="item item-icon-right {{usertype==1?'item-borderless':''}}">
+        <view class="h2">性别 <text class="item-note">{{userdata.sex==0?'保密':(userdata.sex==1?'男':'女')}}</text></view>
+        <text class="icon-accessory iconfont icon-right "></text>
+    </navigator>
+    <view class="item  ">
+        <view class="h2">所在地区 <text class="item-note">{{userdata.addr}}</text></view>
+    </view>
+
+</view>

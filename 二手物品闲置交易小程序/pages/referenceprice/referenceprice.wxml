@@ -1,0 +1,34 @@
+<!--pages/referenceprice/referenceprice.wxml-->
+<view class="tool-tip " wx:if="{{popMsg}}">
+    <text class="{{popType}}">{{popMsg}}</text>
+</view>
+<view>
+    <view class="row row-no-padding ">
+        <view class="col-25 stable-bg">
+            <view class="list list-borderless ">
+                <view class="item {{classifyIndex==index?'classify-selected':'stable-bg'}}"
+                      bindtap="getClassifyDetails" data-index="{{index}}" wx:for="{{productList}}" wx:for-item="item"
+                      wx:key="*this" wx:for-index="index">
+                    <text class="icon iconfont {{item.imgurl}}"></text>
+                    <view class="h2 text-wrap"> {{item.name}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="col-75">
+            <scroll-view scroll-y enable-back-to-top>
+                <view class="list list-borderless ">
+                    <view class="item" wx:for="{{classifyDetails}}" wx:for-item="item" wx:key="*this"
+                          wx:if="{{item.name!='电池'}}">
+                        <view class="p text-wrap">
+                            {{item.grpid==1?item.name:(item.type=="不限"||item.type==null?"":item.type)+(item.size=="不限"||item.size==null?"":item.size)+(item.other=="不限"||item.other==null?"":item.other)}}
+                            <view class="nowrap yuan">
+                                <text class="energized ">{{item.hsprice}}</text>
+                                元/台
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
