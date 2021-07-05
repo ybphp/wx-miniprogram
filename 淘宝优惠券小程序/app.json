@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/99baoyou/index",
+    "pages/dongdong/index",
+    "pages/profile/index",
+    "pages/detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f48fb1",
+    "navigationBarTitleText": "优惠券",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#f48fb1",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/99baoyou/index",
+        "iconPath": "images/icon_99.png",
+        "selectedIconPath": "images/icon_99_active.png",
+        "text": "九块九"
+      },
+      {
+        "pagePath": "pages/dongdong/index",
+        "iconPath": "images/icon_dongdong.png",
+        "selectedIconPath": "images/icon_dongdong_active.png",
+        "text": "咚咚抢"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "iconPath": "images/icon_profile.png",
+        "selectedIconPath": "images/icon_profile_active.png",
+        "text": "个人中心"
+      },
+      {
+        "pagePath": "pages/detail/index",
+        "iconPath": "images/icon_profile.png",
+        "selectedIconPath": "images/icon_profile_active.png",
+        "text": "优惠券详情"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

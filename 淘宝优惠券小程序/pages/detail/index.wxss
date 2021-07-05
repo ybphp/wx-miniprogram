@@ -1,0 +1,167 @@
+/* pages/detail/index.wxss */
+
+.page{
+  background: #f5f5f5;
+}
+
+.cover{
+  height: 700rpx;
+}
+
+.cover image{
+  height: 700rpx;
+  width: 100%;
+}
+
+.info{
+  background: #fff;
+}
+
+.info-pleft{
+  width: 50%;
+  float: left;
+  padding: 20rpx;
+  text-align: right;
+  border-right: 1px solid #f5f5f5;
+}
+
+.info-pright{
+  float: left;
+  width: 50%;
+  padding: 30rpx;
+  font-size: 25rpx;
+}
+
+.info-pright text{
+  display: block;
+}
+
+.info-qhj{
+  display: block;
+  float: right;
+  padding: 2rpx;
+  margin-right: 10rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid #f48fb1;
+  border-radius: 5rpx;
+  color: #f48fb1;
+}
+
+.info-price{
+  display: block;
+  float: right;
+  margin-top: 20rpx;
+  padding: 2rpx;
+  font-size: 40rpx;
+  line-height: 50rpx;
+  color: #f48fb1;
+}
+
+.info-title{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-bottom: 20rpx;
+  font-size: 40rpx;
+  color: #757575;
+  border-bottom: 1rpx dotted #f5f5f5;
+}
+
+.info-recommend{
+  padding: 20rpx 10rpx 10rpx 10rpx;
+}
+
+.info-recommend view:nth-child(1){
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  color: #757575;
+}
+
+.detail{
+  height: 100rpx;
+  background: #f5f5f5;
+}
+
+.detail-btn{
+  display: flex;
+  margin: 10rpx 0;
+  padding: 20rpx 10rpx;
+  border: 1rpx solid #f5f5f5;
+  background: #fff;
+}
+
+.detail-btn text:nth-child(1){
+  display: block;
+  width: 50%;
+  font-weight: bold;
+  color: #757575;
+}
+.detail-btn text:nth-child(2){
+  display: block;
+  width: 50%;
+  text-align: right;
+}
+.detail-list image{
+  display: block;
+  width: 100%;
+}
+.detail-title{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  margin: 10rpx 0;
+  padding-left: 10rpx;
+  border-bottom: 1rpx dotted #e0e0e0;
+  font-weight: bold;
+  color: #757575;
+  line-height: 100rpx;
+  background: #fff;
+}
+
+.buy{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items:center;
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #e0e0e0;
+  background: #fff;
+}
+.buy-price{
+  float: left;
+  width: 50%;
+}
+.buy-price text:nth-child(1){
+  display: inline-block;
+  padding: 0 10rpx;
+  font-size: 40rpx;
+  color: #f48fb1;
+}
+.buy-price text:nth-child(2){
+   text-decoration: line-through;
+}
+
+.buy-share{
+  display: flex;
+  align-items:center;
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-left: 1rpx solid #e0e0e0;
+  border-right: 1rpx solid #e0e0e0;
+}
+.buy-share image{
+  width: 100%;
+  height: 50%;
+}
+.buy-go{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  float: left;
+  width: 30%;
+  height: 100%;
+  font-size: 35rpx;
+  color: #fff;
+  background: #f48fb1;
+}

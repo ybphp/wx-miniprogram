@@ -1,0 +1,7 @@
+<!--pages/profile/index.wxml-->
+<view class="profile-top">
+  
+</view>
+<view class="profile-row">
+当前版本：1.0
+</view>

@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="cover">
+    <image src="https://img.alicdn.com/imgextra/i4/2154413808/TB2GHyqddqUQKJjSZFIXXcOkFXa_!!2154413808.jpg_310x310.jpg" lazy-load="true" mode="aspectFill"></image>
+  </view>
+  <view class="info">
+    <view class="info-pleft">
+      <text class="info-price">¥120</text>
+      <text class="info-qhj">券后价</text>
+    </view>
+    <view class="info-pright">
+      <text>现价 ¥158</text>
+      <text>月销量 7800</text>
+    </view>
+    <view class="info-title">【杰瑞乐咖】秋冬男大童加绒牛津纺衬衫</view>
+    <view class="info-recommend">
+      <view>推荐理由</view>
+      <view>
+        经典牛津纺加绒，秋冬搭配，精选优质面料，柔软舒适，亲肌肤透气。
+      </view>
+    </view>
+  </view>
+
+  <view class="detail">
+    <view class="detail-btn" wx:if="{{!showImageDetail}}" bindtap="showDetail">
+      <text>商品图文详情</text>
+      <text>点击查看 ></text>
+    </view>
+    <view class="detail-list" wx:if="{{showImageDetail}}">
+      <view class="detail-title">商品详情</view>
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <image src="{{item}}" mode="widthFix"></image>
+      </block>
+    </view>
+  </view>
+</view>
+
+<view style="height:100rpx;"></view>
+
+<view class="buy">
+  <view class="buy-price">
+    <text>¥120</text>
+    <text>¥158</text>
+  </view>
+  <view class="buy-share">
+    <image src="../../images/share.png" mode="aspectFit" />
+  </view>
+  <view class="buy-go">
+    淘口令购买
+  </view>
+</view>

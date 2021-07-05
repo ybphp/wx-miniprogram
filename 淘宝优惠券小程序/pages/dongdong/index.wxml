@@ -1,0 +1,96 @@
+<view class="page">
+  <image class="top-img" src="../../images/ddq.jpeg"></image>
+  <scroll-view class="dd-tab" scroll-x="true" scroll-into-view="zero">
+    <view>
+      <text>17:00</text>
+      <text>正在疯抢</text>
+    </view>
+    <view>
+      <text>18:00</text>
+      <text>即将开抢</text>
+    </view>
+    <view>
+      <text>19:00</text>
+      <text>即将开抢</text>
+    </view>
+    <view>
+      <text>20:00</text>
+      <text>即将开抢</text>
+    </view>
+    <view>
+      <text>21:00</text>
+      <text>即将开抢</text>
+    </view>
+    <view id="zero" class="{{currentHour == 'zero' ? 'active' : ''}}">
+      <text>00:00</text>
+      <text>即将开抢</text>
+    </view>
+    <view>
+      <text>08:00</text>
+      <text>即将开抢</text>
+    </view>
+  </scroll-view>
+
+  <view class="pdct-list">
+          <view class="pdct-item">
+            <image src="https://img.alicdn.com/imgextra/i3/520557274/O1CN01cN45oP23bXWv8ZDkx_!!520557274.jpg" mode="aspectFit" />
+            <view class="pdct-mid">
+              <text>推荐理由：波力旗下品牌，台湾进口优质海苔，轻薄均匀，口感清新，香脆可口，片片鲜香有滋味，搭配寿司/生菜卷风味更佳，给你的味蕾一份大海的记忆！</text>
+              <text>券后价</text>
+              <text>¥35</text>
+              <text>现价 ¥45  月销量1000</text>
+            </view>
+            <view class="pdct-right">
+              <view class="pdct-right-top"></view>
+              <text>¥90</text>
+              <text>优惠券</text>
+              <text>查看详情</text>
+            </view>
+          </view>
+          <view class="pdct-item">
+            <image src="https://img.alicdn.com/imgextra/i3/520557274/O1CN01cN45oP23bXWv8ZDkx_!!520557274.jpg" mode="aspectFit" />
+            <view class="pdct-mid">
+              <text>推荐理由：波力旗下品牌，台湾进口优质海苔，轻薄均匀，口感清新，香脆可口，片片鲜香有滋味，搭配寿司/生菜卷风味更佳，给你的味蕾一份大海的记忆！</text>
+              <text>券后价</text>
+              <text>¥35</text>
+              <text>现价 ¥45  月销量1000</text>
+            </view>
+            <view class="pdct-right">
+              <view class="pdct-right-top"></view>
+              <text>¥90</text>
+              <text>优惠券</text>
+              <text>查看详情</text>
+            </view>
+          </view>
+          <view class="pdct-item">
+            <image src="https://img.alicdn.com/imgextra/i3/520557274/O1CN01cN45oP23bXWv8ZDkx_!!520557274.jpg" mode="aspectFit" />
+            <view class="pdct-mid">
+              <text>推荐理由：波力旗下品牌，台湾进口优质海苔，轻薄均匀，口感清新，香脆可口，片片鲜香有滋味，搭配寿司/生菜卷风味更佳，给你的味蕾一份大海的记忆！</text>
+              <text>券后价</text>
+              <text>¥35</text>
+              <text>现价 ¥45  月销量1000</text>
+            </view>
+            <view class="pdct-right">
+              <view class="pdct-right-top"></view>
+              <text>¥90</text>
+              <text>优惠券</text>
+              <text>查看详情</text>
+            </view>
+          </view>
+          <view class="pdct-item">
+            <image src="https://img.alicdn.com/imgextra/i3/520557274/O1CN01cN45oP23bXWv8ZDkx_!!520557274.jpg" mode="aspectFit" />
+            <view class="pdct-mid">
+              <text>推荐理由：波力旗下品牌，台湾进口优质海苔，轻薄均匀，口感清新，香脆可口，片片鲜香有滋味，搭配寿司/生菜卷风味更佳，给你的味蕾一份大海的记忆！</text>
+              <text>券后价</text>
+              <text>¥35</text>
+              <text>现价 ¥45  月销量1000</text>
+            </view>
+            <view class="pdct-right">
+              <view class="pdct-right-top"></view>
+              <text>¥90</text>
+              <text>优惠券</text>
+              <text>查看详情</text>
+            </view>
+          </view>
+        </view>
+</view>

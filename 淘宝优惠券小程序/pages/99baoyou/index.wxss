@@ -1,0 +1,15 @@
+.pdct-sort{
+  display: flex;
+  height: 90rpx;
+  width: 100%;
+  border-top: 10rpx solid #f5f5f5; 
+}
+.pdct-sort text{
+  display: block;
+  flex: 1;
+  line-height: 90rpx;
+  text-align: center;
+}
+.pdct-sort .active{
+  color: #f48fb1;
+}
