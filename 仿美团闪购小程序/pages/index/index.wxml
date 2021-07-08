@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<import src="../../templates/shop_list/shop_list.wxml" />
+<view class="container">
+  <view class="location-box">
+    <navigator url="#">
+      <image src="../../images/location.png"></image>
+      <text>{{ location_name }}></text>
+    </navigator>
+  </view>
+  <view class="search-box">
+    <input type="text" placeholder="输入商家或者商品名" confirm-type="search" bindconfirm="search"></input>
+  </view>
+  <view class="main-nav-box">
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=1">
+            <image src="../../images/nav1.png"></image>
+            <text>超市卖场</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=2">
+            <image src="../../images/nav2.png"></image>
+            <text>便利店</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=3">
+            <image src="../../images/nav3.png"></image>
+            <text>生鲜/菜市场</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=4">
+            <image src="../../images/nav4.png"></image>
+            <text>水果/果切</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=5">
+            <image src="../../images/nav5.png"></image>
+            <text>鲜花/绿植</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=6">
+            <image src="../../images/nav6.png"></image>
+            <text>零食/酒/水</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=7">
+            <image src="../../images/nav7.png"></image>
+            <text>美妆/服饰</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=8">
+            <image src="../../images/nav8.png"></image>
+            <text>母婴/百货</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=9">
+            <image src="../../images/nav9.png"></image>
+            <text>宠物用品</text>
+        </navigator>
+    </view>
+    <view class="main-nav-item">
+        <navigator url="/pages/shop_list/shop_list?type=10">
+            <image src="../../images/nav10.png"></image>
+            <text>配送运费</text>
+        </navigator>
+    </view>
+  </view>
+
+  <view class="shop-items-title">
+    附近商家
+  </view>
+  <view class="shop-items-box">
+    <block wx:for="{{items}}" wx:key="id">
+      <template is="shop_list" data="{{...item}}"></template>
+    </block>
+  </view>
+</view>
+

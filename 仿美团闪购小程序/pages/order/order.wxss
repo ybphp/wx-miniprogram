@@ -1,0 +1,64 @@
+/* pages/order/order.wxss */
+page{
+    background: #eee;
+}
+.order_items .order_item{
+    background: #fff;
+    margin-top:30rpx;
+    padding:30rpx;
+    box-sizing: border-box;
+}
+.order_item_title{
+    display: flex;
+    justify-content : space-between;
+    line-height:60rpx;
+}
+.order_item_shop{
+    display: flex;
+}
+.order_item_title .order_item_shop text{
+    font-size:32rpx;
+    margin-left:20rpx
+}
+.order_item_title .order_item_shop image{
+    width:80rpx;
+    height:60rpx;
+}
+.order_item_title .order_status{
+    font-size:24rpx;
+    color:#666;
+}
+
+.order_item_goods{
+    margin-top:26rpx;
+    font-size: 26rpx;
+    color:#666;
+    padding-left:60rpx;
+}
+.order_item_goods view{
+    display: flex;
+    justify-content : space-between;
+    margin:10rpx 0;
+}
+
+.order_item_totle{
+    margin-top:26rpx;
+    font-size:26rpx;
+    text-align: right;
+}
+
+.order_item_footer{
+    border-top:1px solid #eee;
+    margin:26rpx 0;
+    overflow: hidden;
+}
+.order_item_footer button{
+    float:right;
+    margin-top:30rpx;
+    font-size:26rpx;
+    width:220rpx;
+    background:none;
+    border:1px solid #eee;
+}
+
+

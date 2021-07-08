@@ -1,0 +1,30 @@
+<!--pages/order/order.wxml-->
+<view class="order_items">
+    <block wx:for="{{items}}" wx:key="id">
+        <view class="order_item">
+            <view class="order_item_title">
+                <view class="order_item_shop">
+                    <image src="{{ item.shop.img }}"></image>
+                    <text>{{ item.shop.name }}</text>
+                </view>
+                <view class="order_status">
+                    {{ item.status_anme }}
+                </view>
+            </view>
+            <view class="order_item_goods">
+                <block wx:for="{{item.goods}}" wx:key="id" wx:for-item="good">
+                    <view>
+                        {{good.name}}
+                        <text>{{good.num}}</text>
+                    </view>
+                </block>
+            </view>
+            <view class="order_item_totle">
+                <text>共{{item.num}}商品，实付 {{item.totle}}</text>
+            </view>
+            <view class="order_item_footer">
+                <button>再来一单</button>
+            </view>
+        </view>
+    </block>
+</view>

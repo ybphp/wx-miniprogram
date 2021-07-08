@@ -1,0 +1,66 @@
+/* templates/shop_list/shop_list.wxss */
+.shop-item-box{
+    margin-bottom:20rpx;
+}
+.shop-item-box .shop-item-info{
+    display: flex;
+    justify-content : space-between;
+}
+
+.shop-item-logo{
+    width:200rpx;
+    height:130rpx;
+}
+
+.shop-item-header{
+    flex:1;
+    margin-left:25rpx;
+}
+
+.shop-item-score{
+    width:20rpx;
+    height:20rpx;
+}
+.shop-item-header{
+    font-size:24rpx;
+    color:#999;
+    line-height:44rpx;
+}
+.shop-item-name{
+    font-size:32rpx;
+    color:#000
+}
+.shop-item-other{
+    display: flex;
+    justify-content : space-between;
+}
+.shop-item-elivery text{
+    margin-right:24rpx;
+}
+
+
+.shop-item-goods-box{
+    display:flex;
+    white-space:nowrap;
+    margin-left:225rpx;
+}
+.shop-item-goods{
+    margin-top:20rpx;
+    width:150rpx;
+    margin-right:20rpx;
+    display: inline-block;
+}
+.shop-item-goods .shop-item-goods-img{
+    width:150rpx;
+    height:100rpx;
+    display: block;
+}
+.shop-item-goods-name{
+    margin-top:10rpx;
+    font-size:12px;
+    display: block;
+}
+.shop-item-goods-price{
+    font-size:12px;
+    color: red
+}

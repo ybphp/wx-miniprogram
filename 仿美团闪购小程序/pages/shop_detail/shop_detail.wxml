@@ -1,0 +1,39 @@
+<!--pages/shop_detail/shop_detail.wxml-->
+<view class="shop_header">
+    <view class="show_img">
+        <image src="{{shop_data.img}}"></image>
+    </view>
+    <view class="shop_info">
+        <view class="shop_time">
+            <image src="../../images/time.png"></image>
+            <text>配送约{{shop_data.time}}</text>
+        </view>
+        <text class="shop-notice">公告：{{shop_data.notice}}</text>
+        <text class="shop-score">评分{{shop_data.score}}</text>
+    </view>
+</view>
+<view class="shop-box">
+    <scroll-view class="shop-nav" scroll-y="true" scroll-y>
+        <block wx:for="{{shop_data.nav}}" wx:key="id">
+            <view class="{{item.id == 1 ? 'self' : ''}}">
+                {{ item.name }}
+            </view>
+        </block>
+    </scroll-view>
+    <scroll-view class="shop-items-scroll" scroll-y="true" scroll-y>
+        <block wx:for="{{shop_data.items}}" wx:key="id" wx:for-index="idx">
+            <view class="shop-items-box" data-id="{{ idx }}">
+                <block wx:for="{{item}}" wx:key="id" wx:for-item="list" wx:for-index="idx">
+                    <view class="shop-item">
+                        <image src="{{list.img}}"></image>
+                        <view class="shop-item-text">
+                            <text class="name">{{list.name}}</text>
+                            <text>{{list.sales_volumes}}</text>
+                            <text class="price">{{list.price}}</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </scroll-view>
+</view>

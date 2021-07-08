@@ -1,0 +1,36 @@
+<!--templates/shop_list/shop_list.wxml-->
+<template name="shop_list">
+    <navigator url="../shop_detail/shop_detail?id={{id}}">
+        <view class="shop-item-box">
+            <view class="shop-item-info">
+                <image class="shop-item-logo" src="{{img}}"></image>
+                <view class="shop-item-header">
+                    <text class="shop-item-name">{{name}}</text>
+                    <view class="shop-item-other">
+                        <view class="shop-item-other-left">
+                            <image  src="../../images/stars.png" class="shop-item-score"></image>
+                            <text class="shop-item-score-text">{{score}}</text>
+                            <text class="shop-item-sales_volumes">{{sales_volumes}}</text>
+                        </view>
+                        <view class="shop-item-other-right">
+                            <text class="shop-item-time">{{time}}</text>
+                            <text class="shop-item-distance">{{distance}}</text>
+                        </view>
+                    </view>
+                    <view class="shop-item-elivery">
+                        <text>{{delivery_price}}</text>
+                        <text>{{distribution_fee}}</text>
+                    </view>
+                </view>
+            </view>
+            <scroll-view scroll-x="true" scroll-x class="shop-item-goods-box">
+                <view wx:for="{{items}}" wx:for-item="goods" wx:key="name" class="shop-item-goods">
+                    <image class="shop-item-goods-img" src="{{goods.img}}" mode="aspectFill">
+                    </image>
+                    <text class="shop-item-goods-name">{{goods.name}}</text>
+                    <text class="shop-item-goods-price">{{goods.price}}</text>
+                </view>
+            </scroll-view >
+        </view>
+    </navigator>
+</template>

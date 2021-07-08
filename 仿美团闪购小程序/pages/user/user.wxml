@@ -1,0 +1,18 @@
+<!--pages/user/user.wxml-->
+<view class="user-heaser">
+    <view class='user-info'>
+        用户名
+        <text>178****1222 </text>
+    </view>
+    <view>
+        <image class="user-img" src="http://pic1.zhimg.com/50/v2-a1daed32cac3a2904997f1f7e0b60d9b_hd.jpg"></image>
+    </view>
+</view>
+<view class='user-box'>
+    <view class="user-box-title">
+        <text>我的服务</text>
+    </view>
+    <view class="user-box-list">
+        <text>客服电话</text>
+    </view>
+</view>

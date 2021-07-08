@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/order/order",
+        "pages/user/user",
+        "pages/logs/logs",
+        "pages/shop_detail/shop_detail",
+        "pages/shop_list/shop_list"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#48c001",
+        "navigationBarTitleText": "送菜到家",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#333333",
+        "selectedColor": "#48c001",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/tabbar1.png",
+                "selectedIconPath": "images/tabbar1_selected.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "iconPath": "images/tabbar2.png",
+                "selectedIconPath": "images/tabbar2_selected.png",
+                "text": "订单"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "iconPath": "images/tabbar3.png",
+                "selectedIconPath": "images/tabbar3_selected.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于收货使用"
+        }
+    }
+}

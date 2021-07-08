@@ -1,0 +1,17 @@
+/* pages/shop_list/shop_list.wxss */
+@import "../../templates/shop_list/shop_list.wxss";
+
+.search-box{
+  font-size:24rpx;
+  background: #eee;
+  border-radius: 10rpx;
+  height:60rpx;
+  line-height:60rpx;
+  padding:0 24rpx;
+  margin:20rpx 0;
+}
+.search-box input{
+  height:60rpx;
+  line-height:60rpx;
+  border:0;
+}

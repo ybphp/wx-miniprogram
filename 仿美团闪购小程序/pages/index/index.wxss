@@ -1,0 +1,55 @@
+/**index.wxss**/
+@import "../../templates/shop_list/shop_list.wxss";
+
+.location-box{
+  margin:20rpx 0;
+}
+
+.location-box image{
+  float:left;
+  width:50rpx;
+  height:50rpx;
+  margin-right:10rpx;
+}
+
+.search-box{
+  font-size:24rpx;
+  background: #eee;
+  border-radius: 10rpx;
+  height:60rpx;
+  line-height:60rpx;
+  padding:0 24rpx;
+}
+.search-box input{
+  height:60rpx;
+  line-height:60rpx;
+  border:0;
+}
+
+.main-nav-box{
+  margin-top:40rpx;
+  display: flex;
+  justify-content : space-around;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.main-nav-box .main-nav-item{
+  width:20%;
+  margin-bottom:42rpx;
+  text-align:center;
+}
+.main-nav-box image{
+  width:80rpx;
+  height:80rpx;
+}
+.main-nav-box text{
+  font-size:24rpx;
+  display: block;
+}
+
+.shop-items-title{
+  margin:10rpx 0 20rpx 0;
+  font-size:40rpx;
+  font-weight:bold;
+
+}

@@ -1,0 +1,38 @@
+/* pages/user/user.wxss */
+.user-heaser{
+    display: flex;
+    justify-content : space-between;
+    padding:40rpx;
+}
+.user-info{
+    padding:40rpx 0;
+    font-size:40rpx;
+}
+.user-info text{
+    display: block;
+    font-size:24rpx;
+    color: #999;
+    margin-top:10rpx;
+}
+.user-img{
+    width:180rpx;
+    height:180rpx;
+    border-radius: 50%;
+}
+
+.user-box{
+    border-top:3px solid #eee;
+    padding:40rpx;
+    box-sizing: border-box;
+}
+.user-box view{
+    padding:30rpx 0;
+    border-bottom:2rpx solid rgb(245, 245, 245);
+}
+.user-box-list text{
+    font-size:32rpx;
+}
+.user-box .user-box-title text{
+    font-size:24rpx;
+    color:#999;
+}

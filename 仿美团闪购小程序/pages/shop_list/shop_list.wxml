@@ -1,0 +1,12 @@
+<!--pages/shop_list/shop_list.wxml-->
+<import src="../../templates/shop_list/shop_list.wxml" />
+<view class="container">
+    <view class="search-box">
+        <input type="text" placeholder="输入商家或者商品名" confirm-type="search" bindconfirm="search" value="{{ name }}"></input>
+    </view>
+    <view class="shop-items-box">
+        <block wx:for="{{items}}" wx:key="id">
+            <template is="shop_list" data="{{...item}}"></template>
+        </block>
+    </view>
+</view>
