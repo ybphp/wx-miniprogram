@@ -1,0 +1,20 @@
+<!--pages/cardDetail/cardDetail.wxml-->
+<import src="../../templates/cardInfo/cardInfo" />
+<view class='card-box'>
+    <view class='card-title'>
+        <view>加入校园阅读</view>
+        <view>享受会员权益</view>
+    </view>
+    <template is="cardInfo"></template>
+    <view class="card-concern">
+        <view class="concern-title">
+            注意事项
+        </view>
+        <view class="concern-text">
+            本校园借阅卡不可以转借费用不退。
+        </view>
+    </view>
+    <navigator url='../buyCard/buyCard' style='margin-top:100rpx;'>
+        <button size="defaultSize" class="banli"  bindtap="defaultTap" hover-class="defaultTap">立即支付</button>
+    </navigator>
+</view>

@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<import src="../../templates/join/join" />
+<import src="../../templates/cardInfo/cardInfo"/>
+
+<view class='page'>
+  <view wx:if="{{!is_buy_card}}" class="page__hd">
+    <template is="join"></template>
+  </view>
+  <view class='page__bd'>
+    <view class='banner {{is_buy_card ? "" : "top"}}' >
+        <image src='../../assets/banner.png'></image>
+    </view>
+    <view class="weui-flex catagory">
+      <view class="weui-flex__item">
+        <navigator url='../notesRecord/notesRecord'>
+          <image src='../../assets/read.png'></image>
+          <text>阅读记录</text>
+        </navigator>
+      </view>
+      <view class="weui-flex__item">
+        <navigator url='../class/class'>
+          <image src='../../assets/class.png'></image>
+          <text>班级</text>
+        </navigator>
+
+      </view>
+      <view class="weui-flex__item">
+        <navigator wx:if='{{userData.is_teather == "1"}}' url='../readStatus/readStatus'>
+          <image src='../../assets/check.png'></image>
+          <text>查阅</text>
+        </navigator>
+        <block wx:else="{{userData.is_teather != '1'}}">  
+          <image src='../../assets/check.png'></image>
+          <text>查阅</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="card-list">
+   <template is="cardInfo"></template>
+  </view>
+</view>

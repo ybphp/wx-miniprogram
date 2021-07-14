@@ -1,0 +1,60 @@
+<!--pages/complate/complate.wxml-->
+<import is="" src="../../templates/join/join" />
+<view class="page">
+    <view class="page__hd" wx:if="{{!is_buy_card}}">
+        <template is="join"></template>
+    </view>
+    <view class="page__bd {{is_buy_card ? '' : 'top'}}">
+        <!--学生阅读心得-->
+        <block wx:for="{{completeData}}" wx:for-item="item" wx:for-index="index" wx:key="unique">
+            <view class='read-outbox'>
+                <view class="weui-flex read-head">
+                    <view class="weui-flex__item baby-avatar">
+                        <image src="{{item.baby_avatar}}" />
+                    </view>
+                    <view class="weui-flex__item read-title">
+                        <text class="read-tit overflow-one">{{item.baby_name}}</text>
+                        <text class="read-class overflow-one">{{item.baby_school}}</text>
+                        <text class="read-publish">
+                            <text class="read-time overflow-one">发表于{{item.create_time}}</text>
+                        </text>
+                    </view>
+                    <view class="weui-flex__item read-edit">
+                        <view class='jianyue' wx:if="{{item.review == ''}}" bindtap='checkNote' data-index="{{index}}" data-id="{{item.id}}">
+                            <image class="piyue" src='../../assets/piyue.png'></image>
+                            <view class='share' style='color:#ff6969'>批阅</view>
+                        </view>
+                        <view wx:if="{{item.review != ''}}" class='jianyue'>
+                            {{item.review}}
+                        </view>
+                    </view>
+                </view>
+                <view class="read-head read-instro">
+                    <text class="book-comment {{item.showBool ? 'active' : ''}}">{{item.content}}</text>
+                    <text class="show-all" bindtap='showAll' data-index="{{index}}">{{item.piyue}}</text>
+                </view>
+                <!--图书信息-->
+                <view class="weui-flex  read-head book-info">
+                    <view class="weui-flex__item baby-avatar book-img">
+                        <image src="{{item.book_pic}}" />
+                    </view>
+                    <view class="weui-flex__item  read-title book-cont">
+                        <text class="read-tit book-name overflow-one">{{item.book_name}}</text>
+                        <text class="read-class book-author overflow-one">{{item.book_author}}</text>
+                        <text class="book-instro overflow-more">{{item.book_des}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<!-- 批阅弹窗 -->
+<view class='piyue-mask' wx:if="{{modalStatus}}" bindtap="piyueClose"></view>
+<view class='piyue-modal' wx:if="{{modalStatus}}">
+    <view class='piyue-close' bindtap="piyueClose">X</view>
+    <view class="piyue-tit">笔记批阅</view>
+    <view class="piyue-tags">
+        <view class="piyue-item {{tagIndex == index ? 'active' : ''}}" wx:for="{{piyue}}" data-index="{{index}}" wx:for-index="index" bindtap="setPiYue">{{item}}</view>
+    </view>
+    <view class="piyue-tit piyue-done" bindtap="piyueDone">完成</view>
+</view>

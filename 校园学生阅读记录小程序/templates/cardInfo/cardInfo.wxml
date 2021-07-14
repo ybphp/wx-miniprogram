@@ -1,0 +1,50 @@
+<!--templates/cardInfo/cardInfo.wxml-->
+<template name="cardInfo">
+    <view class="card-list">
+        <view class='weui-flex card-item'>
+            <view class=' weui-flex__item card-icon'>
+                <text class="iconfont icon-ertongjiaocyu" style="font-size:60rpx;color:#f6b0d1"></text>
+            </view>
+            <view class='weui-flex__item card-cont'>
+                <view class='card-tit'>阅读对象</view>
+                <view class='card-text'>服务对象小学一二年级</view>
+            </view>
+        </view>
+        <view class='weui-flex card-item'>
+            <view class=' weui-flex__item card-icon'>
+                <text class="iconfont icon-wuliu" style="color:#a0d2f1"></text>
+            </view>
+            <view class='weui-flex__item card-cont'>
+                <view class='card-tit'>送书到班</view>
+                <view class='card-text'>每日自动借阅一本书，可提供送书到班服务</view>
+            </view>
+        </view>
+        <view class='weui-flex card-item'>
+            <view class=' weui-flex__item card-icon'>
+                <text class="iconfont icon-jinbi" style="color:#f6cb45"></text>
+            </view>
+            <view class='weui-flex__item card-cont'>
+                <view class='card-tit'>校园价格</view>
+                <view class='card-text'>学校200元/学期，可免收押金</view>
+            </view>
+        </view>
+        <view class='weui-flex card-item'>
+            <view class=' weui-flex__item card-icon'>
+                <text class="iconfont icon-shijian" style="color:#9bdad1"></text>
+            </view>
+            <view class='weui-flex__item card-cont'>
+                <view class='card-tit'>阅读时长</view>
+                <view class='card-text'>以学校规定的时间为准</view>
+            </view>
+        </view>
+        <view class='weui-flex card-item'>
+            <view class=' weui-flex__item card-icon'>
+                <text class="iconfont icon-protect" style="color:#e59686"></text>
+            </view>
+            <view class='weui-flex__item card-cont'>
+                <view class='card-tit'>爱护书籍</view>
+                <view class='card-text'>每一本书损坏，按照原价的八折回购</view>
+            </view>
+        </view>
+    </view>
+</template>

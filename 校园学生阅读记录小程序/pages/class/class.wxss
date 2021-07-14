@@ -1,0 +1,121 @@
+/* pages/complate/complate.wxss */
+.read-head {
+    padding:30rpx 60rpx 0;
+}
+.page__bd{
+    padding:0;
+}
+.read-outbox{
+    border-bottom:1px solid #f8f8f8;
+    padding-bottom:40rpx;
+}
+.read-head .baby-avatar{
+    flex:0 0 122rpx;
+    height:122rpx;
+    margin:0 26rpx 0 26rpx;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    align-self: center;
+    overflow: hidden;
+    border:1px solid #ccc;
+}
+.read-head .baby-avatar image{
+    width:100%;
+    height:100%;
+}
+.read-title  text{
+    display: block;
+}
+.read-title .read-tit{
+    color:#09A3A3;
+    font-size:26rpx;
+    font-weight: bold;
+    margin:10rpx 0;
+    max-width:480rpx;
+}
+.read-title .read-class{
+    color:#BBBBBB;
+    font-size:22rpx;
+    margin:10rpx 0;
+    max-width:480rpx;
+}
+.read-title .read-publish{
+    overflow: hidden;
+}
+.read-title .read-time{
+    color:#DCDCDC;
+    font-size:22rpx;
+    float:left;
+    max-width:400rpx;
+}
+.read-title .read-pizhu{
+    color:#EE5252;
+    font-size:24rpx;
+    float:right;
+    border:1px solid #EE5252;
+    padding:5rpx 8rpx;
+    border-radius:10rpx;
+    -webkit-border-radius:10rpx;
+}
+.read-instro{
+    font-size:26rpx;
+    color:#2f2f2f;
+    line-height: 40rpx;
+}
+.read-instro .book-comment{
+    height:200rpx;
+    overflow: hidden;
+    display: block;
+}
+.read-instro .book-comment.active{
+    height:auto;
+    transition: all 2s;
+}
+.read-instro .show-all{
+    color:#50DCC8;
+    font-size:28rpx;
+    font-weight: bold;
+}
+.book-info .book-img{
+    align-self: flex-start;
+    flex:0 0 150rpx;
+    margin:0 26rpx 0 0;
+    height:185rpx;
+    border-radius:5rpx;
+    -webkit-border-radius:5rpx;
+}
+.book-info .book-img image{
+    width:100%;
+    height:100%;
+}
+.book-cont .book-name{
+    color:#000;
+}
+.book-cont .book-author{
+    margin:5rpx 0;
+}
+
+.book-cont .book-instro{
+    font-size:20rpx;
+    color:#717171;
+    max-width:480rpx;
+    height:75rpx;
+    line-height: 25rpx;
+}
+.overflow-more{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+/* 老师批注 */
+.teacher-avatar{
+    flex:0 0 80rpx;
+    height:80rpx;
+}
+.teacher-note{
+    font-size:26rpx;
+    color:#EE5252;
+    line-height: 40rpx;
+}

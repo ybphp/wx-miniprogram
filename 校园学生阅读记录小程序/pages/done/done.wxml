@@ -1,0 +1,10 @@
+<!--pages/done/done.wxml-->
+<import src="../../templates/join/join" />
+<view>
+  <view class="page__hd">
+    <template is="join"></template>
+  </view>
+  <view class="page__bd">
+    
+  </view>
+</view>

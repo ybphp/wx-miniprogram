@@ -1,0 +1,112 @@
+/* pages/login/login.wxss */
+.login-form{
+  padding:0 60rpx;
+  display:block;  
+}
+.login .login-avatar{
+  width:100%;
+  height:324rpx;
+  background: #eeeeee;
+  position: relative;
+  top:0;
+  left:0;
+}
+.login .avatar-cont{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: auto;
+  width:150rpx;
+  height:150rpx;
+}
+.login .login-avatar image{
+  width:146rpx;
+  height:146rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  background: #333;
+}
+.login .login-avatar text{
+  font-size:26rpx;
+  color:#969696;
+  text-align: center;
+  display: block;  
+  margin-top:14rpx;
+  font-weight: bold;
+}
+.login-title .login-tip{
+  font-size:60rpx;
+  color:#3C3C3C;
+  margin:100rpx 0 42rpx;
+  text-align: center;
+}
+.login-title .login-instro{
+  font-size:30rpx;
+  color:#3C3C3C;
+  margin:0 0 64rpx;
+  text-align: center;
+}
+.login .section{
+  height:80rpx;
+  line-height: 80rpx;
+  align-items: center;
+  margin-bottom:40rpx;
+  display: flex;
+}
+.login label{
+  flex:0 0 80rpx;
+  height:80rpx;
+  text-align: center;
+  align-self: center;
+  font-size:50rpx;
+  color:#84c9e6;
+}
+.login .login-input{
+  
+  height:80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #eeeeee;
+  flex:1 1 auto;
+  
+}
+.login input{
+  height:80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  flex:1 1 auto;
+  font-size:26rpx;
+  padding-left: 10rpx;
+}
+.login-password{
+  display: flex;
+}
+.placeholder{ 
+  color:#999;
+}
+.login .section button{
+  height:60rpx;
+  line-height: 60rpx;
+  align-self: center;
+  font-size:28rpx;
+  color:#3aa1e3;
+  padding:0 20rpx;
+  flex:0 0 160rpx;
+  border:0;
+  border-left: 1px solid #eeeeee;
+  position: static;
+  background: #fff;
+  border-radius: 0;
+}
+.sign-in{
+  background-color: #2d8ef7;
+  margin-top: 50rpx;
+  color:#fff;
+  font-size:40rpx;
+}
+.sign-in.hover{
+  background-color: red;
+}

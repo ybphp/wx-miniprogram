@@ -1,0 +1,62 @@
+/* pages/addNote/addNote.wxss */
+@import "../noteList/noteList.wxss";
+page{
+    background: #fff;
+    padding-bottom:30rpx;
+}
+.page__bd{
+    padding:0;
+}
+.yuedu{
+    margin-bottom: 20rpx;
+}
+.yuedu .yuedu-tit{
+    font-size: 30rpx;
+    font-weight: bold;
+    color:#242424;
+    margin:30rpx 0;
+    height:90rpx;
+    line-height: 90rpx;
+    border-top:1px solid #f7f7f7;
+    border-bottom:1px solid #f7f7f7;
+    padding:0 60rpx;
+}
+.yuedu .read-star{
+    padding:0 65rpx;
+}
+.yuedu .yuedu-check,.yuedu-text,.pushImg{
+    padding:0 60rpx;
+}
+.yuedu .yuedu-check view{
+    justify-content: flex-start;
+    flex:0 1 33.3%;
+}
+.yuedu .yuedu-check view text{
+    width:80%;
+    height:70rpx;
+    display: block;
+    border: 1px solid #81abed;
+    color:#81abed;
+    font-size: 26rpx;
+    border-radius: 8rpx;
+    -webkit-border-radius:8rpx;
+    margin: auto;
+    text-align: center;
+    line-height: 70rpx;
+}
+.yuedu .yuedu-check view.active text{
+    background: #81abed;
+    color:#fff;
+}
+.yuedu textarea{
+    width:100%;
+    font-size: 26rpx;
+    color:#B7B7B7;
+    border:1px solid #B7B7B7;
+    padding:8rpx;
+}
+.banli{
+    margin:60rpx 0;
+}
+
+

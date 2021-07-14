@@ -1,0 +1,71 @@
+/* pages/notComplate/notComplate.wxss */
+@import '../class/class.wxss';
+
+.class-box{
+    overflow: hidden;
+    color:#000;
+    font-size:28rpx;
+    padding:36rpx 0;
+    font-weight: bold;
+}
+.class-box .cur-class{
+    float:left;
+}
+.class-box .cur-time{
+    float:right;
+}
+.rest-baby{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.rest-baby view{
+    flex:0 0 20%;
+    margin: 20rpx 0;
+}
+.rest-baby view image{
+    width:100rpx;
+    height:100rpx;
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    overflow: hidden;
+    display:block;
+    margin: auto;
+}
+.relate-note{
+    font-size: 30rpx;
+    color:#242424;
+    font-weight: bold;
+    margin:36rpx 0;
+}
+.relate-book{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.relate-book view{
+    flex:0 0 33.3%;
+    margin: 20rpx 0;
+}
+.relate-book view image{
+    width:80%;
+    height:200rpx;
+    border-radius: 5rpx;
+    -webkit-border-radius:5rpx;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+.relate-book view text{
+    display: block;
+    padding:0 10%;
+    max-width:140rpx;
+}
+.relate-book view .book-name{
+    font-size:22rpx;
+    columns: #444444;
+    font-weight: bold;
+    margin:10rpx;
+}
+.relate-book view .book-author{
+    font-size:20rpx;
+    columns: #9A9A9A;
+}

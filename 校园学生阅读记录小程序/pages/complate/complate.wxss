@@ -1,0 +1,94 @@
+/* pages/class/class.wxss */
+@import "../class/class";
+.piyue{
+    width:50rpx;
+    height:50rpx;
+    display: inline-block;
+    text-align: center;
+    margin-bottom:6rpx;
+}
+.piyue-mask{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.piyue-modal{
+    width:281px;
+    max-height:200px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    border-radius: 10rpx;
+    -webkit-border-radius:10rpx;
+    background: #fff;
+}
+.piyue-modal .piyue-tit{
+    height:45px;
+    line-height: 45px;
+    font-size:34rpx;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.piyue-modal .radio-group{
+    font-size:25rpx;
+    padding:15px 40px;
+    border-bottom:1px solid #ccc;
+    justify-content: space-between;
+}
+.piyue-modal .radio{
+
+}
+.piyue-done{
+    color:#00c200;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-top:1px solid #ccc;
+}
+.piyue-close{
+    position: absolute;
+    top:-7px;
+    right:-5px;
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    background:#ff0000;
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    text-align: center;
+    color:#fff;
+    font-size: 15px;
+}
+.piyue-tags{
+    overflow: hidden;
+    padding:0 20rpx;
+}
+.piyue-tags .piyue-item{
+    background:#fff;
+    border:1px solid #999999;
+    border-radius:8rpx;
+    -webkit-border-radius:8rpx;
+    columns: #999999;
+    font-size:20rpx;
+    text-align:center;
+    line-height:44rpx;
+    padding:5rpx 35rpx;
+    margin:10rpx 10rpx;    
+    float:left;
+}
+.piyue-tags .piyue-item.active{
+    background:#ff6969;
+    color:#fff;
+    border:1px solid #ff6969;
+}
+.jianyue{
+    font-size:14px;
+    margin-top: 5px;
+}

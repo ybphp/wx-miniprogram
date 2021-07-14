@@ -1,0 +1,7 @@
+<!--templates/noData/noData.wxml-->
+<template name="noData">
+    <view class="no-data">
+        <image src='../../assets/icon/no.png'></image>
+        <view>{{title ? title : '暂时木有内容哦！'}}</view>
+    </view>
+</template>

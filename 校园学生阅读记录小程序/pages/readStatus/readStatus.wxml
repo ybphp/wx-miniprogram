@@ -1,0 +1,42 @@
+<!--pages/complate/complate.wxml-->
+<import src="../../templates/join/join" />
+<view class="page">
+        <view class="page__hd" wx:if="{{!is_buy_card}}">
+            <template is="join"></template>
+        </view>
+        <view class="page__bd {{is_buy_card ? '' : 'top'}}">
+            <block wx:for="{{classList}}" wx:for-item="item" wx:for-index="index" wx:key="unique">
+                <view class="banjiItem">
+                    <view class="banji_top">
+                        <text class="banji"></text>                    
+                        <text class="time">{{item.date}}</text>                    
+                    </view>
+                    <view class="weui-flex banji_bottom">
+                        <view class="weui-flex__item read-done">
+                            <navigator wx:if="{{item.done > 0}}" url="../complate/complate?school={{school}}&date={{item.date}}" hover-class="className">
+                                <text class="num">{{item.done}}</text>
+                                <text class="status">已完成人数</text>
+                                <text class="all">查看全部</text>
+                            </navigator>
+                            <block wx:else="{{item.done <= 0}}" hover-class="className">
+                                <text class="num">{{item.done}}</text>
+                                <text class="status">已完成人数</text>
+                            </block>
+                        </view>
+                        <view class="weui-flex__item">
+                            <navigator wx:if="{{item.other > 0}}" url="../notComplate/notComplate?school={{school}}&date={{item.date}}" hover-class="className">
+                                <text class="num">{{item.other}}</text>
+                                <text class="status">未完成人数</text>
+                                <text class="all">查看全部</text>
+                            </navigator>
+                            <block wx:else="{{item.other <= 0}}" hover-class="className">
+                                <text class="num">{{item.other}}</text>
+                                <text class="status">未完成人数</text>
+                            </block>
+
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+</view>

@@ -1,0 +1,9 @@
+<!--templates/buyCard/buyCard.wxml-->
+<template name="join">
+  <view class="join">
+    <text>您当前是试用用户，加入会员可享受更多资源</text>
+    <navigator url='/pages/cardDetail/cardDetail'>
+        <button class="weui-btn mini-btn" size="mini">加入会员</button>
+    </navigator>
+  </view>
+</template>

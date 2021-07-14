@@ -1,0 +1,69 @@
+<!--pages/addNote/addNote.wxml-->
+<import src="../../templates/join/join" />
+<import src="../../templates/uploader/uploader" />
+<view class="page">
+    <view class="page__hd" wx:if="{{!is_buy_card}}">
+        <template is="join"></template>
+    </view>
+    <view class="page__bd {{is_buy_card ? '' : 'top'}}">
+        <view class="weui-flex read-head read-item" style='padding:30rpx 60rpx;'>
+            <view class="weui-flex__item baby-avatar">
+                <image src="{{bookInfo.book_icon}}" />
+            </view>
+            <view class="weui-flex__item read-title">
+                <text class="read-tit overflow-one">{{bookInfo.book_name}}</text>
+                <text class="read-class overflow-one">{{bookInfo.book_author}}</text>
+                <view class="read-note overflow-more">
+                    {{bookInfo.book_des}}
+                </view>
+            </view>
+        </view>
+        <!-- 阅读时长 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读评分
+            </view>
+            <view class='read-star'>
+                <text class='iconfont icon-wujiaoxing star {{starNum >= (idx+1) ? "active" : ""}}' data-index="{{idx+1}}" wx:for="{{stars}}" wx:for-index="idx" bindtap="setStar"  wx:key="unique"></text>
+                <text class='instro'>{{instro[starNum-1]}}</text>
+            </view>
+        </view>
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读时长
+            </view>
+            <view class="weui-flex yuedu-check">
+                <view class="{{readTime == index ? 'active' : ''}}" wx:for="{{timeCont}}" data-index="{{index}}" wx:for-item="item" wx:for-index="index" bindtap='setReadTime'  wx:key="unique">
+                    <text class="weui-flex__item">{{item}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 阅读方式 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读方式
+            </view>
+            <view class="weui-flex yuedu-check">
+                <view class="{{readWay == index ? 'active' : ''}}" wx:for="{{wayText}}" data-index="{{index}}" wx:for-item="item" wx:for-index="index" bindtap='setReadWay'  wx:key="unique">
+                    <text class="weui-flex__item">{{item}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 阅读心得 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读心得
+            </view>
+            <view class='yuedu-text'>
+            <textarea placeholder="书看完了，快来写写你的阅读心得吧！" bindinput="textCont" />
+            </view>
+        </view>
+        <!-- 评论晒图 -->
+        <view class='pushImg'>
+            <template is="uploader" data="{{files}}"></template>
+        </view>
+        <navigator url='../noteList/noteList' style='padding:0 60rpx;'>
+            <button size="defaultSize" class="banli" bindtap="pushEdit" hover-class="defaultTap">提交评论</button>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,65 @@
+<!--pages/noteList/noteList.wxml-->
+<import src="../../templates/join/join" />
+<import src="../../templates/noData/noData"/>
+<template is="noData" wx:if="{{!is_buy_card}}" data="{{...tipInfo}}"></template>
+<template is="noData" wx:if="{{noData}}"></template>
+<view class="page__hd" wx:if="{{!is_buy_card}}">
+    <template is="join"></template>
+</view>
+<scroll-view scroll-top="0" scroll-y="{{true}}" style='height:{{scrollHeight}}px' bindscrolltolower="loadMore">
+    <view class="page__bd read-status {{is_buy_card ? '' : 'top'}}">
+        <view class='not-comment'>
+            <block wx:for="{{notComment}}" wx:for-item="item" wx:for-index="index"  wx:key="unique">
+                <view class="weui-flex read-head read-item">
+                    <view class="weui-flex__item baby-avatar">
+                        <image src="{{item.book_icon}}" />
+                    </view>
+                    <view class="weui-flex__item read-title">
+                        <text class="read-tit overflow-one">{{item.book_name}}</text>
+                        <text class="read-class overflow-one">{{item.book_author}}</text>
+                        <navigator url="../addNote/addNote?id={{item.id}}&book_id={{item.book_id}}" data-index="{{index}}" bindtap="setBookInfo" hover-class="className">
+                            <view class="write-btn">写笔记</view>
+                        </navigator>
+                        <view class="read-note overflow-more">
+                            {{item.book_des}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+            
+        </view>
+
+        <view class='has-comment'>
+            <block wx:for="{{comment}}" wx:for-item="item" wx:for-index="index"  wx:key="unique">
+                <navigator url="../noteManage/noteManage?id={{item.id}}">
+                <view class="weui-flex read-head read-item">
+                    <view class="weui-flex__item baby-avatar">
+                        <image src="{{item.book_icon}}" />
+                    </view>
+                    <view class="weui-flex__item read-title">
+                        <text class="read-tit overflow-one">{{item.book_name}}</text>
+                        <text class="read-class overflow-one">{{item.book_author}}</text>
+                        <view class="see-btn">已完成</view>
+                        <view class='read-star'>
+                            <text class='iconfont icon-wujiaoxing star {{item.star >= "1" ? "active" : ""}}' wx:if="{{item.star >= '1'}}"></text>
+                            <text class='iconfont icon-wujiaoxing star {{item.star >= "2" ? "active" : ""}}' wx:if="{{item.star >= '2'}}"></text>
+                            <text class='iconfont icon-wujiaoxing star {{item.star >= "3" ? "active" : ""}}' wx:if="{{item.star >= '3'}}"></text>
+                            <text class='iconfont icon-wujiaoxing star {{item.star >= "4" ? "active" : ""}}' wx:if="{{item.star >= '4'}}"></text>
+                            <text class='iconfont icon-wujiaoxing star {{item.star >= "5" ? "active" : ""}}' wx:if="{{item.star >= '5'}}"></text>
+                        </view>
+                        <view class='tags'>
+                            <view class="write-btn" wx:if="{{item.read_time != null}}">{{item.read_time == 25 ? "15分钟以上" : item.read_time +"分钟"}}</view>
+                            <view class="write-btn" wx:if="{{item.read_by != null}}">{{item.read_by}}</view>
+                        </view>
+                    </view>
+                    
+                </view>
+                </navigator>
+                
+            </block>
+    
+        </view>
+    </view>
+</scroll-view>
+
+

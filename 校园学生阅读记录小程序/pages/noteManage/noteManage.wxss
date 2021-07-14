@@ -1,0 +1,19 @@
+/* pages/noteManage/noteManage.wxss */
+@import "../addNote/addNote.wxss";
+page{
+    background: #fff;
+    padding-bottom:30rpx;
+}
+.read-star .star-instro{
+    color:#ff5656;
+    font-size:13px;
+    margin-left: 5px;
+}
+.yuedu-info{
+    color:#ccc;
+    font-size:13px;
+    line-height: 20px;
+}
+.yuedu .yuedu-check view text{
+    width:100%;
+}

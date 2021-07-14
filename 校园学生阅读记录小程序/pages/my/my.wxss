@@ -1,0 +1,76 @@
+/* pages/my/my.wxss */
+@import "../complate/complate.wxss";
+.page__bd{
+    padding: 0;
+}
+.my-top{
+    background:#3f85f7;
+    padding:46rpx 60rpx;
+}
+.read-reward{
+    flex:0 0 146rpx;
+    height:130rpx;
+    
+}
+.read-reward image{
+    width:100%;
+    height:100%;
+}
+.read-jiu{
+    padding:20rpx 60rpx 0;
+    font-size:30rpx;
+    font-weight: bold;
+}
+.my-center{
+    padding:0;
+    margin:0;
+}
+.my-top .read-tit{
+    color:#fff;
+}
+.my-category{
+    margin:40rpx 0;
+    padding: 0 60rpx;
+    justify-content: space-between;
+    
+}
+.my-category .my-item{
+    flex:0 0 60px;
+}
+.my-category .my-item image{
+    width:72rpx;
+    height:68rpx;
+    display: block;
+    margin: auto;
+}
+
+.my-category .my-item text{
+    text-align: center;
+    display: block;
+    font-size:26rpx;
+    color:#666;
+    margin-top: 5rpx;
+}
+.weui-cells{
+    border:none;
+}
+
+.weui-cell:before{
+    border-top:0;
+    border-bottom:1px solid #eeeeee;
+    left:0;
+}
+.list-icon{
+    margin-right: 20rpx;
+    vertical-align: middle;
+    width:40rpx; 
+    height: 10rpx;
+    color:#78c3eb;
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+.weui-cell__bd{
+    margin-left:35px;
+    font-size:23rpx;
+}

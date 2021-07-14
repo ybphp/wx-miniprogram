@@ -1,0 +1,55 @@
+<!--pages/complate/complate.wxml-->
+<import is="" src="../../templates/join/join" />
+<import src="../../templates/noData/noData"/>
+<template is="noData" wx:if="{{!is_buy_card}}" data="{{...tipInfo}}"></template>
+<template is="noData" wx:if="{{noData}}"></template>
+<view class="page__hd" wx:if="{{!is_buy_card}}">
+        <template is="join"></template>
+    </view>
+<scroll-view  wx:if="{{!noData}}" scroll-y="ture" scroll-top="0" bindscrolltolower="loadMore" style="height:{{scrollHeight}}px">
+<view class="page">
+    <view class="page__bd read-status {{is_buy_card ? '' : 'top'}}">
+        <block wx:for="{{completeData}}" wx:for-item="item" wx:for-index="index" wx:key="unique">
+        <view class='read-outbox'>
+            <!--学生阅读心得-->
+            <view class="weui-flex read-head">
+                <view class="weui-flex__item baby-avatar">
+                    <image src="{{item.baby_avatar}}" />
+                </view>
+                <view class="weui-flex__item read-title">
+                    <text class="read-tit overflow-one">{{item.baby_name}}</text>
+                    <text class="read-class overflow-one">{{item.baby_school}}</text>
+                    <text class="read-publish">
+          <text class="read-time overflow-one">发表于{{item.create_time}}</text>
+                    </text>
+                </view>
+                <view class="weui-flex__item read-edit">
+                    <text class='iconfont icon-fenxiang' style='color:#e0e0e0'></text>
+                    <view class='share' style='color:#e0e0e0'>分享</view>
+                </view>
+            </view>
+            <view class="read-head read-instro">
+                <text class="book-comment {{item.showBool ? 'active' : ''}}">{{item.content}}</text>
+                <text class="show-all" bindtap='showAll' data-index="{{index}}">{{item.piyue}}</text>
+            </view>
+
+            <!--图书信息-->
+            <view class="weui-flex  read-head book-info">
+                <view class="weui-flex__item baby-avatar book-img">
+                    <image src="{{item.book_pic}}" />
+                </view>
+                <view class="weui-flex__item  read-title book-cont">
+                    <text class="read-tit book-name overflow-one">{{item.book_name}}</text>
+                    <text class="read-class book-author overflow-one">{{item.book_author}}</text>
+                    <text class="book-instro overflow-more">{{item.book_des}}</text>
+                </view>
+            </view>
+        </view>
+        </block>
+        <view class="no-more" wx:if="{{noMore}}">
+                没有更多了！
+            </view>
+
+    </view>
+</view>
+</scroll-view>

@@ -1,0 +1,86 @@
+<!--pages/noteManage/noteManage.wxml-->
+<!--pages/addNote/addNote.wxml-->
+<import src="../../templates/join/join" />
+<import src="../../templates/uploader/uploader" />
+<view class="page">
+    <view class="page__hd" wx:if="{{!is_buy_card}}">
+            <template is="join"></template>
+        </view>
+        <view class="page__bd {{is_buy_card ? '' : 'top'}}">
+        <view class="weui-flex read-head read-item" style='padding:30rpx 60rpx;'>
+            <view class="weui-flex__item baby-avatar">
+                <image src="{{detailData.book_pic}}" />
+            </view>
+            <view class="weui-flex__item read-title">
+                <text class="read-tit overflow-one">{{detailData.book_name}}</text>
+                <text class="read-class overflow-one">{{detailData.book_author}}</text>
+                <view class="read-note overflow-more">
+                    {{detailData.book_des}}
+                </view>
+
+            </view>
+        </view>
+        <!-- 阅读时长 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读评分
+            </view>
+            <view class='read-star'>
+                <text class='iconfont icon-wujiaoxing star {{detailData.star >= "1" ? "active" : ""}}' wx:if="{{detailData.star >= '1'}}"></text>
+                <text class='iconfont icon-wujiaoxing star {{detailData.star >= "2" ? "active" : ""}}' wx:if="{{detailData.star >= '2'}}"></text>
+                <text class='iconfont icon-wujiaoxing star {{detailData.star >= "3" ? "active" : ""}}' wx:if="{{detailData.star >= '3'}}"></text>
+                <text class='iconfont icon-wujiaoxing star {{detailData.star >= "4" ? "active" : ""}}' wx:if="{{detailData.star >= '4'}}"></text>
+                <text class='iconfont icon-wujiaoxing star {{detailData.star >= "5" ? "active" : ""}}' wx:if="{{detailData.star >= '5'}}"></text>
+                <text class="star-instro">{{instro[detailData.star-1]}}</text>
+            </view>
+        </view>
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读时长
+            </view>
+            <view class="weui-flex yuedu-check">
+                <view class="active">
+                    <text class="weui-flex__item">{{detailData.read_time == 25 ? "15分钟以上" : detailData.read_time + "分钟"}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 阅读方式 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读方式
+            </view>
+            <view class="weui-flex yuedu-check">
+                <view class="active">
+                    <text class="weui-flex__item">{{detailData.read_by}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 阅读心得 -->
+        <view class="yuedu">
+            <view class="yuedu-tit">
+                阅读心得
+            </view>
+            <view class='yuedu-text'>
+                <view class="yuedu-info">
+                    {{detailData.content}}
+                </view>
+            </view>
+        </view>
+        <!-- 评论晒图 -->
+        <view class='pushImg'>
+            <view class="weui-cell__bd">
+        <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for="{{detailData.pic_arr}}" wx:key="*this">
+                        <view class="weui-uploader__file" bindtap="previewImage" id="{{item.url}}">
+                            <image class="weui-uploader__img" src="{{item.url}}" mode="aspectFill" />
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+        </view>
+    </view>
+</view>

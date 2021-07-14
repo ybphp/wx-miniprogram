@@ -1,0 +1,35 @@
+<!--pages/notComplate/notComplate.wxml-->
+<import is="" src="../../templates/join/join" />
+<view class="page">
+    <view class="page__hd" wx:if="{{!is_buy_card}}">
+        <template is="join"></template>
+    </view>
+    <view class="page__bd {{is_buy_card ? '' : 'top'}}">
+        <!-- 未评论同学 -->
+        <!--学生阅读心得-->
+        <block wx:for="{{notCompleteData}}" wx:for-item="item" wx:for-index="index"  wx:key="unique">
+        <view class='read-outbox'>
+            <view class="weui-flex read-head">
+                <view class="weui-flex__item baby-avatar">
+                    <image src="{{item.baby_avatar}}" />
+                </view>
+                <view class="weui-flex__item read-title">
+                    <text class="read-tit overflow-one">{{item.baby_name}}</text>
+                    <text class="read-class overflow-one">{{item.baby_school}}</text>
+                </view>
+            </view>
+            <!--图书信息-->
+            <view class="weui-flex  read-head book-info">
+                <view class="weui-flex__item baby-avatar book-img">
+                    <image src="{{item.book_pic}}" />
+                </view>
+                <view class="weui-flex__item  read-title book-cont">
+                    <text class="read-tit book-name overflow-one">{{item.book_name}}</text>
+                    <text class="read-class book-author overflow-one">{{item.book_author}}</text>
+                    <text class="book-instro overflow-more">{{item.book_des}}</text>
+                </view>
+            </view>
+        </view>
+        </block>
+    </view>
+</view>

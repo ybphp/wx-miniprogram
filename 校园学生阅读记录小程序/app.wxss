@@ -1,0 +1,99 @@
+@import "style/weui.wxss";
+@import "assets/iconfont/iconfont.wxss";
+@import "templates/join/join.wxss";
+@import "templates/cardInfo/cardInfo.wxss";
+@import "templates/noData/noData.wxss";
+/**app.wxss**/
+button::after{
+  width:0;
+  height:0;
+}
+/* 通用提交按钮样式 */
+.banli{
+    
+    background: #429AfA;
+    color:#fff;
+    font-size:36rpx;
+    text-align: center;
+    height:88rpx;
+    line-height: 88rpx;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.overflow-one{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/* 星星评分 */
+.read-star{
+    height:25px;
+    line-height: 25px;
+}
+.read-star text.star{
+      display: inline-block;
+      margin-right:3px;
+      color:#f8f8f8;
+      font-size:20px;
+      height:25px;
+}
+.read-star text.active{
+    color:#ff5656;
+}
+.read-star .instro{
+    display: inline-block;
+    font-size:25rpx;
+    color:#ff5656;
+    height:25px;
+    line-height: 25px;
+    margin-left:10rpx;
+}
+/* 图片上传组件样式 */
+.weui-uploader__file{
+    width:155rpx;
+    height:155rpx;
+    margin-right:10rpx;
+}
+.weui-uploader__input-box{
+    width:150rpx;
+    height:155rpx;
+    margin-right:0;
+}
+.weui-uploader__img,.weui-uploader__input{
+    width:100%;
+    height:100%;
+}
+.weui-uploader__file:nth-child(4n){
+    margin-right:0;
+}
+/* 编辑、分享通用按钮 */
+.read-edit{
+     flex: 0 0 50px;
+     text-align:center;
+    color:#6ad1f3;     
+  }
+  .read-edit text{
+    font-size:60rpx;
+  }
+  .read-edit view.share{
+      font-size:25rpx;
+    margin-top: -20rpx;
+      
+  }
+  /* 没有更多了 */
+  .no-more{
+      text-align: center;
+      margin-top: 10px;
+      color:#ccc;
+      font-size:12px;
+  }
+  .top{
+      margin-top: 90rpx;
+  }

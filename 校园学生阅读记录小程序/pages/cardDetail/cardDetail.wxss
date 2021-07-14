@@ -1,0 +1,49 @@
+/* pages/cardDetail/cardDetail.wxss */
+.card-box {
+    padding:40rpx;
+}
+.card-box .card-title view{
+    font-size:40rpx;
+    color:#383838;
+    margin: 9rpx 0;
+    font-weight: bold;
+}
+
+.card-concern .concern-title{
+    font-size:25rpx;
+    color:#414141;
+    margin-bottom: 18rpx;
+    font-weight: bold;
+}
+.card-concern .concern-text{
+    font-size:20rpx;
+    color:#8A8A8A;
+    margin-bottom: 10rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

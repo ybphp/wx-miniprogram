@@ -1,0 +1,22 @@
+/* templates/noData/noData.wxss */
+.no-data{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    width:304rpx;
+    height:220rpx;
+}
+.no-data image{
+    width:304rpx;
+    height:184rpx;
+}
+.no-data view{
+    text-align: center;
+    height:35px;
+    line-height: 35px;
+    color:#ccc;
+    font-size:28rpx;
+}

@@ -1,0 +1,33 @@
+/* templates/cardInfo/cardInfo.wxss */
+.card-list{
+    margin:35rpx 0 48rpx;
+}
+.card-item{
+    margin:18rpx;
+}
+.card-item .card-icon{
+    flex: 0 0 80rpx;
+    height:80rpx;
+    border-radius: 50%;
+    background: #fafafa;
+    overflow: hidden;
+    margin-right:24rpx;
+}
+.card-item .card-icon text{
+    font-size:50rpx;
+    vertical-align: middle;
+    text-align: center;
+    width:80rpx;
+    height:80rpx;
+    line-height:80rpx;
+    display: block;
+}
+.card-item .card-tit{
+    font-size:30rpx;
+    color:#646464;
+    font-weight: bold;
+}
+.card-item .card-text{
+    font-size:20rpx;
+    color:#c3c3c3;
+}

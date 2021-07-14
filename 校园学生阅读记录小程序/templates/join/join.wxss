@@ -1,0 +1,35 @@
+/* templates/buyCard/buyCard.wxss */
+.join{
+    width:100%;
+    height:90rpx;
+    line-height: 90rpx;
+    background: #e94f4f;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 200
+}
+.join text{
+    color:#fff;
+    font-size: 24rpx;
+    padding-left: 28rpx;
+}
+.join navigator{
+    border:1px solid #fff;
+    color:#fff;
+    float:right;
+    height:60rpx;
+    line-height:50rpx;
+    background: transparent;
+    margin:15rpx 28rpx 0 0;
+    padding:0rpx 10rpx;
+    border-radius: 10rpx;
+}
+.join button{
+    color:#fff;
+    height:60rpx;
+    line-height:50rpx;
+    background: transparent;
+    margin:0;
+    padding:0;
+}

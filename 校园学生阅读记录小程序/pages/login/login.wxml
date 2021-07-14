@@ -1,0 +1,31 @@
+
+<!--pages/login/login.wxml-->
+
+<view class="login">
+    <view class="login-avatar">
+        <view class="avatar-cont">
+            <image src="{{userInfo.avatarUrl}}" />
+            <text>授权登录</text>
+        </view>
+    </view>
+    <view class="login-title">
+        <view class="login-tip">短信验证登录</view>
+        <view class="login-instro">如手机号未注册，验证后将自动登录</view>
+    </view>
+<form bindsubmit="login" class="login-form">
+    <view class="section telphone">
+      <label class="login-icon iconfont icon-shouji"></label>
+      <view class="login-input">
+        <input focus="true" name="mobile" type="number" maxlength="11" placeholder="请输入您的手机号" placeholder-class="placeholder" bindblur="mobileInputEvent"/>
+      </view>
+    </view>
+    <view class="section password">
+      <label class="login-icon iconfont icon-mima"></label>
+      <view class="login-input login-password">
+        <input  cursor-spacing="100" name="password" type="number" placeholder="请输入您的验证码" placeholder-class="placeholder" />
+        <button bindtap="getCode" disabled="{{status}}">{{codeText}}</button>
+      </view>
+    </view>
+    <button class="sign-in" size="defaultSize" formType="submit" >登录</button>
+</form>
+  </view>

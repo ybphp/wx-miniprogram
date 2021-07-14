@@ -1,0 +1,44 @@
+<!--logs.wxml-->
+<!--pages/noteList/noteList.wxml-->
+<import src="../../templates/join/join" />
+<import src="../../templates/noData/noData"/>
+<template is="noData" wx:if="{{!is_buy_card}}" data="{{...tipInfo}}"></template>
+<template is="noData" wx:if="{{noData}}"></template>
+<view class="page__hd {{is_buy_card}}" wx:if="{{!is_buy_card}}">
+    <template is="join"></template>
+</view>
+<scroll-view scroll-y="ture" scroll-top="0" bindscrolltolower="loadMore" style="height:{{scrollHeight}}px">
+    
+    <view class="page__bd {{is_buy_card ? '' : 'top'}}" wx:if="{{!noData}}">
+        <view class='record-box'>
+            <block wx:for="{{recordArr}}" wx:for-item="item" wx:for-index="index" wx:key="unique">
+                <view class='record-item'>
+                <view class='record-dotted'></view>
+                <view class="weui-flex read-head read-item">
+                    
+                    <view class="weui-flex__item read-title">
+                        <text class="read-tit overflow-one">{{item.book_name}}</text>
+                        <text class="read-class overflow-one">{{item.book_author}}</text>
+                        <navigator url="../addNote/addNote" hover-class="className">
+                            <view class="write-btn" wx:if="{{item.read_time !== null}}">{{item.read_time == 25 ? "15分钟以上" : item.read_time +"分钟"}}</view>
+                            <view class="write-btn" wx:if="{{item.read_by !== null}}">{{item.read_by}}</view>
+                        </navigator>
+                        <!-- <view class="see-btn">已完成</view> -->
+                        <view class="read-note overflow-more">
+                            {{item.book_des}}
+                        </view>
+                    </view>
+                    <view class="weui-flex__item baby-avatar">
+                        <image src="{{item.book_icon}}" />
+                    </view>
+                </view>
+
+            </view>
+            </block>
+            <view class="no-more" wx:if="{{noMore}}">
+                没有更多了！
+            </view>
+        </view>
+    </view>
+    
+</scroll-view>

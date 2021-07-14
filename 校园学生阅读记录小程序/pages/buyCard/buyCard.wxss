@@ -1,0 +1,36 @@
+/* pages/buyCard/buyCard.wxss */
+.buyCard{
+    width:100%;
+    height:100%;
+    background:#f6f6f6;
+    padding:30rpx 0 0;    
+}
+.buyCard .weui-cell{
+    background: #fff;
+    height:102rpx;
+    line-height: 102rpx;
+    border-top: 0;
+    border-bottom:1px solid #e5e5e5;
+}
+.weui-select{
+    border-right:none;
+}
+.weui-label{
+    color:#000;
+    font-size:34rpx;
+}
+.weui-cell:before {
+    position: static;
+}
+.card-banli{
+    padding:0 30rpx;
+}
+.banli{
+    margin-top:100rpx;
+    background: #429AfA;
+    color:#fff;
+    font-size:36rpx;
+    text-align: center;
+    height:88rpx;
+    line-height: 88rpx;
+}

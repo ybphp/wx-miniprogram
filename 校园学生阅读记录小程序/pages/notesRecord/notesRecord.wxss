@@ -1,0 +1,34 @@
+@import "../noteList/noteList";
+page{
+    background: #fff;
+}
+.read-head{
+    border-left:1px solid #daecff;
+    padding:0 0 40rpx 40rpx;
+}
+.record-box{
+    padding:60rpx 60rpx 0;
+}
+.record-item{
+    position: relative;
+}
+.read-item{
+    border-bottom:none;
+}
+.record-dotted{
+    width:20rpx;
+    height:20rpx;
+    background:#7bbaff;
+    position: absolute;
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    top:0;
+    left:-9rpx;
+}
+.record-box .baby-avatar{
+    margin:0 0 0 46rpx;
+}
+.record-box .read-title{
+    margin-top:-10rpx;
+    max-width: 348rpx;
+}

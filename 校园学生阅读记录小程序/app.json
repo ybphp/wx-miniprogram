@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/notesRecord/notesRecord",
+    "pages/my/my",
+    "pages/done/done",
+    "pages/noteList/noteList",
+    "pages/class/class",
+    "pages/readStatus/readStatus",
+    "pages/notComplate/notComplate",
+    "pages/complate/complate",
+    "pages/addNote/addNote",
+    "pages/cardDetail/cardDetail",
+    "pages/buyCard/buyCard",
+    "templates/cardInfo/cardInfo",
+    "pages/noteManage/noteManage",
+    "templates/noData/noData"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "校园阅读",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7f7f7f",
+    "selectedColor": "#429afa",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./assets/icon/home.png",
+        "selectedIconPath": "./assets/icon/homed.png",
+        "text": "校园阅读"
+      },
+      {
+        "pagePath": "pages/noteList/noteList",
+        "iconPath": "./assets/icon/edit.png",
+        "selectedIconPath": "./assets/icon/editd.png",
+        "text": "阅读笔记"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "./assets/icon/user.png",
+        "selectedIconPath": "./assets/icon/userd.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
