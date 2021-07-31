@@ -1,0 +1,17 @@
+<!--pages/user/user.wxml-->
+<view class="container">        
+    <view class="form-wrap">
+        <text class="hint">请绑定COMPANY ID</text>
+        <view class="flex-wrap input-wrap">            
+            <text class="label">用户名</text>
+            <input value="{{user.username}}" bindinput="updateEmpid" id="username" class="account-info-input"/>
+        </view>
+        <view class="flex-wrap input-wrap">
+            <text class="label">密码</text>
+            <input password bindinput="updatePassword" id="password" class="account-info-input"/>
+        </view>
+        <view class="btn-area" id="buttonContainer">        
+            <button class="submit" type="primary" bindtap="save">绑定</button>               
+        </view>        
+    </view>       
+</view>

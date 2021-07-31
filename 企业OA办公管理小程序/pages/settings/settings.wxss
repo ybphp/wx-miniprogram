@@ -1,0 +1,34 @@
+/* pages/settings/settings.wxss */
+@import "../common/lib/weui.wxss";
+
+.picker{
+  padding: 19rpx 26rpx;
+  background-color: #FFFFFF;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  text-align: center
+}
+
+.navigator {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 0 12px;
+  height: 46px;
+  line-height: 46px;
+}
+

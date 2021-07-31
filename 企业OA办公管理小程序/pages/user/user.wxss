@@ -1,0 +1,55 @@
+/* pages/user/user.wxss */
+/*@import "../common/lib/weui.wxss";*/
+
+.input-wrap {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  margin: 0 -12px;
+  padding: 0 12px;
+  height: 46px;
+  line-height: 46px;
+}
+.label {
+  color: #999;
+  width: 4.5em;
+}
+.account-info-input {
+  font-size: 18px;
+  line-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  height: 90%;
+}
+.tappable:hover {
+  opacity: .6;
+}
+
+.container {
+  padding: 0px 12px;
+}
+.form-wrap {
+  /*border-top: 1px solid #f2f2f2;*/
+  margin: 12px 0;
+}
+
+.hint,
+.error {
+  display: block;
+  margin: 8px 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+.error {
+  color: #e64240;
+}

@@ -1,0 +1,40 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: UI[index].title}}"/>
+
+  <view  class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <!--<text class="userinfo-nickname">{{UI[uindex].greeting}}\n{{userInfo.nickName}}</text>-->
+      <text class="userinfo-nickname" wx:if="{{user !== null}}">You are logged in as, {{user.username}}</text>
+      <text class="userinfo-nickname" wx:if="{{user == null}}">Please bind with your Employee ID</text>
+  </view>
+
+  <view class="page-section">
+    
+    <view class="weui-cells__title">{{UI[index].accountMg}}</view>
+    <navigator wx:if="{{user == null}}" url="../user/user" class="navigator user">{{UI[index].bind}}</navigator>
+    <navigator wx:if="{{user !== null}}" bindtap="unbind" class="navigator user">{{UI[index].unbind}}</navigator>
+
+      <view class="weui-cells__title">{{UI[index].language}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">{{UI[index].currentLan}}</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{languages}}">
+              <view class="weui-input">{{languages[index]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    <!--</view>-->
+
+    <view class="btn-area" id="buttonContainer">
+      <button bindtap="save" type="primary">{{UI[index].save}}</button>
+    </view>
+  </view>    
+  <!--<template is="foot" />-->
+</view>

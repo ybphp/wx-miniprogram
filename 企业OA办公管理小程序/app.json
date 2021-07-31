@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/settings/settings",
+    "pages/timecard/normal/normal",
+    "pages/timecard/history/history",
+    "pages/overwork/create/create",
+    "pages/sample/index/index",
+    "pages/info/index/index",
+    "pages/info/salary/salary",
+    "pages/info/payment/payment"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#006df0",
+    "navigationBarTitleText": "Demo",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#006df0",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_CSR.png",
+        "selectedIconPath": "image/icon_CSR_HL.png",
+        "text": "考勤"
+      },
+      {
+        "pagePath": "pages/info/index/index",
+        "iconPath": "image/icon_CWS.png",
+        "selectedIconPath": "image/icon_CWS_HL.png",
+        "text": "信息"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "iconPath": "image/icon_settings.png",
+        "selectedIconPath": "image/icon_settings_HL.png",
+        "text": "设置"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}
