@@ -1,0 +1,4 @@
+<view class="cui-cell-class cui-list-cell {{arrow?'cui-cell-arrow':''}} {{last?'cui-cell-last':''}} {{lineLeft?'cui-line-left':''}} {{lineRight?'cui-line-right':''}}" hover-class="{{hover?'cui-cell-hover':''}}" style="background: {{bgcolor}};font-size: {{ size }}rpx; {{ color ? 'color:' + color : '' }};padding:{{padding}}"
+  hover-stay-time="150" bindtap="handleClick">
+  <slot></slot>
+</view>

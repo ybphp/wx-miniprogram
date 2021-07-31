@@ -1,0 +1,6 @@
+<van-dialog use-slot show="{{show}}" title="微信授权" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" bind:getuserinfo="updateUserInfo" bind:cancel="cancel">
+     <view class="login-box">
+          <view class="login-box_title">小程序申请获得以下权限</view>
+          <view class="login-box_desc">获得你的公开信息（昵称、头像等）</view>
+     </view>
+</van-dialog>

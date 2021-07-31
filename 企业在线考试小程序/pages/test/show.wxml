@@ -1,0 +1,70 @@
+<view class="container">
+     <view class="test-detail">
+          <image wx:if="{{info.image}}" mode="aspectFill" class="image" src="{{info.image}}"></image>
+          <view class="title">{{info.title}}</view>
+          <view class="px-df">
+               <view class="desc">{{info.desc}}</view>
+          </view>
+     </view>
+     <view class="section">
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-friends"></text>
+               </view>
+               <view class="cell__title">参与人数</view>
+               <view class="cell__content">{{info.total_user}}人</view>
+          </view>
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-data"></text>
+               </view>
+               <view class="cell__title">测评次数</view>
+               <view class="cell__content">{{info.total_answer}}次</view>
+          </view>
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-index"></text>
+               </view>
+               <view class="cell__title">题目个数</view>
+               <view class="cell__content">{{info.total_item}}道</view>
+          </view>
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-medal"></text>
+               </view>
+               <view class="cell__title">总分</view>
+               <view class="cell__content">{{info.total_score}}分</view>
+          </view>
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon--clock"></text>
+               </view>
+               <view class="cell__title">考试时长</view>
+               <view class="cell__content">{{info.limittime ? info.limittime + '秒' : '不限时'}}</view>
+          </view>
+     </view>
+     <view class="section">
+          <view class="home-title"><view class="label">注意事项</view></view>
+          <view class="p-df">
+               <text class="paragraph">
+                    1、答题规则：用户在答题过程中不允许退出，如退出，试卷限时，那么时间到则自动交卷
+               </text>
+          </view>
+     </view>
+     <view class="action-oper">
+          <navigator open-type="switchTab" url="../index/index" class="action-oper__icon">
+               <view class="cui-icon cui-icon-house"></view>
+               <view class="label">首页</view>
+          </navigator>
+          <view bindtap="collect" class="action-oper__icon {{collect ? 'text-warning' : ''}}">
+               <view class="cui-icon cui-icon-star "></view>
+               <view class="label">收藏</view>
+          </view>
+          <view class="action-oper__button">
+               <navigator url="rank?id={{info.id}}" class="btn cui-warning"><text class="cui-icon cui-icon-trophy"></text> 排行榜</navigator>
+               <view wx:if="{{info.status === '0'}}" class="btn cui-btn-gray">已关闭答题</view>
+               <view wx:else bindtap="doAnswer" class="btn cui-green"><text class="cui-icon cui-icon-edit"></text> {{info.keep ? '继续答题' : '开始答题'}}</view>
+          </view>
+     </view>
+     <login show="{{loginShow}}" goBack="{{false}}" bind:loginAfter="loginAfter" />
+</view>

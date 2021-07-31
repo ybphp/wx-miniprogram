@@ -1,0 +1,28 @@
+<view class="container">
+<view class="testpaper-list">
+     <block wx:for="{{list}}">
+     <van-swipe-cell id="swipe-cell" right-width="{{ 80 }}" async-close bind:close="onClose">
+     <navigator url="../test/show?id={{item.test_id}}" class="testpaper-item">
+          <view class="left">
+               <view class="title">{{item.test.title}}</view>
+               <view class="desc">{{item.test.desc}}</view>
+               <view class="info"><text>{{item.test.total_item}}道题</text><text>{{item.test.total_answer}}人参与</text><text>总分{{item.test.total_score}}</text> </view>
+          </view>
+          <view class="right">
+               <image mode="aspectFill" src="{{item.test.image}}"></image>
+          </view>
+     </navigator>
+     <view class="swipe-right" bindtap="cancelCollect" data-index="{{index}}" slot="right">取消收藏</view>
+     </van-swipe-cell>
+     </block>
+</view>
+     <view class="loading" wx:if="{{list.length>0}}">
+          <text class="icon" wx:if="{{loading}}"></text>
+          <view class="tips">{{loadTitle}}</view>
+     </view>
+     <view class="noData" wx:if="{{list.length==0 && page > 1}}">
+          <view class="pictrue"><image src='/images/noNews.png'></image></view>
+          <view class="tips">暂无内容</view>
+     </view>
+<login show="{{!isLog}}" bind:loginAfter="loginAfter" />
+</view>

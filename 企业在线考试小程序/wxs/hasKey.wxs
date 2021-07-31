@@ -1,0 +1,11 @@
+var hasKey = function (key, obj){
+     if (json.hasOwnProperty(key, obj)) {
+          return true;
+          console.log('true');
+     }else{
+          return false;
+     }
+}
+module.exports = {
+     hasKey: hasKey
+};

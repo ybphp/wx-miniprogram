@@ -1,0 +1,112 @@
+<view class="container">
+<view class="test-show">
+     <view class="test-show__hd">
+          <text> 用时{{info.usetime}}秒 </text>
+          <text> 共{{info.total_score}}分 </text>
+          <text> 得{{info.score}}分 </text>
+          <text> 共{{info.itemList.length}}道题 </text>
+          <text> 答对{{info.total_correct}}道 </text>
+     </view>
+     <view class="test-show__bd">
+          <view class="test-top">
+               <view class="test-top-item" bindtap="showAnswercard"><text class="cui-icon cui-icon-set"></text> 题目面板</view>
+               <view class="test-top-item">
+                    {{current+1}}/{{info.itemList.length}}
+               </view>
+          </view>
+          <swiper duration="0" current="{{current}}" easing-function="linear" circular="true">
+          <swiper-item wx:for="{{info.itemList}}" catchtouchmove="stopTouchMove" >
+          <scroll-view scroll-y class="testitem-item">
+               <view class="title ">
+                    <view class="mb-df text-primary">{{type_text[item.itembank.type]}} ({{item.score}}分)</view>
+                    <view>{{item.itembank.title}}</view>
+               </view>
+               <view class="content">
+                    <rich-text nodes="{{item.itembank.content}}"></rich-text>
+               </view>
+               <view class="options">
+                    <radio-group  wx:if="{{item.itembank.type=='judge'}}" bindchange="radioChange" data-id="{{item.id}}" class="radio-group" name="{{item.id}}">
+                         <radio class="item" disabled checked="{{item.useranswer.answer === '1' ? true : false}}" value="1">
+                              <text>对</text>
+                         </radio>
+                         <radio class="item" disabled checked="{{item.useranswer.answer === '0' ? true : false}}" value="0">
+                              <text>错</text>
+                         </radio>
+                    </radio-group>
+                    <radio-group wx:if="{{item.itembank.type=='onechoice'}}" bindchange="radioChange" data-id="{{item.id}}" class="radio-group" name="{{item.id}}">
+                         <radio class="item" disabled checked="{{ocV.checked ? true : false}}" wx:for="{{item.itembank.values}}" wx:for-item="ocV" value="{{ocV.key}}">
+                              <text>{{ocV.key}} . {{ocV.value}}</text>
+                         </radio>
+                    </radio-group>
+                    <checkbox-group wx:if="{{item.itembank.type=='manychoice'}}" bindchange="checkboxChange" data-id="{{item.id}}" name="{{item.id}}">
+                         <label class="item" wx:for="{{item.itembank.values}}" wx:for-item="mcV">
+                         <checkbox value="{{mcV.key}}" disabled checked="{{mcV.checked ? true : false}}"/>{{mcV.key}} . {{mcV.value}}
+                         </label>
+                    </checkbox-group>
+               </view>
+               <view class="your_answer">
+                    <view>您的答题：
+                    <text class="{{item.useranswer.correct ? 'text-success' : 'text-danger'}}">
+                    <block wx:if="{{item.useranswer.answer ===''}}"> 未作答 </block>
+                    <block wx:else>
+                         <block wx:if="{{item.itembank.type ==='judge'}}">
+                               {{item.useranswer.answer == 1 ? '对' : '错'}}
+                         </block>
+                         <block wx:else>
+                               {{item.useranswer.answer}}
+                         </block>
+                    </block>
+                    </text>
+                   </view>
+                    <view>正确答案：
+                         <text class="text-success">
+                         <block wx:if="{{item.itembank.type ==='judge'}}">
+                               {{item.itembank.answer == 1 ? '对' : '错'}}
+                         </block>
+                         <block wx:else>
+                               {{item.itembank.answer}}
+                         </block>
+                         </text>
+                    </view>
+               </view>
+               <view class="answer_key">
+                    <view class="label">解析</view>
+                    <view class="content">{{item.itembank.answer_key}}</view>
+               </view>
+          </scroll-view>
+          </swiper-item>
+          </swiper>
+     </view>
+     <view class="test-show__ft">
+          <button class="cui-btn " disabled="{{current>0 ? false : true}}" bindtap="prevItem">上一题</button>
+          <button class="cui-btn " disabled="{{current < (info.itemList.length-1) ? false : true}}" bindtap="nextItem">下一题</button>
+     </view>
+</view>
+
+<van-popup round position="bottom" show="{{ answercard }}" custom-class="answercard" bind:close="closeAnswercard">
+     <view class="answercard__hd">
+          <view class="explain">
+               <view class="item">
+                    <text class="cui-primary"></text> 
+                    <view>当前试题</view>
+               </view>
+               <view class="item">
+                    <text class="cui-green"></text>
+                    <view>回答正确</view>
+               </view>
+               <view class="item">
+                    <text class="cui-danger"></text>
+                    <view>回答错误</view> 
+               </view>
+               <view class="item">
+                    <text class="cui-phcolor-gray"></text>
+                    <view>未答题</view> 
+               </view>
+          </view>
+     </view>
+     <scroll-view scroll-y enable-flex="true" class="answercard__bd">
+          <view class="answercard-item {{index == current ? 'active' : ''}} {{item.useranswer.answer==='' ? 'cui-phcolor-gray' : item.useranswer.correct ? 'cui-green' :'cui-danger'}}" bindtap="changeItem"  wx:for="{{info.itemList}}" data-index="{{index}}">{{index+1}} </view>
+     </scroll-view>
+</van-popup>
+<login show="{{!isLog}}" bind:loginAfter="loginAfter" />
+</view>

@@ -1,0 +1,23 @@
+<view class="container">
+<view class="testpaper-list">
+     <navigator url="answershow?id={{item.id}}" class="testpaper-item" wx:for="{{list}}">
+          <view class="left">
+               <view class="title">{{item.test.title}}</view>
+               <view class="desc">{{item.test.desc}}</view>
+               <view class="info"><text>共{{item.test.total_item}}道题</text><text>答对{{item.total_correct}}道</text><text>得分{{item.score}}</text> </view>
+          </view>
+          <view class="right">
+               <image mode="aspectFill" src="{{item.test.image}}"></image>
+          </view>
+     </navigator>
+</view>
+     <view class="loading" wx:if="{{list.length>0}}">
+          <text class="icon" wx:if="{{loading}}"></text>
+          <view class="tips">{{loadTitle}}</view>
+     </view>
+     <view class="noData" wx:if="{{list.length==0 && page > 1}}">
+          <view class="pictrue"><image src='/images/noNews.png'></image></view>
+          <view class="tips">暂无内容</view>
+     </view>
+<login show="{{!isLog}}" bind:loginAfter="loginAfter" />
+</view>

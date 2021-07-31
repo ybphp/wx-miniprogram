@@ -1,0 +1,9 @@
+{
+     "usingComponents": {
+          "cui-icon": "/components/icon/icon"
+     },
+     "navigationBarTitleText": "排行榜",
+     "navigationBarTextStyle":"white",
+     "navigationBarBackgroundColor":"#19be6b",
+     "backgroundColor":"#19be6b"
+}

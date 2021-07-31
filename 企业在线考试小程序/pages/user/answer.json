@@ -1,0 +1,9 @@
+{
+     "usingComponents": {
+          "login": "/components/login/index"
+     },
+     "navigationBarTitleText": "我的答题",
+     "enablePullDownRefresh": true,
+     "onReachBottomDistance": 50,
+     "backgroundTextStyle": "dark"
+}

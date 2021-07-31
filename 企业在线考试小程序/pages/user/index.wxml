@@ -1,0 +1,56 @@
+<view class="user-top">
+     <view wx:if="{{isLog}}" class="userInfo">
+          <image class="avatar-img" src="{{userInfo.avatar}}"></image>
+          <view class="nickname">{{userInfo.nickname}}</view>
+     </view>
+     <button wx:else class="userInfo" open-type="getUserInfo" bindgetuserinfo="doLogin">
+          <image class="avatar-img" src="/images/avatar.png"></image>
+          <view class="nickname">请登录</view>
+     </button>
+     <view  class="user-data">
+          <navigator url="answer" hover-class="none" class="user-data-item">
+               <view class="value">{{total_answer}}</view>
+               <view class="label">参与答题</view>
+          </navigator>
+          <navigator url="collect" hover-class="none" class="user-data-item">
+               <view class="value">{{total_collect}}</view>
+               <view class="label">收藏试卷</view>
+          </navigator>
+     </view>
+</view>
+
+<view class="">
+     <navigator url="answer" class="cell link">
+          <view class="cell__icon">
+               <text class="cui-icon cui-icon-edit"></text>
+          </view>
+          <view class="cell__title">我的答题</view>
+     </navigator>
+     <navigator url="collect" class="cell link">
+          <view class="cell__icon">
+               <text class="cui-icon cui-icon-star"></text>
+          </view>
+          <view class="cell__title">我的收藏</view>
+     </navigator>
+     <button open-type="contact" class="cell link">
+          <view class="cell__icon">
+               <text class="cui-icon cui-icon--headset"></text>
+          </view>
+          <view class="cell__title">在线客服</view>
+          <view class="cell__content">发起在线客服</view>
+     </button>
+     <view bindtap="call" class="cell link" data-value="{{siteInfo.phone}}">
+          <view class="cell__icon">
+               <text class="cui-icon cui-icon-call"></text>
+          </view>
+          <view class="cell__title">联系客服</view>
+          <view class="cell__content">一键拨号</view>
+     </view>
+     <view bindtap="openMap" class="cell link">
+          <view class="cell__icon">
+               <text class="cui-icon cui-icon-location"></text>
+          </view>
+          <view class="cell__title">联系地址</view>
+          <view class="cell__content">{{siteInfo.address}}</view>
+     </view>
+</view>

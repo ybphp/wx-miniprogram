@@ -1,0 +1,1 @@
+<view class="cui-icon-class cui-icon cui-icon-{{name}}" style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }};{{bold?'font-weight: bold': ''}}" wx:if="{{visible}}"></view>

@@ -1,0 +1,31 @@
+<view class="container">
+     <view class="test-info">
+          <view class="title">试卷 : {{testInfo.title}}</view>
+          <view class="info"><text>总分 {{testInfo.total_score}}</text><text>参与人数 {{testInfo.total_user}}</text><text>共 {{testInfo.total_item}} 道题</text></view>
+     </view>
+     <view class="rank-box">
+          <view class="rank-item" wx:for="{{list}}">
+               <view class="number">
+               <block wx:if="{{(index+1) == 1}}">
+                    <text class="cui-icon cui-icon-trophy" style="color:#FCCA57;"></text>
+               </block>
+               <block wx:elif="{{(index+1) == 2}}">
+                    <text class="cui-icon cui-icon-trophy" style="color:#CBCBC9;"></text>
+               </block>
+               <block wx:elif="{{(index+1) == 3}}">
+                    <text class="cui-icon cui-icon-trophy" style="color:#FE942B;"></text>
+               </block>
+           
+               <block wx:else>
+                    {{index+1}}
+               </block>
+               </view>
+               <view class="userInfo">
+                    <image class="avatar" src="{{item.user.avatar}}"></image>
+                    <view class="nickname">{{item.user.nickname}}</view>
+               </view>
+               <view class="score">{{item.score}}分</view>
+          </view>
+         
+     </view>
+</view>

@@ -1,0 +1,10 @@
+{
+     "usingComponents": {
+          "login": "/components/login/index",
+          "van-swipe-cell": "/miniprogram_npm/@vant/weapp/swipe-cell/index"
+     },
+     "navigationBarTitleText": "我的收藏",
+     "enablePullDownRefresh": true,
+     "onReachBottomDistance": 50,
+     "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,28 @@
+<view class="container">
+<scroll-view scroll-x scroll-with-animation class="tab-box" scroll-left="{{scrollLeft}}" >
+     <view wx:for="{{categoryList}}" catchtap="swichNav" class="tab-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}"><text>{{item.title}}</text></view>
+</scroll-view>
+<view class="tab-content">
+     <view class="bg-white article-list">
+          <navigator hover-class="none" class="article-item" url="../article/show?id={{item.id}}" wx:for="{{list}}">
+               <image wx:if="{{item.image}}" mode="aspectFill" class="article-item-cover" src="{{item.image}}"></image>
+               <view class="article-item-content">
+                    <view class="title">{{item.title}}</view>
+                    <view class="foot">
+                         <view class="item">{{item.category.title}}</view>
+                         <view class="item">{{item.updatetime_text}}</view>
+                         <view class="item"><text class="cui-icon cui-icon-eye"></text>{{item.views}}</view>
+                    </view>
+               </view>
+          </navigator>
+     </view>
+     <view class="loading" wx:if="{{list.length>0}}">
+          <text class="icon" wx:if="{{loading}}"></text>
+          <view class="tips">{{loadTitle}}</view>
+     </view>
+     <view class="noData" wx:if="{{list.length==0 && page > 1}}">
+          <view class="pictrue"><image src='/images/noNews.png'></image></view>
+          <view class="tips">暂无内容</view>
+     </view>
+</view>
+</view>

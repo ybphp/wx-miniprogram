@@ -1,0 +1,17 @@
+page{
+     background-color: #f0f0f0;
+}
+.swipe-right{
+     width: 80px;
+     background-color: #ed3f14;
+     height: 100%;
+     float: left;
+     white-space: nowrap;
+     box-sizing: border-box;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     color:#ffffff;
+     font-size: 28rpx;
+}

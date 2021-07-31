@@ -1,0 +1,62 @@
+page{
+     background-color: #efeff0;
+}
+.container{
+     padding-bottom: env(safe-area-inset-bottom);
+}
+.title{
+     font-size:32rpx;
+     margin-bottom: 30rpx;
+}
+.test-info{
+     background-color: #19be6b;
+     color:#ffffff;
+     padding: 60rpx 30rpx;
+}
+.test-info .info text{
+     margin-right: 20rpx;
+     font-size: 28rpx;
+}
+.test-info .info text:last-child{
+     margin-right: 0;
+}
+.my-rank{
+     margin-bottom: 30rpx;
+}
+.rank-box .rank-item , .my-rank{
+     display: flex;
+     align-items: center;
+     padding: 20rpx 30rpx;
+     background-color: #ffffff;
+}
+.rank-box .rank-item:last-child{
+     border-bottom:0;    
+}
+.rank-box .rank-item .number, .my-rank .number{
+     width: 80rpx;
+     text-align: center;
+     flex-shrink: 0;
+     font-weight: 600;
+     color:#80848f;
+}
+.rank-box .rank-item .userInfo,.my-rank .userInfo{
+     display: flex;
+     align-items: center;
+     flex-grow: 1;
+     padding-left: 30rpx;
+     padding-right: 30rpx;
+}
+.rank-box .rank-item .userInfo .avatar,.my-rank .userInfo .avatar{
+     width: 60rpx;
+     height: 60rpx;
+     border-radius: 100%;
+}
+.rank-box .rank-item .userInfo .nickname,.my-rank .userInfo .nickname{
+     margin-left: 20rpx;
+     font-size: 24rpx;
+     color:#80848f;
+}
+.rank-box .rank-item .score,.my-rank .userInfo .score{
+     color:#19be6b;
+     font-weight: 600;
+}

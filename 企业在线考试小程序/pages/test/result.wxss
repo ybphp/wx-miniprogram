@@ -1,0 +1,47 @@
+page{
+     padding-top: 60rpx;
+}
+.container{
+     padding-bottom: env(safe-area-inset-bottom);
+}
+.result{
+     display: flex;
+     align-items: center;
+     font-size: 32rpx;
+}
+.result .label{
+     font-size: 32rpx;
+     font-weight: 600;
+     color:#ffffff;
+}
+.result .cui-icon{
+      font-size: 100rpx;
+     font-weight: 600;
+     color:#FFB900;
+}
+.userInfo{
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     margin-bottom: 60rpx;
+     line-height: 1.5;
+}
+.userInfo .avatar-img{
+     height: 160rpx;
+     width:160rpx;
+     border-radius: 100%;
+     margin-bottom: 20rpx;
+}
+.userInfo .nickname{
+     font-size: 28rpx;
+     color:#999999;
+}
+
+.oper{
+     display: flex;
+     align-items: center;
+     margin: 0 15rpx;
+}
+.oper .cui-btn{
+     margin: 0 15rpx;
+}

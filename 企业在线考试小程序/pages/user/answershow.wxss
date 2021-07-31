@@ -1,0 +1,24 @@
+page{
+     background-color: #efeff0;
+     height: 100vh;
+     overflow: hidden;
+}
+.test-top .test-top-item{
+     width: 50%;
+}
+.test-show__hd text{
+     margin-left: 5rpx;
+     margin-right: 5rpx;
+}
+.your_answer{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20rpx 0;
+     font-size: 28rpx;
+     color:#80848f;
+}
+.answer_key .content{
+     font-size: 28rpx;
+     color:#80848f;
+}

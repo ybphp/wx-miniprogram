@@ -1,0 +1,80 @@
+page{
+     background-color: #efeff0;
+}
+.user-top{
+     background-color:#ffffff;
+     padding-top: 100rpx;
+     padding-bottom: 30rpx;
+     margin-bottom: 30rpx;
+}
+.userInfo{
+     display: block;
+     text-align: center;
+     margin-bottom: 60rpx;
+     line-height: 1.5;
+}
+.userInfo .avatar-img{
+     height: 160rpx;
+     width:160rpx;
+     border-radius: 100%;
+     margin-bottom: 20rpx;
+}
+.userInfo .nickname{
+     font-size: 32rpx;
+}
+button.userInfo{
+     padding: 0;
+     background-color: transparent;
+     font-weight: 400;
+     font-size: 28rpx;
+}
+button.userInfo::after{
+     border:none;
+}
+
+.user-data{
+     display: flex
+}
+.user-data .user-data-item{
+     width:50%;
+     position: relative;
+     text-align: center;
+}
+.user-data .user-data-item::after{
+     content:"";
+     position: absolute;
+     right: 0;
+     top:50%;
+     margin-top: -20rpx;
+     height: 40rpx;
+     width: 1px;
+     border-right:1px solid #eaeef1;
+}
+.user-data .user-data-item:last-child::after{
+     border:none;
+}
+.user-data .user-data-item .value{
+     font-size: 38rpx;
+     margin-bottom: 20rpx;
+}
+.user-data .user-data-item .label{
+     color:#888888;
+     font-size: 28rpx;
+}
+
+
+
+.cui-cell-name {
+     padding-left: 20rpx;
+     vertical-align: middle;
+     line-height: 1;
+}
+
+.cui-right {
+     margin-left: auto;
+     margin-right: 34rpx;
+     font-size: 26rpx;
+     line-height: 1;
+     color: #999;
+}
+

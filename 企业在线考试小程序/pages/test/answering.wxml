@@ -1,0 +1,75 @@
+<view class="test-show">
+     <view class="test-show__hd">回答过程中，中断回答，数据将不被保存</view>
+     <view class="test-show__bd">
+          <view class="test-top">
+               <view class="test-top-item" bindtap="showAnswercard"><text class="cui-icon cui-icon-set"></text> 答题卡({{current+1}}/{{info.itemList.length}})</view>
+               <view class="test-top-item">
+                    <text class="cui-icon cui-icon-hourglass"></text> {{islimit ? usabletime ? usabletime + '秒':'时间到' : '不限时'}}
+               </view>
+               <view class="test-top-item" bindtap="clickPost"><text class="cui-icon cui-icon-right"></text> 提交</view>
+          </view>
+          <swiper duration="0" current="{{current}}" easing-function="linear" circular="true">
+          <swiper-item wx:for="{{info.itemList}}" catchtouchmove="stopTouchMove" >
+          <scroll-view scroll-y class="testitem-item">
+               <view class="title">
+                    <view class="mb-df text-primary">{{type_text[item.itembank.type]}} ({{item.score}}分)</view>
+                    <view>{{item.itembank.title}}</view>
+               </view>
+               <view class="content">
+                    <rich-text nodes="{{item.itembank.content}}"></rich-text>
+               </view>
+               <view class="options">
+                    <radio-group  wx:if="{{item.itembank.type=='judge'}}" bindchange="radioChange" data-id="{{item.id}}" class="radio-group" name="{{item.id}}">
+                         <radio class="item" checked="{{item.useranswer.answer === '1' ? true : false}}" value="1">
+                              <text>对</text>
+                         </radio>
+                         <radio class="item" checked="{{item.useranswer.answer === '0' ? true : false}}" value="0">
+                              <text>错</text>
+                         </radio>
+                    </radio-group>
+                    <radio-group wx:if="{{item.itembank.type=='onechoice'}}" bindchange="radioChange" data-id="{{item.id}}" class="radio-group" name="{{item.id}}">
+                         <radio class="item" wx:for="{{item.itembank.values}}" checked="{{ocV.checked ? true : false}}" wx:for-item="ocV" value="{{ocV.key}}">
+                              <text>{{ocV.key}} . {{ocV.value}}</text>
+                         </radio>
+                    </radio-group>
+                    <checkbox-group wx:if="{{item.itembank.type=='manychoice'}}" bindchange="checkboxChange" data-id="{{item.id}}" name="{{item.id}}">
+                         <label class="item" wx:for="{{item.itembank.values}}"  wx:for-item="mcV">
+                         <checkbox value="{{mcV.key}}" checked="{{mcV.checked ? true : false}}" />{{mcV.key}} . {{mcV.value}}
+                         </label>
+                    </checkbox-group>
+               </view>
+               
+          </scroll-view>
+          </swiper-item>
+          </swiper>
+     </view>
+     <view class="test-show__ft">
+          <button class="cui-btn " disabled="{{current>0 ? false : true}}" bindtap="prevItem">上一题</button>
+          <button class="cui-btn " disabled="{{current < (info.itemList.length-1) ? false : true}}" bindtap="nextItem">下一题</button>
+     </view>
+</view>
+<van-popup round position="bottom" show="{{ answercard }}" custom-class="answercard" bind:close="closeAnswercard">
+     <view class="answercard__hd">
+          <view class="explain">
+               <view class="item">
+                    <text class="cui-primary"></text> 
+                    <view>当前试题</view>
+               </view>
+               <view class="item">
+                    <text class="cui-green"></text>
+                    <view>已答题</view>
+               </view>
+               <view class="item">
+                    <text class="cui-phcolor-gray"></text>
+                    <view>未答题</view> 
+               </view>
+          </view>
+          <view class="oper">
+               <button class="cui-btn cui-green"><text class="cui-icon cui-icon-right "></text> 交卷</button>
+          </view>
+     </view>
+     <scroll-view scroll-y enable-flex="true" class="answercard__bd">
+          <view class="answercard-item {{form[item.id] ? 'cui-green' : ''}} {{index == current ? 'active' : ''}}" bindtap="changeItem"  wx:for="{{info.itemList}}" data-index="{{index}}">{{index+1}} </view>
+     </scroll-view>
+     <login show="{{!isLog}}" bind:loginAfter="loginAfter" />
+</van-popup>

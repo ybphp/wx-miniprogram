@@ -1,0 +1,45 @@
+{
+     "pages": [
+          "pages/index/index",
+          "pages/test/list",
+          "pages/test/show",
+          "pages/test/answering",
+          "pages/test/rank",
+          "pages/test/result",
+          "pages/user/index",
+          "pages/user/answer",
+          "pages/user/collect",
+          "pages/user/answershow",
+          "pages/article/index",
+          "pages/article/show"
+          
+     ],
+     "window": {
+          "backgroundTextStyle": "dark",
+          "navigationBarBackgroundColor": "#fff",
+          "navigationBarTextStyle": "black"
+     },
+     "tabBar": {
+          "color": "#80848f",
+          "selectedColor": "#19be6b",
+          "backgroundColor": "#FFFFFF",
+          "list": [
+               {
+                    "pagePath": "pages/index/index",
+                    "text": "首页",
+                    "iconPath": "/images/house.png",
+                    "selectedIconPath": "/images/house-on.png"
+               },
+               {
+                    "pagePath": "pages/user/index",
+                    "text": "我的",
+                    "iconPath": "/images/user.png",
+                    "selectedIconPath": "/images/user-on.png"
+               }
+          ]
+     },
+     "sitemapLocation": "sitemap.json",
+     "usingComponents": {
+         "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index"
+     }
+}

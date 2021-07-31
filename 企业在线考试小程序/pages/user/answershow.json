@@ -1,0 +1,7 @@
+{
+     "usingComponents": {
+          "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+          "login": "/components/login/index"
+     },
+     "navigationBarTitleText": "回顾试题"
+}

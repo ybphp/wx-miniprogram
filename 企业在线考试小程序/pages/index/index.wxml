@@ -1,0 +1,38 @@
+<swiper indicator-dots="true" circular="true" class="banner">
+     <swiper-item wx:for="{{adList}}">
+          <navigator url="{{item.path}}">
+          <image mode="aspectFill" src="{{item.image}}"></image>
+          <view class="text">{{item.title}}</view>
+          </navigator>
+     </swiper-item>
+</swiper>
+<view class="menu">
+     <navigator wx:for="{{menuList}}" hover-class="none" url="{{item.path}}" class="menu-item">
+          <image src="{{item.image}}"></image>
+          <view>{{item.title}}</view>
+     </navigator>
+</view>
+<view class="section">
+     <view class="home-title"><view class="label">科目</view></view> 
+     <scroll-view scroll-x scroll-with-animation class="subject-list">
+          <navigator url="../test/list?subject_id={{item.id}}" class="subject-item" wx:for="{{subjectList}}" style="{{item.image ? 'background-image: url('+item.image+');' : ''}}">
+               <view class="title">{{item.title}}</view>
+          </navigator>
+     </scroll-view>
+</view>
+<view class="section">
+     <view class="home-title"><view class="label">推荐文章</view><navigator hover-class="none" url="../article/index" class="right">更多 ＞</navigator></view> 
+     <view class=" article-list">
+     <navigator hover-class="none" class="article-item" url="../article/show?id={{item.id}}" wx:for="{{articleList}}">
+          <image wx:if="{{item.image}}" mode="aspectFill" class="article-item-cover" src="{{item.image}}"></image>
+          <view class="article-item-content">
+               <view class="title">{{item.title}}</view>
+               <view class="foot">
+                    <view class="item">{{item.category.title}}</view>
+                    <view class="item">{{item.updatetime_text}}</view>
+                    <view class="item"><text class="cui-icon cui-icon-eye"></text> {{item.views}}</view>
+               </view>
+          </view>
+     </navigator>
+     </view>
+</view>

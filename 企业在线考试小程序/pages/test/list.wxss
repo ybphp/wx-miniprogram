@@ -1,0 +1,6 @@
+page{
+     background-color: #f0f0f0;
+}
+.container{
+     padding-bottom: env(safe-area-inset-bottom);
+}

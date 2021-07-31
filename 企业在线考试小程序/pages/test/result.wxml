@@ -1,0 +1,36 @@
+<view class="container">
+     <view class="userInfo mb-df">
+          <image class="avatar-img" src="{{userInfo.avatar}}"></image>
+          <view class="info">
+               <view class="nickname">恭喜“{{userInfo.nickname}}”，完成答题</view>
+          </view>
+     </view>
+     <view class="mb-df">
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-notebook"></text>
+               </view>
+               <view class="cell__title">您的得分</view>
+               <view class="cell__content">{{info.score}}/{{testInfo.total_score}}</view>
+          </view>
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon-data"></text>
+               </view>
+               <view class="cell__title">答对题数</view>
+               <view class="cell__content">{{info.total_correct}}/{{testInfo.total_item}}</view>
+          </view>
+          
+          <view class="cell">
+               <view class="cell__icon">
+                    <text class="cui-icon cui-icon--clock"></text>
+               </view>
+               <view class="cell__title">用时</view>
+               <view class="cell__content">{{info.usetime}}秒</view>
+          </view>
+     </view>
+     <view class="oper">
+     <navigator url="rank?id={{testInfo.id}}" class="cui-btn cui-green">排行榜</navigator>
+     <navigator url="../user/answershow?id={{info.id}}" class="cui-btn cui-danger">错题查看</navigator>
+     </view>
+</view>

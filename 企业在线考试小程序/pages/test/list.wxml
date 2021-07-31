@@ -1,0 +1,27 @@
+<view class="container">
+<scroll-view scroll-x scroll-with-animation class="tab-box" scroll-left="{{scrollLeft}}" >
+     <view wx:for="{{subjectList}}" catchtap="swichNav" class="tab-item {{currentTab==index ? 'active' : ''}}" data-current="{{index}}"><text>{{item.title}}</text></view>
+</scroll-view>
+<view class="tab-content">
+     <view class="testpaper-list">
+     <navigator url="show?id={{item.id}}" class="testpaper-item" wx:for="{{list}}">
+          <view class="left">
+               <view class="title">{{item.title}}</view>
+               <view class="desc">{{item.desc}}</view>
+               <view class="info"><text>{{item.total_user}}人参与</text><text>{{item.total_item}}道题</text><text>约{{item.total_item*30/60}}分钟</text> </view>
+          </view>
+          <view class="right" wx:if="{{item.image}}">
+               <image mode="aspectFill" src="{{item.image}}"></image>
+          </view>
+     </navigator>
+     </view>
+     <view class="loading" wx:if="{{list.length>0}}">
+          <text class="icon" wx:if="{{loading}}"></text>
+          <view class="tips">{{loadTitle}}</view>
+     </view>
+     <view class="noData" wx:if="{{list.length==0 && page > 1}}">
+          <view class="pictrue"><image src='/images/noNews.png'></image></view>
+          <view class="tips">暂无内容</view>
+     </view>
+</view>
+</view>
