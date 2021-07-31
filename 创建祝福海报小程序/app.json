@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/create/create",
+    "pages/custom/custom",
+    "pages/preview/preview",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e7404d",
+    "navigationBarTitleText": "祝福话",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#e7404d"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}
