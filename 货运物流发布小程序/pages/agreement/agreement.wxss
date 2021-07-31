@@ -1,0 +1,17 @@
+/* pages/agreement/agreement.wxss */
+.agreement{
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+}
+.content{
+  line-height: 48rpx;
+}

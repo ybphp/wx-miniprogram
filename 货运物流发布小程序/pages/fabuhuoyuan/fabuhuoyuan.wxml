@@ -1,0 +1,256 @@
+<view class="container">
+
+  <view class="zx"> 
+    <view class="z">
+      <text class="icon">装</text>
+      <picker class="pickers" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker plc">
+          <block wx:if="{{region.length > 0}}">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </block>
+          <block wx:else>
+          请选择装货地
+          </block>
+        </view>
+      </picker>
+    </view>
+    <view class="line"></view>
+    <view class="x">
+      <text class="icon">卸</text>
+      <picker class="pickers" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker plc">
+          <block wx:if="{{region.length > 0}}">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </block>
+          <block wx:else>
+          请选择装货地
+          </block>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="zx hwxx"> 
+    <view class="xx" bindtap="closeWl">
+      <text class="title">货物信息</text>
+      <input class="weui-input" disabled placeholder-class="plc"  placeholder="必填，请选择货物信息"/>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </view>
+    <view class="line"></view>
+    <view class="xx" bindtap="closeCx">
+      <text class="title">车型车长</text>
+      <input class="weui-input" disabled placeholder-class="plc"  placeholder="必填，请选择车型车长"/>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </view>
+    <view class="line"></view>
+    <view class="xx" bindtap="closeSj">
+      <text class="title">装货时间</text>
+      <input class="weui-input" disabled placeholder-class="plc" value="{{sjtext}}" placeholder="必填，请选择装货时间"/>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </view>
+  </view>
+
+  <checkbox-group slot="tips" bindchange="bindAgreeChange">
+    <label class="weui-agree" for="weuiAgree">
+      <view class="weui-agree__text">
+          <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+          <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+          </view>
+          我已阅读并同意<navigator url="/pages/agreement/agreement" class="weui-agree__link">《获取运输协议》</navigator>等相关协议
+      </view>
+    </label>
+  </checkbox-group>
+
+</view>
+<view class="tijiao">发货</view>
+
+<view class="bg" wx:if="{{wuliu}}">
+  <!-- 搜索货物信息 s-->
+  <view class="sshwxx">
+    <view class="bt">
+      <text class="close" bindtap="closeWl">关闭</text>
+      <text class="tit">货物信息</text>
+      <text class="confirm" style="opacity:{{huowu==''?0:1}}">确定</text>
+    </view> 
+    <view class="border"></view>   
+    <view class="searchre" wx:if="{{huowu==''}}">
+      <view class="serch">
+        <icon class="icon-small" color="#bdbdbd" type="search" size="24"></icon>
+        <input class="weui-input phc" placeholder="请输入您要找的货物" placeholder-class="ph" bindconfirm="bindsearch" bindblur="bindsearch" bindinput="bindsearch" />
+      </view>
+
+      <view class="slists" wx:if="{{serchlist.length > 0}}">
+        <view class="slist" wx:for="{{serchlist}}">
+          <text class="type">{{item.title}}</text>
+          <text class="tag">{{item.tag}}</text>
+        </view>
+      </view>
+
+      <view class="resou" wx:if="{{issearchr}}">
+        <text class="tit">热门类型</text>
+        <view class="more"><text>更多</text><mp-icon icon="arrow" color="#ccc" size="{{10}}"></mp-icon></view>
+      </view>
+
+      <view class="tags" wx:if="{{issearchr}}">
+        <text bindtap="choose" data-name="煤炭">煤炭</text>
+        <text bindtap="choose" data-name="其他机械设备">其他机械设备</text>
+        <text bindtap="choose" data-name="设备零配件">设备零配件</text>
+        <text bindtap="choose" data-name="其他玉米作物">其他玉米作物</text>
+        <text bindtap="choose" data-name="瓜类水果">瓜类水果</text>
+        <text bindtap="choose" data-name="稻谷麦子">稻谷麦子</text>
+        <text bindtap="choose" data-name="饲料">饲料</text>
+        <text bindtap="choose" data-name="其他建材">其他建材</text>
+        <text bindtap="choose" data-name="其他食品饮料">其他食品饮料</text>
+        <text bindtap="choose" data-name="化肥">化肥</text>
+      </view>
+    </view>
+    
+    <!-- 选择了货物之后 -->
+    <view class="jieguo" wx:if="{{huowu!=''}}">
+      <view class="jgs">
+        <view class="jgs-tit">
+          <text style="opacity:0">占位</text>
+          <view class="jgs-tit-c">
+            <text>其他机械设备</text>
+            <mp-icon icon="pencil" color="#ccc" size="{{18}}"></mp-icon>
+          </view>
+          <text class="other">其他机械设备</text>
+        </view>
+
+        <view class="bz">
+          <view class="bz-tit">包装方式必填，请选择</view>
+          <view class="bz-types">
+            <text class="on" bindtap="chooseBz" data-name="裸妆">裸妆</text>
+            <text bindtap="chooseBz" data-name="木箱">木箱</text>
+            <text bindtap="chooseBz" data-name="托盘">托盘</text>
+            <text bindtap="chooseBz" data-name="纸箱">纸箱</text>
+            <text bindtap="chooseBz" data-name="散装">散装</text>
+            <text bindtap="chooseBz" data-name="其他">其他</text>
+          </view>
+        </view>
+
+      </view>
+
+      <view class="jgx">
+        <view class="jgx-tit">货重/体积，必填一项</view>
+        <view class="jgx-sku">
+          <text class="jgx-sku-tit">重量（吨）</text>
+          <view class="jgx-input">
+            <input class="input" placeholder="0-999" placeholder-class="plc"/>
+            <text></text>
+            <input class="input" placeholder="0-999" placeholder-class="plc"/>
+          </view>
+        </view>
+        <view class="jgx-sku">
+          <text class="jgx-sku-tit">体积（方）</text>
+          <view class="jgx-input">
+            <input class="input" placeholder="0-999" placeholder-class="plc"/>
+            <text></text>
+            <input class="input" placeholder="0-999" placeholder-class="plc"/>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+  <!-- 搜索货物信息 e-->
+  
+</view>
+
+<view class="bg" wx:if="{{chexing}}">
+  <!-- 搜索车型车长 s-->
+  <view class="sshwxx">
+    <view class="bt">
+      <text class="close" bindtap="closeCx">关闭</text>
+      <text class="tit">车型车长</text>
+      <text class="confirm">确定</text>
+    </view> 
+    <view class="border"></view>   
+    <view class="searchre">
+
+      <view class="resou">
+        <text class="tit">用车类型</text>
+      </view>
+
+      <view class="tags">
+        <text bindtap="choose" data-name="整车">整车</text>
+        <text bindtap="choose" data-name="零担">零担</text>
+      </view>
+
+      <view class="resou">
+        <text class="tit">车长</text>
+        <text class="plc">（必填，最多3项）</text>
+      </view>
+
+      <view class="tags">
+        <text bindtap="choose" data-name="1.8">1.8</text>
+        <text bindtap="choose" data-name="2.7">2.7</text>
+        <text bindtap="choose" data-name="1.8">1.8</text>
+        <text bindtap="choose" data-name="2.7">2.7</text>
+        <text bindtap="choose" data-name="1.8">1.8</text>
+        <text bindtap="choose" data-name="2.7">2.7</text>
+        <text bindtap="choose" data-name="1.8">1.8</text>
+        <text bindtap="choose" data-name="2.7">2.7</text>
+        <text bindtap="choose" data-name="1.8">1.8</text>
+        <text bindtap="choose" data-name="2.7">2.7</text>
+      </view>
+      <view class="resou">
+        <text class="tit">车型</text>
+        <text class="plc">（必填，最多3项）</text>
+      </view>
+
+      <view class="tags">
+        <text bindtap="choose" data-name="平板">平板</text>
+        <text bindtap="choose" data-name="高栏">高栏</text>
+        <text bindtap="choose" data-name="箱式">箱式</text>
+        <text bindtap="choose" data-name="集装箱">集装箱</text>
+        <text bindtap="choose" data-name="自卸">自卸</text>
+        <text bindtap="choose" data-name="冷藏">冷藏</text>
+        <text bindtap="choose" data-name="保温">保温</text>
+        <text bindtap="choose" data-name="高低板">高低板</text>
+        <text bindtap="choose" data-name="面包车">面包车</text>
+        <text bindtap="choose" data-name="棉被车">棉被车</text>
+      </view>
+
+    </view>
+    
+  </view>
+  <!-- 搜索车型车长 e-->
+</view>
+<!-- 搜索装货时间 s-->
+<view class="bg" wx:if="{{shijian}}">
+  <view class="sszhsj sshwxx">
+  <view class="bt">
+      <text class="close" bindtap="closeSj">关闭</text>
+      <text class="tit">选择装货时间</text>
+      <text class="confirm" bindtap="closeSj">确定</text>
+    </view> 
+    <view class="border"></view>
+
+    <view class="sj-lists">
+      <!-- indicator-style 中间框框的样式
+            value  选择每列的第几个数据(0)  当大于索引时  选择最后一列
+       -->
+      <picker-view indicator-style="height: 34px;" class="pvs" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+          <view class="pvc" wx:for="{{years}}" wx:key="{{years}}">{{item}}</view>
+        </picker-view-column>
+
+        <picker-view-column>
+          <view class="pvc" wx:for="{{months}}" wx:key="{{months}}">{{item}}</view>
+        </picker-view-column>
+
+        <picker-view-column>
+          <view class="pvc">都可以</view>
+        </picker-view-column>
+
+      
+      </picker-view>
+
+    </view>
+
+  </view>
+</view>
+<!-- 搜索装货时间 e-->

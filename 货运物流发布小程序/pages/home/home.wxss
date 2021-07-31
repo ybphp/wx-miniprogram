@@ -1,0 +1,71 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.banner{
+  width: 100%;
+}
+.swiper{
+  width: 100%;
+  height: 390rpx;
+}
+.swiper-item{
+  width: 100%;
+  display: block;
+  height: 390rpx;
+}
+.content{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 80rpx;
+}
+.huozhu,.siji{
+  width: 100%;
+  height: 240rpx;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.huozhu{
+  background-image: linear-gradient(-90deg, #3084D8, #09A5F8);
+  box-shadow: 0 6rpx 5px #99C3F7;
+}
+.siji{
+  margin-top: 80rpx;
+  background-image: linear-gradient(-90deg, #FF6A02, #FD8E2C);
+  box-shadow: 0 6rpx 5px #FFD9BD;
+}
+.hz-l{
+  display: flex;
+  height: 240rpx;
+  align-items: center;
+}
+.hz-l image{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.hz-ll{
+  display: flex;
+  flex-direction: column;
+  width: 380rpx;
+  margin-left: 20rpx;
+}
+.hz-ll .title{
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+.hz-ll .desc{
+  line-height: 28rpx;
+  color: rgba(255, 255, 255, 0.7);
+}
+.hz-ll .desc text{
+  color: #fff;
+}

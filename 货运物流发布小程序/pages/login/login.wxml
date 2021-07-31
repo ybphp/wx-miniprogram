@@ -1,0 +1,37 @@
+  <mp-form-page title="登录/注册" subtitle="如果没注册登录后即注册完成完成注册"> 
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+      <mp-cells title="" footer="">
+        <mp-cell show-error prop="mobile" title="手机号" ext-class="">
+          <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入手机号"/>
+          <view slot="footer" class="weui-vcode-btn">获取验证码</view>
+        </mp-cell>
+
+        <mp-cell show-error prop="yzm" title="验证码" ext-class="">
+          <input bindinput="formInputChange" data-field="yzm" class="weui-input" placeholder="请输入验证码"/>
+        </mp-cell>
+
+        <mp-cell prop="yqm" title="邀请码" ext-class="">
+          <input bindinput="formInputChange" data-field="yqm" class="weui-input" placeholder="请输入邀请码"/>
+        </mp-cell>
+
+      </mp-cells>
+    </mp-form>
+
+    
+    <checkbox-group slot="tips" bindchange="bindAgreeChange">
+      <label class="weui-agree" for="weuiAgree">
+        <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+                <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意<navigator url="/pages/agreement/agreement" class="weui-agree__link">《相关条款》</navigator>
+        </view>
+      </label>
+    </checkbox-group>
+    <view slot="button">
+      <button class="weui-btn" type="primary" bindtap="submitForm">登录</button>
+    </view>
+
+  </mp-form-page>
+

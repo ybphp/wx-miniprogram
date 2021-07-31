@@ -1,0 +1,163 @@
+/* pages/huoyuan/huoyuan.wxss */
+.shaixuan{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  box-shadow: 0 1px 5px 1px #F4F4F4;
+}
+.shaixuan .sx-xl{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  font-size: 32rpx;
+}
+.shaixuan .sx-xl image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.cityselect,.cx{
+  width: 100%;
+  display: flex;
+  box-shadow: inset 0 1px 5px 0px rgb(228, 228, 228);
+}
+.province{
+  width: 35%;
+}
+.citys{
+  width: 65%;
+}
+.province .sc-province{
+  background: #FAFAFA;
+}
+.scroll-view-item{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 16rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+}
+.province .sc-province .on{
+  border-left: 2px solid red;
+}
+.citys .scroll-view-item{
+  border-bottom: 1px solid #FAFAFA;
+  font-size: 32rpx;
+  padding-left: 24rpx;
+}
+.cx{
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+}
+
+.cx-tit{
+  font-size: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.cx-tit text{
+  color: #ccc;
+}
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags text{
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  background-color: #F4F4F4;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 8rpx;
+}
+
+.anniu{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+}
+.anniu text{
+  width: 50%;
+  font-size: 32rpx;
+  line-height: 120rpx;
+  text-align: center;
+  display: inline-block;
+  border-top: 1px solid #ccc;
+}
+.anniu text.submit{
+  background-color: #FF5E00;
+  color: #fff;
+}
+
+.hy-lists,.hy-lists-lt{
+  display: flex;
+}
+.hy-lists{
+  width: 100%;
+  padding: 20rpx 30rpx;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+}
+.hy-lists-lt-info{
+  margin-left: 20rpx;
+}
+.hy-lists-lt{
+
+}
+.hy-lists-lt image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.hy-lists-lt-info image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.hy-lxr image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.hy-yq-tit{
+  font-size: 32rpx;
+}
+.hy-yq-c{
+  font-size: 30rpx;
+} 
+.hy-yq{
+  font-size: 28rpx;
+  color: #888;
+}
+.hy-user-cj{
+  font-size: 28rpx;
+  color: #999;
+}
+.hy-vip{
+  display: block;
+}
+.hy-lists-rt{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hy-shijian{
+  color: #999;
+  font-size: 24rpx;
+}
+.hy-lxr{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.hy-lxr-tit{
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 10rpx;
+}

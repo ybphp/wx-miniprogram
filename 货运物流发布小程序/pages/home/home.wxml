@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}" class="swiper"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="swiper-item"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="content">
+    <view class="huozhu" bindtap="openUrl" data-type="1">
+      <view class="hz-l">
+        <image src="/common/image/df.jpg"></image>
+        <view class="hz-ll">
+          <view class="title">我是货主</view>
+          <view class="desc">在发货后平均<text>56.90分钟</text>收到司机定金</view>
+        </view>
+      </view>
+      <view class="hz-r">发货 ></view>
+    </view>
+
+    <view class="siji" bindtap="openUrl" data-type="2">
+      <view class="hz-l">
+        <image src="/common/image/df.jpg"></image>
+        <view class="hz-ll">
+          <view class="title">我是司机</view>
+          <view class="desc">查找周边<text>6666666</text>个货源</view>
+        </view>
+      </view>
+      <view class="hz-r">找货 ></view>
+    </view>
+  </view>
+</view>

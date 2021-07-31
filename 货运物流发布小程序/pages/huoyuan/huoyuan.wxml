@@ -1,0 +1,86 @@
+<view>
+  <view class="shaixuan"> 
+    <view class="sx-xl">
+      <text bindtap="chooseDz">
+      <block wx:if="{{qi!=''}}">{{qi}}</block>
+      <block wx:else>全部</block>
+      </text>
+      <image wx:if="{{qishow}}" src="/common/image/xia.png"></image>
+      <image wx:else src="/common/image/shang.png"></image>
+    </view>
+    <view class="sx-xl">
+      <text>
+      <block wx:if="{{zhong!=''}}">{{zhong}}</block>
+      <block wx:else>全部</block>
+      </text>
+      <image wx:if="{{zhongshow}}" src="/common/image/xia.png"></image>
+      <image wx:else src="/common/image/shang.png"></image>
+    </view>
+    <view class="sx-xl" bindtap="chooseCx">
+      <text>车型车长</text>
+      <image src="/common/image/shang.png"></image>
+    </view>
+  </view>
+
+  <view class="cityselect" wx:if="{{qishow||zhongshow}}">
+    <view class="province">
+      <scroll-view class="sc-province" style="height:{{scheight}}px" scroll-y="true" scroll-into-view="p{{toViewp}}" scroll-top="{{scrollTop}}">
+
+        <block wx:for="{{province}}">
+        <view  id="p{{item[0]}}" bindtap="chooseProvince" data-index="{{item[0]}}" class="scroll-view-item {{item[0] == toViewp?'on':''}}">{{item[1]}}</view>
+        </block>
+
+      </scroll-view>
+    </view>
+    <view class="citys">
+      <scroll-view scroll-y="true" style="height:{{scheight}}px" scroll-into-view="{{toViewc}}">
+
+        <block wx:for="{{city}}">
+        <view  id="c{{item[0]}}" bindtap="chooseCity" data-name="{{item[1]}}" class="scroll-view-item">{{item[1]}}</view>
+        </block>
+
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 车型车长 -->
+  <view class="cx" wx:if="{{cxshow}}">
+    <view style="padding: 0 30rpx;">
+      <view class="cx-tit">车长<text>(单选)</text></view>
+      <view class="tags">
+        <text>不限</text>
+        <text wx:for="{{[1,1,1,1,1,1,1,1,1,1]}}">1.8</text>
+      </view>
+      <view class="cx-tit">车长<text>(单选)</text></view>
+      <view class="tags">
+        <text>不限</text>
+        <text wx:for="{{[1,1,1,1,1,1,1,1,1,1]}}">高栏</text>
+      </view>
+    </view>
+
+    <view class="anniu">
+      <text>清空条件</text>
+      <text class="submit">开始搜索</text>
+    </view>
+  </view>
+  
+  <!-- 货源列表 -->
+  <view class="hy-lists" wx:for="{{[1,1,1,1,1,1]}}">
+    <view class="hy-lists-lt">
+      <image src="/common/image/df.jpg"></image>
+      <view class="hy-lists-lt-info">
+        <view class="hy-yq-tit">宝山 → 楚雄</view>
+        <view class="hy-yq-c">2.7米 高栏 6.2吨</view>
+        <view class="hy-yq">百货，今天装货，多装多卸</view>
+        <image class="hy-vip" src="/common/image/vip.png"></image>
+        <view class="hy-user-cj">交易1265 好评率99%</view>
+      </view>
+    </view>
+    <view class="hy-lists-rt">
+      <view class="hy-shijian">8小时前</view>
+      <view class="hy-lxr">
+        <text class="hy-lxr-tit">张老板</text>
+        <image src="/common/image/tel.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
