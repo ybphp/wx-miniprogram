@@ -1,0 +1,7 @@
+/* pages/caruser/caruser.wxss */
+.section{
+    padding-left:0; 
+}
+.section__title{
+    margin-bottom: 15px;
+}

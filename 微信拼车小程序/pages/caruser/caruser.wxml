@@ -1,0 +1,9 @@
+
+<!--pages/caruser/caruser.wxml-->
+<import src="../mould/mould.wxml"/>
+
+  <template is="detailed" data="{{ items}}"/>
+
+ <view class="btn-area">
+    <button  class=" white" style="background-color:#09bb07 " data-name="{{item.name}}" data-tel="{{item.tel}}" bindtap="calltel"  >拨打电话</button>
+  </view>

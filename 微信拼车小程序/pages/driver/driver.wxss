@@ -1,0 +1,31 @@
+input{
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 20px;
+}
+.section__title{
+    padding-left:0px; 
+}
+.timeview{
+    padding-top: 15px;
+}
+.picker{
+    background-color: white
+}
+.textarea{
+    border-bottom: 1px solid gainsboro;
+    line-height: 30px;
+    margin-bottom: 35rpx
+}
+.formlength{
+  font-size: 25rpx;
+  text-align: center;
+ height: 50vh;
+ line-height: 50vh;
+}
+.formlength1{
+    font-size: 25rpx;
+  text-align: center;
+ padding-top: 40vh;
+ line-height: 10vh;
+ padding-left: 10px;
+}

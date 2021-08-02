@@ -1,0 +1,99 @@
+
+<!--pages/index/index.wxml-->
+<view wx:if="{{networkType==true}}">
+<swiper indicator-dots="{{indicatorDots}}" autoplay="true" interval="5000" duration="500">
+
+    <swiper-item wx:for="{{imgUrls}}" >
+      <image  src="{{item}}" class="slide-image" style="windth:100%;height:100%" />
+    </swiper-item>
+
+</swiper>
+
+<!--筛选-->
+<form  class='indexflex' bindsubmit="formSubmit">
+  <view class="" style="background-color:white;border-top:1px solid gainsboro;">
+    <view class="place" style="background-color:white;height:140rpx;">
+      <view class="start indexFlexTop " bindtap="indexFlexQ" name="qidian" value="{{qidian}}" >
+        <text class="city ">{{xian}}</text>
+        <input type="text" style="display:none" name="qidian" value="{{shi}}-{{xian}}" />
+        <text class="province ">{{shi}}</text>
+      </view>
+      <view class="distance " style="padding-top:20px;">
+        <view class="image">
+          <image src="../../img/car.png"></image>
+        </view>
+        <text class="green">到</text>
+      </view>
+      <view class="end indexFlexTop " bindtap="indexFlexZ" name="zhongdian" value="{{zhongdian}}" >
+        <text class="city ">{{xian1}}</text>
+        <input type="text" style="display:none" name="zhongdian" value="{{shi1}}-{{xian1}}" />
+        <text class="province ">{{shi1}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='indexFlexBoxTitle'>
+    人数：
+    <picker bindchange="bindPickerChange" name="userlength" value=" {{peoplelength[index]}}" range="{{peoplelength}}">
+      <view style="color:#09bb07 ">
+        {{peoplelength[index]}}人
+      </view>
+    </picker>
+  </view>
+  <view class='indexFlexBoxTitle'>
+    <radio-group name="usertype" bindchange="bindradio">
+      身份选择：
+      <label>
+        <radio value="司机" checked="true" />找车</label>
+      <label>
+        <radio style="margin-left:15px;" value="乘客" />找人</label>
+    </radio-group>
+  </view>
+  <view class='indexFlexBoxTitle'>
+    出发时间:
+    <picker mode="date" value="{{date}}" name="date" start="{{date}}" end="{{endtime}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" name="time" start="6:00" end="24:00" bindchange="bindTimeChange">
+      <view class="picker">
+        {{time}}
+      </view>
+    </picker>
+  </view>
+  
+  <text style="font-size:12px;color:gray;padding:8px;">说明：只能查询到从现在到未来的一个月内的</text>
+ 
+  <view class="btn-area">
+    <button formType="{{submit}}" class=" {{submit}}" style="color:gainsboro" >搜索</button>
+  </view>
+</form>
+</view>
+<view>
+  <scroll-view scroll-y="true"  animation="{{animationData}}" style="height:0vh;overflow: hidden;" class="indexFlexCenter">
+    <view wx:if='{{city_select}}'>
+      <view wx:if="{{qZ=='q'}}" class="cityTitle">请选择始发地</view>
+      <view wx:if="{{qZ=='z'}}" class="cityTitle">请选择目的地</view>
+      <view class='indexFlexBoxTitle' >
+        当前所在地：{{sheng}}
+        <view class='indexFlexBoxTitleReset' bindtap="resetBottom" wx:if='{{resetButton}}'>返回上一级</view>
+      </view>
+      <view class="indexFlexBox" style="min-height:70vh">
+        <view wx:for="{{provinces}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-shengname="{{i}}" bindtap="provincesBottom">
+          {{item}}
+        </view>
+        <view wx:for="{{citys}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-shiname="{{i}}" bindtap="citysBottom">
+          {{item}}
+        </view>
+        <view wx:for="{{areas}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-xianname="{{i}}" bindtap="areasBottom">
+          {{item}}
+        </view>
+      </view>
+       <button style=";margin:0 15%;background-color:gainsboro;" bindtap="colosecity"  >关闭</button>
+    </view>
+   
+  </scroll-view>
+</view>
+<view class="nonenet" wx:if="{{networkType==false}}">
+    无网络,请检查数据或者wifi是否打开
+  </view>

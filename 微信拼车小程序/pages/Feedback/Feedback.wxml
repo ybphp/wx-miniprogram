@@ -1,0 +1,18 @@
+
+<!--pages/Feedback/Feedback.wxml-->
+
+<!--pages/driver/driver.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section" style="margin-bottom:0rpx !important;">
+    <view class="section__title">联系方式（选填）</view>
+    <input type="number" name="tel"  placeholder="电话为11位数字。" maxlength="11" />
+    <view class="section__title">意见发聩（必填）：</view>
+    <textarea name="feedback"  bindinput="bindinput" class="textarea" auto-height placeholder="字数大于12" />
+    <view class="section__title">反馈图片(选填)</view>
+      <image wx:for="{{urlArr}}" id="{{index}}"  bindtap="removeimg" class="img" src="{{item}}" />
+    <image class="img" wx:if="{{urlArr.length!=9}}" style="border:none" src="../../img/add.png" bindtap="addimg" />
+  </view>
+  <view class="btn-area">
+    <button class="{{submit}}" style="color:gainsboro" formType="{{submit}}">提交</button>
+  </view>
+</form>

@@ -1,0 +1,33 @@
+<!--pages/userbody/userbody.wxml-->
+<form wx:if="{{tel==''}}" bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">输入你的手机号</view>
+    <input name="tel" type="number" bindinput="bindinput" style="border-bottom:1px solid gainsboro" maxlength="11"  placeholder="手机号码为11位数字" />
+  </view>
+  <view class="btn-area">
+    <button formType="{{submit}}" class="{{submit}}">查询</button>
+  </view>
+</form>
+ <view class="goods" wx:else="{{tel}}" >
+  <view class="monad" wx:for="{{items}}" style="height:150rpx;padding:0 10rpx">
+    <view class="place">
+      <view class="start start1">
+        <text class="truck">{{item.name}}</text>
+        <text class="province " style="color:gray; font-size:25rpx">起点：{{item.qidian}}</text>
+      </view>
+      <view class="distance " style="padding-top:10px;">
+        <text style="line-height:30px;">{{item.cfdate}}</text>
+        <text style="line-height:20px;">{{item.zhongdian}}</text>
+      </view>
+      <view class="end ">
+        <text class="city province" wx:if="{{item.usertype=='乘客'}}" style="color:red !important"> {{item.usertype}}</text>
+        <text class="city province" wx:if="{{item.usertype=='司机'}}" style="color:#09bb07 !important"> {{item.usertype}}</text>
+        <text class="province" style="color:gray;font-size:24rpx" bindtap="tocaruser" id="{{objectid[index]}}">查看详情</text>
+      </view>
+
+    </view>
+    
+  </view>
+  <view  class="datebotton" wx:if="{{items!=''}}">没有更多数据了</view>
+  <view class="nodate" wx:if="{{items==''}}">没有找到数据</view>
+</view>

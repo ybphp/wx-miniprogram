@@ -1,0 +1,5 @@
+/* pages/userbody/userbody.wxss */
+.submit{
+    background-color: #09bb07;
+    color: white
+}

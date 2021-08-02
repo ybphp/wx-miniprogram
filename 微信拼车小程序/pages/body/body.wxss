@@ -1,0 +1,37 @@
+/*固定顶部*/
+.indexflex{
+  position: fixed;
+  top: 0;
+}
+.indexFlexTop{
+  padding: 0 3%
+}
+.place {
+  border-bottom:0; 
+}
+.start .truck,.start .price{
+  margin: 0 10rpx;
+  border-radius: 25rpx;
+
+  line-height: 30rpx;
+  padding: 8rpx 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.place .start1{
+  width: 40% !important;
+}
+.start .truck{
+  color: black;
+  display: block;
+  font-size: 35rpx;
+}
+.start .price{
+ color: gainsboro;
+   font-size: 24rpx;
+}
+.end image{
+ margin-left: 30%;
+  width: 40px;
+  height: 40px;
+}

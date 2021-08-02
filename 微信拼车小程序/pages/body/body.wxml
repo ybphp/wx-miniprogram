@@ -1,0 +1,22 @@
+<view class="goods">
+  <view class="monad" wx:for="{{items}}" style="height:150rpx;padding:0 10rpx">
+    <view class="place">
+      <view class="start start1">
+        <text class="truck">{{item.name}}</text>
+        <text class="price" style="color:gray">起点：{{item.qidian}}</text>
+      </view>
+      <view class="distance " style="padding-top:10px;">
+        <text style="line-height:30px;">{{item.cfdate}}</text>
+        <text style="line-height:20px;">{{item.zhongdian}}</text>
+      </view>
+      <view class="end ">
+        <text class="city province" wx:if="{{item.usertype=='乘客'}}" style="color:red !important"> {{item.usertype}}</text>
+        <text class="city province" wx:if="{{item.usertype=='司机'}}" style="color:#09bb07 !important"> {{item.usertype}}</text>
+        <text class="province" style="color:gray;font-size:24rpx" bindtap="tocaruser" id="{{objectid[index]}}">查看详情</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="datebotton" wx:if="{{items!=''}}">没有更多了</view>
+  <view class="nodate" wx:if="{{items==''}}">你查找的当前时间区域没有拼车信息</view>
+  </view>

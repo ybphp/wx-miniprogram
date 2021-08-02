@@ -1,0 +1,87 @@
+
+<!--pages/driver/driver.wxml-->
+<view wx:if="{{networkType==true}}">
+<view wx:if="{{form==true}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section" style="margin-bottom:0rpx !important;">
+      <view class="section__title">称呼：</view>
+      <input type="text" type="display:{{display}}" name="name" placeholder="称呼最多4个字。" maxlength="4" />
+      <view class="section__title">电话：</view>
+      <input type="number" name="tel" type="display:{{display}}" placeholder="电话为11位数字。" maxlength="11" />
+      <view class="section__title">起点：</view>
+      <input type="text" name="qidian" type="display:{{display}}" value="{{pickPointsq}}" placeholder="精确到县/区。" bindfocus="indexFlexQ" />
+      <view class="section__title">终点</view>
+      <input type="text" name="zhongdian" type="display:{{display}}" value="{{pickPointsz}}" placeholder="精确到县/区。" bindfocus="indexFlexZ" />
+      <view class="section__title">备注：</view>
+      <textarea name="replenish" class="textarea" auto-height placeholder="途径地点，车颜色，车牌信息等" />
+      <radio-group name="usertype" bindchange="bindradio">
+        <label>
+          <radio value="乘客" checked="true" />我是乘客</label>
+        <label>
+          <radio value="司机" style="margin-left:15px;" />我是司机</label>
+      </radio-group>
+      <view class="timeview">
+        <text>{{peoplename}}人数:</text>
+        <picker bindchange="bindPickerChange" name="userlength" value=" {{peoplelength[index]}}" range="{{peoplelength}}">
+          <view>
+            {{peoplelength[index]}}人
+          </view>
+        </picker>
+      </view>
+      <view class="timeview">
+        出发时间:
+        <picker mode="date" name="cfdate" value="{{date}}" start="{{startdate}}" end="{{endtime}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+        <picker mode="time" name="time" value="{{time}}" bindchange="bindTimeChange">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>
+      </view>
+      <view style="font-size:12px;color:gray;padding:8px;">说明1：发布信息最多可以提前1个月发布</view>
+          <view style="font-size:12px;color:blue;padding:8px;">温馨提示：所以内容都为必填项</view>
+      <view class="btn-area">
+         <button formType="{{submit}}" class=" {{submit}}" style="color:gainsboro" >发布</button>
+      </view>
+    </view>
+  </form>
+  <scroll-view scroll-y="true" animation="{{animationData}}" style="height:0vh;overflow: hidden;" class="indexFlexCenter">
+    <view wx:if='{{city_select}}'>
+      <view wx:if="{{qZ=='q'}}" class="cityTitle">请选择始发地</view>
+      <view wx:if="{{qZ=='z'}}" class="cityTitle">请选择目的地</view>
+      <view class='indexFlexBoxTitle'>
+        当前所在地：{{sheng}}
+        <view class='indexFlexBoxTitleReset' bindtap="resetBottom" wx:if='{{resetButton}}'>返回上一级</view>
+      </view>
+      <view class="indexFlexBox" style="min-height:70vh">
+        <view wx:for="{{provinces}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-shengname="{{i}}" bindtap="provincesBottom">
+          {{item}}
+        </view>
+        <view wx:for="{{citys}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-shiname="{{i}}" bindtap="citysBottom">
+          {{item}}
+        </view>
+        <view wx:for="{{areas}}" hover='true' hover-class="hoverButton" hover-start-time='25' wx:for-index="i" data-xianname="{{i}}" bindtap="areasBottom">
+          {{item}}
+        </view>
+        
+      </view>
+      <button style=";margin:0 15%;background-color:gainsboro;" bindtap="colosecity">关闭</button>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if="{{form==false}}">
+  <view class="formlength" wx:if="{{datasubmitlength==1}}">今天你已发不过一次拼车信息了。
+    <text class="blue" bindtap="twosubmit">点此再次发布</text>
+  </view>
+  <view class="formlength" wx:else="{{datasubmitlength}}">今天你已发不过两次拼车信息了，请明天再来</view>
+  <view class="formlength1">意见反馈：QQ
+    <text class="lan">1299834937</text>
+  </view>
+</view>
+</view>
+<view class="nonenet" wx:if="{{networkType==false}}">
+    无网络,请检查数据或者wifi是否打开
+  </view>

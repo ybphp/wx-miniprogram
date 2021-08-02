@@ -1,0 +1,560 @@
+/**app.wxss**/
+
+page {
+  /*background-color: #efeff4;*/
+  background-color: #fbf9fe;
+  min-height: 100vh;
+  font-family: 'Microsoft YaHei',Verdana,Arial,Helvetica,sans-serif;
+}
+.section{
+  font-size: 15px;
+}
+.page-header {
+  display: flex;
+  font-size: 32rpx;
+  color: #aaa;
+  margin-top: 50rpx;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header-text {
+  padding: 20rpx 40rpx;
+}
+
+.page-header-line {
+  width: 150rpx;
+  height: 1px;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+.page-body-wrapper {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.page-body-wrapper form {
+  width: 100%;
+}
+
+.page-body-wording {
+  text-align: center;
+  padding: 200rpx 100rpx;
+}
+
+.page-body-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 50rpx;
+  width: 100%;
+  padding: 50rpx 0 150rpx 0;
+}
+
+.page-body-title {
+  margin-bottom: 100rpx;
+  font-size: 32rpx;
+}
+
+.page-body-text {
+  font-size: 30rpx;
+  line-height: 26px;
+  color: #ccc;
+}
+
+.page-body-text-small {
+  font-size: 24rpx;
+  color: #000;
+  margin-bottom: 100rpx;
+}
+
+.page-body-form {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.page-body-form-item {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #eee;
+  height: 88rpx;
+  font-size: 34rpx;
+}
+
+.page-body-form-key {
+  width: 180rpx;
+  color: #000;
+}
+
+.page-body-form-value {
+  flex-grow: 1;
+}
+
+.page-body-form-value .input-placeholder {
+  color: #b2b2b2;
+}
+
+.page-body-form-picker {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  padding-right: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.page-body-form-picker-value {
+  color: #ccc;
+}
+
+.page-body-buttons {
+  width: 100%;
+}
+
+.page-body-button {
+  margin: 25rpx;
+}
+
+.page-body-button image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.page-footer {
+  text-align: center;
+  color: #1aad19;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}
+
+.green {
+  color: #09bb07 !important;
+}
+
+.red {
+  color: #f76260;
+}
+
+.lan {
+  color: #1296db !important;
+}
+
+.blue {
+  color: #10aeff !important;
+}
+
+.yellow {
+  color: #ffbe00;
+}
+
+.gray {
+  color: #c9c9c9 !important;
+}
+
+.white {
+  color: white;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.bc_white {
+  background-color: white;
+}
+
+.bc_green {
+  background-color: #09bb07;
+}
+
+.bc_red {
+  background-color: #f76260;
+}
+
+.bc_blue {
+  background-color: #10aeff;
+}
+
+.bc_lan {
+  background-color: #1296db;
+}
+
+.bc_yellow {
+  background-color: #ffbe00;
+}
+
+.bc_gray {
+  background-color: #c9c9c9;
+}
+
+.tc {
+  text-align: center;
+}
+
+.page input {
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+}
+
+checkbox, radio {
+  margin-right: 10rpx;
+}
+
+.btn-area {
+  padding: 0 30px;
+}
+
+.btn-area button {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.page__hd {
+  padding: 50rpx 50rpx 100rpx 50rpx;
+  text-align: center;
+}
+
+.page__title {
+  display: inline-block;
+  padding: 20rpx 40rpx;
+  font-size: 32rpx;
+  color: #aaa;
+  border-bottom: 1px solid #ccc;
+}
+
+.page__desc {
+  display: none;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #bbb;
+}
+
+.section {
+  margin-bottom: 80rpx;
+}
+
+.section_gap {
+  padding: 0 30rpx;
+}
+
+.section__title {
+  margin-bottom: 16rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.section_gap .section__title {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*自己添加*/
+
+
+/*用户头像*/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+/*用户头像END*/
+
+/*省市级联*/
+
+
+/* pages/city_select/city_select.wxss */
+
+.indexflex {
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+  background-color: white;
+ 
+}
+.cityTitle{
+  padding-top: 30rpx;
+  font-size: 16px;
+  text-align: center;
+  color: #8bbfff;
+}
+
+.indexFlexCenter {
+ 
+  width: 100%;
+  text-align: left;
+  position: fixed;
+  top: 0;
+   background-color: white;
+   z-index: 10;
+}
+
+.indexBoxSelect {
+  border-bottom: 1px solid gainsboro;
+}
+
+.indexFlexBoxTitle {
+  padding: 15px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.indexFlexBoxTitleReset {
+  display: inline-block;
+  height: 100%;
+  color: royalblue;
+  float: right;
+  font-size: 13px;
+}
+
+.indexFlexBox {
+  width: 95%;
+  padding-left: 15px;
+}
+
+.indexFlexBox view {
+  width: 23%;
+  text-align: center;
+  font-size: 15px;
+  margin-left: -1px;
+  margin-top: -4px;
+  line-height: 40px;
+  display: inline-block;
+  border: 1px solid gainsboro;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carButton {
+  border: 1px solid gainsboro !important;
+  background-color: #f8f8f8;
+  width: 21.5% !important;
+  border-radius: 3px;
+  height: 30px !important;
+  line-height: 30px !important;
+  margin: 10px 10px;
+}
+
+.hoverButton {
+  background-color: royalblue;
+  color: white;
+}
+
+/*省市级联*/
+
+/*说明*/
+
+.body-view {
+  font-size: 19px;
+}
+
+.body-view view {
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 15px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/*说明*/
+/*列表*/
+.page view {
+  line-height: 100rpx;
+  width: 100%;
+  text-align: center;
+  color: #353535;
+  font-size: 30rpx;
+}
+
+.page navigator:last-child {
+  border: none;
+}
+
+.goods {
+  background: #efeff4;
+  min-height: 100vh;
+}
+
+.monad {
+  margin-bottom: 30rpx;
+  background: #fff;
+  padding: 0 60rpx;
+  height: 250rpx;
+  box-shadow: 0 1rpx 2rpx 0 rgba(0, 0, 0, 0.20);
+  border-radius: 6rpx;
+}
+
+.place {
+  position: relative;
+  height: 140rpx;
+  border-bottom: 1rpx solid #f0f5fa ;
+}
+
+.place view {
+  text-algin: center;
+}
+
+.place text, .place view {
+  display: block;
+}
+
+.place .start, .place .end {
+  position: absolute;
+  width: 180rpx;
+  padding-top: 30rpx;
+  text-align: center;
+}
+
+.place .start {
+  left: 0;
+  top: 0;
+}
+
+.place .end {
+  top: 0;
+  right: 0;
+}
+
+.place .city {
+  font-size: 35rpx;
+  color: #333;
+  height: 36rpx;
+  line-height: 36rpx;
+  margin-bottom: 20rpx;
+}
+
+.place .province {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.place .distance {
+  display: block;
+  width: 176rpx;
+  padding-top: 42rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.place .distance image, .place .distance .image {
+  width: 176rpx;
+  height: 30rpx;
+  margin-bottom: 12rpx;
+  overflow: hidden;
+}
+
+.place .distance text {
+  color: #8faacc;
+  
+  line-height: 24rpx;
+  font-size: 24rpx;
+}
+
+.condition {
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 50rpx;
+  padding: 30rpx 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.condition text{
+  margin: 0 10rpx;
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  padding: 8rpx 20rpx 7rpx 22rpx;
+  border: 1px solid #eee;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.condition .truck {
+  color: #8bbfff;
+  border-color: #8bbfff;
+}
+
+.condition .article {
+  color: #58df7e;
+  border-color: #58df7e;
+}
+
+.condition .price {
+  color: #ffb578;
+  border-color: #ffb578;
+}
+.section{
+  padding: 15px;
+}
+.picker{
+
+  padding: 3px 5px;
+  color: #09bb07 
+}
+picker{
+  display: inline-block;
+  padding-left:20px; 
+}
+.nodate{
+  height: 100vh;
+ line-height: 70vh;
+  text-align: center;
+  font-size: 25rpx;
+  color: gray 
+}
+.datebotton{
+  color:gray;
+  text-align: center;
+  background-color: #efeff4;
+  font-size: 25rpx;
+  height:100rpx;
+  padding:0 10rpx;
+  line-height: 100rpx;
+}
+.submit{
+  background-color:#09bb07;
+  color:white !important;
+}
+.nonenet{
+    height: 100vh;
+    width: 100vw;
+    line-height: 50vh;
+    font-size: 25rpx;
+    text-align: center;
+}

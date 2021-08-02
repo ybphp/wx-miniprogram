@@ -1,0 +1,14 @@
+/* pages/user/user.wxss */
+.usersubmit{
+ 
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid gainsboro;
+    
+}
+.Feedback{
+    padding: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid gainsboro;
+     border-top: 3px solid gainsboro;
+}

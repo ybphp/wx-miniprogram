@@ -1,0 +1,42 @@
+<template name="list">
+  <view class="goods" >
+  <view class="monad" wx:for="{{items}}" style="height:150rpx;padding:0 10rpx">
+    <view class="place">
+      <view class="start start1">
+        <text class="truck">{{item.name}}</text>
+        <text class="province " style="color:gray; font-size:25rpx">起点：{{item.qidian}}</text>
+      </view>
+      <view class="distance " style="padding-top:10px;">
+        <text style="line-height:30px;">{{item.cfdate}}</text>
+        <text style="line-height:20px;">{{item.zhongdian}}</text>
+      </view>
+      <view class="end ">
+        <text class="city province" wx:if="{{item.usertype=='乘客'}}" style="color:red !important"> {{item.usertype}}</text>
+        <text class="city province" wx:if="{{item.usertype=='司机'}}" style="color:#09bb07 !important"> {{item.usertype}}</text>
+        <text class="province" style="color:gray;font-size:24rpx" bindtap="tocaruser" id="{{objectid[index]}}">查看详情</text>
+      </view>
+
+    </view>
+    
+  </view>
+  <view  class="datebotton" wx:if="{{items!=''}}">没有更多数据了</view>
+  <view class="nodate" wx:if="{{items==''}}">没有找到数据</view>
+</view>
+
+</template>
+<template name="detailed" >
+<view class="section" style="margin-bottom:0rpx !important;">
+    <view class="section__title">称呼：{{item.name}}</view>
+    <view class="section__title">身份：{{item.usertype}}</view>
+   
+    <view class="section__title" wx:if="{{item.usertype=='乘客'}}">人数：<text class="green">{{item.userlength}}</text>人</view>
+     
+    <view class="section__title">起点：{{item.qidian}}</view>
+  
+    <view class="section__title">终点：{{item.zhongdian}}</view>
+    <view class="section__title"  wx:if="{{item.usertype=='司机'}}">剩余座位：：<text class="green">{{item.userlength}}</text>个</view>
+   <view class="section__title">出发时间：<text class="red">{{item.cfdate}} {{item.time}}</text></view>
+    <view class="section__title">补充说明：{{item.replenish}}</view>
+   
+  </view>
+</template>

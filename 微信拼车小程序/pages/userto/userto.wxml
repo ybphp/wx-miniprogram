@@ -1,0 +1,7 @@
+<!--pages/userto/userto.wxml-->
+<import src="../mould/mould.wxml"/>
+  <template is="detailed" data="{{ item }}"/>
+ <view class="btn-area">
+    <button  class=" white" wx:if="{{status==true}}" style="background-color:red " id="{{id}}" bindtap="closepinche"  >关闭行程</button>
+    <button  disabled="true" wx:if="{{status==false}}" style="background-color:gainsboro " >已关闭</button>
+  </view>

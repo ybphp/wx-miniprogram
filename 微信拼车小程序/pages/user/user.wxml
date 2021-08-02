@@ -1,0 +1,16 @@
+<!--pages/user/user.wxml-->
+<view class="container" wx:if="{{networkType==true}}">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usersubmit" bindtap="userbody">
+    我发布的拼车
+  </view>
+  <view class="Feedback" bindtap="Feedback">
+    意见反馈
+  </view>
+  
+</view>
+
+
