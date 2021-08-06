@@ -1,0 +1,41 @@
+/* pages/mine/information.wxss */
+@import '/assets/styles/view-input.wxss';
+.userInfo {
+    margin-top: 20rpx;
+    padding: 0 40rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: 210rpx;
+}
+.userInfo .avatarsize {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-left: 40rpx;
+}
+.userInfo-hd {
+  display: flex;
+  flex-direction: column;
+}
+.userInfo-bd {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.listgroup{
+    margin-top: 20rpx;
+}
+.view-list .choose{
+    display: flex;
+    justify-content: flex-end;
+    font-size:36rpx;
+}
+
+.view-list .choose .icon{
+    width:50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}

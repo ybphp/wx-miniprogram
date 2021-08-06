@@ -1,0 +1,37 @@
+<!--pages/wineProcess/placeOrder.wxml-->
+<view class="container">
+     <view class="placeOrder_info">
+        <image class="imgsize" src="/assets/images/buy_sucess@2x.png"></image>
+        <view class="font-color-c24e4e font-size" style="margin:30rpx 0;">下单成功</view>
+        <view class="font-color-999">订单号：{{order.order_no}}</view>
+        <view class="font-color-333"  style="margin-top:30rpx;">厂家会尽快发货</view>
+     </view>
+     <view class="addressGroup">
+         <view class="address-hd font-color-999">客户收货地址</view>
+         <view class="address-bd">
+             <view class="address-bd-hd font-color-999">地址:</view><view>湖北省武汉市硚口区人名西路302号明日财富大厦20层，迪吧拉亚公司研发部</view>
+         </view>
+         <view class="address-ft font-color-999">
+             <text>收货人：<text class="font-color-hei">轩少</text></text>
+               <text style="margin-left:100rpx;">电话：<text class="font-color-hei" >13297090745</text></text>
+         </view>
+     </view>
+    <view class="order-group">
+       <view class="group-hd">商品</view>
+       <view class="group-bd  line-after-top ">
+           <view class="food-list line-before-bottom" wx:for="{{order.order_foods}}" wx:for-item="foodlist">
+              <image src="{{foodlist.foods_img}}" class="imgsize"></image>
+              <view class="food-text">
+                <view class="font-size-16">{{foodlist.foods_name}}</view>
+                 <view><text class="font-color-999"><text class="font-color-c24e4e" style="font-size:40rpx;margin-left:24rpx;">¥{{foodlist.foods_price}}</text>{{foodlist.foods_weight}}</text>
+                       <text class="font-color-999">数量：<text class="font-color-c24e4e" style="margin-left:24rpx;">{{foodlist.foods_num}}</text></text>
+                 </view>
+              </view>
+           </view>
+       </view>
+       <view class="group-ft">
+          <text class="font-color-999">订单总额：<text class="font-color-c24e4e" style="font-size:40rpx; margin-left:24rpx;">¥{{order.order_sum}}</text></text>
+       </view>
+    </view>
+</view>
+

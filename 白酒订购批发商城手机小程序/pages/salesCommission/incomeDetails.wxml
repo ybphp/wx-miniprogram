@@ -1,0 +1,41 @@
+<!--pages/salesCommission/incomeDetails.wxml-->
+<view class="container">
+<view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; width:{{sliderWidth}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                     <view class="incomeList-title">{{tabs[activeIndex]}}合计：¥22222</view>
+                      <view class="incomeList" wx:for="{{incomeList}}" wx:for-item="list">
+                          <view class="incomeList-hd"><text>订单：{{list.order_no}}</text><text>{{list.create_time}}</text></view>
+                          <view class="incomeList-bd">客户：{{list.customer_name}}</view>
+                           <view class="incomeList-ft"><text>金额：{{list.order_total}}</text><text >提成：<text class="font-color-c24e4e">{{list.order_Commission}}</text></text></view>
+                      </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                      <view class="incomeList-title">{{tabs[activeIndex]}}合计：22222</view>
+                      <view class="incomeList" wx:for="{{incomeList}}" wx:for-item="list">
+                          <view class="incomeList-hd"><text>订单：{{list.order_no}}</text><text>{{list.create_time}}</text></view>
+                          <view class="incomeList-bd">客户：{{list.customer_name}}</view>
+                           <view class="incomeList-ft"><text>金额：{{list.order_total}}</text><text>提成：<text class="font-color-c24e4e">{{list.order_Commission}}</text></text></view>
+                      </view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                      <view class="incomeList-title">{{tabs[activeIndex]}}合计：22222</view>
+                      <view class="incomeList" wx:for="{{incomeList}}" wx:for-item="list">
+                          <view class="incomeList-hd"><text>订单：{{list.order_no}}</text><text>{{list.create_time}}</text></view>
+                          <view class="incomeList-bd">客户：{{list.customer_name}}</view>
+                           <view class="incomeList-ft"><text>金额：{{list.order_total}}</text><text>提成：<text class="font-color-c24e4e">{{list.order_Commission}}</text></text></view>
+                      </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

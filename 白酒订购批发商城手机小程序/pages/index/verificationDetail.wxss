@@ -1,0 +1,19 @@
+/* pages/index/verificationDetail.wxss */
+.Codeinfo{
+    background-color: #fff;
+    margin-top:20rpx;
+    padding: 40rpx;
+    color: #999999;
+}
+.line{
+    width: 670rpx;
+    height: 2rpx;
+    background-color: #dcdcdc;
+}
+.margin-bottom-40{
+    margin-bottom: 40rpx;
+
+}
+.margin-top-50{
+    margin-top:50rpx; 
+}

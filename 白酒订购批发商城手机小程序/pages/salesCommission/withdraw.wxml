@@ -1,0 +1,21 @@
+<!--pages/salesCommission/withdraw.wxml-->
+
+<view class="container">
+   <view class="view-list font-color-999" style=" background-color:transparent;">可提现金额：¥{{amount}}</view>
+   <view class="withdraw">
+       <view class="withdraw-hd font-color-c24e4e">输入提现金额：</view>
+       <view class="withdraw-bd">
+           <view class="input-box">  
+              <input type="number" class="input" auto-focus/>
+        </view>
+           <view class="bg-color-c24e4e but" bindtap="openWin">提现</view>
+       </view>
+       <view class="withdraw-ft">
+          <text class="font-color-999">申请提现后，系统将在工作日的48小时内打款.</text>
+          <text class="font-color-999">请确保您的<text class="font-color-c24e4e">个人资料</text>中已经绑定收款银行卡</text>
+       </view>
+   </view>
+ <navigator url="withdrawHistory" class="view-list arrow-right margin-top-20"  hover-class="weui-cell_active">
+      <view class="list-text font-color-333">提现记录</view>
+ </navigator>
+</view>

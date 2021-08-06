@@ -1,0 +1,19 @@
+<!--pages/mine/submitVerification.wxml-->
+<view class="container">
+    <view class="title-hd font-color-999">
+        <text>为保障厂家及经纪人自身的合法权益</text>
+        <text>经济人须上传身份证照片进行实名认证</text>
+    </view>
+    <view class="idCard-box">
+      <view class="cardBox-hd font-color-666">身份认证结果</view>
+      <view class="cardBox-text font-color-c24e4e font-size-18">
+          数据已提交，请等待系统处理...
+      </view>
+    </view>
+    <view class="butbox" style="margin-top:40rpx;">
+          <view class="but bg-color-c24e4e font-color-white" bindtap='backTwoWin' >返回个人资料</view> 
+    </view> 
+    <view class="butbox" style="margin-top:40rpx; ">
+        <view class="but bg-color-4d94c1 font-color-white" bindtap='backOneWin'>申请重新认证</view>
+    </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/index/verification.wxml-->
+<view class="container">
+   <view  wx:if="{{verification}}" class="verification-none">
+     <image src="/assets/images/zhuisuyanzhen@2x.png"></image>
+     <view class="magrin-top-50 font-color-999">追溯验真功能即将上线</view>
+     <view class="magrin-top-44 font-color-999">敬请期待</view>
+  </view>
+  <view wx:else class="verification">
+       <view class="list ">
+           <view class="list-hd font-color-c24e4e">请输入产品追溯识别码</view>
+           <view class="input-box">
+                <view class="box_bd" >
+                    <input class="box_bd_input" bindinput="bindCodeInput1" placeholder="请输入识别码" />
+                </view>
+                <navigator url="verificationDetail?code={{code1}}" class="box_ft bg-color-c24e4e font-color-fefefe">查询</navigator>
+           </view>
+           <view class="list-ft font-color-999">本数据由仁怀市xxxx数据中心提供</view>
+       </view>
+        <view class="list">
+           <view class="list-hd font-color-c24e4e"> 请输入酱酒宝验真识别码</view>
+            <view class="input-box">
+                <view class="box_bd" >
+                    <input class="box_bd_input" bindinput="bindCodeInput2" placeholder="请输入识别码" />
+                </view>
+                <navigator url="verificationDetail?code={{code2}}" class="box_ft bg-color-c24e4e font-color-fefefe">查询</navigator>
+           </view>
+       </view>
+  </view>
+</view>

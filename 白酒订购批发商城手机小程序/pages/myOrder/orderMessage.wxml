@@ -1,0 +1,12 @@
+<!--pages/myOrder/orderMessage.wxml-->
+<view class="container">
+    <view class="massge" wx:for="{{orderList}}"  wx:for-item="list" >
+      <view class="massge-hd"><image class="massge-img" src="/assets/images/index_message_1@2x.png"></image><view>系统消息</view></view>
+      <view class="massge-bd font-color-666">
+        <text>订单：<text class="font-color-c24e4e font-size-15">{{list.order_no}}</text></text>
+        <text style="margin-top:22rpx;"><text>客户：<text class="font-color-c24e4e font-size-15">{{list.customer_name}}</text></text><text style="margin-left:40rpx;">金额:</text>¥ {{list.money}}</text>
+        <text style="margin-top:30rpx;">状态变化:<text class="font-color-c24e4e">{{list.order_status}}</text></text>
+       </view>
+  </view>
+</view>
+

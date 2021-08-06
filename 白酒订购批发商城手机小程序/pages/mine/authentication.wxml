@@ -1,0 +1,25 @@
+<!--pages/mine/Authentication.wxml-->
+<view class="container">
+    <view class="title-hd font-color-999">
+        <text>为保障厂家及经纪人自身的合法权益</text>
+        <text>经济人须上传身份证照片进行实名认证</text>
+    </view>
+    <view class="idCard-box">
+       <view class="cardBox-hd font-color-666">身份证照片(照片)</view>
+       <view class="cardBox-bd">
+         <image class="img1" src="/assets/images/Click_shooting.png"></image>
+         <image class="img2" src="/assets/images/IDcard_front.png"></image>
+       </view>
+    </view>
+    <view class="idCard-box">
+        <view class="cardBox-hd font-color-666">身份证照片(背面)</view>
+         <view class="cardBox-bd">
+            <image class="img1" src="/assets/images/Click_shooting.png"></image>
+            <image class="img2" src="/assets/images/IDcard_front.png"></image>
+         </view>
+    </view>
+    <view class="ft-title font-color-999">拍摄时注意光线和焦距,务必保持照片清晰</view>
+    <view class="butbox" style="margin:40rpx auto 30rpx; ">
+          <navigator class="but bg-color-c24e4e font-color-white" url="submitVerification">提交验证</navigator> 
+    </view>
+</view>

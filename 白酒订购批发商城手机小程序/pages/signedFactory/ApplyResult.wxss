@@ -1,0 +1,5 @@
+/* pages/signedFactory/ApplyResult.wxss */
+@import '../salesCommission/withdrawResult.wxss';
+page{
+    line-height: 1;
+}

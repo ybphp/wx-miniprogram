@@ -1,0 +1,47 @@
+<!--pages/signedFactory/factoryList.wxml-->
+<view class="container">
+    <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; width:{{sliderWidth}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <navigator url="factoryDetail" class="factoryList" hover-class="weui-cell_active" wx:for="{{factoryList}}" wx:for-item="list">
+                    <view class="factoryList-hd">{{list.factory_name}}</view>
+                    <view class="factoryList-bd">
+                        <image class="imagesize" src="{{list.factory_img}}"></image>
+                        <view class="factoryList-text font-color-999">{{list.factory_Int}}</view>
+                    </view>
+                     <view class="factoryList-ft">
+                        <view class="foods-box">
+                           <image src="{{item}}" wx:for="{{list.foods_img}}" ></image>
+                        </view>
+                        <view class="more font-color-c24e4e arrow-right">了解并签约</view>
+                     </view>
+
+                    </navigator>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <navigator url="factoryDetail" class="factoryList" hover-class="weui-cell_active" wx:for="{{factoryList}}" wx:for-item="list">
+                    <view class="factoryList-hd">{{list.factory_name}}</view>
+                    <view class="factoryList-bd">
+                        <image class="imagesize" src="{{list.factory_img}}"></image>
+                        <view class="factoryList-text font-color-999">{{list.factory_Int}}</view>
+                    </view>
+                     <view class="factoryList-ft">
+                        <view class="foods-box">
+                           <image src="{{item}}" wx:for="{{list.foods_img}}" ></image>
+                        </view>
+                        <view class="more font-color-c24e4e arrow-right">了解并签约</view>
+                     </view>
+
+                    </navigator>
+                </view>
+            </view>
+     </view>
+</view>

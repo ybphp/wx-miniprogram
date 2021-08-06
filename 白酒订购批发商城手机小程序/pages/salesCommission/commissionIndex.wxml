@@ -1,0 +1,25 @@
+<!--pages/salesCommission/commissionIndex.wxml-->
+<view class="container">
+      <view class="account">
+          <view class="font-color-white account-left">
+             <text>当前账户余额</text>
+             <text style="margin-top:42rpx;">¥<text class="font-size-24">{{acctoumtInfo.balance}}</text></text>
+          </view>
+          <view class="font-color-white account-right">
+             <text>我的总收入</text>
+              <text style="margin-top:42rpx;">¥<text class="font-size-24">{{acctoumtInfo.total}}</text></text>
+          </view>
+      </view>
+
+         <view class="listgroup">
+           <navigator url="../salesCommission/incomeDetails" class="view-list arrow-right " hover-class="weui-cell_active">
+              
+               <view class="list-text">收入明细</view>
+           </navigator>
+     </view>
+     <view class="listgroup">
+           <navigator url="../salesCommission/withdraw" class="view-list arrow-right " hover-class="weui-cell_active">
+              <view class="list-text">申请提现</view>
+           </navigator>
+     </view>
+</view>

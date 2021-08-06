@@ -1,0 +1,35 @@
+/* pages/mine/Authentication.wxss */
+.title-hd{
+    display: flex;
+    padding:30rpx;
+    height: 84rpx;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 1
+}
+.idCard-box{
+    display: flex;
+    padding: 40rpx 30rpx;
+    flex-direction: column;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+.cardBox-bd {
+     display: flex;
+     flex-direction: row;
+     align-items: center; 
+     padding-top: 20rpx;
+}
+.cardBox-bd .img1{
+    width: 280rpx;
+    height: 170rpx;
+    margin: 0rpx 70rpx;
+}
+.cardBox-bd .img2{
+    width: 200rpx;
+    height:130rpx;
+}
+.ft-title{
+    padding:20rpx 30rpx 0;
+
+}

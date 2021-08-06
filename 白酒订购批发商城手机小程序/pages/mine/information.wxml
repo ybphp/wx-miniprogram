@@ -1,0 +1,80 @@
+<!--pages/mine/information.wxml-->
+<view class="container">
+     <view class="userInfo bg-color-white">
+      <view class="userInfo-hd">
+          <text class="font-color-333 font-size-18">我的登录信息</text>
+          <text class="font-color-999">由微信授权登录</text>
+      </view>
+         <view class="userInfo-bd font-size-18">{{userInfo.nickName}}</view>
+         <image class="avatarsize" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+     </view>
+     <view class="hd-title font-color-999">
+         以下请务必填写真实信息,负责将影响资金结算
+     </view>
+     <view class="listgroup" style="margin-top:0;">
+           <navigator url="enterInput?type=name&name={{user.name}}" class="view-list arrow-right line-before-bottom " hover-class="weui-cell_active">
+              <view class="list__hd">
+                    <view class="weui-label font-color-666">真实姓名</view>
+            </view>
+            <view class="list__bd">
+                 <view class="choose">{{user.name}}</view>
+            </view>
+           </navigator>
+            <navigator url="enterInput?type=phone&phone={{user.phone}}" class="view-list arrow-right line-before-bottom" hover-class="weui-cell_active">
+               <view class="list__hd">
+                    <view class="weui-label font-color-666">手机号码</view>
+                 </view>
+            <view class="list__bd">
+               <view class="choose">{{user.phone}}</view>
+            </view>
+           </navigator>
+          <view  class="view-list arrow-right  line-before-bottom" >
+                 <view class="list__hd">
+                    <view class="weui-label font-color-666">客户性别</view>
+            </view>
+            <view class="list__bd ">
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindSexChange" value="{{sexIndex}}" range="{{sexs}}">
+                        <view class=" choose">{{user.sex || sexs[sexIndex]}}</view>
+                    </picker>
+                </view> 
+               
+            </view>
+           </view>
+            <view class="view-list arrow-right" >
+            <view class="list__hd">
+                    <view class="weui-label font-color-666">客户年龄</view>
+            </view>
+            <view class="list__bd">                
+              <view class="weui-cell__bd">
+                    <picker bindchange="bindAgeChange" value="{{ageIndex}}" range="{{ages}}">
+                       <view class="choose">{{user.age || ages[ageIndex]}}</view>
+                    </picker>
+                </view> 
+            </view>
+        </view>
+     </view>
+     <view class="listgroup">
+           <navigator url="bankCard" class="view-list arrow-right" hover-class="weui-cell_active">
+              <view class="list__hd">
+                    <view class="weui-label font-color-666">结算银行卡</view>
+            </view>
+            <view class="list__bd">
+                 <view class="choose">工商银行(2245)</view>
+            </view>
+           </navigator>
+    </view>      
+     <view class="listgroup">
+           <navigator url="authentication" class="view-list arrow-right " hover-class="weui-cell_active">
+              <view class="list__hd">
+                    <view class="weui-label font-color-666">身份验证</view>
+            </view>
+            <view class="list__bd">
+                 <view class="choose"><image class="icon" src="/assets/images/my_rz@2x.png"></image>已验证</view>
+            </view>
+           </navigator>
+    </view>     
+     <view class="butbox" style="margin:40rpx auto 30rpx; ">
+             <view bindtap="backWind" class="but bg-color-c24e4e font-color-white">保存资料</view>
+      </view>
+</view>

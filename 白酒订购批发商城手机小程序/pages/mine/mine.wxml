@@ -1,0 +1,39 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+     <view class="userInfo bg-color-c24e4e">
+         <image class="avatarsize" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+         <view class="font-color-white">{{userInfo.nickName}}</view>
+         <view class="information" bindtap="openWin">
+            <image class="information-image" src="/assets/images/index_my_detailicon@2x.png" background-size="cover"></image>
+            <text class="information-text font-color-white">个人资料</text>
+         </view>
+     </view>
+     <view class="listgroup">
+           <navigator url="../myOrder/orderList" class="view-list arrow-right line-before-bottom " hover-class="weui-cell_active">
+               <image class="icon" src="/assets/images/Myorder@2x.png"></image>
+               <view class="list-text">我的订单</view>
+           </navigator>
+            <navigator url="../myOrder/orderMessage" class="view-list arrow-right " hover-class="weui-cell_active">
+               <image class="icon" src="/assets/images/index_Messagecenter@2x.png"></image>
+               <view class="list-text">消息中心</view>
+           </navigator>
+     </view>
+     <view class="listgroup">
+           <navigator url="../salesCommission/commissionIndex" class="view-list arrow-right " hover-class="weui-cell_active">
+               <image class="icon" src="/assets/images/Salescommission@2x.png"></image>
+               <view class="list-text"><text> 我的销售提成</text><text  class="font-color-999 font-size-12">收入明细、资金体现</text></view>
+           </navigator>
+     </view>
+     <view class="listgroup">
+           <navigator url="../signedFactory/factoryList" class="view-list arrow-right " hover-class="weui-cell_active">
+               <image class="icon" src="/assets/images/Contractmanufacturers@2x.png"></image>
+               <view class="list-text"><text> 签约厂家</text><text class="font-color-999 font-size-12">成为经纪人</text></view>
+           </navigator>
+     </view>
+      <view class="listgroup">
+           <navigator url="url" class="view-list arrow-right " hover-class="weui-cell_active">
+               <image class="icon" src="/assets/images/about@2x.png"></image>
+               <view class="list-text">关于酱酒宝</view>
+           </navigator>
+     </view>
+</view>

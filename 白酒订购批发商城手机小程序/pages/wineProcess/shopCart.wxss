@@ -1,0 +1,91 @@
+/* pages/wineProcess/shopCart.wxss */
+.goodsGroup_bd{
+    background-color: #fff;
+}
+.goodsGroup_hd{
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 100rpx; 
+}
+.goodsGroup_hd image{
+    margin-right: 20rpx;
+}
+.image-icon{
+     width: 40rpx;
+    height: 40rpx;
+   
+}
+.image-icon1{
+    width: 60rpx;
+    height: 60rpx;
+}
+  
+.food-image{
+    width: 120rpx;
+    height: 120rpx;
+}
+.goodsGroup_bd{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.foodlist{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 160rpx;
+    padding:0 30rpx;
+}
+.foodlist .foodlist-hd{
+    margin-right: 30rpx;
+}
+.foodlist .foodlist-bd{
+    display: flex;
+    flex: 1;
+}
+.food-image{
+    margin-right: 10rpx;
+}
+.foodlist .food-text{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    flex: 1;
+}
+.foodlist .food-text .text{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+.foodlist .food-text .text view{
+     display: flex;
+     align-items: center;
+}
+/*购物车*/
+.but-group{
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 30rpx 0 45rpx;
+  justify-content: space-between;
+}
+.but-group .total{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.but-group .but-box{
+  background-color: #c24e4e;
+  width: 500rpx;
+  height: 100rpx;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  border-radius: 8rpx;
+}

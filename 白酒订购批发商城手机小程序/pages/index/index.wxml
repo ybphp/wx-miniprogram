@@ -1,0 +1,57 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo ">
+      <view class="userinfo-box">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <view class="userinfo-area">
+          <text class="userinfo-nickname">您好，{{userInfo.nickName}}!</text>
+          <text class="userinfo-parent">签约企业:</text>
+          <text class="userinfo-company">仁怀市茅台镇永泰酒业有限公司</text>
+        </view>
+      </view>
+      <view class="count-list">
+        <view class="list-cloum">
+         <text class="item2">本月订单数</text>
+          <text class="item1">{{res.monthOrdersCount}}</text>
+         
+        </view>
+        <view class="list-cloum list-line">
+        <text class="item2">本月订单金额</text>
+          <text class="item1"><text class="font-size-15">¥</text>{{res.monthOrdersTotalMoney}}</text>
+        </view>
+        <view class="list-cloum">
+        <text class="item2">我的客户数</text>
+          <text class="item1">{{res.customerCount}}</text>      
+        </view>
+      </view>
+  </view>
+  <view class="index-muen">
+    <navigator url="knowledgeList" class="muen-list" >
+      <image class="image"  src="/assets/images/index_ico1@2x.png" background-size="cover"></image>
+      <view class="text">
+         <text class="font-size-18 font-color-hei">酱香型白酒</text>
+         <text class="font-size-15 font-color-c24e4e">知识百科</text>
+      </view>
+    </navigator>
+       <navigator url="verification" class="muen-list" >
+        <image class="image" src="/assets/images/index_ico2@2x.png" background-size="cover"></image>
+        <view class="text">
+          <text class="font-size-18 font-color-hei">追溯/验真</text>
+          <text class="font-size-15 font-color-c24e4e">品质保证</text>
+        </view>
+    </navigator>
+  </view>
+  <view  bindtap="bindMassge"  class="massge"  animation="{{animationData}}"  wx:if="{{isshow}}" hover-class="weui-cell_active">
+      <view class="massge-hd"><image class="massge-img" src="/assets/images/index_message_1@2x.png"></image><view>系统消息</view></view>
+      <view class="massge-bd font-color-666">订单：<text class="font-color-c24e4e font-size-15">SA123485743673</text>(客户:老王 ¥1890)</view>
+      <view class="massge-ft font-color-666">状态变化：厂家已确认订单</view>
+      <view  catchtap="translate" class="massge-close"><image  src="/assets/images/index_Close@2x.png"></image></view>
+  </view>
+  <view class="news">
+      <view class="news-list font-color-666">
+          <view class="newslist-hd">欢迎加入仁怀酱酒宝</view>
+          <view class="img-box"><image class="news-listimg" src="/assets/testimages/timg.jpg"></image></view>
+      </view> 
+  </view>
+</view>

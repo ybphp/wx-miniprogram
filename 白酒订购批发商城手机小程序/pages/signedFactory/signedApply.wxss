@@ -1,0 +1,26 @@
+/* pages/signedFactory/signedApply.wxss */
+
+.title{
+    display: flex;
+    flex-direction: column;
+    padding: 40rpx 30rpx;
+    color: #010101;
+    line-height: 1;
+}
+.view-list{
+    display: flex;
+    flex-direction: row;
+    height: 120rpx;
+    padding: 0 30rpx;
+    align-items: center;
+    background-color: #fff;
+    color: #333333;
+}
+.view-list  .list-text{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-right: 36rpx;
+    align-items: center;
+    
+}

@@ -1,0 +1,13 @@
+<!--pages/signedFactory/ApplyResult.wxml-->
+<view class="container">
+  <view class="result">
+      <image class="imgsize" src="/assets/images/buy_sucess@2x.png"></image>
+      <text class="font-color-c24e4e margin-top-30">申请成功</text>
+      <text class="font-color-999 margin-top-30">签约厂家</text>
+     <text class="font-color-333 margin-top-30">仁怀市茅台镇永泰酒业有限公司</text>
+      <text class="margin-top-30 font-color-999">请等待系统处理</text>
+   </view>   
+    <view class="butbox" style="margin-top:40rpx;">
+         <view bindtap="backMine" class="but bg-color-c24e4e font-color-white" >返回我的主页</view>  
+    </view> 
+</view>

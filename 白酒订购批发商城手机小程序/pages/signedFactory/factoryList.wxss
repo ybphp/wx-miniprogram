@@ -1,0 +1,65 @@
+/* pages/signedFactory/factoryList.wxss */
+.weui-navbar__item{
+    padding: 30rpx 0;
+}
+.weui-navbar__item.weui-bar__item_on{
+    color: #c24e4e;
+}
+.weui-navbar__slider{
+    background-color: #c24e4e;
+}
+.weui-navbar{
+    background-color: #fff;
+}
+
+.factoryList{
+    margin-top: 20rpx;
+    padding: 30rpx;
+    background-color: #fff;
+}
+.factoryList-hd{
+    display: flex;
+    align-items: center;
+}
+.factoryList-bd,.factoryList-ft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.factoryList-bd{
+    padding: 30rpx 0;
+}
+
+ 
+.factoryList-bd .imagesize{
+   width: 150rpx;
+   height: 150rpx;
+   margin-right: 20rpx;
+}
+.factoryList-bd .factoryList-text{
+  width: 490rpx;
+  line-height: 1.2;
+  text-indent: 2em;
+  display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+   overflow: hidden;
+ 
+}
+.factoryList-ft image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 10rpx;
+    
+}
+.more::before{
+    border: 2rpx solid #c24e4e;
+    border-top: none;
+    border-right: none;
+    right: 0rpx;
+    
+}
+.more{
+    padding-right: 30rpx;
+}

@@ -1,0 +1,15 @@
+
+<!--pages/index/verificationDetail.wxml-->
+<view class="container">
+  <view class="Codeinfo">
+    <view class=" font-size-18 font-color-c24e4e margin-bottom-40">查询结果</view>
+    <view class="font-color-999 margin-bottom-40">查询识别码：<text class="font-color-c24e4e">{{info.code}}</text>
+    </view>
+    <view class="line"></view>
+    <view class="margin-bottom-40 margin-top-50">产品名称：<text class="font-color-hei">{{info.name}}</text></view>
+    <view class="margin-bottom-40">产品规格：<text class="font-color-hei">{{info.norm}}</text></view>
+    <view class="margin-bottom-40">生产厂家：<text class="font-color-hei">{{info.factory}}</text></view>
+    <view class="margin-bottom-40">生产批次：<text class="font-color-hei">{{info.batch}}</text></view>
+    <view>质量体系：<text class="font-color-hei" >{{info.system}}</text></view>
+  </view>
+</view>

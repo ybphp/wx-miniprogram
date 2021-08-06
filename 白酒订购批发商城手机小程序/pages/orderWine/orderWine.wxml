@@ -1,0 +1,67 @@
+<!--pages/orderWine/orderWine.wxml-->
+<view class="container">
+    <view class="weui-tab bg-color-white ">
+     <view class="fixed">
+        <view class="userInfo" bindtap="showModal">
+            <image class="img" src="{{chooseFactory.img}}"></image>
+            <view class="Info">
+                <text class="font-color-white">{{chooseFactory.name}}</text>
+                <text class="font-color-d9d9d9">已签约为 {{chooseFactory.Identity}}</text>
+            </view>
+            <image class="choose" src="/assets/images/buy_cf_ico@2x.png"  wx:if="{{!showModalStatus}}"></image>
+            <image class="choose" src="/assets/images/buy_cf_ico_top2x.png" wx:else></image>
+        </view>
+    </view>     
+        <view class="weui-navbar">
+            <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                <view class="weui-navbar__title">{{item}}</view>
+                </view>
+            </block>
+            <view class="weui-navbar__slider" style="left: {{sliderLeft}}px;  transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <scroll-view scroll-y="false"  bindscrolltoupper="refresh" bindscrolltolower="loadmore" bindscroll="scroll" scroll-top="{{scrolltop}}">
+                <navigator url="../wineProcess/orderWineDetail" class="goodsList " hover-class="weui-cell_active" wx:for="{{goodsList.list}}" wx:for-item="goodlist" data-id="{{goodlist.id}}">
+                     <image class="listimg" src="{{goodlist.img_url}}"></image>
+                     <view class="listinfo">
+                        <text class="font-color-hei title">{{goodlist.title}}</text>
+                        <text class="font-color-999 font-size-12" style="margin-bottom:18rpx;">酒精度：{{goodlist.purity}}</text>
+                        <text class="font-color-999 font-size-12">净含量：{{goodlist.weight}}{{goodlist.weight_unit}}</text>
+                      <view class="listinfo-ft"> <text class="font-color-999 font-size-12">包装规格：{{goodlist.pack_spec}}{{goodlist.pack_spec_unit}}</text><text class="font-color-c24e4e ">¥<text style="font-size:40rpx;">{{goodlist.price}}</text></text></view>
+                     </view>
+                </navigator>
+            </scroll-view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <scroll-view scroll-y="false"  bindscrolltoupper="refresh" bindscrolltolower="loadmore" bindscroll="scroll" scroll-top="{{scrolltop}}">
+            2222
+            </scroll-view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+            <scroll-view scroll-y="false"  bindscrolltoupper="refresh" bindscrolltolower="loadmore" bindscroll="scroll" scroll-top="{{scrolltop}}">
+            33333
+            </scroll-view>
+        </view>
+    </view>
+ </view>
+
+</view>
+
+
+<!--点击选择 显示遮罩层-->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}">
+</view>
+<!--弹出选择存-->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+     <view class="factoryList"  wx:for="{{factoryList}}" wx:for-item="list" data-id="{{list.id}}" bindtap="chooseFactory" >
+         <image class="img" src="{{list.img}}"></image>
+         <view class="Info">
+              <text class="font-color-hei">{{list.name}}</text>
+              <text class="font-color-999" >已签约为 {{list.Identity}}</text>
+         </view>
+         <image class="chooseicon" src="/assets/images/buy_cf_choose_on@2x.png"  wx:if="{{chooseFactory.id==list.id}}"></image>
+         <image class="chooseicon" src="/assets/images/buy_cf_choose_off@2x.png"  wx:else></image>
+     </view>
+</view>

@@ -1,0 +1,2 @@
+/* pages/wineProcess/chooseCustomer.wxss */
+@import '/pages/customer/customer.wxss';

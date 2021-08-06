@@ -1,0 +1,143 @@
+/* pages/orderWine/orderWine.wxss */
+
+.userInfo,.factoryList{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+.fixed{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 21;
+    overflow: hidden;
+}
+.userInfo{ 
+   background-color:#c24e4e;
+   height: 180rpx;
+}
+.factoryList{
+    background-color: #fff;
+    border-top:2rpx solid #eeeeee; 
+}
+.userInfo .img,.factoryList .img{
+    width: 120rpx;
+    height: 120rpx;
+    margin: 10rpx 20rpx 10rpx;
+}
+.userInfo .Info,.factoryList .Info{
+   height: 120rpx;
+   margin: 10rpx 0rpx 10rpx;
+   display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.choose{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+    z-index:22;
+}
+.chooseicon{
+     width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+}
+.weui-navbar{
+    background-color: #fff;
+    line-height: 1;
+    font-size: 30rpx;
+    padding:0;
+    border-bottom:0px; 
+}
+.weui-navbar__item{
+     padding: 30rpx 0;
+}
+.weui-navbar__item.weui-bar__item_on{
+  color:#c24e4e;
+}
+.weui-navbar__slider{
+    width: 33.33%;
+}
+.weui-navbar__slider{
+    background-color:#c24e4e;  
+}
+.weui-tab__panel{
+    padding-top: 90rpx;
+}
+
+
+/*goods list*/
+.weui-tab{
+    margin-top: 180rpx;
+}
+.weui-tab__content{
+     line-height:1;
+
+}
+.listinfo{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.listinfo .title{
+    margin: 20rpx 0px;
+}
+
+.goodsList{
+    padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    border-top:2rpx solid #eeeeee;
+}
+.listinfo-ft{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.goodsList .listimg{
+    width: 180rpx;
+    height: 180rpx;
+    margin-right: 20rpx;
+}
+.weui-navbar{
+    position: fixed;
+    top: 180rpx;
+}
+
+/*mask*/
+.commodity_screen {
+ width:100%;
+ height:100%;
+ position:fixed;
+ top:0;
+ left:0;
+ background:#000;
+ opacity:0.2;
+ overflow:hidden;
+ z-index:98;
+ color:#fff;
+}
+
+/*choose*/
+.commodity_attr_box {
+    width:100%;
+    min-height:30px;
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:#fff;
+    padding-top:20rpx;
+}
+
+

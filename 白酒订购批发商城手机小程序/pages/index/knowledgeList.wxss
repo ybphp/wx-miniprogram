@@ -1,0 +1,16 @@
+/* pages/index/knowledgeList.wxss */
+
+.newlist{
+      background-color: #ffffff;
+      height: 120rpx;
+      display: flex;
+      flex-direction: row;
+      padding: 30rpx;
+      align-items: center;
+      margin-top: 20rpx;
+}
+.newslist-left image{
+    width: 160rpx;
+    height: 120rpx;
+    margin-right: 30rpx;
+}

@@ -1,0 +1,14 @@
+/* pages/salesCommission/withdrawHistory.wxss */
+.historyList{
+    margin-top: 20rpx;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 30rpx;
+    line-height: 1
+}
+.historyList-hd{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+}

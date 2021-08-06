@@ -1,0 +1,43 @@
+<!--pages/signedFactory/factoryDetail.wxml-->
+<view class="container">
+   <view class="factory-info margin-top-20">
+        <view class="factory-info-hd font-size-18 font-color-c24e4e">
+             {{info.factory_name}}
+        </view>
+        <view class="factory-info-bd">
+           <image src="{{item}}" wx:for="{{info.factory_img}}"></image>
+        </view>
+        <view class="factory-info-ft font-color-333">
+          {{info.factory_Int}}
+        </view>
+   </view>
+   <view class="factory-foods margin-top-20">
+      <view class="factory-info-hd font-size-18 font-color-c24e4e" style="padding-left:10rpx;">厂家产品</view>
+     <navigator url="goodDetail" class="goodsList line-before-bottom" hover-class="weui-cell_active" wx:for="{{goodsList}}" wx:for-item="goodlist" data-id="{{goodlist.id}}">
+        <image class="listimg" src="{{goodlist.img }}"></image>
+        <view class="listinfo">
+        <text class="font-color-hei title">{{goodlist.name}}</text>
+        <text class="font-color-999 font-size-12" style="margin-bottom:18rpx;">酒精度：{{goodlist.purity}}</text>
+        <text class="font-color-999 font-size-12">净含量：{{goodlist.weight}}</text>
+        <view class="listinfo-ft"> <text class="font-color-999 font-size-12">包装规格：{{goodlist.norm}}</text><text class="font-color-c24e4e ">¥<text style="font-size:40rpx;">{{goodlist.price}}</text></text></view>
+        </view>
+     </navigator>
+   </view>  
+   <view class="policy margin-top-20 font-color-333">
+      <view class="factory-info-hd font-size-18 font-color-c24e4e" >奖励政策</view>
+      <view class="policy-text">以公司产品价格表的定价为基础。销售人员对需方让利，产品销售价格低于公司定价的，需由主管销售厂长同意，报公司经理审核同意后方可签定合同。</view>
+      <view class="policy-text1">
+            <view class="text">普通经纪人:</view>
+            <view  class="textinfo">以公司产品价格表的定价为基础。销售人员对需方让利。</view>
+      </view>
+      <view class="policy-text1">
+            <view class="text">高级经纪人:</view>
+            <view  class="textinfo">以公司产品价格表的定价为基础。销售人员对需方让利。</view></view>
+   </view>  
+   <view style="width:100%; height:110rpx;"></view>
+   <view class="button-box font-color-white" bindtap="openWin">
+       签约该厂家
+   </view>
+</view>
+
+

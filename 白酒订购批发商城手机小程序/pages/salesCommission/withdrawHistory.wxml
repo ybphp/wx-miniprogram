@@ -1,0 +1,11 @@
+<!--pages/salesCommission/withdrawHistory.wxml-->
+<view class="container">
+     <view class="historyList font-color-333" wx:for="{{withdrawList}}" wx:for-item="list">
+         <view class="historyList-hd">
+             <text>操作日期：{{list.update_time}}</text><text class="font-color-999">{{list.update_status}}</text>
+         </view>
+         <view class="historyList-bd">
+             <text>提现金额：<text class="font-color-c24e4e">¥{{list.withdrawal_amount}}</text></text>
+         </view>
+     </view>
+</view>

@@ -1,0 +1,57 @@
+<!--pages/customer/customerDetail.wxml-->
+<view class="container">
+    <view class="customerInfo">
+        <view class="hd-title">
+                基本信息
+        </view>
+        <view class="view-list line-before-bottom ">
+            <view class="list__hd">
+                    <view class="weui-label font-color-666">客户名称</view>
+            </view>
+            <view class="list__bd">
+               <input class="choose" bindinput="bindKeyInput" value="{{customerInfo.customerName}}"/>
+            </view>
+        </view>
+          <view class="view-list line-before-bottom arrow-right ">
+            <view class="list__hd">
+                    <view class="weui-label font-color-666">客户性别</view>
+            </view>
+            <view class="list__bd ">
+                <picker bindchange="bindSexChange" class="picker" value="{{sexIndex}}" range="{{sexs}}">
+                    <input class="choose" disabled="true" placeholder="请选择" placeholder-class="font-color-ccc" value="{{customerInfo.sex || sexs[sexIndex]}}"/>
+                </picker>
+            </view>
+        </view>
+        <view class="view-list arrow-right" >
+            <view class="list__hd">
+                    <view class="weui-label font-color-666">客户年龄</view>
+            </view>
+            <view class="list__bd">
+                <picker bindchange="bindAgeChange" class="picker"  value="{{ageIndex}}" range="{{ages}}">
+                       <input class="choose" disabled="true"  placeholder="请选择" placeholder-class="font-color-ccc" value="{{customerInfo.age || ages[ageIndex]}}"/>
+                </picker>
+            </view>
+        </view>
+     </view>
+     <view class="customerInfo">
+          <view class="hd-title">
+            收货地址
+          </view> 
+          <navigator url="shippingAddress?type=edit&addressid={{list.addressId}}" class="view-group line-before-bottom" wx:for="{{customerInfo.address}}" wx:for-item="list">
+              <view class="group-hd"><image class="imgsize" src="/assets/images/address.png"></image> <text class="font-color-c24e4e">{{list.addressName}}</text></view>
+              <view class="group-bd">
+                  <view class="group-bd-hd">地址:<text class="font-color-999">{{list.address}}</text></view>
+                  <view class="consignee-info">
+                      <view>收货人：<text class="font-color-999">{{list.consignee}}</text></view>
+                      <view>电话：<text class="font-color-999">{{list.phone}}</text></view>
+                  </view>
+              </view>
+              <view class="group-icon">
+                  <image src="/assets/images/buy_go@2x.png"></image>
+              </view>
+          </navigator>
+      </view>
+      <view class="butbox" style="margin:30rpx auto; ">
+             <navigator url="shippingAddress?type=add" class="but bg-color-c24e4e font-color-white">添加收货地址</navigator>
+      </view>
+</view>        

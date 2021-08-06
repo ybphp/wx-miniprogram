@@ -1,0 +1,14 @@
+/* pages/mine/enterInput.wxss */
+.hd-title{
+    display:flex;
+    align-items: center;
+    height: 90rpx;
+    padding:0 30rpx;
+}
+.inputbox{
+    display: flex;
+    height: 110rpx;
+    align-items: center;
+    background-color: #ffffff;
+    padding:0 30rpx;
+}

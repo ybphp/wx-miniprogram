@@ -1,0 +1,128 @@
+/* pages/wineProcess/orderWineDetail.wxss */
+.swiper-box{
+  position: relative;
+  overflow: hidden;
+
+}
+.banner{
+   width: 100%;
+   overflow: hidden;
+}
+.banner image{
+  width: 100%;
+  height: 500rpx;
+}
+.shopCart{
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+  z-index: 99;
+
+}
+.shopCart image{
+  width:100rpx;
+  height: 100rpx;
+}
+.shopCart-num{
+    display: inline-block;
+    width: 36rpx;
+    height: 36rpx;
+    font-size: 22rpx;
+    color: white;
+    line-height: 36rpx;
+    border-radius: 36rpx;
+    text-align: center;
+    position: absolute;
+    right: 2rpx;
+    background-color: #c24e4e;
+}
+.commodityInfo{
+  line-height: 1;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.commodityInfo-des{
+  margin: 30rpx 0  40rpx;
+
+}
+.commodityInfo-bd view{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content:space-between;
+}
+.commodityInfo-bd view text{
+  display: inline-flex;
+  flex: 1;
+}
+
+.but-group{
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 30rpx 0 45rpx;
+}
+.but-group .total{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.but-group .but-box{
+  background-color: #c24e4e;
+  width: 260rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8rpx;
+}
+.choose-amount{
+  height: 160rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:0 30rpx;
+
+}
+.choose-amount .choose-amount-hd{
+  margin-right: 10rpx;
+  position: relative;
+}
+.choose-amount-hd .imgtext{
+  display: inline-block;
+  position: absolute;
+  bottom: 10rpx;
+  left: 0;
+  font-size:20rpx;
+  width: 100rpx;
+  text-align: center;
+  
+
+}
+.choose-amount .choose-amount-hd image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.choose-amount .choose-amount-bd,.choose-amount .choose-amount-ft{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.choose-amount .choose-amount-bd{
+  margin-right: 30rpx;
+}
+.choose-amount-ft{
+   flex: 1;
+}
+
+.choose-amount-ft .icon{
+  width: 100rpx;
+  height: 100rpx;
+}

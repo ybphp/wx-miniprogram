@@ -1,0 +1,10 @@
+<!--pages/mine/enterInput.wxml-->
+<view class="container">
+   <view class="hd-title font-color-999">{{pagetype=='name' ? '真实姓名' : '手机号'}}</view>
+   <view class="inputbox">
+     <input class="font-size-16" placeholder="请输入{{pagetype=='name' ? '真实姓名' : '手机号'}}" type="{{pagetype=='name' ? 'text' : 'number'}}" bindinput="inputValue" placeholder-class="font-color-ccc font-size-16 font-family-default" value="{{pagetype=='name' ? name : phone}}" auto-focus/>
+   </view>
+    <view class="butbox" style="margin:40rpx auto; ">
+             <view bindtap="backWind" class="but bg-color-c24e4e font-color-white">保存并返回</view>
+    </view>
+</view>

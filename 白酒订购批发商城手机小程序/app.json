@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/knowledgeList",
+    "pages/index/knowledgeDetail",
+    "pages/index/verification",
+    "pages/index/verificationDetail",
+    "pages/orderWine/orderWine",
+    "pages/wineProcess/orderWineDetail",
+    "pages/wineProcess/shopCart",
+    "pages/wineProcess/confirmOrder",
+    "pages/wineProcess/chooseCustomer",
+    "pages/wineProcess/chooseAddress",
+    "pages/wineProcess/placeOrder",
+    "pages/customer/customer",
+    "pages/customer/customerDetail",
+    "pages/customer/shippingAddress",
+    "pages/mine/mine",
+    "pages/mine/information",
+    "pages/mine/bankCard",
+    "pages/mine/authentication",
+    "pages/mine/submitVerification",
+    "pages/mine/enterInput",
+    "pages/myOrder/orderList",
+    "pages/myOrder/orderDetail",
+    "pages/myOrder/orderMessage",
+    "pages/salesCommission/commissionIndex",
+    "pages/salesCommission/incomeDetails",
+    "pages/salesCommission/withdraw",
+    "pages/salesCommission/withdrawResult",
+    "pages/salesCommission/withdrawHistory",
+    "pages/signedFactory/factoryList",
+    "pages/signedFactory/factoryDetail",
+    "pages/signedFactory/signedApply",
+    "pages/signedFactory/ApplyResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#c24e4e",
+    "color": "#999999",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/nav_1_off@2x.png",
+        "selectedIconPath": "assets/images/nav_1_on@2x.png"
+      },
+      {
+        "pagePath": "pages/orderWine/orderWine",
+        "text": "订酒",
+        "iconPath": "assets/images/nav_2_off@2x.png",
+        "selectedIconPath": "assets/images/nav_2_on@2x.png"
+      },
+      {
+        "pagePath": "pages/customer/customer",
+        "text": "客户",
+        "iconPath": "assets/images/nav_3_off@2x.png",
+        "selectedIconPath": "assets/images/nav_3_on@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/images/nav_4_off@2x.png",
+        "selectedIconPath": "assets/images/nav_4_on@2x.png"
+      }
+    ]
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

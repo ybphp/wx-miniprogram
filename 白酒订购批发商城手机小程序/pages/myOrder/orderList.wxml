@@ -1,0 +1,24 @@
+<!--pages/myOrder/orderList.wxml-->
+<view class="container">
+    <view class="list-group">
+        <navigator url="orderDetail?order_id={{list.order_id}}" class="orderList bg-color-white" hover-class="weui-cell_active" wx:for="{{orderList}}" wx:for-item="list">
+             <view class="orderList-hd line-before-bottom">
+               <text class="font-color-c24e4e">{{list.order_no}}</text>
+               <text class="font-color-999">{{list.create_time}}</text>
+             </view>
+              <view class="orderList-bd line-before-bottom">
+                  <view class="imgbox" wx:for="{{list.imgs}}" wx:for-item="img">
+                      <image src="{{img}}"></image>
+                  </view>
+              </view>
+              <view class="orderList-ft">
+                  <view class="orderList-ft-hd font-color-999">
+                    客户:<text class="font-color-hei ">{{list.customer_name}}</text>
+                  </view>
+                  <view class="orderList-ft-ft font-color-999" >
+                    状态:<text class="font-color-hei">{{list.order_status}}</text>
+                  </view>
+              </view>
+        </navigator>
+    </view>
+</view>

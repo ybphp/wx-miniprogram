@@ -1,0 +1,21 @@
+<!--pages/wineProcess/chooseAddress.wxml-->
+<view class="container">
+  <view class="customerInfo">
+          <view class="hd-title">
+            客户{{customer_name}}收货地址
+          </view> 
+          <view class="view-group line-before-bottom" wx:for="{{customerInfo.address}}" wx:for-item="list">
+              <view class="group-hd"><image class="imgsize" src="/assets/images/address.png"></image> <text class="font-color-c24e4e">{{list.addressName}}</text></view>
+              <view class="group-bd">
+                  <view class="group-bd-hd">地址:<text class="font-color-999">{{list.address}}</text></view>
+                  <view class="consignee-info">
+                      <view>收货人：<text class="font-color-999">{{list.consignee}}</text></view>
+                      <view>电话：<text class="font-color-999">{{list.phone}}</text></view>
+                  </view>
+              </view>
+              <view class="group-icon">
+                  <image src="/assets/images/buy_go@2x.png"></image>
+              </view>
+          </view>
+      </view>
+</view>

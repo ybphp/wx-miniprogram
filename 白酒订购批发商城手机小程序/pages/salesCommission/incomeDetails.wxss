@@ -1,0 +1,40 @@
+/* pages/salesCommission/incomeDetails.wxss */
+page{
+    color:#666666;
+}
+
+.weui-navbar__item{
+    padding: 30rpx 0;
+}
+.weui-navbar__item.weui-bar__item_on{
+    color: #c24e4e;
+}
+.weui-navbar__slider{
+    background-color: #c24e4e;
+}
+.weui-navbar{
+    background-color: #fff;
+}
+.incomeList-title{
+    height: 110rpx;
+    padding: 0 40rpx;
+    display: flex;
+    align-items: center;
+     color:#999999;
+}
+.incomeList{
+    padding: 30rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+     color:#333333;
+}
+.incomeList-hd,.incomeList-ft{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.incomeList-bd{
+    margin: 20rpx 0;
+}

@@ -1,0 +1,7 @@
+<!--pages/index/knowledgeList.wxml-->
+<view class="container">
+      <navigator wx:for="{{news}}" url="knowledgeDetail?id={{item.id}}" class="newlist" hover-class="weui-cell_active">
+            <view class="newslist-left"><image src="{{item.img}}"></image></view>
+            <view class="newslist-right font-size-333">{{item.title}}</view>
+      </navigator>
+</view>

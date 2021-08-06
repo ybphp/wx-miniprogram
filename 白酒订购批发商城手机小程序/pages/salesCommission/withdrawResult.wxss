@@ -1,0 +1,15 @@
+/* pages/salesCommission/withdrawResult.wxss */
+.imgsize{
+    width: 200rpx;
+    height: 200rpx;
+}
+.result{
+    margin-top: 120rpx;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+.margin-top-30{
+    margin-top: 30rpx;
+}

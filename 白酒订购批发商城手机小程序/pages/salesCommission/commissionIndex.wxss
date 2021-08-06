@@ -1,0 +1,23 @@
+/* pages/salesCommission/commissionIndex.wxss */
+@import '../mine/mine.wxss';
+page{
+    line-height: 1;
+   
+}
+.account{
+    display: flex;
+    background-color: #c2774e;
+    height: 230rpx;
+    flex-direction: row;
+    align-items: center;
+}
+.account-left,.account-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+.account-left{
+    border-right:1px solid #de997a; 
+}

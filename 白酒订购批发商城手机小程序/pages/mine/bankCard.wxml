@@ -1,0 +1,27 @@
+<!--pages/mine/bankCard.wxml-->
+<view class="container">
+   <view class="hd-title font-color-999">我的结算银行卡</view>
+   <view class="bd">
+        <view class="view-list line-before-bottom ">
+            <view class="list__bd">
+             <view class="weui-label font-color-666">卡号</view>
+               <input class="input-width font-size-36" type="idcard" bindinput="bindKeyInput" placeholder="请输入银行卡号" value="{{customerInfo.customerName}}" placeholder-class="font-color-ccc font-size-18" />
+            </view>
+        </view>
+       <view class="view-list">
+            <view class="list__bd">
+                <view class="weui-label font-color-666">开户行</view>
+               <input class="input-width font-size-36" bindinput="bindKeyInput" placeholder="开户行名称,如 工商银行" placeholder-class="font-color-ccc font-size-18" value="{{customerInfo.customerName}}"/>
+            </view>
+        </view>
+   </view>
+   <view class="description font-color-999">
+        <text>申请积分体现后款项将会打入该账户</text>
+        <text class="margin-top-20">请务必确保是您本人的银行卡,卡号真实有效</text>
+   </view>
+
+    <view class="butbox" style="margin:40rpx auto; ">
+             <view bindtap="backWind" class="but bg-color-c24e4e font-color-white">保存并返回</view>
+      </view>
+</view>
+

@@ -1,0 +1,22 @@
+/* pages/wineProcess/confirmOrder.wxss */
+@import '/pages/myOrder/orderDetail.wxss';
+.order-group .weui-cell__bd{
+    padding: 30rpx 0;
+
+}
+.pay-box{
+    width: 710rpx;
+    height: 100rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #339933;
+    border-radius: 8rpx;
+}
+
+.foot-box{
+    padding: 20rpx 0;
+    background-color: #eeeeee;
+    
+}

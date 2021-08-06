@@ -1,0 +1,52 @@
+
+<!--pages/wineProcess/shopCart.wxml-->
+<view class="container">
+  <view calss="goodsGroup" wx:for="{{foodsgroup}}" wx:for-item="group"  wx:for-index="idx"  >
+    <view class="goodsGroup_hd">
+      <image class="image-icon" src="/assets/images/buy_cert_choose_off@2x.png"></image>
+      <text class="">{{group.foctory_name}}</text>
+    </view>
+    <view class="goodsGroup_bd">
+      <!--<checkbox-group bindchange="checkboxChange" style="width:100%;  overflow: hidden;">
+        <label class="foodlist line-before-bottom" wx:for="{{group.foodlist}}" wx:key="{{index}}">
+          <checkbox class="weui-check" value="{{index}}" checked="{{item.checked}}" />
+          <view class="foodlist-hd">
+            <image class="image-icon" src="/assets/images/buy_cert_choose_off@2x.png" wx:if="{{!item.checked}}"></image>
+            <image class="image-icon" src="/assets/images/buy_cert_choose_on@2x.png" wx:if="{{item.checked}}"></image>
+          </view>
+          <view class="foodlist-bd">
+            <image class="food-image" src="/assets/testimages/timg.jpg"></image>
+            <view class="food-text">
+              <text>{{item.food_name}}</text>
+              <view class="text font-color-c24e4e"><view >¥<text class="font-size-20" style="margin-right:10rpx;">{{item.food_price}}</text><text class="font-color-999">{{item.food_norm}}</text></view><view class="font-color-c24e4e"><image class="image-icon1" src="/assets/images/Reduceinput@2x.png" style="margin-right:34rpx;"></image>{{item.food_num}}<image  class="image-icon1" src="/assets/images/Addinput@2x.png" style="margin-left:34rpx;"></image></view></view>
+                        </view>
+             </view>
+         </label>
+            </checkbox-group>-->
+            <checkbox-group bindchange="checkboxChange" style="width:100%;  overflow: hidden;"  data-id="{{idx}}">
+                <label class="foodlist weui-cell weui-check__label" wx:for="{{group.foodlist}}" wx:key="{{index}}">
+                    <checkbox class="weui-check" value="{{index}}" checked="{{item.checked}}"/>
+
+                    <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                         <image class="image-icon" src="/assets/images/buy_cert_choose_off@2x.png" wx:if="{{!item.checked}}"></image>
+                         <image class="image-icon" src="/assets/images/buy_cert_choose_on@2x.png" wx:if="{{item.checked}}"></image>
+                    </view>
+                    <view class="foodlist-bd">
+                       <image class="food-image" src="/assets/testimages/timg.jpg"></image>
+            <view class="food-text">
+              <text>{{item.food_name}}</text>
+              <view class="text font-color-c24e4e"><view >¥<text class="font-size-20" style="margin-right:10rpx;">{{item.food_price}}</text><text class="font-color-999">{{item.food_norm}}</text></view><view class="font-color-c24e4e"><image class="image-icon1" src="/assets/images/Reduceinput@2x.png" style="margin-right:34rpx;"></image>{{item.food_num}}<image  class="image-icon1" src="/assets/images/Addinput@2x.png" style="margin-left:34rpx;"></image></view></view>
+                        </view>
+                    </view>
+                </label>
+            </checkbox-group>
+      
+       </view>
+   </view>
+ 
+</view>
+<view class="fixed-ft but-group font-color-white">
+   <view class="total"><text class="font-size-12">合计金额</text><text>¥<text class="font-size-18">0</text></text></view>
+   <view class="but-box font-size-18" bindtap="addCart" style="margin-left:40rpx;" bindtap="goConOrder" >去结算</view>
+  
+</view>

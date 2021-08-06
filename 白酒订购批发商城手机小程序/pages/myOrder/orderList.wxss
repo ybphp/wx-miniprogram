@@ -1,0 +1,42 @@
+/* pages/myOrder/orderList.wxss */
+page{
+    line-height: 1
+}
+.orderList{
+    margin-top: 20rpx;
+    padding: 30rpx;
+    display: flex;
+    flex-direction:column;
+}
+.orderList-hd{
+    display: flex;
+    padding-bottom: 28rpx;
+    justify-content: space-between;
+}
+.orderList-bd{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+      padding: 30rpx 0rpx;
+      margin-bottom: 30rpx;
+}
+.imgbox{
+  box-sizing: border-box;
+  background-color: white;
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  margin: 0 15rpx;
+ 
+ 
+
+} 
+.imgbox image{
+    width: 100rpx;
+    height: 100rpx;
+}
+.orderList-ft{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,187 @@
+/*@import weui.wxss*/
+@import 'assets/styles/weui.wxss';
+
+/**app.wxss**/
+page{
+    background-color: #eeeeee;
+    font-size: 30rpx;
+    font-family:'MicrosoftYaHei';
+}
+/*font-size*/
+.font-size-24 {
+  font-size: 48rpx !important;
+}
+.font-size-20 {
+  font-size: 40rpx !important;
+}
+.font-size-18 {
+  font-size: 36rpx !important;
+}
+.font-size-16 {
+  font-size: 32rpx !important;
+}
+.font-size-15 {
+  font-size: 30rpx !important;
+}
+.font-size-14 {
+  font-size: 28rpx !important;
+}
+.font-size-13{
+  font-size: 26rpx !important;
+}
+.font-size-12{
+  font-size: 24rpx !important;
+}
+/*font-color*/
+.font-color-white{
+  color:#fff;
+}
+.font-color-hei{
+  color: #000000;
+}
+.font-color-d9d9d9{
+    color:#d9d9d9;
+}
+.font-color-d2d2d2{
+ color: #B2B2B2;
+}
+.font-color-fefefe{
+  color:#fefefe;
+}
+.font-color-c24e4e{
+  color:#c24e4e;
+}
+.font-color-999{
+  color: #999999;
+}
+.font-color-666{
+  color:#666666;
+}
+.font-color-333{
+  color: #333333;
+}
+.font-color-ccc{
+  color: #cccccc;
+}
+
+/**/
+.margin-top-20{
+  margin-top: 20rpx;
+}
+/*font-family*/
+font-family-default{
+   font-family:'MicrosoftYaHei';
+}
+/*bg-color*/
+.bg-color-c24e4e{
+  background-color:#c24e4e;
+}
+.bg-color-white{
+  background-color:#ffffff;
+}
+.bg-color-eee{
+  background-color: #eeeeee;
+}
+.bg-color-4d94c1{
+  background-color: #4d94c1;
+}
+/* line */
+.line1{
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee; 
+}
+.line-10{
+  background:transparent;
+  width: 100%;
+  height: 20rpx; 
+}
+
+.line-after-top,.line-before-bottom{
+  position: relative;
+}
+
+.line-after-top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #eeeeee;
+  width: 100%;
+}
+
+.line-before-bottom:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #eeeeee;
+  width: 100%;
+}
+/*arrow  箭头*/
+.arrow-right{
+   position: relative;
+}
+.arrow-right::before{
+  content: '';
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  margin-top: -8rpx;
+  background: transparent;
+  border: 4rpx solid #dddddd;
+  border-top: none;
+  border-right: none;
+  z-index: 2;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+
+
+/*单行超出省略   */
+.text-over-hidden1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*两行超出省略*/
+
+.text-over-hidden2 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+/*自定义but 按钮*/
+.butbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.butbox .but{
+  width: 670rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*fixed*/
+.fixed-ft{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}

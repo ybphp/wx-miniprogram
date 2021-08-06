@@ -1,0 +1,52 @@
+/* pages/salesCommission/withdraw.wxss */
+.view-list{
+    display: flex;
+    flex-direction: row;
+    height: 120rpx;
+    padding: 0 30rpx;
+    align-items: center;
+    background-color: #fff;
+    color: #333333;
+}
+.view-list  .list-text{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-right: 36rpx;
+    align-items: center;
+    
+}
+.withdraw{
+    background-color: #ffffff;
+    padding: 40rpx;
+
+}
+.withdraw-bd{
+    display:flex;
+    margin: 40rpx 0 30rpx; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+.withdraw-bd .input-box{
+    border:2rpx solid #999999;
+    display: flex;
+    align-items: center;
+    padding:0 30rpx;
+    width: 450rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+.withdraw-bd{
+    display: flex;
+    flex: 1;
+}
+.withdraw-bd .but{
+    width:200rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#fefefe;
+
+    
+}

@@ -1,0 +1,12 @@
+<!--pages/salesCommission/withdrawResult.wxml-->
+<view class="container">
+   <view class="result">
+      <image class="imgsize" src="/assets/images/buy_sucess@2x.png"></image>
+      <view class="font-color-c24e4e margin-top-30">申请成功</view>
+      <view class="font-color-999 margin-top-30">提现金额:¥{{withdrawalAmount}}</view>
+      <view class="margin-top-30 font-color-333">收款银行卡：工商银行(2245)</view>
+   </view>   
+   <view class="butbox" style="margin-top:40rpx;">
+         <view bindtap="backMine" class="but bg-color-c24e4e font-color-white" >返回我的主页</view>  
+    </view> 
+</view>

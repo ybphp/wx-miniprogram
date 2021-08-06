@@ -1,0 +1,9 @@
+/* pages/mine/submitVerification.wxss */
+@import '../mine/authentication.wxss';
+.idCard-box{
+    height: 300rpx;
+    
+}
+.cardBox-text{
+    margin-top: 40rpx;
+}

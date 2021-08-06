@@ -1,0 +1,13 @@
+<!--pages/signedFactory/signedApply.wxml-->
+<view class="container">
+   <view class="title"><text>签约厂家:</text><text style="margin:20rpx 0 30rpx;">仁怀市茅台镇永泰酒业有限公司</text><text class="font-color-c24e4e font-size-12">为确保您的权益,请仔细阅读以下文档:</text></view>
+  <navigator url="ApplyResult" class="view-list arrow-right"  hover-class="weui-cell_active">
+      <view class="list-text">厂家奖励政策(细则)</view>
+ </navigator>
+ <navigator url="ApplyResult" class="view-list arrow-right margin-top-20"  hover-class="weui-cell_active">
+      <view class="list-text">酱酒宝系统服务条款</view>
+ </navigator>
+  <view class="butbox" style="margin-top:40rpx;">
+         <navigator url="ApplyResult" class="but bg-color-c24e4e font-color-white" >我已阅读以上条款、签约</navigator>  
+    </view> 
+</view>

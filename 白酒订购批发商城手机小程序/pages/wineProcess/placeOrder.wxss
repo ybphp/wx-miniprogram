@@ -1,0 +1,40 @@
+/* pages/wineProcess/placeOrder.wxss */
+@import '/pages/wineProcess/confirmOrder.wxss';
+.placeOrder_info{
+    display: flex;
+    flex-direction: column;
+    height: 490rpx;
+    align-items: center;
+    line-height: 1;
+  
+}
+.placeOrder_info .imgsize{
+    margin-top:70rpx;
+    width: 200rpx;
+    height: 200rpx;
+}
+.addressGroup{
+    background-color: #fff;
+    padding: 0rpx 30rpx;
+    line-height: 1;
+    height:230rpx;
+}
+.address-hd{
+   margin-top: 30rpx; 
+}
+.address-bd{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30rpx;
+    line-height: 1.5;  
+    font-size: 24rpx;
+}
+.address-bd-hd{
+    width: 100rpx;
+    
+    
+}
+.address-ft{
+    margin-top: 20rpx;
+    font-size: 24rpx;
+}

@@ -1,0 +1,44 @@
+/* pages/index/verification.wxss */
+.verification-none{
+    padding-top: 200rpx;
+    text-align: center;
+}
+.verification-none image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.magrin-top-50{
+    margin-top: 50rpx;
+}
+.magrin-top-44{
+    margin-top: 44rpx;
+}
+.list{
+    padding: 40rpx;
+    background-color:#fff;
+    margin-top: 20rpx; 
+}
+.input-box{
+   margin: 40rpx 0 ;
+   display: flex;
+   justify-content: space-between;
+}
+
+.list .box_bd{
+    height: 100rpx;
+    display:flex;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    width: 450rpx;
+    align-items: center;
+    justify-content: center;
+   
+}
+.list .box_ft{
+    width: 200rpx;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

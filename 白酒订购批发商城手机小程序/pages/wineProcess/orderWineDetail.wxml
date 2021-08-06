@@ -1,0 +1,48 @@
+<!--pages/wineProcess/orderWineDetail.wxml-->
+<view class="container">
+  <view class="swiper-box">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" style="height:500rpx;">
+        <block wx:for="{{background}}">
+          <swiper-item>
+            <view class="banner" >
+               <image src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="shopCart" bindtap="goShopCart">
+         <image src="/assets/images/orderBox.png"></image>
+          <view class="shopCart-num font-color-c24e4e">0</view>
+      </view>
+     
+   </view>   
+      <view class="commodityInfo">
+         <view class="commodityInfo-hd">
+             {{goodsList.name}}
+         </view>
+          <view class="commodityInfo-des font-color-c24e4e">
+          {{goodsList.int}}</view>
+           <view class="commodityInfo-bd font-size-12 font-color-999">
+               <view style="margin-bottom:26rpx;"><text>香型：{{goodsList.purity}}</text><text>酒精度：{{goodsList.purity}}</text><text>产地：{{goodsList.address}}</text></view>
+               <view><text>净含量：{{goodsList.weight}}</text><text>包装规格：{{goodsList.norm}}</text><text></text></view>
+           </view>
+      </view>
+      <view class="choose-amount margin-top-20">
+         <view  class="choose-amount-hd"> 
+            <image src="/assets/images/Wholeorder@2x.png"></image>
+            <text class="font-color-999 imgtext">整件订购</text>
+         </view>
+         <view class="font-color-c24e4e choose-amount-bd" >¥<text style="font-size:50rpx; margin-left:5rpx;" >{{goodsList.price}}</text><text class="font-color-999" style="margin-left:5rpx;">{{goodsList.norm}}</text></view>
+         <view class="choose-amount-ft">
+            <image class="add icon" src="/assets/images/Defaultreduction@2x.png"></image>
+            <text class="amount font-color-c24e4e" style="font-size:50rpx;">{{goodsList.amount}}</text>
+            <image class="sub icon" src="/assets/images/Adddefault@2x.png"></image>
+         </view>
+      </view>
+</view>
+<view class="fixed-ft but-group font-color-white">
+   <view class="total"><text class="font-size-12">合计金额</text><text>¥<text class="font-size-18">0</text></text></view>
+   <view class="but-box font-size-18" bindtap="addCart" style="margin-left:40rpx;" >加入购物车</view>
+   <view class="but-box font-size-18" bindtap="playOrder" style="margin-left:20rpx;">直接下单</view>
+</view>

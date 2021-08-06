@@ -1,0 +1,35 @@
+.hd-title{
+    display:flex;
+    align-items: center;
+    height: 90rpx;
+    padding:0 30rpx;
+}
+.view-list{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.list__hd{
+    display: flex;
+    padding-left:30rpx;
+    height: 110rpx;
+    align-items: center;
+}
+.list__bd{
+    display: flex;
+    padding-left:30rpx;
+    height: 110rpx;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+          flex: 1;
+}
+
+.view-list .choose{
+   flex: 1;
+   height: 110rpx;
+   position: relative;
+   display: flex;
+   align-items: center;
+   padding-right:56rpx;
+}

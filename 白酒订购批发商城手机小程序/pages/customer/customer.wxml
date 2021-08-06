@@ -1,0 +1,72 @@
+<!--pages/customer/customer.wxml-->
+
+<view class="flex box">
+  <scroll-view class="flex groups box box-tb"  style="height:{{windowHeight}}px;" scroll-y="true" scroll-into-view="{{scrollIntoView}}">
+   <view class="search-box">
+      <view class="addcustomer" bindtap="addcustomer">新增客户</view>
+      <view class="searchcustomer" bindtap="showSearch"> <icon type="search" size="15" class="searchicon"/> <text class="font-color-d2d2d2">搜索</text></view>
+    </view>
+   <navigator url="customerDetail?type=edit&id={{myuser.id}}" class="user box box-lr bg-color-white" hover-class="navigator-hover">
+            <view class="user-avatar box box-lr box-pack-center box-align-center">
+              <view class="myuser-avatar-img font-color-white" >{{myuser.firstname}}</view>
+            </view>
+            <view class="flex user-name">{{myuser.name}}<text class="font-size-999" style="margin-left:1em">{{myuser.nickname}}     </text></view>
+   </navigator>
+    <block wx:for="{{groups}}" wx:for-item="group" wx:key="groupName">
+      <view class="flex" id="{{group.groupName}}">
+        <view class="group-name">{{group.groupName}}</view>
+        <view class="flex group-users">
+          <navigator url="customerDetail?type=edit&id={{user.id}}" wx:for="{{group.users}}" wx:for-item="user" class="user box box-lr" hover-class="navigator-hover">
+            <view class="user-avatar box box-lr box-pack-center box-align-center">
+              <view class="user-avatar-img font-color-white" >{{user.firstname}}</view>
+            </view>
+            <view class="flex user-name">{{user.name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="nav box box-tb" bindtouchmove="touchmove" bindtouchcancel="touchcancel" bindtouchend="touchend">
+    <view bindtap="tabLetter" data-index="{{item}}" wx:for="{{letters}}" class="flex box box-align-center box-pack-center letter" wx:key="item">
+      <text class="letter-text {{selected == item ? 'letter-actived' : ''}}">{{item}}</text>
+    </view>
+  </view>
+  
+</view>
+
+<view class="mask" wx:if="{{searchstatus}}"></view>
+<view class="search-page" wx:if="{{searchstatus}}">
+ <scroll-view class="flex groups box box-tb" style="height:{{windowHeight}}px;" scroll-y="true">
+    <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputValGroup.length > 0}}">
+           <navigator wx:for="{{inputValGroup}}" wx:for-item="user" url="customerDetail?type=edit&id={{user.id}}"  wx:for-index="idx" class="user box box-lr" hover-class="navigator-hover">
+            <view class="user-avatar box box-lr box-pack-center box-align-center">
+              <view class="user-avatar-img font-color-white" >{{user.firstname}}</view>
+            </view>
+            <view class="flex user-name">{{user.name}}</view>
+          </navigator>
+        </view>
+        
+    </view>
+     </scroll-view>
+</view>
+
+
+
+

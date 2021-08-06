@@ -1,0 +1,50 @@
+/* pages/customer/customerDetail.wxss */
+@import '/assets/styles/view-input.wxss';
+
+.view-group{
+    background-color: #fff;
+    padding: 30rpx;
+    position: relative;
+}
+.group-hd{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 40rpx;
+}
+.group-bd{
+    padding-right:30rpx;
+}
+.group-hd .imgsize{
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 30rpx;
+}
+.group-icon{
+    width:40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 50%;
+    margin-top: -25rpx;
+    right: 10rpx;  
+}
+.group-icon image{
+    width:30rpx;
+    height: 50rpx;
+}
+.consignee-info{
+    display: flex;
+    flex-direction: row;
+}
+.group-bd-hd{
+    margin-bottom: 30rpx;
+}
+.consignee-info{
+    display: flex;
+    flex-direction: row;
+    
+}
+.consignee-info view{
+    flex: 1;
+}
+

@@ -1,0 +1,93 @@
+/* pages/myOrder/orderDetail.wxss */
+.order-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100rpx;
+    background-color:#fff;
+    padding: 0 30rpx;
+    margin: 20rpx 0;
+}
+.order-group,.address-group{
+    padding:0 30rpx;
+    background-color:#fff;
+}
+.group-hd{
+    display: flex;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.group-bd{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.group-ft{
+    display: flex;
+    padding: 0rpx 0rpx 20rpx;
+    justify-content:flex-end;
+}
+.food-list {
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx 0 ;
+    width: 100%;
+}
+.food-list .imgsize{
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+}
+.food-list .food-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    
+    
+}
+.food-text view{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+/*order-status*/
+.order-status{
+    line-height: 1;
+    padding: 17rpx 30rpx 13rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+.order-status .group-hd{
+    margin-bottom: 10rpx;
+}
+.order-status .content{
+    margin-bottom: 27rpx;
+}
+
+/*address-group*/
+.address-group{
+    margin-top: 20rpx;
+}
+.address-group-hd{
+   height: 120rpx;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.address-group-bd{
+    padding: 30rpx 0;
+    flex-direction:column;
+      display: flex;
+}
+.order-group{
+     margin: 20rpx 0;
+}
+
+.beizhu{
+    padding: 30rpx 0;
+}
