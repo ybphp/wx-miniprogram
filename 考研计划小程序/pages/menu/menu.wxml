@@ -1,0 +1,34 @@
+<!-- 顶部信息框 -->
+<view id='infomation'>
+  <!-- 头像 -->
+  <view id='picture_out'>
+    <image id='picture' src='{{avatarUrl}}' />
+  </view>
+
+  <view id='tips'>
+    <view id='nickName'>
+      {{nickName}}
+    </view>
+    <view id='motto'>
+      <text decode='{{true}}'>{{motto}}</text>
+    </view>
+  </view>
+</view>
+
+<view id='menu'>
+  <view class='wave' />
+  <view class='item' bindtap='clickPlan'>考研计划</view>
+  <view class='wave' />
+  <view class='item' bindtap='clickDiary'>考研日记</view>
+  <view class='wave' />
+  <view class='item' bindtap='clickExam'>考研安排</view>
+  <view class='wave' />
+  <view class='item' bindtap='clickSetting'>设置</view>
+  <view class='wave' />
+</view>
+
+<view id="bottom">
+  <text bindtap='clickFeedback'>错误反馈</text>
+  <text decode='{{true}}'> &nbsp; |  &nbsp; </text>
+  <text bindtap='clickContact'>联系我们</text>
+</view>

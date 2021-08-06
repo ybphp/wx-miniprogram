@@ -1,0 +1,12 @@
+<view>
+  <view class='image-container'>
+    <image class='head-image' src='/images/menu/head.png'></image>
+  </view>
+  
+  <view class='text-container'>
+    <text>email：888888@qq.com</text>
+    <text>GitHub：github.com/nihaocaicai</text>
+    <text>QQ：888888</text>
+    <text>微信：888888</text>
+  </view>
+</view>

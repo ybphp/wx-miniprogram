@@ -1,0 +1,32 @@
+<view>
+  <block wx:key="item" wx:for="{{data}}">
+  <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+    <view class='data-container'>
+      <!-- 内容 -->
+      <view class='content-container'>
+        <text class='content-title'>日记标题</text>
+        <text class='content-text'>日记内容</text>
+      </view>
+
+      <!-- 日期 -->
+      <view class='date-container'>
+        <text class='date-text'>2019-04-13-8:00 地点</text>
+      </view>
+    </view>
+    
+    <view class="edit">
+      <image class='modify-image' src='/images/index/diary.png' bindtap="modItem"></image>
+      <image class='del-image' src='/images/index/modify/del.png' bindtap="delItem"></image>
+    </view>
+  </view>
+  </block>
+
+  <diary id='diary'
+      bind:error="_error"  
+      bind:success="_success">
+  </diary>
+  <modifydiary id='modifydiary'
+      bind:error="_errorModifyDiary"  
+      bind:success="_successModifyDiary">
+  </modifydiary>
+</view>

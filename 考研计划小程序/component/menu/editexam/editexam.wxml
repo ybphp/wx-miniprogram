@@ -1,0 +1,22 @@
+<view hidden="{{flag}}">
+  <view class='editexam-container'>
+    <!-- 标题 -->
+    <view class="wx-editexam-title">考研安排</view>
+    <form bindsubmit="formSubmit">
+    <!-- 内容 -->
+    <view class="wx-editexam-con">
+        <view>时间</view>
+        <textarea class="wx-examtxt" maxlength="-1" placeholder='请输入时间'></textarea>
+        <view>内容</view>
+        <textarea class="wx-examtxt" maxlength="10" placeholder='请输入科目'></textarea>
+        <view>地点</view>
+        <textarea class="wx-examtxt" maxlength="10" placeholder='请输入地点'></textarea>
+    </view>
+    <!-- 按钮 -->
+    <view class="wx-editexam-btn">
+      <button bindtap='_error'>取消</button>
+      <button bindtap='_success' form-type="submit">保存</button>
+    </view>
+  </form>
+  </view>
+</view>

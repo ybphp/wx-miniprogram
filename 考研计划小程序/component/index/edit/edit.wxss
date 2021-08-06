@@ -1,0 +1,52 @@
+.plan-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  width: 80%;
+  max-width: 600rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  box-sizing: bordre-box;
+  transform: translate(-50%, -50%); 
+  overflow: hidden;
+  background: #fff;
+}
+.wx-plan-title {
+  width: 100%;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid black;
+}
+.wx-plan-con {
+  margin: 25rpx 10rpx;
+  padding: 10rpx;
+}
+.plan-content-container{
+  
+}
+.plan-content{
+  border-width: 1rpx;  
+  border-color: black;  
+  border-style: solid;
+}
+
+
+
+
+
+.wx-plan-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25rpx;
+}
+.wx-plan-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 88rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 88rpx;
+}

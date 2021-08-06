@@ -1,0 +1,20 @@
+<view hidden="{{flag}}">
+  <view class='diary-container'>
+    <!-- 标题 -->
+    <view class="wx-diary-title">考研小日志</view>
+    <form bindsubmit="formSubmit">
+    <!-- 内容 -->
+    <view class="wx-diary-headline">
+      <input name="input" maxlength="10" placeholder="标题" />
+    </view>
+    <view class="wx-diary-con">
+      <textarea name="textarea" placeholder="内容" />
+    </view>
+    <!-- 按钮 -->
+    <view class="wx-diary-btn">
+      <button bindtap='_error'>取消</button>
+      <button bindtap='_success' form-type="submit">确认</button>
+    </view>
+  </form>
+  </view>
+</view>

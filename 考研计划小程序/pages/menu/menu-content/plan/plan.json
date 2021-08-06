@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "历史计划",
+  "usingComponents": {
+    "edit": "/component/index/edit/edit",
+    "i-collapse": "/component/menu/plan/collapse/index",
+    "i-collapse-item": "/component/menu/plan/collapse-item/index"
+  }
+}

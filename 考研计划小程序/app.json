@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/modify/modify",
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/menu/menu-content/diary/diary",
+    "pages/menu/menu-content/exam/exam",
+    "pages/menu/menu-content/plan/plan",
+    "pages/menu/menu-content/setting/setting",
+    "pages/menu/menu-other/contact/contact",
+    "pages/menu/menu-other/feedback/feedback"
+  ],
+  "window": {
+    "navigationBarTitleText": "考研小神器",
+    "navigationBarBackgroundColor": "#04838e",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a5a5a5",
+    "selectedColor": "#04838e",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab/home.png",
+        "selectedIconPath": "images/tab/home-1.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "images/tab/menu.png",
+        "selectedIconPath": "images/tab/menu-1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

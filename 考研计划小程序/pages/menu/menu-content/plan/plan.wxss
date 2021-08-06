@@ -1,0 +1,48 @@
+/* pages/menu/menu-content/plan/plan.wxss */
+
+page {
+  height: 100%;
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+}
+
+.date {
+  margin-left: 20rpx;
+  color: #999;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+
+.detail {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.detail .time {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+.detail .content {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#tips {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

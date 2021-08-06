@@ -1,0 +1,46 @@
+<view class='container'>
+  <!-- 倒计时部分star -->
+  <view class='top-container'>
+    <view class='count-down-container'>
+      <image class='count-down-image' src="/images/index/count-down.png"></image>
+      <text class='count-doen-text'>{{countdown}}</text>
+    </view>
+    <view class='target-container'>
+      <text>我的目标：{{goal}}</text>
+      <text>{{motto}}</text>
+    </view>
+  </view>
+  <!-- 倒计时部分end -->
+
+  <!-- 每日计划star -->
+  <view class='bottom-container'>
+    <view class='edit-container'>
+      <image class='diary-image' src='/images/index/diary.png' bindtap="showDiary"></image>
+      <text class='edit-text'>{{date}}</text>
+      <image class='modify-image' src='/images/index/modify.png' bindtap="goToModify"></image>
+    </view>
+
+    <scroll-view scroll-y class='scroll-view'>
+      <!-- 今天没有计划 -->
+      <view wx:if='{{plan.length==0}}'>
+        <view style='margin:20px; text-align:center'>今天没有计划</view>
+      </view>
+      <!-- 今天有计划 -->
+      <view wx:else>
+        <view wx:for='{{plan}}' wx:key='none'>
+          <view class='plan-container'>
+            <text class='plan-text'>{{item.content}}</text>
+            <image wx:if='{{item.flag_star}}' class='plan-image' bindtap='clickStar' data-index="{{index}}" src='/images/index/star.png' />
+            <image wx:else class='plan-image' bindtap='clickStar' data-index="{{index}}" src='/images/index/none-star.png' />
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+    <view class='show-container'>
+      <image src='/images/index/show.png' bindtap='showAllDiary' />
+    </view>
+  </view>
+  <!-- 日记添加组件 -->
+  <diary id='diary' bind:error="_error" bind:success="_success" />
+</view>

@@ -1,0 +1,64 @@
+<view hidden="{{flag}}">
+  <view class='plan-container'>
+    <!-- 标题 -->
+    <view class="wx-plan-title">每日计划添加</view>
+    <form bindsubmit="formSubmit">
+      <!-- 内容 -->
+      <view class="wx-plan-con">
+        <!-- 计划内容 -->
+        <view class="plan-content-container">
+          <text>计划内容：</text>
+          <input class='plan-content' placeholder="计划内容" />
+        </view>
+        <!-- 是否每日重复 -->
+        <view class="plan-switch-container">
+          <text>每日重复：</text>
+          <switch class='plan-switch' bindchange="switchChange" />
+        </view>
+        <!-- 开始时间 -->
+        <!-- 开始日期选择 -->
+        <view class="section">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              开始日期: {{date}}
+            </view>
+          </picker>
+        </view>
+        <!-- 开始当天时间选择 -->
+        <view class="section">
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker">
+              开始时间: {{time}}
+            </view>
+          </picker>
+        </view>
+        <!-- 结束时间 -->
+        <view class="section">
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <view class="picker">
+              结束日期: {{date}}
+            </view>
+          </picker>
+        </view>
+        <!-- 结束当天时间选择 -->
+        <view class="section">
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker">
+              结束时间: {{time}}
+            </view>
+          </picker>
+        </view>
+        <!-- 是否开启微信提示 -->
+        <view class="plan-switch-container">
+          <text>微信提示：</text>
+          <switch class='plan-switch' bindchange="switchChange" />
+        </view>
+      </view>
+      <!-- 按钮 -->
+      <view class="wx-plan-btn">
+        <button bindtap='_error'>取消</button>
+        <button bindtap='_success' form-type="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>

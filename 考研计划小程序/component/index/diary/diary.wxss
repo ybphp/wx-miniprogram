@@ -1,0 +1,57 @@
+.diary-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+ 
+  width: 80%;
+  max-width: 600rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  box-sizing: bordre-box;
+  transform: translate(-50%, -50%); 
+  overflow: hidden;
+  background: #fff;
+}
+.wx-diary-title {
+  width: 100%;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid black;
+}
+.wx-diary-headline{
+  padding: 10rpx;
+  border-width: 1rpx;  
+  border-color: black;  
+  border-style: solid;
+  margin: 20rpx;
+}
+.wx-diary-headline input{
+  width: 100%;
+}
+.wx-diary-con {
+  margin: 20rpx;
+  padding: 10rpx;
+  border-width: 1rpx;  
+  border-color: black;  
+  border-style: solid;
+}
+
+.wx-diary-con textarea{
+  width: 100%;
+}
+
+.wx-diary-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25rpx;
+}
+.wx-diary-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 88rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 88rpx;
+}

@@ -1,0 +1,22 @@
+<!-- 如果没有授权，则显示授权页面 -->
+<view id='container'>
+  <view>
+    <view id='title'>
+      考研小神器
+    </view>
+
+    <view id='logo_view'>
+      <image id='logo' src='/images/logo.png' />
+    </view>
+
+    <view wx:if='{{needAuthorize}}' id='button_view'>
+      <button id='button' open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+    </view>
+
+    <!-- 旧版本微信提示加载中 / 网络可能有阻塞，需要提示正在加载中 -->
+    <view wx:elif='{{loading}}' style='text-align:center'>
+      <text decode='true'>加载中\n</text>
+      <image style='margin-top:5px; width:32px; height:32px' src='/images/login/loading.gif' />
+    </view>
+  </view>
+</view>

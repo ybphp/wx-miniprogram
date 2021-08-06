@@ -1,0 +1,27 @@
+<!--pages/menu/menu-content/exam/exam.wxml-->
+<view>
+  <block wx:key="item" wx:for="{{data}}">
+  <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+    <view class='data-container'>
+      <!-- 时间-->
+      <view class='date-container'>
+        <text class='date-text'>2020-12-22 8:30--11:30</text>
+      </view>
+      <!-- 科目及地点 -->
+      <view class='content-container'>
+        <text class='content-text' decode="{{true}}">英语 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xx学校一教110</text>
+      </view>
+    </view>
+    
+    <view class="edit">
+      <image class='modify-image' src='/images/index/diary.png' bindtap="modItem"></image>
+      <image class='del-image' src='/images/index/modify/del.png' bindtap="delItem"></image>
+    </view>
+  </view>
+  </block>
+
+  <edit id='edit'
+      bind:error="_error"  
+      bind:success="_success">
+  </edit>
+</view>

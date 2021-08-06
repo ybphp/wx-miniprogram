@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "设置",
+  "usingComponents": {
+    "edit": "/component/menu/setting/edit/edit"
+  }
+}

@@ -1,0 +1,30 @@
+<!--pages/menu/menu-content/plan/plan.wxml-->
+<scroll-view scroll-y="true" style="width: 100%; height: 100%;">
+  <view wx:for="{{totalPlan}}" wx:key='{{index}}' wx:for-item="month">
+    <view style="display:flex; width: 100%;">
+      <!-- 不同月份颜色不同，颜色数目不定 -->
+      <view style="width:5%; background:{{color[index%color.length]}}" />
+      <view style="width:95%;">
+        <!-- 月份标题 -->
+        <view class='date'>{{month.date}}</view>
+        <!-- 当前月份下的日期 -->
+        <i-collapse>
+          <i-collapse-item wx:for="{{month['data']}}" wx:for-item="plans" wx:key='{{index}}' title="{{month.date + plans.day}}" name="{{month.date + plans.day}}">
+            <!-- 当前日期下的所有计划 -->
+            <view slot="content">
+              <view wx:for="{{plans.plan}}" wx:for-item="detail" wx:key='{{index}}'>
+                <view class='detail'>
+                  <view class='time'>{{detail.time}}</view>
+                  <view class='content'>{{detail.content}}</view>
+                </view>
+              </view>
+            </view>
+          </i-collapse-item>
+        </i-collapse>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if='{{hasMorePlan}}' id="tips" bindtap='loadMore'>点击加载更多</view>
+  <view wx:else id="tips">没有更多了</view>
+</scroll-view>
