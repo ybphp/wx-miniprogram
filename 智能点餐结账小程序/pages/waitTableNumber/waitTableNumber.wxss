@@ -1,0 +1,281 @@
+/* pages/waitTableNumber/waitTableNumber.wxss */
+
+.wait-table-number-container .head {
+  background: #ea5b5b;
+  height: 80px;
+  display: flex;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.wait-table-number-container .head .left {
+  width: 50%;
+  line-height: 80px;
+  font-size: 40px;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 20px;
+  position: relative;
+}
+
+.wait-table-number-container .head .left::after {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  height: 54px;
+  width: 1px;
+  background: #fff;
+  content: '';
+}
+
+.wait-table-number-container .head .right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 16px 0 0 20px;
+}
+
+.wait-table-number-container .head .right view {
+  color: #fff;
+  font-size: 14px;
+}
+
+.wait-table-number-container .head .right .number {
+  margin-bottom: 8px;
+}
+
+.wait-table-number-container .head .right view text {
+  margin-right: 20px;
+}
+
+.wait-table-number-container .top {
+  padding: 16px 0;
+  background: #fff;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.wait-table-number-container .top .text {
+  font-size: 16px;
+  color: #ea5b5b;
+  text-align: center;
+}
+
+.wait-table-number-container .top .text text {
+  display: block;
+  margin-top: 6px;
+  color: #969aa1;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  bottom: 70px;
+  width: 100%;
+  height: calc(100% - 230px);
+  overflow: auto;
+  background: #f7f7f9;
+}
+
+.footer {
+  padding-top: 14px;
+  display: flex;
+  height: 70px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer .left {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.footer .left view {
+  color: #1d1d27;
+  font-size: 14px;
+}
+
+.footer .left .number text {
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.footer .left .total-price text {
+  font-size: 23px;
+  color: #ea5b5b;
+}
+
+.footer .right {
+  width: 50%;
+  text-align: center;
+}
+
+.footer  .right .sure-btn {
+  width: 180px;
+  height: 45px;
+  background: #ea5b5b;
+  margin: 0 auto;
+  border-radius: 26px;
+  line-height: 45px;
+  color: #fff;
+  font-weight: 300;
+  box-shadow: 0 7px 8px 0 rgba(234, 91, 91, 0.11);
+}
+
+.wait-table-number-container .content .product-list{
+  padding-bottom: 20px;
+}
+
+.wait-table-number-container .content .time-sort-title {
+  box-sizing: border-box;
+  padding: 6px 12px 4px;
+  background: #f7f7f9;
+}
+
+.wait-table-number-container .content .time-sort-title .title image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.wait-table-number-container .content .time-sort-title .title .time {
+  float: right;
+  font-size: 13px;
+  color: #000;
+  margin-top: 2px;
+}
+
+.wait-table-number-container .content .time-sort-title .title .name {
+  font-size: 13px;
+  color: #000;
+  position: relative;
+  top: -4px;
+  margin-left: 4px;
+}
+
+.wait-table-number-container .content .time-sort-title .title .name .waiter {
+  font-size: 11px;
+  color: #ea5b5b;
+  margin-left: 6px;
+}
+
+.wait-table-number-container .content .time-sort-title .title .name .customer {
+  font-size: 11px;
+  color: #4a90e2;
+  margin-left: 6px;
+}
+
+
+.wait-table-number-container .content  .product-box {
+  padding: 10px 12px;
+  background: #fff;
+  display: flex;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.wait-table-number-container .content  .product-box:last-of-type {
+  box-shadow: none;
+}
+
+.wait-table-number-container .content  .product-box .left {
+  color: #1d1d20;
+  font-size: 14px;
+  width: 80%;
+  position: relative;
+}
+
+.wait-table-number-container .content  .product-box .left .price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 56%;
+  color: #1d1d20;
+  font-size: 14px;
+}
+
+.wait-table-number-container .content  .product-box .left .price .number {
+  font-size: 14px;
+  color: #ea5b5b;
+  margin-right: 18px;
+}
+
+.wait-table-number-container .content  .product-box .left view {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 60px);
+  color:#1D1D20;
+}
+
+.wait-table-number-container .content  .product-box.completed .left::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #979797;
+  left: 0;
+}
+
+.wait-table-number-container .content  .product-box .remarks {
+  font-size: 12px;
+  color: #969aa1;
+  display: block;
+}
+
+.wait-table-number-container .content  .product-box .right {
+  width: 20%;
+}
+
+.wait-table-number-container .content  .product-box .right .operation {
+  position: relative;
+  transform: translateY(-50%);
+  float: right;
+  padding: 0 4px;
+  top: 50%;
+}
+
+.wait-table-number-container .content  .product-box .right .operation image {
+  height: 12px;
+  width: 4px;
+}
+
+.wait-table-number-container .content  .product-box .right .operation .operation-box {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  background: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #4e5463;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.wait-table-number-container .content  .product-box .right .operation .operation-box  image {
+  height: 20px;
+  width: 12px;
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.wait-table-number-container .content  .product-box .right .operation .operation-box view {
+  height: 35px;
+  line-height: 35px;
+}
+
+.wait-table-number-container .content  .product-box .right .operation .operation-box view:first-of-type {
+  border-bottom: 1px solid #e1e1e1;
+}

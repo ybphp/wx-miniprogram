@@ -1,0 +1,562 @@
+/* pages/shopcart/shopcart.wxss */
+
+.head {
+  background: #ea5b5b;
+  height: 80px;
+  display: flex;
+}
+
+.head .left {
+  width: 50%;
+  line-height: 80px;
+  font-size: 40px;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 20px;
+  position: relative;
+}
+
+.head .left::after {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  height: 54px;
+  width: 1px;
+  background: #fff;
+  content: '';
+}
+
+.head .right {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 16px 0 0 20px;
+}
+
+.head .right view {
+  color: #fff;
+  font-size: 14px;
+}
+
+.head .right .number {
+  margin-bottom: 8px;
+}
+
+.head .right view text {
+  margin-right: 20px;
+}
+
+.content {
+  background: #f7f7f9;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 150px);
+}
+
+.content .product-list:last-of-type {
+  margin-bottom: 40px;
+}
+
+.content .product-list .product-title {
+  box-sizing: border-box;
+  padding: 14px 12px 10px;
+  background: #f7f7f9;
+  display: flex;
+}
+
+.content .product-list .product-title .title {
+  font-size: 14px;
+  color: #000;
+  box-sizing: border-box;
+  padding-left: 7px;
+  width: 60%;
+  position: relative;
+}
+
+.content .product-list .product-title .title ::after {
+  height: 16px;
+  width: 2px;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #ea5b5b;
+}
+
+.content .product-list .product-title .title text {
+  color: #ea5b5b;
+  margin-left: 10px;
+}
+
+.content .product-list .product-title .state {
+  width: 40%;
+}
+
+.content .product-list .product-title .state image {
+  width: 16px;
+  height: 16px;
+}
+
+.content .product-list .product-title .state text {
+  color: #494f60;
+  font-size: 14px;
+  margin-left: 3px;
+  position: relative;
+  top: -3px;
+}
+
+.content .product-list .product-box {
+  padding: 10px 12px;
+  background: #fff;
+  display: flex;
+}
+
+.content .product-list .product-box .left {
+  color: #1d1d20;
+  font-size: 14px;
+  width: 55%;
+  position: relative;
+}
+
+.content .product-list .product-box .left .price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: #1d1d20;
+  font-size: 16px;
+}
+
+.content .product-list .product-box .left view {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 60px);
+}
+
+.content .product-list .product-box .remarks {
+  font-size: 12px;
+  color: #969aa1;
+  display: block;
+}
+
+.content .product-list .product-box .right {
+  box-sizing: border-box;
+  width: 45%;
+  padding: 2px 0 0 7%;
+}
+
+.content .product-list .product-box .right .icon {
+  width: 22px;
+  height: 22px;
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content .product-list .product-box .right .operation {
+  overflow: hidden;
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+}
+
+.content .product-list .product-box .right .operation text {
+  position: relative;
+  top: -3px;
+  margin: 0 12px;
+}
+
+.content .product-list .product-box .right .operation image {
+  width: 22px;
+  height: 22px;
+}
+
+.shopcart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  transition: all 0.6s;
+}
+
+.shopcart-cover {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  opacity: 0;
+}
+
+.shopcart-cover.on {
+  opacity: 1;
+  display: block;
+}
+
+.shopcart.open {
+  height: 100%;
+}
+
+.shopcart .already-product {
+  background: #fff;
+}
+
+.shopcart .already-product .already-scroll-wrap {
+  max-height: 300px;
+  border-top: 1px solid #ddd;
+  height: 0;
+  display: none;
+  transition: all 0.8s;
+}
+
+.shopcart .already-product .already-scroll-wrap.on {
+  height: auto;
+  display: block;
+}
+
+.shopcart .already-product .already-title {
+  text-align: center;
+  font-size: 13px;
+  color: #1d1d27;
+  height: 30px;
+  line-height: 30px;
+}
+
+.shopcart .already-product .already-title image {
+  width: 12px;
+  height: 7px;
+  position: relative;
+  top: -2px;
+  margin-left: 6px;
+  background: #fff;
+}
+
+.main {
+  padding-top: 14px;
+  display: flex;
+  height: 70px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.main .left {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.main .left view {
+  color: #1d1d27;
+  font-size: 14px;
+}
+
+.main .left .number text {
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.main .left .total-price text {
+  font-size: 23px;
+  color: #ea5b5b;
+}
+
+.main .right {
+  width: 50%;
+  text-align: center;
+}
+
+.main  .right .sure-btn {
+  width: 180px;
+  height: 45px;
+  background: #ea5b5b;
+  margin: 0 auto;
+  border-radius: 26px;
+  line-height: 45px;
+  color: #fff;
+  box-shadow: 0 7px 8px 0 rgba(234, 91, 91, 0.11);
+}
+
+.already-product .product-list .product-title {
+  box-sizing: border-box;
+  padding: 6px 12px 4px;
+  background: #f7f7f9;
+  display: flex;
+}
+
+.already-product .product-list .product-title .product-operation {
+  font-size: 13px;
+  color: #ea5b5b;
+  margin-left: 34px;
+}
+
+.already-product .product-list .product-title .title {
+  font-size: 14px;
+  color: #000;
+  box-sizing: border-box;
+  padding-left: 7px;
+  width: 65%;
+  position: relative;
+}
+
+.already-product .product-list .product-title .title ::after {
+  height: 16px;
+  width: 2px;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #ea5b5b;
+}
+
+.already-product .product-list .product-title .title text {
+  color: #ea5b5b;
+  margin-left: 10px;
+}
+
+.already-product .product-list .product-box {
+  padding: 10px 12px;
+  background: #fff;
+  display: flex;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.already-product .product-list .product-box:last-of-type {
+  box-shadow: none;
+}
+
+.already-product .product-list .product-box .left {
+  color: #1d1d20;
+  font-size: 14px;
+  width: 65%;
+  position: relative;
+}
+
+.already-product .product-list .product-box .left .price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 56%;
+  color: #1d1d20;
+  font-size: 14px;
+}
+
+.already-product .product-list .product-box .left .price .number {
+  font-size: 14px;
+  color: #ea5b5b;
+  margin-right: 18px;
+}
+
+.already-product .product-list .product-box .left view {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 60px);
+}
+
+.already-product .product-list .product-box.completed .left::after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #979797;
+  left: 0;
+}
+
+.already-product .product-list .product-box .left view,
+.already-product .product-list .product-box .left .price,
+.already-product .product-list .product-box.completed .left .price .number {
+  color: #969aa1;
+}
+
+.already-product .product-list .product-box .remarks {
+  font-size: 12px;
+  color: #969aa1;
+  display: block;
+}
+
+.already-product .product-list .product-box .right {
+  width: 35%;
+}
+
+.already-product .product-list .product-box .right .on {
+  color: #ea5b5b;
+  font-size: 12px;
+  padding: 2px 8px 1px;
+  border: 1px solid #ea5b5b;
+  border-radius: 46px;
+  display: block;
+  margin-left: 38px;
+  width: 24px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.already-product .product-list .product-box.completed .right .on {
+  border: none;
+  color: #59b166;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+}
+
+.already-product .product-list .product-box .right .operation {
+  position: relative;
+  transform: translateY(-50%);
+  float: right;
+  padding: 0 4px;
+}
+
+.already-product .product-list .product-box .right .operation image {
+  height: 12px;
+  width: 4px;
+}
+
+.sure-order {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.sure-order .top {
+  background: #fff;
+  width: 90%;
+  margin: 57px auto 0;
+  border-radius: 10px;
+  text-align: center;
+  padding: 45px 0 20px;
+  position: relative;
+  font-size: 17px;
+  color: #000;
+}
+
+.sure-order .top .state-icon {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  margin-left: -45px;
+}
+
+.sure-order .bottom {
+  width: 90%;
+  margin: 40px auto 0;
+  position: relative;
+  padding: 46px 0 87px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.sure-order .bottom .state-icon {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  margin-left: -45px;
+}
+
+.sure-order .bottom .failed-info {
+  font-size: 17px;
+  color: #f54747;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sure-order .bottom .info-list {
+  background: #f7f7f9;
+  box-sizing: border-box;
+  padding-left: 13px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.sure-order .bottom .info-list .icon {
+  height: 18px;
+  width: 18px;
+  position: relative;
+  top: 3px;
+  margin-right: 6px;
+}
+
+.sure-order .bottom .info-list .category-name {
+  font-size: 14px;
+}
+
+.sure-order .bottom .info-list .category-name text {
+  margin-left: 4px;
+}
+
+.sure-order .bottom .info-list .again-btn {
+  height: 100%;
+  width: 99px;
+  background: #ea5b5b;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.sure-order .bottom .info-list .again-btn text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.sure-order .bottom .info-list .again-btn image {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+}
+
+.sure-order .bottom .all-again-btn {
+  position: absolute;
+  bottom: -23px;
+  left: 24%;
+  width: 52%;
+  background: #ea5b5b;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 20px;
+  box-shadow: 0 7px 8px 0 rgba(234, 91, 91, 0.11);
+}
+
+.sure-order .back-table {
+  margin-top: 50px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+
+.sure-order .back-table image {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 4px;
+}

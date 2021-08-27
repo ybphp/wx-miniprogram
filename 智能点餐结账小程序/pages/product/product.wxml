@@ -1,0 +1,148 @@
+<!-- 商品页 -->
+<view class="container">
+  <view id="product-wrap">
+    <!-- 侧边栏导航 -->
+    <view class="left">
+      <view id="search" class="{{!keyboardShowFlag?'active':''}}" bindtap="showKeyboard">
+        <icon type="search" size="16" color="{{searchIconColor}}" />
+        <text>搜索</text>
+      </view>
+      <scroll-view class="sidebar" scroll-y="true">
+        <view class="product-nav {{index===navActive?'active':''}}" wx:for="{{lists}}" data-category="category{{index}}" data-index="{{index}}" bindtap="toCategory">{{item.name}}
+          <view class="selected-state {{!item.countNumber||item.countNumber==0?'hide':''}}">
+            <image src="./../../public/img/select_icon.png" mode="widthFix"></image>
+            <text>{{item.countNumber}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- 商品显示 -->
+    <scroll-view scroll-y="true" class="right" scroll-into-view="{{category}}" scroll-with-animation="true">
+      <view class="product-list" wx:for="{{lists}}" wx:for-item="list" wx:for-index="listIndex" id="category{{listIndex}}">
+        <view class="product-title">{{list.name}}</view>
+        <view class="product-content">
+          <view class="product-box" wx:for="{{list.products}}" wx:for-item="product" bindtap="selectProduct" data-current-list-index="{{product.currentCategoryIndex}}" data-current-product-index="{{product.currentProductIndex}}">
+            <image class="product-img" src="{{product.imgUrl}}" style="height:70px"></image>
+            <text class="title {{!product.imgUrl?'not-img':''}}">{{product.name}}</text>
+            <text class="price">￥{{product.price}}</text>
+            <image wx:if="{{product.recommended}}" class="hot" style="height:13px" src="./../../public/img/hot.png" mode="widthFix"></image>
+            <view class="selected-state {{!product.selectNumber || product.selectNumber==0?'hide':''}}">
+              <image src="./../../public/img/select_icon.png" mode="widthFix" style="height:13px"></image>
+              <text>{{product.selectNumber}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 搜索商品 -->
+    <scroll-view hidden="{{searchProductShowFlag}}" scroll-y="true" class="search-wrap" scroll-with-animation="true" scroll-top="{{searchScrollTop}}">
+      <text class="title" hidden="{{searchProductData.length===0}}">智能搜索结果</text>
+      <view class="product-list">
+        <block wx:for="{{searchProductData}}" wx:for-item="product" wx:for-index="listIndex">
+          <view class="product-box" data-current-list-index="{{product.currentCategoryIndex}}" data-current-product-index="{{product.currentProductIndex}}" bindtap="selectProduct">
+            <image class="product-img" src="{{product.imgUrl}}" style="height:70px"></image>
+            <text class="title {{!product.imgUrl?'not-img':''}}">{{product.name}}</text>
+            <text class="price">￥{{product.price}}</text>
+            <image wx:if="{{product.recommended}}" class="hot" style="height:13px" src="./../../public/img/hot.png" mode="widthFix"></image>
+            <view class="selected-state {{!product.selectNumber || product.selectNumber==0?'hide':''}}">
+              <image src="./../../public/img/select_icon.png" mode="widthFix" style="height:13px"></image>
+              <text>{{product.selectNumber}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+
+    <!-- 购物车 -->
+    <view id="shop-cart" bindtap="toShopCart">
+      <view class="left">
+        <image src="./../../public/img/shop_cart_icon.png" mode="widthFix"></image>
+        <text>{{shopCart.allCount || 0}}</text>
+      </view>
+      <view class="right">
+        <text class="total-price">￥{{shopCart.totalPrice|| 0}}</text>
+      </view>
+    </view>
+    <!-- 规格选择 -->
+    <view id="specifications" style="display:{{specificationsShowFlag?'none':'block'}}">
+      <view class="content">
+        <view class="close" bindtap="closeSelectProduct">
+          <image src="./../../public/img/close_icon.png"></image>
+        </view>
+        <view class="title">{{selectProductObj.name}}
+          <text>￥{{selectProductObj.price}}</text>
+        </view>
+        <scroll-view scroll-y="true" class="middle" scroll-top="{{recommendedScrollTop}}">
+          <view class="option-list" wx:for="{{selectProductObj.optionGroups}}" wx:for-index="optionsIndex" wx:for-item="optionsItem">
+            <text>{{optionsItem.name}}<text wx:if="{{optionsItem.required}}" class="required">(必选)</text>
+            </text>
+            <view class="option-content">
+              <view class="option">
+                <block wx:for="{{optionsItem.options}}" wx:for-item="optionItem">
+                  <view bindtap="selectOption" data-multiple="{{optionsItem.multiple}}" data-options-index="{{optionsIndex}}" data-current-index="{{index}}" class="{{optionItem.default?'checked':''}}">{{optionItem.name}}</view>
+                </block>
+              </view>
+            </view>
+          </view>
+          <view class="remarks">
+            <input placeholder="添加备注" bindinput="changeRemarks" value="{{remarks}}" />
+          </view>
+        </scroll-view>
+        <view class="bottom">
+          <text class="price">￥{{newPrice}}</text>
+          <view class="tag" wx:if="{{defaultSelectFlag}}">(
+            <block wx:for="{{selectProductObj.optionGroups}}" wx:for-index="optionsIndex" wx:for-item="optionsItem">
+              <block wx:for="{{optionsItem.options}}" wx:for-item="optionItem">
+                <text wx:if="{{optionItem.default}}"><text>,</text>{{optionItem.name}}</text>
+              </block>
+            </block>
+            <text hidden="{{!remarks.length>0}}"><text wx:if="{{selectProductObj.optionGroups}}">,</text>{{remarks}}</text>
+            )</view>
+          <view class="sure {{requiredOptionLength===0?'ok':''}}">选好了</view>
+          <view class="sure {{requiredOptionLength===0?'ok':''}}" animation="{{animationData}}" bindtap="sureProduct">选好了</view>
+        </view>
+      </view>
+    </view>
+    <!-- 键盘 -->
+    <view id="keyboard" hidden="{{keyboardShowFlag}}">
+      <view class="top">
+        <text>{{keyboardVal}}</text>
+        <icon bindtap="emptyKeydown" id="clear" type="clear" size="20" color="#969AA1" />
+      </view>
+      <view class="content">
+        <view class="keyboard-box" data-number="1" bindtap="numberKeydown">1 </view>
+        <view class="keyboard-box" data-number="2" bindtap="numberKeydown">2
+          <text>ABC</text>
+        </view>
+        <view class="keyboard-box" data-number="3" bindtap="numberKeydown">3
+          <text>DEF</text>
+        </view>
+        <view class="keyboard-box" data-number="4" bindtap="numberKeydown">4
+          <text>GHI</text>
+        </view>
+        <view class="keyboard-box" data-number="5" bindtap="numberKeydown">5
+          <text>JKL</text>
+        </view>
+        <view class="keyboard-box" data-number="6" bindtap="numberKeydown">6
+          <text>MNO</text>
+        </view>
+        <view class="keyboard-box" data-number="7" bindtap="numberKeydown">7
+          <text>PQRS</text>
+        </view>
+        <view class="keyboard-box" data-number="8" bindtap="numberKeydown">8
+          <text>TUV</text>
+        </view>
+        <view class="keyboard-box" data-number="9" bindtap="numberKeydown">9
+          <text>WXYZ</text>
+        </view>
+        <view class="keyboard-box">
+        </view>
+        <view class="keyboard-box" data-number="0" bindtap="numberKeydown">0
+        </view>
+        <view class="keyboard-box" bindtap="deleteKeydown">
+          <image class="keyboard-del-btn" src="./../../public/img/keyboard_delete_btn.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!-- 收款二维码页 -->
+<view class="receivable-container">
+  <image class="bg" src="./../../public/img/checkout_bg.png" mode="widthFix"></image>
+  <view class="receivable-qrcode">
+    <view class="content">
+      <view class="top">
+        NICE精品咖啡
+        <text>淮海中路店</text>
+      </view>
+      <view class="middle">
+        <image class="qr-code" src="./../../public/img/member_qr.png"></image>
+      </view>
+      <view class="bottom">
+        <view class="price-text"><text>¥</text>266.00</view>
+        <text class="text">请确认金额后用微信扫二维码付款</text>
+      </view>
+    </view>
+  </view>
+</view>

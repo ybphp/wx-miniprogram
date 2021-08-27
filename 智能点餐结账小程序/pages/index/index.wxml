@@ -1,0 +1,88 @@
+<view>
+  <view class="header">
+    <view class="header-box">
+      <view class="title" bindtap="selectOption" data-select-area="true">
+        <text>{{areaOption}}</text>
+        <image src="./../../public/img/index_icon1.png" style="height:5px;width:8px;"></image>
+      </view>
+      <view class="nav" hidden="{{selectArea}}">
+        <view class="{{areaOption=='全部区域'?'active':''}}"  data-area-select="全部区域" bindtap="selectArea">全部区域</view>
+        <view class="area {{areaOption==item?'active':''}}" data-area-select="{{item}}"  bindtap="selectArea" wx:for="{{areaOptions}}">{{item}}
+          <text>1F</text>
+        </view>
+        <image class="icon" src="./../../public/img/nav_icon.png"></image>
+      </view>
+    </view>
+    <view class="header-box">
+      <view class="title" bindtap="selectOption">
+        <text>全部状态</text>
+        <image src="./../../public/img/index_icon1.png" style="height:5px;width:8px;"></image>
+      </view>
+      <view class="nav" hidden="{{selectState}}">
+        <view class="active">全部状态</view>
+        <view class="state" wx:for="{{stateOptions}}">{{item}}
+          <text>32</text>
+        </view>
+        <image class="icon" src="./../../public/img/nav_icon.png"></image>
+      </view>
+    </view>
+
+  </view>
+  <scroll-view scroll-y='true' class="table-number-scroll">
+    <view class="table-number-content">
+      <view wx:for="{{tableNumberOptions}}" class="table-number-wrap" data-state="{{item.state}}" wx:if="{{areaOption=='全部区域' || areaOption == item.area}}">
+        <view class="table-number-box state1" hidden="{{!(item.state==='state1')}}" data-table-number="{{item.tableNumber}}"  data-current-table-number-area="{{item.area}}" bindtap="selectTableNumber">
+          <view class="number">{{item.tableNumber}}</view>
+          <image src="./../../public/img/table_number_state1.png"></image>
+        </view>
+        <view class="table-number-box state2" hidden="{{!(item.state==='state2')}}"  bindtap="toTableDetail" data-table-number="{{item.tableNumber}}">
+          <view class="number">{{item.tableNumber}}</view>
+          <view class="select-number">
+            <image src="./../../public/img/table_number_icon.png"></image>
+            <text>{{item.shopCart.allCount}}</text>
+          </view>
+          <view class="price">￥
+            <text>{{item.shopCart.totalPrice}}</text>
+          </view>
+        </view>
+        <view class="table-number-box state3" hidden="{{!(item.state==='state3')}}">
+          <view class="number">{{item.tableNumber}}</view>
+          <view class="text">正在结账</view>
+        </view>
+        <view class="table-number-box state4" hidden="{{!(item.state==='state4')}}" bindtap="toClearTable">
+          <view class="number">{{item.tableNumber}}</view>
+          <view class="text">等待清台</view>
+        </view>
+        <view class="table-number-box state5" hidden="{{!(item.state==='state5')}}">
+          <view class="number">{{item.tableNumber}}</view>
+          <view class="select-number">
+            <image src="./../../public/img/table_number_icon.png"></image>
+            <text>{{item.shopCart.allCount}}</text>
+          </view>
+          <view class="price">￥
+            <text>{{item.shopCart.totalPrice || 0}}</text>
+          </view>
+          <image class="state-icon" src="./../../public/img/table_number_state5.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="people-number-modal" hidden="{{peopleNumberSelect}}">
+    <view class="cover" bindtap="closePeopleNumberSelect"></view>
+    <view class="content">
+      <view class="title">
+          请选择用餐人数
+      </view>
+      <view class="people-number-wrap">
+        <view class="people-number-box" wx:for="{{peopleNumberOption}}" bindtap="toSelectProduct" data-people-number="{{item}}">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="status">
+    <view><image src="./../../public/img/index_success.png" mode="aspectFit"></image>主POS</view>
+    <view><image src="./../../public/img/index_success.png" mode="aspectFit"></image>后厨打印机</view>
+    <view><image src="./../../public/img/index_error.png" mode="aspectFit"></image>小票打印机</view>
+  </view>
+</view>

@@ -1,0 +1,176 @@
+<!--等待清台页-->
+<view class="wait-table-number-container">
+  <view class="head">
+    <view class="left">
+      A15
+    </view>
+    <view class="right">
+      <view class="number">
+        <text>用餐人数</text>3</view>
+      <view class="time">
+        <text>待确认开台</text>
+      </view>
+    </view>
+  </view>
+  <view class="top">
+    <view class="text">顾客已点单，请尽快确认后开台
+      <text>拒绝开台</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="product-list">
+      <view class="time-sort-title">
+        <view class="title">
+          <image src="./../../public/img/avatar.png"></image>
+          <text class="name">小仙女 <text class="customer">顾客</text></text>
+          <text class="time">12-28 12:25:32</text>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="product-box">
+        <view class="left">
+          <view>华山奶茶
+            <text class="remarks">少糖,beizhu</text>
+          </view>
+          <text class="price"><text class="number">X2</text>￥35.44</text>
+        </view>
+        <view class="right">
+          <view class="operation">
+            <image src="./../../public/img/already_operation_icon.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="left">
+      <view class="number">总数:
+        <text>5</text>
+      </view>
+      <view class="total-price">总价:
+        <text>￥123</text>
+      </view>
+    </view>
+    <view class="right">
+      <view class="sure-btn" bindtap="sureOrder">开台并下单</view>
+    </view>
+  </view>
+</view>

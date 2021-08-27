@@ -1,0 +1,318 @@
+/* pages/index/index.wxss */
+
+.header {
+  height: 40px;
+  width: 100%;
+  padding: 4px 0;
+  box-shadow: 2px 2px 5px #999;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 9;
+}
+
+.header::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.header .header-box {
+  float: left;
+  width: 50%;
+  text-align: center;
+  color: #494f60;
+  font-size: 14px;
+  position: relative;
+  line-height: 32px;
+}
+
+.header .header-box .title>.text {
+  font-weight: bold;
+}
+
+.header .header-box:first-child::after {
+  display: block;
+  content: '';
+  height: 80%;
+  width: 1px;
+  background: #969aa1;
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.header .header-box .title {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.header .header-box .title text {
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.header .header-box .title image {
+  position: relative;
+  top: 13px;
+  float: right;
+  left: -20px;
+}
+
+.header .header-box .nav {
+  position: absolute;
+  top: 32px;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #999;
+}
+
+.header .header-box .nav .state {
+  text-align: left;
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+
+.header .header-box .nav .state text {
+  float: right;
+}
+
+.header .header-box .nav .area {
+  position: relative;
+}
+
+.header .header-box .nav .area text {
+  position: absolute;
+  font-size: 12px;
+  line-height: 1;
+  margin: 5px 0 0 5px;
+  color: #969aa1;
+  left: 0;
+  top: 0;
+}
+
+.header .header-box .nav .icon {
+  position: absolute;
+  top: -12px;
+  right: 9%;
+  width: 20px;
+  height: 12px;
+}
+
+.header .header-box .nav>view {
+  border-bottom: 1px solid #e1e1e1;
+  line-height: 40px;
+}
+
+.header .header-box .nav>view.active {
+  color: #ea5b5b;
+}
+
+.table-number-scroll {
+  position: fixed;
+  height: calc(100% - 40px);
+  top: 40px;
+  width: 100%;
+}
+
+.table-number-content {
+  width: 100%;
+  padding: 14px 6% 10px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.table-number-content .table-number-wrap {
+  border-radius: 4px;
+  width: 31%;
+  margin: 0 3.5% 18px 0;
+  box-shadow: 1px 1px 6px #999;
+  box-sizing: border-box;
+  height: 110px;
+}
+
+.table-number-content .table-number-box {
+  width: 100%;
+  background: #fff;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding:2px 8px;
+}
+
+.table-number-content .table-number-wrap:nth-child(3n) {
+  margin-right: 0;
+}
+
+.table-number-content .table-number-box .number {
+  color: #ea5b5b;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.table-number-content .table-number-box .select-number {
+  font-size: 14px;
+  margin-top: 26px;
+  color: #4e5463;
+}
+
+.table-number-content .table-number-box .select-number image {
+  position: relative;
+  top: 2px;
+  width: 16px;
+  height: 10px;
+}
+
+.table-number-content .table-number-box .select-number text {
+  margin-left: 4px;
+}
+
+.table-number-content .table-number-box .price {
+  font-size: 14px;
+  color: #969aa1;
+}
+
+.table-number-content .table-number-box .price text {
+  color: #4e5463;
+  margin-left: 6px;
+  position:absolute;
+}
+
+.table-number-content .table-number-box.state1 .number {
+  color: #494f60;
+}
+
+.table-number-content .table-number-box.state1 image {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+
+.table-number-content .table-number-box.state3 .number {
+  color: #4a90e2;
+}
+
+.table-number-content .table-number-box.state3 .text {
+  font-size: 14px;
+  color: #4a90e2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table-number-content .table-number-box.state4 {
+  background: #f2f2f2;
+}
+
+.table-number-content .table-number-box.state4 .number {
+  color: #969aa1;
+}
+
+.table-number-content .table-number-box.state4 .text {
+  color: #969aa1;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table-number-content .table-number-box.state5 {
+  border: 2px solid #ea5b5b;
+}
+
+.table-number-content .table-number-box.state5 .state-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.status {
+  position: fixed;
+  bottom: 0px;
+  height: 24px;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  background: #fff;
+}
+
+.status view {
+  width: 33.333%;
+  font-size: 12px;
+  text-align: center;
+}
+
+.status view image {
+  width: 20px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}
+
+.people-number-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 19;
+  background: rgba(0, 0, 0, 0.80);
+  height: 100%;
+  width: 100%;
+}
+.people-number-modal .cover{
+  height: 100%;
+  width: 100%;
+}
+.people-number-modal .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 9;
+}
+
+.people-number-modal .content .title {
+  text-align: center;
+  color: #000;
+  font-size: 17px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.people-number-modal .content .people-number-wrap {
+  background: #f8f8f8;
+  padding: 18px 15px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.people-number-modal .content .people-number-wrap .people-number-box {
+  width: 20%;
+  text-align: center;
+  margin-bottom:18px;
+}
+.people-number-modal .content .people-number-wrap .people-number-box  view:hover{
+  background: #8BC34A;
+  border-color:#8BC34A;
+  color:#fff;
+}
+.people-number-modal .content .people-number-wrap .people-number-box view {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #1d1d20;
+  font-size: 18px;
+  text-align: center;
+  line-height: 45px;
+  margin:0 auto;
+
+}

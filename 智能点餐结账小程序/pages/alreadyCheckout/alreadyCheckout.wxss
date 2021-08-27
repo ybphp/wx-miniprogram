@@ -1,0 +1,168 @@
+/* pages/alreadyCheckout/alreadyCheckout.wxss */
+
+.alreadyCheckout-detail {
+  background: #f7f7f9;
+  padding-bottom: 110px;
+}
+
+.alreadyCheckout-detail .head {
+  background: #4a90e2;
+  height: 44px;
+  width: 100%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 9;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.alreadyCheckout-detail .head .table-number {
+  line-height: 44px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.alreadyCheckout-detail .head .table-number-info {
+  float: right;
+  line-height: 44px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.alreadyCheckout-detail .head .table-number-info text {
+  margin-right: 16px;
+  padding-left: 10px;
+  border-left: 1px solid #fff;
+}
+
+.alreadyCheckout-detail .content {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.alreadyCheckout-detail .order-detail-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20px 10px 10px;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .title {
+  color: #1d1d27;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .title text {
+  float: right;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .thead {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  display: flex;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .thead .th1 {
+  flex: 3;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .thead .th2 {
+  flex: 1;
+  text-align: center;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .thead .th3 {
+  flex: 1;
+  text-align: right;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody {
+  border-bottom: 1px solid #000;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody:last-of-type {
+  border: none;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr {
+  font-size: 14px;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  display: flex;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr .td1 {
+  flex: 3;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr .td1 .remarks {
+  display: block;
+  font-size: 11px;
+  color: #969aa1;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr .td2 {
+  flex: 1;
+  text-align: center;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr .td3 {
+  flex: 1;
+  text-align: right;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .tbody .tr .td3 {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+  color: #000;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .pay-price .tr {
+  margin: 10px 0 0;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .pay-price .td1 {
+  margin-top: 3px;
+}
+
+.alreadyCheckout-detail .order-detail-wrap .pay-price .td3 {
+  font-size: 18px;
+}
+
+.alreadyCheckout-detail .order-detail-bottom-img {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.clear-table {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.28);
+  width: 100%;
+  padding: 12px 0;
+}
+
+.clear-table-btn {
+  background: #4a90e2;
+  box-shadow: 0 7px 8px 0 rgba(74, 144, 226, 0.40);
+  border-radius: 46px;
+  width: 175px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 auto;
+  color:#fff;
+  font-size: 16px;
+}

@@ -1,0 +1,198 @@
+<!-- 购物车页 -->
+<view>
+  <view class="head">
+    <view class="left">
+      {{shopcartData.tableNumber}}
+    </view>
+    <view class="right">
+      <view class="number">
+        <text>用餐人数</text>{{shopcartData.peopleNumber}}</view>
+      <view class="time">
+        <text>开台时间</text>{{createAt}}</view>
+    </view>
+  </view>
+  <scroll-view class="content" scroll-y="true">
+    <block wx:for="{{shopcartData.shopCart.lists}}">
+      <view class="product-list" wx:if="{{item.count!==0}}">
+        <view class="product-title">
+          <view class="title">冷菜
+            <text>{{item.count}}</text>
+          </view>
+          <view class="state">
+            <image src="./../../public/img/shopcart_1.png"></image>
+            <text>等叫</text>
+          </view>
+        </view>
+        <view class="product-box">
+          <view class="left">
+            <view>{{item.name}}
+              <text class="remarks">{{item.totalRemarks}}</text>
+              <text class="remarks">{{item.remarks}}</text>
+            </view>
+            <text class="price">￥{{item.totalPrice}}</text>
+          </view>
+          <view class="right">
+            <image class="icon" src="./../../public/img/shopcart_2.png"></image>
+            <view class="operation">
+              <image src="./../../public/img/shopcart_3.png" data-index="{{index}}" bindtap="delProduct"></image>
+              <text>{{item.count}}</text>
+              <image src="./../../public/img/shopcart_3_on.png" data-index="{{index}}" bindtap="addProduct"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view class="shopcart-cover {{alreadyProductFlag?'on':''}}"></view>
+  <view class="shopcart">
+    <view class="already-product">
+      <view class="already-title" bindtap="viewAlreadyProduct">已点菜(6)
+        <image hidden="{{!alreadyProductFlag}}" src="./../../public/img/already_icon.png"></image>
+        <image hidden="{{alreadyProductFlag}}" src="./../../public/img/already_icon_on.png"></image>
+      </view>
+      <scroll-view class="already-scroll-wrap {{alreadyProductFlag?'on':''}}" scroll-y="true">
+        <view class="product-list">
+          <view class="product-title">
+            <view class="title">冷菜
+              <text>4</text>
+            </view>
+          </view>
+          <view class="product-box completed">
+            <view class="left">
+              <view>华山奶茶
+              </view>
+              <text class="price"><text class="number">X2</text>￥35.44</text>
+            </view>
+            <view class="right">
+              <view class="on">已上菜</view>
+            </view>
+          </view>
+        </view>
+        <view class="product-list">
+          <view class="product-title">
+            <view class="title">冷菜
+              <text>4</text>
+            </view>
+            <view class="product-operation">全部叫起</view>
+          </view>
+          <view class="product-box">
+            <view class="left">
+              <view>华山奶茶
+                <text class="remarks">少糖</text>
+              </view>
+              <text class="price"><text class="number">X2</text>￥35.44</text>
+            </view>
+            <view class="right">
+              <view class="on">叫起</view>
+              <view class="operation">
+                <image src="./../../public/img/already_operation_icon.png"></image>
+              </view>
+            </view>
+          </view>
+          <view class="product-box">
+            <view class="left">
+              <view>华山奶茶
+                <text class="remarks">少糖,beizhu</text>
+              </view>
+              <text class="price"><text class="number">X2</text>￥35.44</text>
+            </view>
+            <view class="right">
+              <view class="on">叫起</view>
+              <view class="operation">
+                <image src="./../../public/img/already_operation_icon.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="product-list">
+          <view class="product-title">
+            <view class="title">冷菜
+              <text>4</text>
+            </view>
+            <view class="product-operation">全部叫起</view>
+          </view>
+          <view class="product-box">
+            <view class="left">
+              <view>华山奶茶
+                <text class="remarks">少糖</text>
+              </view>
+              <text class="price"><text class="number">X2</text>￥35.44</text>
+            </view>
+            <view class="right">
+              <view class="on">叫起</view>
+              <view class="operation">
+                <image src="./../../public/img/already_operation_icon.png"></image>
+              </view>
+            </view>
+          </view>
+          <view class="product-box">
+            <view class="left">
+              <view>华山奶茶
+                <text class="remarks">少糖,beizhu</text>
+              </view>
+              <text class="price"><text class="number">X2</text>￥35.44</text>
+            </view>
+            <view class="right">
+              <view class="on">叫起</view>
+              <view class="operation">
+                <image src="./../../public/img/already_operation_icon.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="main">
+      <view class="left">
+        <view class="number">总数:
+          <text>{{shopcartData.shopCart.allCount}}</text>
+        </view>
+        <view class="total-price">总价:
+          <text>￥{{shopcartData.shopCart.totalPrice}}</text>
+        </view>
+      </view>
+      <view class="right">
+        <view class="sure-btn" bindtap="sureOrder">下单</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="sure-order" hidden="{{sureOrderFalg}}">
+    <view class="top">
+      <image class="state-icon" src="./../../public/img/Success_Big.png"></image>
+      成功下单
+    </view>
+    <view class="bottom">
+      <image class="state-icon" src="./../../public/img/Failed_Big.png"></image>
+      <text class="failed-info">后厨部分打印失败</text>
+      <view class="info-list">
+        <image class="icon" src="./../../public/img/Failed_Small.png"></image>
+        <text class="category-name">冷菜 <text>2</text></text>
+        <view class="again-btn">
+          <image src="./../../public/img/sure_order_icon1.png"></image>
+          <text>重打</text>
+        </view>
+      </view>
+      <view class="info-list">
+        <image class="icon" src="./../../public/img/Failed_Small.png"></image>
+        <text class="category-name">冷菜 <text>2</text></text>
+        <view class="again-btn">
+          <image src="./../../public/img/sure_order_icon1.png"></image>
+          <text>重打</text>
+        </view>
+      </view>
+      <view class="info-list">
+        <image class="icon" src="./../../public/img/Success_Small.png"></image>
+        <text class="category-name">冷菜 <text>2</text></text>
+      </view>
+
+      <view class="all-again-btn">
+        全部重打
+      </view>
+    </view>
+    <view class="back-table" bindtap="backTableNumber">
+      <image src="./../../public/img/back.png"></image>
+      返回桌台
+    </view>
+  </view>
+</view>

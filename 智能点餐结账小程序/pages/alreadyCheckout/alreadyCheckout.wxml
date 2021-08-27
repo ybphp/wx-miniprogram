@@ -1,0 +1,72 @@
+<!--已结账页-->
+<view class="alreadyCheckout-detail">
+  <view class="head">
+    <text class="table-number">A15</text>
+    <view class="table-number-info"><text>结账时间</text>13:28</view>
+  </view>
+  <view class="content">
+    <view class="order-detail-wrap">
+      <view class="title">下单商品 (10)
+        <text>2017-12-12 13:25:31</text>
+      </view>
+      <view class="thead">
+        <text class="th1">菜品</text>
+        <text class="th2">数量</text>
+        <text class="th3">总价</text>
+      </view>
+      <view class="tbody">
+        <view class="tr">
+          <text class="td1">招牌拉面 <text class="remarks">不加葱</text>
+          <text class="remarks">不加葱不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面</text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+      </view>
+
+      <view class="tbody">
+        <view class="tr">
+          <text class="td1">原金额: </text>
+          <text class="td3">¥ 420</text>
+        </view>
+        <view class="tr">
+          <text class="td1">优惠: </text>
+          <text class="td3">-¥ 10</text>
+        </view>
+        <view class="tr">
+          <text class="td1">服务费: </text>
+          <text class="td3">¥ 15</text>
+        </view>
+      </view>
+      <view class="tbody pay-price">
+        <view class="tr">
+          <text class="td1">应收: </text>
+          <text class="td3">¥ 276</text>
+        </view>
+      </view>
+    </view>
+    <image class="order-detail-bottom-img" src="./../../public/img/checkout_bottom_img.png" mode="widthFix"></image>
+  </view>
+</view>
+<view class="clear-table">
+    <view class="clear-table-btn">清台</view>
+</view>

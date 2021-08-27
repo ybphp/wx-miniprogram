@@ -1,0 +1,4 @@
+/**app.wxss**/
+.hide{
+  display: none !important;
+}

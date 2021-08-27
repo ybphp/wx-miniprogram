@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/product",
+    "pages/shopcart/shopcart",
+    "pages/tableDetail/tableDetail",
+    "pages/checkout/checkout",
+    "pages/alreadyCheckout/alreadyCheckout",
+    "pages/receivables/receivables",
+    "pages/waitTableNumber/waitTableNumber"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "店小二",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

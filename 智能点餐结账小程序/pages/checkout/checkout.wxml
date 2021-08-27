@@ -1,0 +1,411 @@
+<!--买单页-->
+<view class="container">
+  <view class="head">
+    <text class="table-number">A15</text>
+    <view class="table-info">
+      <text>用餐人数 3</text>
+      <text>下单时间 12:30</text>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="list-box">
+      <text class="left">绑定会员</text>
+      <view class="right" bindtap="toggleMemberSignQr">
+        <image class="qrcode-img" src="./../../public/img/qrcode.png"></image>
+        <image class="icon-right" src="./../../public/img/icon_right.png"></image>
+      </view>
+    </view>
+    <view class="list-box">
+      <text class="left">优惠</text>
+      <view class="right" bindtap="toggleCouponModal">
+        <text class="text">¥0</text>
+        <image class="icon-right" src="./../../public/img/icon_right.png"></image>
+      </view>
+    </view>
+    <view class="list-box">
+      <text class="left">服务费</text>
+      <view class="right">
+        <text class="text">¥0</text>
+        <image class="icon-right" src="./../../public/img/icon_right.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 订单详情 -->
+  <scroll-view class="scroll-order-detail" scroll-y="true">
+    <view class="order-detail-wrap">
+      <view class="title">下单商品 (10)
+        <text>2017-12-12 13:25:31</text>
+      </view>
+      <view class="thead">
+        <text class="th1">菜品</text>
+        <text class="th2">数量</text>
+        <text class="th3">总价</text>
+      </view>
+      <view class="tbody">
+        <view class="tr">
+          <text class="td1">招牌拉面 <text class="remarks">不加葱</text>
+          <text class="remarks">不加葱不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面</text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+        <view class="tr">
+          <text class="td1">招牌拉面<text class="remarks">不加葱</text></text>
+          <text class="td2">x 2</text>
+          <text class="td3">¥ 120</text>
+        </view>
+      </view>
+
+      <view class="tbody">
+        <view class="tr">
+          <text class="td1">原金额: </text>
+          <text class="td3">¥ 420</text>
+        </view>
+        <view class="tr">
+          <text class="td1">优惠: </text>
+          <text class="td3">-¥ 10</text>
+        </view>
+        <view class="tr">
+          <text class="td1">服务费: </text>
+          <text class="td3">¥ 15</text>
+        </view>
+      </view>
+      <view class="tbody pay-price">
+        <view class="tr">
+          <text class="td1">应收: </text>
+          <text class="td3">¥ 276</text>
+        </view>
+      </view>
+    </view>
+    <image class="order-detail-bottom-img" src="./../../public/img/checkout_bottom_img.png" mode="widthFix"></image>
+  </scroll-view>
+
+  <view class="foot">
+    <view class="list-box">
+      <text class="left">支付方式</text>
+      <view class="right">
+        <text class="text">微信支付</text>
+        <image class="icon-right" src="./../../public/img/icon_right.png"></image>
+      </view>
+    </view>
+    <view class="pay-box">
+      <view class="price-show">
+        <text>还需支付</text>¥276</view>
+      <view class="pay-btn">
+        <view bindtap="toReceivablesView">微信收款码</view>
+      </view>
+    </view>
+  </view>
+  <!-- 会员签到 -->
+  <view class="member-sign" hidden="{{!memberSignQr}}">
+    <view class="content">
+      <image src="./../../public/img/member_qr.png"></image>
+      <view class="text">微信扫一扫签到 \ 加入会员
+        <text>获取专属权益</text>
+      </view>
+      <view class="close-btn" bindtap="closeMemberSignQr">关闭</view>
+    </view>
+  </view>
+
+  <!-- 会员卡信息 -->
+  <view class="member-card-info hide" hidden="{{!(memberCardInfoFlag)}}">
+    <view class="content">
+      <!-- 会员卡 -->
+      <view class="member-card-number">
+        <image class="avatar" src="./../../public/img/avatar.png"></image>
+        <view class="name">小仙女</view>
+        <view class="unbind">解绑</view>
+        <view class="mobile">
+          <image src="./../../public/img/mobile.png"></image>
+          <text>18087654321</text>
+        </view>
+        <view class="number">
+          <image src="./../../public/img/NO..png"></image>
+          <text>6102 8479 352</text>
+        </view>
+        <view class="member-info-list">
+          <view class="integrl">
+            <view class="title">
+              <image src="./../../public/img/Points.png"></image>
+              <text>会员积分</text>
+            </view>
+            <view class="text">750
+              <text>分</text>
+            </view>
+          </view>
+          <view class="balance">
+            <view class="title">
+              <image src="./../../public/img/balance.png"></image>
+              <text>储值余额</text>
+            </view>
+            <view class="text">550.50
+              <text>元</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="member-coupon-wrap">
+        <view class="coupon-wrap">
+          <view class="coupon-nav">
+            <text class="title {{memberCouponFlag===1?'active':''}}" bindtap="toggleMemberCoupon" data-index="1">优惠券 <text>3</text></text>
+            <text class="title {{memberCouponFlag===2?'active':''}}" bindtap="toggleMemberCoupon" data-index="2">集点卡 <text>1</text></text>
+          </view>
+          <!-- 优惠券 -->
+          <view class="coupon-content" hidden="{{!(memberCouponFlag===1)}}">
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余2天
+                    <text>即将过期</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    8
+                    <text>折</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意甜品下午茶时段八折</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 集点卡 -->
+          <view class="set-point-card-content" hidden="{{!(memberCouponFlag===2)}}">
+            <view class="set-point-card-box">
+              <view class="title">焦糖榛果拿铁
+                <text class="subtitle">买十送一</text>
+              </view>
+              <text class="point-process">
+                  <text>6</text>/10
+              </text>
+              <view class="point-progress-bar">
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_red.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_gray.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_gray.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_gray.png" mode="aspectFit"></image>
+                <image src="./../../public/img/progress_bar_gray.png" mode="aspectFit"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="close-btn" bindtap="closeMemberCardInfo">关闭</view>
+    </view>
+  </view>
+  <!-- 优惠信息 -->
+  <view class="coupon-info" hidden="{{!couponModalFlag}}">
+    <view class="content">
+      <view class="discount-content">
+        <view class="store-coupon-content">
+          <view class="store-title">店铺优惠券</view>
+          <view class="store-coupon-boxs">
+            <view class="store-coupon-box">
+              <image src="./../../public/img/CouponShort.png" mode="widthFix"></image>
+              <view class="title">8.5
+                <text>折</text>
+              </view>
+              <view class="subtitle">试营业优惠</view>
+              <image class="active" src="./../../public/img/CouponShortSelected.png" mode="widthFix"></image>
+            </view>
+            <view class="store-coupon-box">
+              <image src="./../../public/img/CouponShort.png" mode="widthFix"></image>
+              <view class="title">8.5
+                <text>折</text>
+              </view>
+              <view class="subtitle">试营业优惠</view>
+            </view>
+            <view class="store-coupon-box">
+              <image src="./../../public/img/CouponShort.png" mode="widthFix"></image>
+              <view class="title">8.5
+                <text>折</text>
+              </view>
+              <view class="subtitle">试营业优惠</view>
+            </view>
+            <view class="store-coupon-box">
+              <image src="./../../public/img/CouponShort.png" mode="widthFix"></image>
+              <view class="title">8.5
+                <text>折</text>
+              </view>
+              <view class="subtitle">试营业优惠</view>
+            </view>
+            <view class="store-coupon-box">
+              <image src="./../../public/img/CouponShort.png" mode="widthFix"></image>
+              <view class="title">8.5
+                <text>折</text>
+              </view>
+              <view class="subtitle">试营业优惠</view>
+            </view>
+          </view>
+        </view>
+        <view class="member-coupon-content">
+          <view class="member-coupon-title">会员优惠券
+          </view>
+          <view class="member-coupon-boxs">
+            <view class="member-coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余2天
+                    <text>即将过期</text>
+                  </view>
+                </view>
+              </view>
+              <image class="active" src="./../../public/img/CouponNormalSelected.png" mode="widthFix"></image>
+            </view>
+            <view class="member-coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    8
+                    <text>折</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意甜品下午茶时段八折</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="member-coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+            <view class="member-coupon-box">
+              <image class="bg" src="./../../public/img/CouponNormal.png" mode="widthFix"></image>
+              <view class="coupon-text-box">
+                <view class="left">
+                  <view>
+                    10
+                    <text>元</text>
+                  </view>
+                </view>
+                <view class="right">
+                  <view class="title">任意茶品减10元</view>
+                  <view class="time">剩余23天</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="close-btn" bindtap="toggleCouponModal">关闭</view>
+    </view>
+  </view>
+</view>

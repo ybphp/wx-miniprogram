@@ -1,0 +1,78 @@
+/* pages/receivables/receivables.wxss */
+
+.receivable-container {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.receivable-container .bg {
+  width: 100%;
+}
+
+.receivable-container .receivable-qrcode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.69);
+}
+
+.receivable-container .receivable-qrcode .content {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.receivable-container .receivable-qrcode .content .top {
+  padding: 15px 0 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #1d1d27;
+  background: #f7f7f9;
+}
+
+.receivable-container .receivable-qrcode .content .top text {
+  display: block;
+  font-size: 14px;
+  color: #1d1d27;
+  font-weight: 300;
+}
+
+.receivable-container .receivable-qrcode .content .middle {
+  padding: 30px 0 20px;
+}
+
+.receivable-container .receivable-qrcode .content .middle .qr-code {
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+.receivable-container .receivable-qrcode .content .bottom {
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+.receivable-container .receivable-qrcode .content .bottom .price-text {
+  font-size: 40px;
+  color: #000;
+}
+
+.receivable-container .receivable-qrcode .content .bottom .price-text text {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+.receivable-container .receivable-qrcode .content .bottom .text {
+  font-size: 14px;
+  color: #969aa1;
+}
