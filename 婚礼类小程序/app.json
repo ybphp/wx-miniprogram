@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/list/list",
+    "pages/list_xq/list_xq",
+    "pages/list_Tj/list_Tj",
+    "pages/my_sc/my_sc",
+    "pages/my_dd/my_dd",
+    "pages/my_qj/my_qj",
+    "pages/my_dd_xq/my_dd_xq",
+    "pages/cs_ddd/cs_ddd", 
+    "pages/lingquan/lingquan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "鑫沐集团·石鹏婚礼",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#444",
+    "selectedColor": "#444",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/dibu.png",
+        "selectedIconPath": "images/dibu_.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "咨 询",
+        "iconPath": "images/dibu1.png",
+        "selectedIconPath": "images/dibu1_.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/dibu2.png",
+        "selectedIconPath": "images/dibu2_.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

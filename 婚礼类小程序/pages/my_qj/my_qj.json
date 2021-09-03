@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "请柬",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#eaa428",
+  "navigationBarTextStyle": "white"
+}

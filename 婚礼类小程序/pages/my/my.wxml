@@ -1,0 +1,26 @@
+<view class="my_tib_k">
+  <image mode="widthFix" src="/images/my_beij.jpg"></image>
+  <view class="tx">
+    <image src="/images/toux.jpg"></image>
+    <text>石玲玲</text>
+  </view>
+</view> 
+
+<view class="my_daoh">
+  <view bindtap="my_dd">
+    <view>12</view>
+    <text>我的订单</text>
+  </view>
+  <view bindtap="my_qj">
+    <view>0</view>
+    <text>电子请柬</text>
+  </view>
+  <view bindtap="my_sc">
+    <view>5</view>
+    <text>心动收藏</text>
+  </view>
+</view>
+<view class="my_bt">
+  <text>最近预览</text>
+</view>
+ 

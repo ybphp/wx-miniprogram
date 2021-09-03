@@ -1,0 +1,29 @@
+/* pages/my_sc/my_sc.wxss */
+
+.weui-media-box__thumb {
+  object-fit:cover;
+
+}
+.weui-media-box__desc,.weui-media-box__title{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+white-space: inherit;
+font-size: 28rpx;
+
+}
+
+.weui-media-box__desc {  
+padding-top: 4px;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1; 
+font-size: 24rpx;
+
+}
+.weui-media-box__hd_in-appmsg{
+  width: 80px;
+  border-radius: 6rpx;
+  overflow: hidden;
+
+}

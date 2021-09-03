@@ -1,0 +1,44 @@
+<!--pages/my_dd_xq/my_dd_xq.wxml-->
+<view class="rpx20"></view>
+<view class="weui-panel__bd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="my_dd_xq">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/cp_img1.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <view class="weui-media-box__desc">说得第三个</view>
+        </view> 
+    </navigator>
+</view> 
+<view class="rpx20"></view>
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+    <view>订单编号：<text>34868080</text></view>
+    <view>下单时间：<text>2019-1-21  09:48:35</text></view> 
+  </view> 
+</view> 
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+    <view>订单编号：<text>34868080</text></view>
+    <view>下单时间：<text>2019-1-21  09:48:35</text></view> 
+  </view> 
+</view> 
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+    <view>配送方式：</view> 
+  </view> 
+</view>
+<view class="weui-cell">
+  <view class="weui-cell__bd">
+    <view>用户：<text>往后余生</text></view> 
+    <view>联系人：<text>培壮壮</text></view> 
+    <view>电话：<text>182****3243</text></view> 
+  </view> 
+</view> 
+<view class="rpx20"></view>
+<view class="weui-cell">
+  <view class="weui-cell__bd">服务收费</view> 
+  <view class="weui-cell__ft">￥<text>4260</text>.00</view>
+</view> 
+<view class="tenc_nim_nimen"><view>删除订单</view><button>预定中</button></view>

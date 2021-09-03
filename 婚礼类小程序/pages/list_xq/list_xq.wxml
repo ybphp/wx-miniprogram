@@ -1,0 +1,46 @@
+<!--pages/list_xq/list_xq.wxml-->
+<!-- <text>pages/list_xq/list_xq.wxml</text> -->
+<view class="index_list">
+  <view>
+    <image src="/images/cp_img.jpg"></image>
+    <view class="text"> 
+      <view class="bt">我祝你们在彼此身上找到的快乐</view>
+      <view class="dianz">
+        <text>时间：2020-02-20</text>
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="rpx20"></view>
+<video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" ></video>
+<view class="rpx20"></view>
+
+<view class="tiaot_zy">
+  <text>详情参数</text>
+</view>
+
+<view class="text_xq">
+  <text>服务类型：婚庆服务
+感慨于沈从文与张兆和之间的爱情，沈从文是才子，是作家
+他的《边城》向人们展现了最朴素的真情。
+我将于茫茫人海中访我唯一灵魂之伴侣；
+得知，我幸，不得，我命。</text>
+</view>
+
+<view class="xiangq_img">
+  <image mode="widthFix" src="/images/ziyem_se_03.jpg"></image>
+</view>
+<view class="rpx20"></view>
+<view style="height:100rpx;"></view>
+<view class="footer_list_xq">
+  <view class="left">
+    <image src="/images/sc.png"></image>
+    <text>收藏</text>
+  </view>
+  <view class="right">
+    <button>快速咨询</button>
+    <button bindtap="jump_List_xq">立即预约</button>
+  </view>
+</view>

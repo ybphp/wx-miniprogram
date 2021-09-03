@@ -1,0 +1,36 @@
+<!--pages/lingquan/lingquan.wxml-->
+<!-- <text>pages/lingquan/lingquan.wxml</text> -->
+<view class="nimen_ge">
+  <view class="ul">
+    <view class="li">
+      <view class="zit">婚礼主持人</view>
+      <view class="qiang_ge">
+        <view>￥</view> 
+        <text>100</text>
+        <view>策划</view>
+      </view>
+      <button>立即领取</button>
+      <view class="buttom">到店礼品兑换</view>
+    </view>
+    <view class="li">
+      <view class="zit">婚礼主持人</view>
+      <view class="qiang_ge">
+        <view>￥</view> 
+        <text>100</text>
+        <view>策划</view>
+      </view>
+      <button>立即领取</button>
+      <view class="buttom">到店礼品兑换</view>
+    </view> 
+    <view class="li">
+      <view class="zit">婚礼主持人</view>
+      <view class="qiang_ge">
+        <view>￥</view> 
+        <text>100</text>
+        <view>策划</view>
+      </view>
+      <button>立即领取</button>
+      <view class="buttom">到店礼品兑换</view>
+    </view> 
+  </view>
+</view>

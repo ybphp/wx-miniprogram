@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#eaa428",
+  "navigationBarTextStyle": "white"
+}

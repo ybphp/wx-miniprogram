@@ -1,0 +1,48 @@
+<!--pages/my_dd/my_dd.wxml-->
+<view class="yvding_s">
+  <view class="no">预定中</view>
+  <view>已完成</view>
+</view>
+<view class="weui-panel__bd">
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="my_dd_xq">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/cp_img1.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <view class="weui-media-box__desc">说得第三个</view>
+        </view>
+        <view class="tenc_nim"><view>￥<text>4260</text>.00</view><button>预定中</button></view>
+    </navigator>
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="my_dd_xq">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/cp_img.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <view class="weui-media-box__desc">说得第三个</view>
+        </view>
+        <view class="tenc_nim"><view>￥<text>4260</text>.00</view><button class="wanc">已完成</button></view>
+    </navigator> 
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="my_dd_xq">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/cp_img2.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <view class="weui-media-box__desc">说得第三个</view>
+        </view>
+        <view class="tenc_nim"><view>￥<text>4260</text>.00</view><button>预定中</button></view>
+    </navigator> 
+    <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active" bindtap="my_dd_xq">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="/images/cp_img1.jpg" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <view class="weui-media-box__desc">说得第三个</view>
+        </view>
+        <view class="tenc_nim"><view>￥<text>4260</text>.00</view><button>预定中</button></view>
+    </navigator> 
+</view>
+

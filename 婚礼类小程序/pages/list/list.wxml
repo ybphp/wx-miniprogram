@@ -1,0 +1,84 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+<view class="list_daohang"> 
+  <view class='topTabSwiper'>
+      <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>婚庆策划</view>
+      <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>婚纱照</view>
+      <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>婚纱礼服</view>
+      <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}'  data-current = "3" bindtap='checkCurrent'>媳妇定制</view>
+      <view class='tab  {{currentData == 4 ? "tabBorer" : ""}}'  data-current = "4" bindtap='checkCurrent'>栏目</view>
+      <view class='tab  {{currentData == 5 ? "tabBorer" : ""}}'  data-current = "5" bindtap='checkCurrent'>栏目二</view>
+  </view>
+  <view class="sous_k">
+    <image bindtap="btn"  src="/images/sos_wer.png"></image>
+  </view> 
+</view>
+<view class="rpx20"></view>
+<view current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+  <!--你们-->
+  <view >
+    <view class="index_list">
+      <view>
+        <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+        <view class="text"> 
+          <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+          <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+          <view class="dianz">
+            <view>123</view>
+            <view>340</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+        <view class="text"> 
+          <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+          <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+          <view class="dianz">
+            <view>123</view>
+            <view>340</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+        <view class="text"> 
+          <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+          <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+          <view class="dianz">
+            <view>123</view>
+            <view>340</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+        <view class="text"> 
+          <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+          <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+          <view class="dianz">
+            <view>123</view>
+            <view>340</view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+        <view class="text"> 
+          <view class="bt" bindtap="jump_List_xq"><view class="span">我们的</view>我祝你们在彼此身上找到的快乐</view>
+          <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+          <view class="dianz">
+            <view>123</view>
+            <view>340</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="modalDlg" wx:if="{{showModal}}">
+<!-- 二维码或其他图片 --> 
+    <input placeholder="输入关键词"></input>
+    <view bindtap="ok" class="ok">搜索</view>
+</view> 

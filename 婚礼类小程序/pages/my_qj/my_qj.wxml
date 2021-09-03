@@ -1,0 +1,44 @@
+<!--pages/my_qj/my_qj.wxml-->
+<!-- <text>pages/my_qj/my_qj.wxml</text> -->
+
+<!-- <view class="qingjian_kuang">
+  <view bindtap="showRule">
+    <text>+</text>
+    <view>创建请柬</view>
+  </view> 
+</view> -->
+<!-- / -->
+<view class="nimen_wing">
+  <view>
+    <image src="/images/wang_kai.jpg"></image>
+  </view>
+  <view>
+    <image src="/images/wang_kai1.jpg"></image>
+  </view>
+    <view>
+    <image src="/images/wang_kai1.jpg"></image>
+  </view>
+    <view>
+    <image src="/images/wang_kai.jpg"></image>
+  </view>
+</view>
+
+<view class="rpx20"></view>
+<view style="height:100rpx;"></view>
+<view class="footer_list_xq" bindtap='showRule'><button>添加请柬</button></view>
+
+<!-- 弹出层！ --> 
+<view class="tanc_tianj_qj {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+  <view class="nimen_wing">
+    <view>
+      <image src="/images/wang_kai.jpg"></image>
+    </view>
+    <view>
+      <image src="/images/wang_kai1.jpg"></image>
+    </view> 
+  </view>
+  <view class="qvxiao_qjmy" bindtap="hideRule">
+    <image src="/images/chacha.png"></image>
+  </view>
+</view>
+

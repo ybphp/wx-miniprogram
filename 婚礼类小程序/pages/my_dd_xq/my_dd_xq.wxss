@@ -1,0 +1,89 @@
+/* pages/my_dd_xq/my_dd_xq.wxss */
+.weui-media-box__thumb {
+  object-fit:cover;
+
+}
+.weui-media-box__desc,.weui-media-box__title{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+white-space: inherit;
+font-size: 28rpx;
+
+}
+
+.weui-media-box__desc {  
+padding-top: 4px;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1; 
+font-size: 24rpx;
+
+}
+.weui-media-box__hd_in-appmsg{
+  width: 80px;
+  border-radius: 6rpx;
+  overflow: hidden;
+
+}
+
+
+.weui-cell{
+  font-size: 28rpx;
+}
+.weui-cell text{
+  color: #999;
+}
+.weui-cell .weui-cell__ft{
+  font-size:26rpx;
+  color: #ff2e26;
+}
+.weui-cell .weui-cell__ft text{
+  color: #ff2e26;
+  font-size:36rpx;
+}
+
+
+
+.tenc_nim_nimen{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+   overflow: hidden;
+   height: 100rpx;
+   line-height:90rpx;
+   box-shadow: 0 0 10rpx #b2b2b2;
+   width: 100%;
+}
+.tenc_nim_nimen>view{
+  float: left;
+  margin-left: 10rpx;
+
+}
+.tenc_nim_nimen button{
+  float: right;
+  width: 180rpx; 
+  border-radius: 50rpx;
+  border:solid 1px #cfa972;
+  background:inherit;
+  padding: 0 40rpx;
+  margin: 0 30rpx;
+  line-height: 60rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  margin-top: 15rpx; 
+  color:  #cfa972;
+}
+.tenc_nim_nimen button.wanc{
+  border:solid 1px #d6d6d6;
+  color:  #828282;
+}
+
+.tenc_nim_nimen>view{
+  font-size: 30rpx;
+  color:  #544e4c;
+
+}
+.tenc_nim_nimen>view text{
+  font-size:30rpx; 
+}

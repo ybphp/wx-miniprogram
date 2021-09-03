@@ -1,0 +1,88 @@
+/* pages/my_dd/my_dd.wxss */
+.weui-media-box__thumb {
+  object-fit:cover;
+
+}
+.weui-media-box__desc,.weui-media-box__title{
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+white-space: inherit;
+font-size: 28rpx;
+
+}
+
+.weui-media-box__desc {  
+padding-top: 4px;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1; 
+font-size: 24rpx;
+
+}
+.weui-media-box__hd_in-appmsg{
+  width: 80px;
+  border-radius: 6rpx;
+  overflow: hidden;
+
+}
+.weui-media-box_appmsg{
+  padding-bottom: 120rpx;
+  position: relative;
+}
+
+.weui-media-box_appmsg .tenc_nim{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+   overflow: hidden;
+   height: 100rpx;
+   line-height:80rpx;
+}
+.weui-media-box_appmsg .tenc_nim>view{
+  float: left;
+
+}
+.weui-media-box_appmsg .tenc_nim button{
+  float: left;
+  width: inherit; 
+  border-radius: 50rpx;
+  border:solid 1px #cfa972;
+  background:inherit;
+  padding: 0 40rpx;
+  margin: 0 30rpx;
+  line-height: 60rpx;
+  height: 70rpx;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color:  #cfa972;
+}
+.weui-media-box_appmsg .tenc_nim button.wanc{
+  border:solid 1px #d6d6d6;
+  color:  #828282;
+}
+
+.weui-media-box_appmsg .tenc_nim>view{
+  font-size: 24rpx;
+  color:  #544e4c;
+
+}
+.weui-media-box_appmsg .tenc_nim>view text{
+  font-size:30rpx; 
+}
+
+.yvding_s{
+  border-bottom: solid 1px #eee;
+  overflow: hidden;
+}
+.yvding_s>view{
+  float: left;
+  padding: 20rpx 0;
+  margin: 0 30rpx;
+  border-bottom: solid 1px #fff
+}
+
+.yvding_s>view.no{ 
+  border-bottom: solid 1px #cfa972;
+  color: #cfa972;
+}

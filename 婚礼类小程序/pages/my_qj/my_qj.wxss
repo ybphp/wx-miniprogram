@@ -1,0 +1,102 @@
+/* pages/my_qj/my_qj.wxss */
+
+.footer_list_xq{
+  position: fixed;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #eaa429;
+  text-align: center;
+}
+
+.footer_list_xq button{
+  width: 100%;
+  height: 100%;
+  background: none;line-height: 100rpx;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+.qingjian_kuang{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.qingjian_kuang>view{
+  width:300rpx;
+  border:solid 1px #eee;
+  height: 450rpx;
+  text-align: center;
+  position: absolute;
+  top: -110rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #ebab41;
+  margin: auto;
+}
+
+.qingjian_kuang>view text{
+  font-size: 50rpx;
+  color: #ebab41;
+  padding-top: 120rpx;
+  display: inline-block;
+}
+
+.nimen_wing{
+  width:96%;
+  padding: 2%;
+  overflow: hidden;
+}
+.nimen_wing view{
+  width:300rpx;
+  border:solid 1px #eee;
+  height: 450rpx;
+  padding: 12rpx;
+  float: left;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+.nimen_wing view:nth-child(2n){
+  margin-right: 0;
+    margin-left: 0;
+}
+.nimen_wing view image{
+  width: 100%;
+  height: 450rpx;
+}
+
+.tanc_tianj_qj{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+}
+
+.tanc_tianj_qj .nimen_wing view{
+  border:solid 1px rgba(238, 238, 238, .3);
+
+}
+
+.qvxiao_qjmy{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100rpx;
+  margin: auto;
+}
+.qvxiao_qjmy image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.isRuleShow{
+    display: block;
+}
+.isRuleHide{
+    display: none;
+}

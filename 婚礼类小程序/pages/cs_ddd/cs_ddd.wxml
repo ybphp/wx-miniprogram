@@ -1,0 +1,40 @@
+<!--pages/cs_ddd/cs_ddd.wxml-->
+<scroll-view scroll-x="true" class="scroll-view-x" style=" white-space: nowrap; display: flex"  scroll-with-animation="true" scroll-left='0' bindscroll="getleft">
+        <!--内容区域-->
+        <view class="ff">
+          <view class="navigator_second"   wx:for-item="childItem" bindtap="getProductList" data-id="{{childItem.id}}">
+            <image class="navigator_icon" src="/images/dibu.png"></image>
+            <text class="navigator_text">{{childItem.name}}</text>
+          </view>
+        </view>
+        <view class="ff">
+          <view class="navigator_second"   wx:for-item="childItem" data-id="{{childItem.id}}" bindtap="getProductList">
+            <image class="navigator_icon" src="/images/dibu.png" ></image>
+            <text class="navigator_text">{{childItem.name}}</text>
+          </view>
+        </view>
+        <view class="ff">
+          <view class="navigator_second"   wx:for-item="childItem" data-id="{{childItem.id}}" bindtap="getProductList">
+            <image class="navigator_icon" src="/images/dibu.png" ></image>
+            <text class="navigator_text">{{childItem.name}}</text>
+          </view>
+        </view>
+        <view class="ff">
+          <view class="navigator_second"   wx:for-item="childItem" data-id="{{childItem.id}}" bindtap="getProductList">
+            <image class="navigator_icon" src="/images/dibu.png" ></image>
+            <text class="navigator_text">{{childItem.name}}</text>
+          </view>
+        </view>
+        <view class="ff">
+          <view class="navigator_second"   wx:for-item="childItem" data-id="{{childItem.id}}" bindtap="getProductList">
+            <image class="navigator_icon" src="/images/dibu.png" ></image>
+            <text class="navigator_text">{{childItem.name}}</text>
+          </view>
+        </view>
+      </scroll-view >
+      <!--滚动条部分-->
+      <view wx:if="{{slideShow}}" class="slide">
+        <view class='slide-bar' >
+          <view class="slide-show" style="width:{{slideWidth}}rpx; margin-left:{{slideLeft<=1 ? 0 : slideLeft+'rpx'}};"></view>
+        </view>
+      </view>

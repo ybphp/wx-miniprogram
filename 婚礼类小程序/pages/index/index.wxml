@@ -1,0 +1,233 @@
+<!--index.wxml-->
+<!-- banner -->
+<view class="banner_sy">
+  <swiper autoplay="{{autoplay}}" bindchange="swiperChange" circular="true">
+    <block wx:for="{{imgs_banner}}">   
+      <swiper-item  bindtap="jump_List_xq">
+        <view class="text">
+          <view class="jianj">{{item.banner_text}}</view>
+          <view class="i_henx"></view>
+          <view class="text_xia">{{item.banner_text_xq}}</view>
+        </view>  
+        <image  mode='aspectFill'  src="{{item.url}}"></image>
+      </swiper-item> 
+    </block>
+  </swiper>  
+  <!--重置小圆点的样式  -->
+  <view class="dots">  
+      <block wx:for="{{imgs_banner}}">  
+          <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
+      </block>  
+  </view>   
+</view>
+<!-- banner结束 -->  
+<!--  -->
+<scroll-view class="  scroll-view_H_my"   scroll-x="true" style=" white-space: nowrap; display: flex"   >
+  <view  class="scroll_view_img">
+    <image src="/images/hou_ios.png"></image>
+    <text>婚庆策划</text>
+  </view>
+  <view  class="scroll_view_img">
+    <image  src="/images/hou_ios1.png"></image>
+    <text>婚纱照</text>
+  </view> 
+  <view  class="scroll_view_img">
+    <image src="/images/hou_ios2.png"></image>
+    <text>婚纱礼服</text>
+  </view> 
+  <view  class="scroll_view_img">
+    <image src="/images/hou_ios3.png"></image>
+    <text>西服定制</text>
+  </view> 
+  <view  bindtap="jump_lingquan"  class="scroll_view_img">
+    <image src="/images/hou_ios4.png"></image>
+    <text>领券中心</text>
+  </view>  
+</scroll-view>
+
+<!--  -->
+<!-- <view class="huny_daih"> -->
+  <!-- 
+indicator-dots='true':是否显示面板指示点,默认为false
+indicator-color='red':指示点颜色
+indicator-active-color='yellow':当前选中的指示点颜色
+autoplay='true':是否自动切换
+ -->
+  <!-- <swiper indicator-dots='true' indicator-color='#e4e4e4' indicator-active-color='#ac6716' circular="true">
+    <swiper-item  bindtap="jump_List">
+      <view class="kuang">
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚庆策划</view>
+            <view class="p">幸福只在你我之间</view>
+          </view>
+          <image src='/images/hunli.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚纱照</view>
+            <view class="p">与你不枉此生</view>
+          </view>
+          <image src='/images/hunli1.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚纱礼服</view>
+            <view class="p">百年修渡 一钻倾心</view>
+          </view>
+          <image src='/images/hunli2.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">西服定制</view>
+            <view class="p">幸福只在你我之间幸福只在你我之间</view>
+          </view>
+          <image src='/images/hunli3.png'></image>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="kuang">
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚庆策划</view>
+            <view class="p">幸福只在你我之间</view>
+          </view>
+          <image src='/images/hunli.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚纱照</view>
+            <view class="p">与你不枉此生</view>
+          </view>
+          <image src='/images/hunli1.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">婚纱礼服</view>
+            <view class="p">百年修渡 一钻倾心</view>
+          </view>
+          <image src='/images/hunli2.png'></image>
+        </view>
+        <view class="li">
+          <view class="fd">
+            <view class="h1">西服定制</view>
+            <view class="p">幸福只在你我之间幸福只在你我之间</view>
+          </view>
+          <image src='/images/hunli3.png'></image>
+        </view>
+      </view>
+    </swiper-item> 
+  </swiper> 
+</view> -->
+<!--  --> 
+<view class="rpx20"></view>
+
+<view class="er_img_T">
+  <view>
+    <image  mode='aspectFill'  src="/images/hou_tj.png"></image>
+  </view>
+  <view>
+    <image  mode='aspectFill' src="/images/hou_tj1.png"></image>
+  </view>
+  <view>
+    <image  mode='aspectFill'  src="/images/hou_tj2.png"></image>
+  </view>
+</view>
+
+<!-- 内容 -->
+<!-- 标题 -->
+<!-- <view class="index_bt">
+  <view class="bt"><image src="/images/yuanx.png"></image> 定制案例 <view class="text">Custom case</view></view>
+  <view class="lianj_d"  bindtap="jump_List">查看全部+</view>
+</view> -->
+<view class="hou_biaot">
+<text>定制案例</text>
+  <image src="/images/hou_jiant.png"></image>
+</view>
+<!-- 产品列表 --> 
+<view class="index_list">
+  <view>
+    <image bindtap="jump_List_xq"  mode='aspectFill' src="/images/cp_img.jpg"></image>
+    <view class="text"> 
+      <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+      <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+      <view class="dianz">
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image bindtap="jump_List_xq" mode='aspectFill' src="/images/cp_img1.jpg"></image>
+    <view class="text"> 
+      <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+      <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+      <view class="dianz">
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image bindtap="jump_List_xq" src="/images/cp_img2.jpg"></image>
+    <view class="text"> 
+      <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+      <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+      <view class="dianz">
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image bindtap="jump_List_xq" src="/images/cp_img.jpg"></image>
+    <view class="text"> 
+      <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+      <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+      <view class="dianz">
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image bindtap="jump_List_xq" src="/images/cp_img1.jpg"></image>
+    <view class="text"> 
+      <view class="bt" bindtap="jump_List_xq"><view class="span">场地布置</view>我祝你们在彼此身上找到的快乐</view>
+      <view class="shum">你可以把余生都交给我保管，可以霸占我情话里的每一句喜...</view> 
+      <view class="dianz">
+        <view>123</view>
+        <view>340</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="rpx20"></view>
+<!-- footer -->
+<view class="footer">
+  <view class="logo"><image src="/images/logo.png"></image></view>
+  <view class="text">
+    <view>地址：贵州省贵阳市南明区胡果园</view>
+    <view>电话：400-6677-937</view>
+    <view>邮箱：2239329788@qq.ocm</view> 
+  </view>
+  <view class="erweim">
+    <view>
+      <image src="/images/erwm.png"></image>
+      <view>我们的微信</view>
+    </view>
+    <view>
+      <image src="/images/erwm.png"></image>
+      <view>关注微博</view>
+    </view>
+  </view>
+</view>
+<!-- 结束 -->
+<view class="rpx20"></view>
+
+<!-- 浮动 -->
+<view class="fudong_dd">
+  <view><image src="/images/fudong_se_03.png"></image></view>
+  <view class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"><image src="/images/fudong_se_06.png"></image></view>
+</view>
