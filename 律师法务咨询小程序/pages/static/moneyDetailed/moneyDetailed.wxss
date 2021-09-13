@@ -1,0 +1,28 @@
+.text-cen {
+    padding: 30rpx;
+}
+.text-cen text,.text-cen view {
+    display: block;
+    font-size: 32rpx;
+    color: #333;
+    padding-bottom: 20rpx;
+}
+.text-cen view  {
+  
+    
+}
+.text-cen text.title {
+    color: #d92a2a;
+ 
+}
+.text-cen text.h3{
+    color: #6d6d6d;
+    font-size: 30rpx;
+}
+.text-cen text.h2{
+    font-size: 36rpx;
+}
+.text-cen text.h1{
+   font-weight: bold;
+   padding-bottom: 20rpx;
+}

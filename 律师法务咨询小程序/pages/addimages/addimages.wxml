@@ -1,0 +1,24 @@
+<!--输入文本域  -->
+<view class="text-box">
+    <textarea placeholder="您好，请详细描述你的问题..." placeholder-style="color:#666;font-size:30rpx; "  value="{{textareaVal}}"    bindinput="textareaFn"></textarea>
+</view>
+<!--上传图片  -->
+<view class="upload-img">
+  <view  class="imgs-style" wx:for="{{arrimg}}" wx:key="{{arrimg}}">
+        <view class="close" bindtap="closeImgFn"  id="{{index}}">
+                <image src="/images/close.png"></image>
+         </view>
+       <image src="{{item}}" data-id="{{index}}"></image>
+    </view>
+    <image   src="/images/upload.png" bindtap="chooseimage" bindtouchstart=""></image>
+    
+    <text>{{index}}/{{len}}</text>
+</view>
+<!--温馨提示  -->
+<view class="prompt">
+<text>温馨提示:</text>
+<text>建议详细描述事情经过和需要解决的问题，问题越详细，律师回复质量越高。</text>
+<text>如有证据请点击上方上传图片。</text>
+</view>
+<!-- 下一步-->
+<view class="next-step" bindtap="submitFn"><text>下一步</text></view>

@@ -1,0 +1,54 @@
+<!--头部 logo部分  -->
+<view class="login-center">
+   <view class="login-logo">
+      <view class="login-box">
+        <image src="/images/logo-login.png"></image>
+        <view class="login-text">现有<text>1233</text>个问题被专业律师解答</view>
+      </view>
+   </view>
+   <!--表单验证部分  -->
+<form bindsubmit="formSubmit"  class="form-cen">
+    <view class="from-list">
+      <view class="section">
+        <input type="number"  name='tel'  placeholder="请输入您的手机号码"  disabled = "{{btndisabled}}" placeholder-class='placeholders' 
+         value="{{phone}}"   />
+      </view>
+      <view class="section">
+        <input password type="text" name='pasd'   placeholder="请输入您的密码"  disabled = "{{btndisabled}}" value = "{{pasd}}" placeholder-class='placeholders' />
+      </view>
+      <view class="section section-flex">
+            <view class="checkbox  text ">
+              <checkbox-group   bindchange="checkboxChange"  name ='checkboxval'    >
+                        <label class="checkbox" >
+                            <checkbox color='red'  value="{{checkboxVal}}"  checked="{{bool}}"/>记住密码
+                        </label>
+            </checkbox-group>
+          </view>
+          <view class="forgot-pasd text">
+                <navigator url="/pages/forgot_password/forgot_password" >忘记密码</navigator >
+          </view>
+      </view>
+      <view class="section">
+        <button size ="default"   class="submit-btn"  formType = 'submit' style="background-color:{{loginBtnBgBgColor}}"  loading ="{{btnLoading}}" disabled =  "{{ btndisabled}}">
+          {{loginBtnTxt}}
+        </button>
+      </view>
+    </view>
+  </form>
+<!-- 点击微信手机号码授权 -->
+<view class="authorization">
+    <button disabled="{{ztBool}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        一键微信登陆
+     </button>
+</view>
+<!--底部的跳转  -->
+<view class="footer-nav">
+    <view class="footer-btn">
+        <navigator url="/pages/forgot_password/forgot_password">用户注册</navigator>
+    </view>
+</view>
+</view>
+
+
+
+

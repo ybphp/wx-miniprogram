@@ -1,0 +1,40 @@
+/* pages/setUp/setUp.wxss */
+.setup-list {
+        padding: 0 30rpx;
+}
+.setup-list navigator {
+        display: flex;
+         justify-content:space-between;
+         padding: 30rpx 0;
+         border-bottom: 1rpx solid #e8e8e8;
+}
+.setup-list navigator text{
+        font-size: 30rpx;
+}
+.setup-list navigator image{
+        height: 35rpx;
+        width: 35rpx;
+}
+.quit {
+      padding: 30rpx ;
+}
+.quit text{
+        width: 100%;
+        padding: 18rpx 0;
+        background-color: rgba(217, 42, 42, 1);
+        display: flex;
+        font-size: 30rpx;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10rpx;
+}
+.imgs {
+    display: flex;
+    align-items: center;
+}
+.imgs .yuan{
+    height: 18rpx;
+    width: 18rpx;
+    margin-right: 15rpx;
+}

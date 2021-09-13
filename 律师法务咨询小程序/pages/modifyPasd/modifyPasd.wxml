@@ -1,0 +1,17 @@
+<view class="pasd-cen">
+<form bindsubmit="formSubmit">
+    <view class="section">
+         <input placeholder="请输入你的手机号码"  type="number" placeholder-class='placeholders'  name='ipone' value ="{{iponeVal}}"  bindinput="verIpneVal"/>
+    </view>
+     <view class="section section-btn">
+         <input placeholder="请确认验证码"   type="number" placeholder-class='placeholders' value="{{Verification_Code}}" name='Verification'  bindinput="verificationCode"/>
+        <button bindtap="delivery"   disabled = "{{disabled}}" class="countdown-btn">{{time}}</button>
+    </view>
+     <view class="section">
+         <input placeholder="请输入新密码"  type="password" placeholder-class='placeholders'   value="{{pasdVal}}" name='pasd'/>
+    </view>
+      <view class="section">
+        <button class="section-submit" form-type='submit'>确认</button>
+    </view>
+</form>
+</view>

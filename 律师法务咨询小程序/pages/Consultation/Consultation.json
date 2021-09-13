@@ -1,0 +1,8 @@
+    {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "咨询列表",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    }
+

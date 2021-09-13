@@ -1,0 +1,55 @@
+.register-form {
+padding: 40px 30px 49px;
+display:flex;
+flex-direction:column;
+}
+.register-form .section {
+    flex:1;
+    margin-bottom:35rpx;
+}
+.register-form .section input {
+    border:1px solid #afafaf;
+    border-radius:15rpx;
+    height:80rpx;
+    line-height:80rpx;
+    font-size:32rpx;
+    padding-left:15rpx;
+}
+.register-form  .section-btn {
+    display: flex;
+    justify-content:center;
+}
+.register-form  .section-btn input{
+    flex: 2;
+}
+.register-form  .section-btn button{
+    flex: 1;
+    margin-left: 30rpx;
+}
+.register-form  .agreement {
+    display:flex;
+    font-size:30rpx;
+}
+.register-form  .agreement  .text {
+    color: #1679f3;
+    text-decoration: underline;
+}
+.section-submit {
+    background-color:#e64444;
+    color: #fff;
+}
+.herf {
+    text-align: center;
+    font-size: 32rpx;
+    color: #333;
+}
+.herf.navigator-hover {
+    color:red;
+    background: #fff;
+}
+.countdown-btn {
+    font-size: 28rpx;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}

@@ -1,0 +1,7 @@
+<view class="news"  wx:if="{{bool == 0 }}" wx:for="{{arr}}" wx:key="{{index}}">
+    <text>{{item.date}}</text>
+    <view class="news-cen">
+        <text>{{item.content}}</text>
+    </view>
+</view>
+<view class="texts" wx:if="{{bool != 0 }}">未有消息推送...</view>

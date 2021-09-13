@@ -1,0 +1,31 @@
+.news {
+    display: flex;
+    flex-wrap:wrap;
+    padding: 30rpx;
+    margin-bottom: 30rpx;
+}
+.news-cen {
+     background-color: #eef5fc;
+     padding: 20rpx;
+     border-radius: 30rpx;
+     margin-top: 25rpx;
+}
+.news text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.news text:first-child{
+    font-size: 32rpx;
+    color: #ccc;
+}
+.news text:last-child{
+    font-size: 36rpx;
+    color: #333;
+    line-height: 60rpx;
+}
+.texts {
+    padding-top: 50rpx;
+    text-align: center;
+    font-size: 36rpx;
+}

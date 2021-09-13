@@ -1,0 +1,4 @@
+<view class="reply-cen">
+    <textarea auto-focus="{{bAuto}}" bindinput="textareaFn"></textarea>
+    <button bindtap="SubmitFn">提交</button>
+</view>

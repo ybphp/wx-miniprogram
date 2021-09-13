@@ -1,0 +1,78 @@
+<!--title部分  -->
+<view class="title">
+    <view class="title-txt">
+       <view class="title-top" bindtap="detailed">
+             <text>打赏金额</text><image src="/images/yw.png"></image>
+       </view>
+        <text>开启打赏，律师第一时间回复</text>
+    </view>
+</view> 
+<!--价格列表部分  -->
+<view class="money-list">
+    <view class="{{index == value?  'block set' : 'block'  }}"  wx:for="{{arr}}" bindtap="thisVal"  id="{{index}}" wx:key  = "{{index}}">
+        <text id="{{index}}" >{{item}}</text>
+        <text id="{{index}}" >元</text>
+    </view>
+</view>
+<!-- 免费咨询 -->
+<view class="gratis"><text>免费咨询</text></view>
+<!--提示  -->
+<view class="prompt">
+    <view class="prompt-title">
+        <text>【金额】</text>
+        <text>赏金越多，回复的律师越多，回复速度越快</text>
+    </view>
+     <view class="prompt-title">
+        <text>【特权】</text>
+        <text>赏金50元以上享有隐私保护、仅律师可阅特权</text>
+    </view>
+</view>
+<!--所在区域  -->
+<view class="input-text">
+    <text>所在区域</text>
+    <view class="val" bindtap='initFn'>
+        <text>{{name}}</text>
+       <image src="../../images/b.png"></image>
+    </view>
+</view>
+<!-- 业务类型 -->
+<view class="input-text">
+    <text>业务类型</text>
+    <view class="val" bindtap="typeFn">
+        <text id="{{typeID}}">{{typeName}}</text>
+       <image src="../../images/b.png"></image>
+    </view>
+</view>
+<!--发布  -->
+<button class="release"  bindtap="releaseFn" disabled="{{disabled}}">发布</button>
+<!--所在区域 遮罩层  -->
+<view class='mask' wx:if="{{maskDis != 0 }}" >
+        <view class='mask-back'   bindtap="CloseFn"></view>
+        <view class='address'>
+        <picker-view indicator-style="height: 65px;" style="width: 100%; height: 250rpx;" value="{{valueArr}}" bindchange="bindChange">
+                <picker-view-column>
+                <view wx:for="{{province}}" wx:key="{{index}}"  class='address-box'>{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                <view wx:for="{{city}}"  wx:key="{{index}}"  class='address-box'  >{{item}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                <view wx:for="{{area}}"  wx:key="{{index}}"  class='address-box'>{{item}}</view>
+                </picker-view-column>
+        </picker-view>
+        </view>
+</view>
+<!--业务类型 遮罩层  -->
+<view class='mask' wx:if="{{maskDis1 != 0 }}">
+    <view class='mask-back'  bindtap="CloseFn"></view>
+    <view class='address'>
+       <picker-view indicator-style="height: 50px;" style="width: 100%; height: 150rpx;" value="{{typeArr}}" bindchange="change">
+            <picker-view-column>
+                 <view wx:for="{{Dtype}}" wx:key="{{index}}" style="line-height: 50px" id="{{item.id}}" class='address-box'>{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view wx:for="{{Xtype}}"  wx:key="{{index}}" style="line-height: 50px" id="{{item.id}}" class='address-box'>{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+</view>

@@ -1,0 +1,132 @@
+.user-contont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+}
+.user-name {
+    width: 500rpx;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.user-name image {
+    height: 150rpx;
+    width: 150rpx;
+    margin-bottom: 50rpx;
+}
+.user-name  text {
+    width: 100%;
+    text-align: center;
+}
+.moeny {
+    padding: 0 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.moeny view{
+    height: 150rpx;
+    width: 200rpx;
+    border:2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+    border-radius: 15rpx;
+    font-size: 46rpx;
+    color: #333;
+    font-weight: bold;
+}
+.moeny view.action{
+    color: #d92a2a;
+    border-color: #d92a2a;
+}
+.other {
+    color: #1679f3;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    padding-top: 50rpx;
+}
+.mask-back {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.mask-text {
+    height: 400rpx;
+    width:75%;
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    border-radius: 20rpx;
+}
+.title {
+    padding: 20rpx 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.title image {
+    height: 45rpx;
+    width: 45rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 15rpx;
+}
+.title text {
+    font-size: 36rpx;
+}
+.txmoeny {
+    position: relative;
+    display:flex;
+    height: 80rpx;
+    margin: 50rpx 30rpx;
+    border:1px solid #ccc;
+    padding: 0 15rpx;
+}
+.txmoeny  text {
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+
+}
+.txmoeny input {
+    flex: 1;
+    height: 100%;
+}
+.sumbtn {
+    height: 80rpx;
+    padding: 0 30rpx;
+}
+.sumbtn button {
+    background-color: #db3535;
+    color: #fff;
+}
+.smreward {
+    height: 90rpx;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: 0 auto;
+    background-color: #d92a2a;
+    border-radius: 15rpx;
+    margin-top: 50rpx;
+    font-size: 38rpx;
+}

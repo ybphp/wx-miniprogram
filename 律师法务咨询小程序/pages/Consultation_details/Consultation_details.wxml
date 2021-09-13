@@ -1,0 +1,76 @@
+  <!--titlen部分  -->
+<view class='details-title' id="{{faqid}}">
+        <view class='title-user'>
+                 <image src="{{logo}}"  class='logo' ait='律师'></image> 
+                 <text>{{Mobile}}</text>
+                <image src="/images/shang.png" class='ico' ait='赏' 
+                wx-if="{{money != ''}}"></image>
+                <text class="money">{{Dmoney}}</text>
+        </view>
+        <view class='title-content'>{{content}} </view>
+        <view class="title-images" wx:if="{{images != null}}">
+              <image src="{{item.path}}" mode="aspectFit" 
+            wx:for="{{images}}" wx:key="{{index}}"></image>  
+        </view>
+        <view class='title-label'>
+                <text>{{category1}}</text>
+                <text>{{category2}}</text>
+        </view>
+        <view class='title-time'>
+                <text>{{time}}</text>
+                <text>{{place}}</text>
+        </view> 
+</view>
+<!--回复列表  -->
+<view class='reply-list'>
+        <text class='title'>回复（{{len}}）</text>
+        <!--列表循环  -->
+        <view class='list-details'  wx:for="{{detailsArr}}" wx:key="{{index}}" wx:for-item ="itemDetails">
+                <!--列表的title  -->
+                <view class='list-details-title' >
+                        <view class='details-cen'>
+                            <view class="details-1">
+                                    <image src="{{itemDetails.senduser.image}}"  class='details-logo' ait='律师'></image> 
+                                    <text class='details-name'>{{itemDetails.senduser.nickname}}</text>
+                            </view>
+                            <view class="details-2">
+                                <text  bindtap="adopt" class="{{itemDetails.senduser.is_adopt!='采纳' ? 'color' : ''}}" data-index="{{index}}">{{itemDetails.senduser.is_adopt}}</text>
+                                <view class="redbox" bindtap="redFn" data-img="{{itemDetails.senduser.image}}" data-name="{{itemDetails.senduser.nickname}}" data-id="{{itemDetails.senduser.uid}}" data-index="{{index}}"><image src="/images/red.png"></image>{{itemDetails.senduser.reward_count}}
+                                </view>
+                            </view>
+                        </view>
+                        <view class='details-cen' style='display:none'>
+                                <view  class='red-text'>
+                                        <image src="/images/red.png" ait='红包'></image> 
+                                        <text>3</text>    
+                                </view>
+                                <view class='consultation'>咨询TA</view>
+                        </view>
+                </view>
+                <!--列表的内容  -->
+                   <block  wx:for="{{itemDetails.contents}}" wx:key="{{index}}" wx:for-item = "timeCenter">
+                <view class='list-details-content' id="{{timeCenter.id}}">
+                        <view class='content-text'>
+                                <text >{{timeCenter.content}}</text>
+                                <text class="reply" bindtap="replyFn" id="{{timeCenter.id}}" data-parent_id="{{timeCenter.id}}" data-master_id="{{timeCenter.master_id}}" wx:if="{{isShow}}">回复</text>
+                            <text>{{timeCenter.date}}</text>
+                        </view>
+                        <view class='content-reply' wx:if="{{timeCenter.child.length != '' }}" > 
+                        <block  wx:for="{{timeCenter.child}}"  wx:for-item = "reply" wx:key="{{index}}">
+                                <view class='reply-list'>                     
+                                 <text class='blue-txt'>{{reply.senduser.nickname}}</text>回复 <text class='blue-txt'>{{reply.touser.nickname}}</text> {{reply.content}}
+                                </view>
+                        </block>
+                        </view>
+                </view>
+                </block>
+        </view>
+</view>
+<!--圆形点击框  -->
+<view class="round-click">
+    <navigator url='/pages/addimages/addimages' >发布咨询</navigator >
+</view>
+<!--回复框  -->
+<view class="replytext" wx:if="{{nReply != 0 }}" bindtap="ondataFn">
+    <text>请点击这里输入您要回复的内容</text>
+</view>

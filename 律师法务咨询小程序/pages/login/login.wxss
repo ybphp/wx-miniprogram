@@ -1,0 +1,91 @@
+
+/*
+  登陆页面的样式文件
+    --217-8-3
+*/
+.login-center {
+  padding: 40rpx;
+
+}
+.login-logo {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height:150px;
+}
+.login-logo image {
+  height:140rpx;
+  width:426rpx;
+  display: block;
+  margin: 0 auto;
+}
+.login-logo .login-text {
+  font-size: 32rpx;
+  color: #6d6d6d;
+  padding-top: 20rpx;
+  
+}
+.login-logo .login-text text {
+  color: #d92a2a;
+}
+.form-cen {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.from-list {
+  display: flex;
+  flex-direction: column;
+}
+.from-list .section {
+  flex: 1;
+  margin-bottom: 35rpx;
+}
+.from-list .section  input{
+  border:1px solid #afafaf;
+  border-radius:15rpx;
+  height:80rpx;
+  line-height:80rpx;
+  font-size: 32rpx;
+  padding-left: 15rpx;
+}
+.from-list .section.section-flex {
+  display: flex;
+  justify-content:space-between;
+}
+.from-list .section.section-flex  .text {
+  font-size: 30rpx;
+  color: #6d6d6d ;
+}
+.from-list .section .submit-btn {
+  background-color: rgba(217, 42, 42, 1);
+  color: #fff;
+}
+.footer-nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100rpx;
+    background: #f7f7f8;
+    border-top: 1px solid #b2b2b2;
+}
+.footer-btn {
+    display: flex;
+}
+.footer-btn  navigator {
+    height: 100rpx;
+    flex:1;
+    display: flex;
+    justify-content:center;
+     align-items:center ;
+     color: #d92a2a ;
+     font-size: 32rpx;
+}
+.footer-btn  navigator:first-child {
+    border-right: 1px solid #b2b2b2;
+}
+.authorization button{
+    background: #1AAD16;
+    color: #fff;
+}

@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/Consultation/Consultation",
+    "pages/RedPacket/RedPacket",
+    "pages/questions/questions",
+    "pages/forgot_password/forgot_password",
+    "pages/demo/demo",
+    "pages/addimages/addimages",
+    "pages/myList/myList",
+    "pages/login/login",
+    "pages/static/moneyDetailed/moneyDetailed",
+    "pages/myListStatic/order/order",
+    "pages/myListStatic/news/news",
+    "pages/myListStatic/systemNews/systemNews",
+    "pages/myListStatic/ConsultationNews/ConsultationNews",
+    "pages/myListModify/myListModify",
+    "pages/setUp/setUp",
+    "pages/Reply/Reply",
+    "pages/Consultation_details/Consultation_details",
+    "pages/static/ContactUs/ContactUs",
+    "pages/static/feedback/feedback",
+    "pages/static/platform/platform",
+    "pages/static/user/user",
+    "pages/static/Lawyer/Lawyer",
+    "pages/static/AboutUs/AboutUs",
+    "pages/static/Help/Help",
+    "pages/static/ServiceGuarantee/ServiceGuarantee",
+    "pages/modifyPasd/modifyPasd",
+    "pages/register/register",
+    "pages/aboutList/aboutList",
+    "pages/Agreement/Agreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "律师帮帮",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

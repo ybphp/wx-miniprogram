@@ -1,0 +1,19 @@
+<!--条目列表  -->
+<view  class="setup-list">
+    <navigator url='/pages/myListStatic/systemNews/systemNews'>
+            <text>系统消息</text>
+            <view class="imgs">
+                <image src='/images/yuan.png' class="yuan" 
+                wx:if="{{znews != 0}}"></image>
+                <image src='/images/b.png'></image>
+            </view>
+    </navigator>
+        <navigator url="/pages/myListStatic/ConsultationNews/ConsultationNews">
+            <text>咨询消息</text>
+            <view class="imgs">
+                <image src='/images/yuan.png' class="yuan" 
+                wx:if="{{xnews != 0}}"></image>
+                <image src='/images/b.png'></image>
+            </view>
+    </navigator>
+</view>

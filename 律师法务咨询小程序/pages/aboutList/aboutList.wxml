@@ -1,0 +1,27 @@
+<!--条目列表  -->
+<view  class="setup-list">
+        <navigator url="/pages/static/AboutUs/AboutUs">
+                <text>关于我们</text>
+                <image src='/images/b.png'></image>
+        </navigator>
+         <navigator url="/pages/static/ServiceGuarantee/ServiceGuarantee">
+                <text>服务保障</text>
+                <image src='/images/b.png'></image>
+        </navigator>
+         <navigator url="/pages/static/platform/platform">
+                <text>平台服务协议</text>
+                <image src='/images/b.png'></image>
+        </navigator>
+         <!-- <navigator url="/pages/static/user/user">
+                <text>用户注册协议</text>
+                <image src='/images/b.png'></image>
+        </navigator>
+         <navigator url="/pages/static/Lawyer/Lawyer">
+                <text>律师注册协议</text>
+                <image src='/images/b.png'></image>
+        </navigator> -->
+         <navigator url="/pages/static/ContactUs/ContactUs">
+                <text>联系我们</text>
+                <image src='/images/b.png'></image>
+        </navigator>
+</view>

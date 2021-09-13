@@ -1,0 +1,110 @@
+.head-cen {
+    background:#ea3333;
+    height: 250rpx;
+}
+.head {
+    display: flex;
+    justify-content:space-between;
+     align-items: center;
+    padding: 0 15rpx;
+    height: 76rpx;
+}
+.head image{
+      height: 40rpx;
+     width: 40rpx;
+}
+.head-left {
+    display: flex;
+    align-items: center;
+    font-size: 32rpx;
+    color: #fff;
+}
+.head-left image{
+    height: 40rpx;
+    width: 40rpx;
+}
+.head-user {
+    display: flex;
+    justify-content:space-between;
+     align-items: center;
+     padding: 0 25rpx;
+    height: 175rpx;
+}
+.head-user .head-users {
+    display: flex;
+    align-items: center;
+}
+.head-user .sex {
+    font-size: 36rpx;
+    color: #fff;
+}
+.sexFlex {
+     display: flex;
+    align-items: center;
+}
+.head-user .head-users image{
+    height: 100rpx;
+    width: 100rpx;
+}
+.head-user .head-users text {
+    padding-left: 15rpx;
+    font-size: 32rpx;
+    color: #fff;
+}
+.head-user navigator image {
+    height: 40rpx;
+    width: 40rpx;
+}
+/*
+    内容列表
+  */
+  .user-center {
+    border-top:15rpx solid #e8e8e8;
+    border-bottom:14rpx solid #e8e8e8;
+  }
+.user-center .user-list {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 110rpx;
+    padding: 0 30rpx;
+    border-bottom: 1rpx solid #e8e8e8;
+  }
+  .user-center .user-list .user-list-let {
+      display: flex;
+      align-items: center;
+  }
+  .user-center .user-list image {
+      height: 48rpx;
+      width: 48rpx;
+  }
+   .user-center .user-list text {
+       font-size: 32rpx;
+       color: #333;
+       padding-left: 20rpx;
+   }
+   .left-img {
+    flex: 1;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+   }
+   .user-center .user-list image.yuan{
+        height: 18rpx;
+        width: 18rpx;
+   }
+   .footer {
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 100%;
+       display: flex;
+       height: 100rpx;
+       background:#f7f7f8;
+       border-top:1px solid #b2b2b2;
+        border-right: 1px solid #b2b2b2;
+        justify-content:center;
+        align-items: center;
+        color:#d92a2a;
+        font-size:32rpx;
+   }

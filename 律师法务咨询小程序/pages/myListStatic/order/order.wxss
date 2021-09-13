@@ -1,0 +1,51 @@
+
+.orders {
+    background: #fff;
+    padding: 30rpx;
+    border-bottom: 10rpx solid #e8e8e8;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-let {
+    display: flex;
+    align-items: center;
+}
+.title-let image{
+    height: 80rpx;
+    width: 80rpx;
+    border-radius: 100%;
+}
+.title-let text {
+    font-size:36rpx;
+    color: #333;
+    padding-left: 20rpx;
+}
+.title-rit {
+    font-size: 28rpx;
+    color: #929292;
+}
+.content {
+    font-size: 36rpx;
+    color: #333;
+    padding: 20rpx 0;
+}
+.orders-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.orders-footer text {
+    font-size: 28rpx;
+    color: #929292;
+}
+.reply {
+    display: flex;
+    align-items: center;
+}
+.reply image{
+    height: 40rpx;
+    width: 40rpx;
+    margin-right: 15rpx;
+}

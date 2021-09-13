@@ -1,0 +1,9 @@
+/**app.wxss**/
+page {
+  height: 100%;
+  width:100%;
+  background: #fff;
+}
+view,input,button,.placeholders {
+   font-family:"Microsoft YaHei" , Helvetica Neue,Helvetica,Arial,sans-serif;
+}

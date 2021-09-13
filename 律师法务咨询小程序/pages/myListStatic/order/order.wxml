@@ -1,0 +1,20 @@
+<view class="order-list">
+    <view class="orders" wx:for="{{orderArr}}" wx:key="{{index}}"
+     data-id="{{item.id}}" data-uid="{{item.uid}}" bindtap='Jump'>
+        <view class="title">
+            <view class="title-let">
+                <image src="{{image}}"></image>
+                <text>{{nickname}}</text>
+            </view>
+             <view class="title-rit">{{item.date}}</view>
+        </view>
+        <view class="content">{{item.content}}</view>
+        <view class="orders-footer">
+            <text>{{item.category}}</text>
+            <view class="reply">
+                <image src="/images/xinx.png"></image>
+                <text>{{item.answer_count}}</text>
+            </view>
+        </view>
+    </view>
+</view>

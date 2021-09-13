@@ -1,0 +1,30 @@
+<view class="modify-form">
+    <form bindsubmit="formSubmit">
+        <view class="label-list label-lists">
+            <view class="label">头像</view>
+            <image src="{{images}}" bindtap="uploadFn"></image>
+        </view>
+         <view class="label-list">
+            <view class="label">昵称</view>
+            <input placeholder="请输入您的昵称"  placeholder-class="place" name="name" value="{{name}}"/>
+        </view>
+        <view class="label-list">
+            <view class="label">性别</view>
+            <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{sex}}" wx:key="{{index}}">
+                    <radio value="{{item.id}}"  
+                    checked="{{sexId == item.id}}"/>{{item.name}}
+                </label>
+            </radio-group>
+        </view>
+         <view class="label-list">
+            <view class="label">E-mail</view>
+            <input placeholder="请输入您的E-mail" value='{{Email}}' placeholder-class="place" name='Email'/>
+        </view>
+         <view class="label-list">
+            <view class="label">手机号</view>
+            <input value="{{ipone}}" disabled="{{disabled}}"  placeholder-class="place"/>
+        </view>
+        <button form-type='submit' class="submit">确定</button>
+    </form>
+</view>

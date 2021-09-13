@@ -1,0 +1,54 @@
+<view class="head-cen">
+    <view class="head">
+        <view class="head-left ">
+                <text>{{positions}}</text>
+                <image src="/images/coordinates.png"></image>
+        </view>
+         <navigator url = "/pages/setUp/setUp"><image src="/images/setup.png"></image></navigator>
+    </view>
+    <view class="head-user" bindtap="xgUserFn">
+            <view class="head-users ">  
+                      <image src="{{image}}"></image>
+                      <text>{{usrename}}</text>
+            </view>
+            <navigator url="javascript:;" class="sexFlex"> 
+                <text class="sex">{{sex}}</text>
+                <image src="../../images/a.png"></image>
+            </navigator>
+    </view>
+</view>
+<view class="user-center">
+    <view class="user-list" bindtap="onNews">
+        <view class="user-list-let">
+            <image src="../../images/news.png"></image>
+            <text>消息中心</text>
+        </view>
+        <view class="left-img">
+             <image src="../../images/yuan.png" class="yuan" 
+             wx:if="{{news != 0 }}"></image>
+            <image src="../../images/b.png"></image>
+        </view>
+    </view>
+    <view class="user-list" bindtap="onOrder">
+        <view class="user-list-let">
+            <image src="../../images/order.png"></image>
+            <text>我的订单</text>
+        </view>
+         <view class="left-img">
+            <image src="../../images/b.png"></image>
+        </view>
+    </view>
+    <!-- <view class="user-list">
+        <view class="user-list-let">
+            <image src="../../images/heart.png"></image>
+            <text>我的律师</text>
+        </view>
+    </view> -->
+    <!-- <view class="user-list">
+        <view class="user-list-let">
+            <image src="../../images/wallet.png"></image>
+            <text>我的钱包</text>
+        </view>
+    </view> -->
+</view>
+<view class="footer"  bindtap="JumpFn" >咨询列表</view>

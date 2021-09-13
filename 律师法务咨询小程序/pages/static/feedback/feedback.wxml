@@ -1,0 +1,6 @@
+<view class="feedback">
+    <textarea placeholder="请输入您的反馈信息" auto-focus="{{focus}}" value="{{value}}" bindinput="changeFn"></textarea>
+    <button bindtap="SubmitFn">发布</button>
+    <view class="classname">{{demos1}}</view>
+    <view class="classname">{{demos2}}</view>
+</view>

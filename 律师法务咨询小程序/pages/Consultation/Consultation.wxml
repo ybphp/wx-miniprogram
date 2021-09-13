@@ -1,0 +1,47 @@
+
+<view class="center">
+    <!--title  -->
+    <view class="title">
+        <view wx:for="{{navAtrr}}" bindtap="navFn" id="{{index}}" class="{{index == value ? 'set' : '' }}" wx:key="{{index}}">{{item}}</view>
+        <view bindtap="sortFn" class="{{sortID == 1?'last set':'last' }}">排序</view>
+    </view>
+    <!--弹出层  -->
+    <view class="dolayer" wx:if="{{sortID == 1}}">
+        <text wx:for="{{layerArr}}" id="{{index}}" class="{{index == layerVal ? 'set' : '' }}" bindtap="dolayerFn" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <!--滚动区域  -->
+    <view class="scroll-box">
+        <view class="scroll-box-pasd">
+        <view class="view-box" wx:for="{{results}}" id="{{item.id}}" bindtap = "jumpFn" wx:key = "{{item.id}}">
+            <view class="box-title">
+                    <view class="title-left">
+                        <image src="https://m.12348.com.cn{{item.image}}" class="logo"></image>
+                        <text class="text">{{item.nickname || "电话为空"}}</text>
+                        <image src="/images/shang.png" class="ico"  wx:if="{{item.money!= '' }}"></image>
+                        <text class="bor-txt" wx:if="{{item.is_adopt == 1}}">已采纳</text>
+                    </view>
+                    <view class="title-rit">{{item.date}}</view>
+            </view>
+            <view class="box-test">
+                    <text>{{item.content}}</text>
+            </view>
+            <view class="box-footer">
+                    <text>{{item.cat_small}}-{{item.cat_big}}</text>
+                    <view class="news">
+                        <image src="/images/xinx.png"></image>
+                        <text>{{item.answer_count}}</text>
+                    </view>
+            </view>
+        </view>
+        </view>
+    </view>
+    <!--圆形点击框  -->
+    <view class="round-click">
+       <navigator url='/pages/addimages/addimages' >发布咨询</navigator >
+    </view>
+    <!--底部  -->
+    <view class="footer-box">
+            <view  bindtap="ConsultationFn">咨询{{demos}}</view>
+            <view bindtap="myNews">我的</view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+.common-text{
+    padding: 30rpx;
+}
+.common-text text{
+    font-size: 32rpx;
+    color: #464646;
+    padding: 20rpx 0;
+    display: block;
+}
+.common-text .title {
+    display: block;
+    font-size: 36rpx;
+    color: #333;
+    font-weight: bold;
+}

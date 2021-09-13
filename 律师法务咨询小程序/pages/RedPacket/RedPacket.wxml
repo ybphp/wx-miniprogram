@@ -1,0 +1,30 @@
+<!--用户信息  -->
+<view class="user-contont">
+    <view class="user-name">
+        <image src="{{imageSrc}}"></image>
+        <text>{{imageName}}</text>
+    </view>
+</view>
+<!--金额  -->
+<view class="moeny">
+    <view class="{{index == value ?  'action' : '' }}"  wx:for="{{Marr}}" wx:key="{{index}}" bindtap="actionFn" id="{{index}}" >{{item}}</view>   
+</view>
+<!--其他金额  -->
+<view class="other" bindtap="otherFn">其他金额</view>
+<!-- 确定打赏  -->
+<view class="smreward" bindtap="smReward">确定支付</view>
+<!--遮罩层  -->
+<view class="mask" wx:if="{{close}}">
+    <view class="mask-back"></view>
+    <view class="mask-text">
+        <view class="title">
+            <image src="/images/close.png" bindtap="closeFn"></image>
+            <text >其他金额</text>
+        </view>
+        <view class="txmoeny">
+            <text>金额（元）</text>
+            <input placeholder="请填写您的金额" bindinput="inputFn"/>
+        </view>
+        <view class="sumbtn" bindtap="sumbtn"><button>塞钱</button></view>
+    </view>
+</view>

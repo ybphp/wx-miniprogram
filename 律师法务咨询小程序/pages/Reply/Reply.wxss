@@ -1,0 +1,22 @@
+.reply-cen {
+    padding: 30rpx;
+    display: flex;
+    flex-wrap:wrap;
+}
+.reply-cen textarea{
+    height: 250rpx;
+    border:1px solid #e8e8e8;
+    width: 100%;
+    padding: 2%;
+}
+.reply-cen button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80rpx;
+    width: 100%;
+    color: #fff;
+    font-size: 34rpx;
+    background-color: #ea3333;
+    margin-top: 50rpx;
+}

@@ -1,0 +1,19 @@
+/* pages/demo/demo.wxss */
+.box {
+        height: 50rpx;
+        width: 100%;
+        background-color: #ccc;
+        text-align: center;
+        font-size: 30rpx;
+        color: #fff;
+}
+.region {
+        margin-top: 15rpx;
+        display: flex;
+        height: 300rpx;
+        border:1px solid #999;
+}
+.demo {
+        height: 280rpx;
+        overflow: hidden;
+}

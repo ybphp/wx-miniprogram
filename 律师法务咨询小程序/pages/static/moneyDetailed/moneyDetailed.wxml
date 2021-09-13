@@ -1,0 +1,23 @@
+<view class="text-cen">
+    <text class="h1">支付费用将暂时托管在本平台：</text>
+    <view>
+        <text class="title">采纳律师建议，</text>
+        <text>平台将把费用支付给被采纳的律师；</text>
+    </view>
+    <view>
+        <text class="title">24小时内未采纳，</text>
+        <text>平台将把费用转给首位提供咨询的律师，打赏费用不予退回；</text>
+    </view>
+    <view>
+         <text class="title">超过24小时律师未回复，</text>
+         <text>赏金全额退还。</text>
+    </view>
+    <text class="h2">1、优先回复：</text>
+    <text class="h3">获得优先咨询权限，全国律师第一时间响应。</text>
+    <text class="h2">2、仅律师可阅：</text>
+    <text class="h3">保护隐私，其他登录用户或游客无法查看详情。</text>
+    <text class="h2">3、保护隐私：</text>
+    <text class="h3">搜索引擎无法搜索并查看咨询内容，保护您的隐私。</text>
+    <text class="h2">4、加急置顶：</text>
+    <text class="h3">问题出现在咨询列表最上方，不用排队。</text>
+</view>
