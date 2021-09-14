@@ -1,0 +1,10 @@
+<!--pages/myresident/myresident.wxml-->
+<i-panel title="">
+    <view class='panel-p10'>
+      <i-cell-group>
+          <i-cell title="添加住院人" label="还可以添加10人" is-link url="../addresident/addresident">
+            <i-icon slot="icon" type="add" color="#1498d9" size='36' />
+          </i-cell>
+      </i-cell-group>
+    </view>
+</i-panel>

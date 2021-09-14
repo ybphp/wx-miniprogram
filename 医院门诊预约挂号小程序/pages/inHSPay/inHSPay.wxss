@@ -1,0 +1,35 @@
+.clock{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #ffa14e;
+  text-align: center;
+  color: #fff;
+}
+.money{
+  width: 100%;
+  height: 100px;
+  background: #fff;
+}
+.money text{
+  width: 100%;
+  height: 26px;
+  display: block;
+  line-height: 30px;
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+  color: #999999;
+}
+.money view{
+  height: 70px;
+  line-height: 70px;
+  background: #fff;
+  font-size: 50px;
+  text-align: center;
+  color: #ffa14e;
+}
+.payYes button{
+  background: #1498d9;
+  border-radius: 10px;
+}

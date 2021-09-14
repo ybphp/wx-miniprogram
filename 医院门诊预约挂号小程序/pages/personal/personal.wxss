@@ -1,0 +1,28 @@
+/* pages/personal/personal.wxss */
+.userInfo{
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 80rpx 0 0;
+}
+.userAvatar{
+  margin: -40rpx 20rpx 0;
+}
+.userName{
+  padding: 20rpx 0;
+  font-size: 1rem;
+}
+.userName2{
+  padding: 20rpx 0;
+  font-size: 0.8rem;
+  color:#999;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}

@@ -1,0 +1,84 @@
+
+.changePersonInfo{
+  position: fixed;
+  bottom: 0;
+  
+}
+.clearFloat{
+  clear: both;
+}
+.personInfoTop{
+  background: #fff;
+  padding-bottom: 10px;
+  
+}
+.personInfoTop>view:first-child{
+  float: left;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.personInfoTop>view:nth-child(2){
+  float: right;
+  border-radius: 20px;
+  margin-right: 10px;
+  color:#1498d9;
+  padding:2px 12px;
+  margin-top: 10px;
+}
+.seeCard{
+  padding-bottom: 0px;
+  font-size: 12px;
+  color: #858585;
+  margin-left: 10px;
+}
+.notPayTitle{
+  width: 100%;
+  padding: 10px 0;
+  margin-left: 10px;
+}
+.wrapper{
+  width: 100%;
+  display: block;
+  background: #fff;
+  height: 50px;
+  padding:10px 0;
+  border-bottom: solid 1px #eee;
+}
+.wrapper>view{
+  height: 25px;
+  width: 100%;
+}
+.wrapper>view>text{
+  float: left;
+  margin-left: 10px;
+}
+.wrapper>view>view{
+  float: right;
+  margin-right: 10px;
+}
+.wrapperBottom text{
+  font-size: 12px;
+  color:#8c8c8c;
+  width: 30%;
+  display: block;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+}
+.wrapperBottom view{
+  font-size: 12px;
+  color: #8c8c8c;
+}
+.notLog{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+  

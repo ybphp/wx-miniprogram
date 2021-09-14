@@ -1,0 +1,21 @@
+/* pages/component/searchComp/searchComp.wxss */
+.searchBody{
+  position: relative;
+  flex: 1;
+}
+.searchIcon{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+    color: #ccc;
+}
+.searchInput{
+  background: #f2f2f2;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 3px;
+  padding: 0 0 0 1.25rem;
+}

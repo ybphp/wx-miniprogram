@@ -1,0 +1,36 @@
+<!--pages/deposit/deposit.wxml-->
+
+<view class='panel-m20'>
+
+  <!-- <i-panel title="" class="{{show}}">
+      <view class='panel-p30'>
+        <i-button bind:click="addVisitCard" type="ghost" size="large">初次使用，请添加住院人</i-button>
+      </view>
+  </i-panel> -->
+  <i-panel>
+      <view class="personInfoTop" >
+    <view>充值人姓名：{{sickName}}</view>
+    <view></view>
+    <view class='clearFloat'></view>
+    <view class='seeCard'>充值人就诊卡：{{sickCard}}</view>
+    </view>
+  </i-panel> 
+
+  <i-panel title="">
+      <view class='panel-p10 centent'>
+        <view class='flexBody'>
+          <view class='flexLeft choose'>选择充值金额</view>
+          <!-- <view class='flexRight'>余额<view class='momey'>￥0.00</view></view> -->
+        </view>
+        <i-row>
+            <i-col span="8" wx:for="{{button}}" wx:key="{{item.id}}" i-class="col-class">
+              <i-button data-money="{{item.id}}" bind:click="handleClick" type="{{item.type}}">￥{{item.id}}</i-button>
+            </i-col>
+            <i-input value="{{money}}" type="number" bind:change="moneyChange" placeholder="请输整数金额" maxlength="50" />
+        </i-row>
+      </view>
+  </i-panel>
+  <view class='panel-p30'>
+    <i-button bind:click="inputMoney" type="primary">确定</i-button>
+  </view>
+</view>  

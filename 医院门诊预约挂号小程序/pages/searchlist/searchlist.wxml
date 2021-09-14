@@ -1,0 +1,29 @@
+<view class='searchTop'>
+  <view class='searchBody'>
+    <input placeholder="请输入关键字查询"  class='searchInput' placeholder-class="searchHolder" focus="{{focus}}" bindinput="gotoSearchList" />
+    <view  class='searchIcon'><i-icon size="24" type="search" /></view>
+  </view>
+  <view class='cancelBtn'>取消</view>
+</view>
+<view class='searchList' scroll-y>
+  <i-panel title="推荐医生">
+      <view>
+        <i-cell-group>
+            <i-cell wx:for="{{doctor}}" wx:key="{{item.ID}}"  title="{{item.KSMC}}" label="{{item.YS}}"  data-id="{{item.YSID}}" bindtap="getDetail">
+                <image class='cellImage' src='../../images/doctor2.jpg'  slot="icon"></image>
+            </i-cell>
+            <i-cell title="查看更多" is-link url="../department/department" only-tap-footer></i-cell>
+        </i-cell-group>
+      </view>
+  </i-panel>
+  <i-panel title="推荐科室">
+      <view>
+        <i-cell-group>
+            <i-cell title="中医内科" is-link url="../reserve/reserve">
+              <i-icon type="document" size='28'  slot="icon" />
+            </i-cell>
+            <i-cell title="查看更多" is-link url="../department/department" only-tap-footer></i-cell>
+        </i-cell-group>
+      </view>
+  </i-panel>
+</view>

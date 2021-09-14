@@ -1,0 +1,16 @@
+<view class='panel-m20'>
+  <view bindtap='handleOpen2'>
+  切换就诊人
+    <!-- <i-button id="small" shape="circle" size="small" bind:click="handleOpen2">切换就诊人</i-button> -->
+  </view>
+  <i-action-sheet visible="{{ visible2 }}" show-cancel bind:cancel="handleCancel2" bind:click="handleClickItem2" mask-closable="{{ false }}">
+    <view slot="header" style="padding: 16px">
+      <view style="color: #444;font-size: 16px">切换就诊卡</view>
+      <i-cell-group>
+        <i-cell class="name" wx:for="{{sickList}}" wx:key="{{item.PATIENT_ID}}" title="{{item.NAME}}" value="就诊卡：{{item.PATIENT_ID}}" data-id="{{item.PATIENT_ID}}" bindtap="changeMan">
+          <i-icon slot="icon" type="right" size="28" color="{{item.color}}" />
+        </i-cell>
+      </i-cell-group>
+    </view>
+  </i-action-sheet>
+</view>

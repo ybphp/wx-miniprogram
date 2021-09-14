@@ -1,0 +1,16 @@
+<view class='panel-m20'>
+  <view class="personInfoTop">
+    科室分布
+  </view>
+
+  <view class="wrapper">
+    <view>
+      <text>一楼</text>
+      <text>门诊大厅，煎药室</text>
+    </view>
+    <view>
+      <text>二楼</text>
+      <text>眼科，急症科，耳鼻喉科</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,101 @@
+.medicare{
+  padding:10px;
+  line-height: 16px;
+  background: #f4f2f2;
+  color: #888888;
+}
+.personInfo{
+  padding: 10px;
+}
+.changePersonInfo{
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+}
+.clearFloat{
+  clear: both;
+}
+.personInfoTop{
+  background: #fff;
+  padding:10px;
+}
+.personInfoTop>view:first-child{
+  float: left;
+  font-size: 16px;
+}
+.personInfoTop>view:nth-child(2){
+  float: right;
+  border-radius: 20px;
+  padding:2px 10px;
+  color:#1498d9;
+}
+.seeCard{
+  padding-bottom: 0px;
+  font-size: 12px;
+  color: #858585;
+}
+.goPayYes{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  height: 60px;
+}
+.goPayYes checkbox{
+  float: left;
+  margin-top: 17px;
+  margin-left: 28px;
+}
+.goPayYes text{
+  float: left;
+  margin-top: 17px;
+}
+.goPayYes view{
+  background: #ccc;
+  width: 100px;
+  line-height: 60px;
+  text-align: center;
+  height: 60px;
+  float: right; 
+}
+.notPayTitle{
+  width: 100%;
+  padding: 10px;
+}
+.notPayWrapper>view{
+  width: 93%;
+  background: #fff;
+  padding: 13px 10px 10px 20px;
+  height: 30px;
+  border-bottom: solid 1px #f4f2f2;
+}
+.notPayWrapper>view>checkbox{
+  float: left;
+}
+.notPayWrapper>view>text{
+  float: left;
+}
+.notPayWrapper>view>view{
+  float: right;
+  margin-right: 20px;
+}
+.notPayWrapper{
+  padding-bottom: 60px;
+}
+#toPayColor{
+  background: #1498d9;
+  color: #fff;
+}
+#toPayColor2{
+  background: #ccc;
+  color: #000;
+}
+.show{
+  display: block;
+  text-align: center;
+}
+.hidden{
+  display: none;
+}
+
+

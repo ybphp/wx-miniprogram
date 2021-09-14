@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "添加就诊卡",
+  "usingComponents": {
+    "i-message": "../../iview/message/index"
+  },
+  "usingComponents2": {
+    "i-input": "../../iview/input/index"
+  }
+}

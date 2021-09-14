@@ -1,0 +1,68 @@
+<!--pages/doctor/doctor.wxml-->
+<import src="../component/calendar/calendar/index.wxml"/>
+<view class='doctorBody'>
+  <view class='doctorTp'>
+    <i-avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" size="large" shape="square"></i-avatar>
+    <view class='doctorMd'>
+      <view class='doctorName'>{{doctor}}</view>
+      <view>{{departments}}</view>
+    </view>
+    <view>
+      <i-icon size='20' type="collection" />
+      <i-icon size='20' type="share" />
+    </view>
+  </view>
+  <view class='doctorBt'>
+  {{position}}
+  </view>
+</view>
+<view>
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="0" title="挂号"></i-tab>
+    <i-tab key="1" title="介绍"></i-tab>
+  </i-tabs>
+</view>
+
+<view class='{{registration}}'>
+  <view class='flexRow'>
+    <view>{{date}}</view>
+    <view><i-button size="small" bind:click="switchView">切换日期</i-button></view>
+  </view>
+  <view class="calendar-wrap">
+    <template is="calendar" data="{{...calendar}}"/>
+    <i-cell-group>
+      <i-cell bindtap='handleOpen2' title="只显示箭头" value="{{price}}￥" is-link></i-cell>
+    </i-cell-group>
+  </view>
+</view>
+<view class='{{introduce}}'>
+  <i-cell-group>
+      <i-cell title="擅长" label="斯蒂芬斯蒂芬"></i-cell>
+      <i-cell title="介绍" label="高房价和国际法"></i-cell>
+  </i-cell-group>
+</view>
+<view>
+  <i-action-sheet visible="{{ visible2 }}" show-cancel bind:cancel="handleCancel2" bind:click="handleClickItem2" mask-closable="{{ false }}">
+    <view class='top' slot="header" style="padding: 16px">
+      <view class='list-part-top'>
+            <view class='list-part-left'>
+                <image src="../../images/doctor.jpg"></image>
+            </view>
+            <view class='list-part-right'>
+                <text class='doctor-name'>医生：{{doctor}}</text> 
+                <text class='doctor-name'>科室：妇产科</text> 
+                <text class='doctor-name'>费用：￥3.00</text> 
+                <text class='doctor-name'>时间：{{date}}</text> 
+            </view>
+        </view>
+        <view class='list-part-bottom'>
+          <text class='doctor-name1'>就诊人：{{sickName}}</text> 
+          <text class='doctor-name2'>就诊卡：{{sickCard}}</text> 
+        </view>
+        
+    </view>
+    <view class='bottomYes' bindtap='goPay' slot="header" style="padding: 16px">
+        <view style="color: #fff;font-size: 16px">确定</view>
+    </view>
+  </i-action-sheet>
+</view>

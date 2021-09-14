@@ -1,0 +1,19 @@
+<view>
+  <!-- <view class="clock">剩余支付时间12：50</view> -->
+  <view class="money">
+    <text>支付金额（元）</text>
+    <view>{{price}}</view>
+  </view>
+  <view>
+    <i-cell-group>
+      <i-cell i-class="right" title="费用类型" value="预约挂号" ></i-cell>
+      <i-cell title="就诊科室" value="{{departments}}" ></i-cell>
+      <i-cell title="医生名字" value="{{doctor}}" ></i-cell>
+      <i-cell title="就诊日期" value="{{date}}星期日"></i-cell>
+      <i-cell title="就诊时段" value="8：00"></i-cell>
+      <i-cell title="就诊人"   value="{{sickName}}"></i-cell>
+      <i-cell title="就诊卡号" value="{{sickCard}}"></i-cell>
+    </i-cell-group>
+  </view>
+  <i-button type='primary' disabled="{{disabled}}" id="payYes" bind:click="WXPay">微信支付</i-button>
+</view>

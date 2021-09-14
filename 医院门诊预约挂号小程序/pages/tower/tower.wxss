@@ -1,0 +1,12 @@
+
+.personInfoTop{
+  padding:10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center; 
+}
+.personInfoTop>image{
+  width: 100%;
+  
+}
+  

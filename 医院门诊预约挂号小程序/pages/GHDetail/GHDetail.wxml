@@ -1,0 +1,17 @@
+<view>
+  <view>
+    <i-cell-group>
+      <view class="money">
+        <view><image src="../../images/yes.png" /><text>挂号成功</text></view>
+        <text>温馨提示！请您提前到您预约的科室排队候诊，如有疑问可以咨询导医台。</text>
+      </view>
+      <view class='erweimaWrap'>
+        <view>就诊二维码</view>
+        <image class="erweima" src="http://qr.liantu.com/api.php?text={{sickCard}}" />
+      </view>
+      <i-cell i-class="right" title="费用类型" value="预约挂号" ></i-cell>
+      <i-cell title="就诊人"   value="{{sickName}}"></i-cell>
+      <i-cell title="就诊卡号" value="{{sickCard}}"></i-cell>
+    </i-cell-group>
+  </view>
+</view>

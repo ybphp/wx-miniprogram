@@ -1,0 +1,28 @@
+<!--pages/reserve/reserve.wxml-->
+<import src="../component/calendar/calendar/index.wxml"/>
+
+<view>
+  <view class='flexRow'>
+    <view>医生列表</view>
+  </view>
+  <view>
+    <view wx:for="{{ doctors }}" wx:key="{{ item.id }}" data-doctor='{{ item }}' bindtap='toShowDoctorDetails' class='list-with-graphic'>
+        <view class='list-part-top'>
+            <view class='list-part-left'>
+                <image src="{{ item.imageurl }}"></image>
+            </view>
+            <view class='list-part-right'>
+                <view>
+                  <text class='doctor-name'>{{ item.YS }}</text> 
+                  <text class="price {{show}}">{{item.price}}</text>
+                  <text class="haveNumber {{show}}">{{item.type}}</text>
+                </view>
+                <view class='list-part-bottom'>
+                 <label>{{ item.ZC }}</label>
+                  <text class='doctor-field'>{{ item.HYMC }}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

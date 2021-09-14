@@ -1,0 +1,5 @@
+<!--pages/component/searchComp/searchComp.wxml-->
+<view class='searchBody'>
+  <input placeholder="请输入关键字查询" class='searchInput' placeholder-class="searchHolder" focus="{{focus}}" bindfocus="gotoSearchList" />
+  <view  class='searchIcon'><i-icon size="24" type="search" /></view>
+</view>

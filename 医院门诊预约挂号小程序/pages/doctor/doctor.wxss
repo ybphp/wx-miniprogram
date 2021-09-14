@@ -1,0 +1,132 @@
+/* pages/doctor/doctor.wxss */
+@import '../component/calendar/calendar/index.wxss';
+.doctorBody{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  color: #fff;
+  background:#008e76;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+.doctorTp{
+  display: flex;
+  flex-direction: row;
+}
+.doctorMd{
+  flex: 1;
+  padding: 0 30rpx;
+  font-size: .75rem;
+}
+.doctorName{
+  font-size: 1rem;
+}
+.doctorBt{
+  padding: 30rpx 0;
+  font-size: .75rem;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+
+.personInfoTop{
+  padding:10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center; 
+}
+.personInfoTop>image{
+  width: 100%;
+  
+}
+.i-btn-small{
+  height: 25px;
+}
+.list-with-graphic{
+  width: 100%;
+  height: 82px;
+  padding:10px 0;
+  border-top: solid 1px #d7dcdb;
+}
+.list-part-left{
+  float: left;
+}
+.list-part-left{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 7px;
+  margin-left: 10px;
+  margin-right: 20px;
+  border: solid 1px #d7dcdb;
+}
+.list-part-left image{
+  width: 100%;
+  height: 100%;
+
+}
+.doctor-name{
+  font-size: 14px;
+  display: block;
+  text-align: left;
+}
+.list-part-right{
+  float: left;
+  width: 60%;
+}
+.list-part-right view{
+  width: 100%;
+}
+.list-part-bottom label{
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  color: #989898;
+  margin: 8px 0;
+}
+.doctor-name1{
+  float: left;
+  width: 45%;
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  color: #989898;
+  text-align: left;
+}
+.doctor-name2{
+  float: left;
+  width: 55%;
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  color: #989898;
+}
+.haveNumber{
+  padding:3px 10px;
+  font-size:14px;
+  color: #fff;
+  margin-right: 10px;
+  float: right;
+  border-radius: 20px;
+  background: #1498d9; 
+}
+.list-part-top{
+  height: 85px;
+  border-bottom: solid 1px #e1e1e1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.list-part-bottom{
+  border-bottom:solid 1px #e1e1e1;
+  height: 30px;
+}
+.bottomYes{
+  background: #1498d9;
+  color:#fff;
+}
+.bottomYes>view{
+  color: #fff;
+}

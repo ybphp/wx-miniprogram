@@ -1,0 +1,23 @@
+<view class='panel-m20'>
+  <view class="personInfoTop" >
+    <view>{{sickName}}</view>
+    <view></view>
+    <!-- <view><j-changeMan/></view> -->
+    <view class='clearFloat'></view>
+    <view class='seeCard'>就诊卡：{{sickCard}}</view>
+  </view>
+  <view class='notPayTitle'>{{title}}</view>
+  <view class="notLog {{show}}">您没有相关的记录</view>  
+  <view>
+    <view class="wrapper" wx:for="{{dayLog}}" wx:key="{{ item.id }}" bindtap='detailFun'>
+      <view>
+        <text>{{item.YBLX}}</text>
+        <view>{{item.YBJE}}</view>
+      </view>
+      <!-- <view class="wrapperBottom">
+        <text>{{item.name}}</text>
+        <view>{{item.date}}</view>
+      </view> -->
+    </view>
+  </view>
+</view>

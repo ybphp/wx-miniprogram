@@ -1,0 +1,21 @@
+<!--pages/addcard/addcard.wxml-->
+<view class='toptext'>
+  <text>
+  本院采用实名就诊，请输入您的真实就诊信息进行绑定，若您在本院有多张就诊卡，请选择一个需要使用的就诊卡进行绑定。
+  </text>
+</view>
+<i-message id="message" />
+<i-panel title="">
+  <i-input value="{{ name }}" title="姓名" bind:blur="nameVerifyFun" placeholder="姓名" maxlength="50" />
+  <i-input value="{{ card }}" title="身份证号" bind:blur="cardVerifyFun" placeholder="请输入身份证号码" maxlength="50" />
+  <i-input value="{{ phone }}" type="number" bind:blur="phoneVerifyFun" title="联系电话" placeholder="请输入手机号" maxlength="50" />
+  <i-radio-group class='sexWrapper' current="{{current}}" bindchange="handleFruitChange">
+    <i-radio class='sex' wx:for="{{fruit}}" position="{{position}}" wx:key="{{item.id}}" title="{{item.id}}" value="{{item.name}}">
+    </i-radio>
+  </i-radio-group>
+
+  <i-input value="{{ addrs }}"  bind:blur="addrVerifyFun" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" />
+  <view class='panel-p30'>
+    <i-button bind:click="handleClick" type="primary">{{yesButton}}</i-button>
+  </view>
+</i-panel>

@@ -1,0 +1,6 @@
+<!--pages/common/footbar/footbar.wxml-->
+  <i-tab-bar current="{{ current }}" fixed bindchange="handleChange">
+    <i-tab-bar-item key="home" icon="homepage" current-icon="homepage_fill" title="院内服务"></i-tab-bar-item>
+    <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="医院信息"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="个人中心"></i-tab-bar-item>
+  </i-tab-bar>

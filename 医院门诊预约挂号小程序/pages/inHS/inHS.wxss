@@ -1,0 +1,31 @@
+
+.changePersonInfo{
+  position: fixed;
+  bottom: 0;
+  
+}
+.clearFloat{
+  clear: both;
+}
+.personInfoTop{
+  background: #fff;
+  padding-bottom: 10px;
+  padding-top:10px;
+  margin-bottom: 20px;
+}
+.serverWrapper{
+  background: #fff;
+  padding-top: 10px;
+}
+.serverTitle{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+
+  

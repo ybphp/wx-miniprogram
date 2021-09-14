@@ -1,0 +1,22 @@
+/* pages/departmentinfo/departmentinfo.wxss */
+.ksName{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 20rpx;
+  border-bottom: solid 1px #ccc;
+}
+.ksinfoPanel{
+  padding: 30rpx;
+  font-size: .75rem;
+}
+.ksinfoTitle{
+  padding: 20rpx 0;
+}
+.ksinfoLf{
+  color: #999;
+  display: inline-block;
+}
+.ksinfo{
+  padding: 20rpx 0 0;
+}

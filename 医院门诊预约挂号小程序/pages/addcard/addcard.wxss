@@ -1,0 +1,13 @@
+/* pages/addcard/addcard.wxss */
+.toptext{
+  color:#f90;
+  font-size: .75rem;
+  padding: 0 30rpx 30rpx;
+}
+.sexWrapper{
+  width: 100%;
+}
+.sex{
+  width: 50%;
+  float: left;
+}

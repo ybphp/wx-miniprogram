@@ -1,0 +1,5 @@
+<view class='panel-m20'>
+  <view class="personInfoTop">
+    <image src='../../images/yy.jpg'></image>
+  </view>
+</view>

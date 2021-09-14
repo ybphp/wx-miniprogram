@@ -1,0 +1,7 @@
+<view class='panel-m20'>
+  <view class="personInfoTop">
+    <image src='../../images/time.jpg'></image>
+  </view>
+  <view class='hospitalTital'>医院简介</view>
+  <view class="hospitalInfo">{{intro}}</view>
+</view>

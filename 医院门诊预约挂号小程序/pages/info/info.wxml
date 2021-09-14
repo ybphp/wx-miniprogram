@@ -1,0 +1,58 @@
+<!--pages/info/info.wxml-->
+<view>
+  <view class='infoImg'><image src="{{ infoImgURL }}" /></view>
+  <view class='infoCont'>
+    <view class='infopanel'>
+      <view>
+        <view class='nameTitle'>{{name}}</view>
+        <view class='nameTag'>三甲级</view>
+      </view>
+      <view class='j-list border-b'>
+        <view class='j-list-lf'>咨询电话：{{phone}}</view>
+        <view class='j-list-rt'><i-icon size='22' type="customerservice_fill" /></view>
+      </view>
+      <view class='j-list'>
+        <view class='j-list-lf'>医院地址：{{address}}</view>  
+         
+          \
+        <view class='j-list-rt'><i-icon size='22' type="coordinates_fill" /></view>
+      </view>
+    </view>
+    <i-panel>
+        <view class='panTitle'><view class='titleName'>简介</view>
+        <view class='titleMore' bindtap='goHospitalInfo'>查看详情<i-icon type="enter" /></view></view>
+        <view class='infoText'>{{intro}}</view>
+    </i-panel>
+    
+    <i-panel title="功能清单">
+        <view style="padding: 5px;">
+          <i-grid>
+              <i-grid-item data-type="1" bindtap="goBranchList">
+                  <i-grid-icon>
+                      <image src="../../images/referral.png" />
+                  </i-grid-icon>
+                  <i-grid-label>科室介绍</i-grid-label>
+              </i-grid-item>
+              <i-grid-item data-type="2" bindtap="goBranchList">
+                  <i-grid-icon>
+                      <image src="../../images/doctor.png" />
+                  </i-grid-icon>
+                  <i-grid-label>医生介绍</i-grid-label>
+              </i-grid-item>
+              <i-grid-item bindtap="goTower">
+                  <i-grid-icon>
+                      <image src="../../images/tower.png" />
+                  </i-grid-icon>
+                  <i-grid-label>楼群分布</i-grid-label>
+              </i-grid-item>
+              <i-grid-item bindtap="goBranchLocation">
+                  <i-grid-icon>
+                      <image src="../../images/section.png" />
+                  </i-grid-icon>
+                  <i-grid-label>科室分布</i-grid-label>
+              </i-grid-item>
+          </i-grid>
+        </view>
+    </i-panel>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--pages/personal/personal.wxml-->
+
+<view class='panel-m20'>
+  <view class='userInfo'>
+    <view class='userAvatar'>
+      <i-avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" size="large"></i-avatar>
+    </view>
+    <view class='userName'>名字：{{sickName}}</view>
+    <view class='userName2'>就诊卡：{{sickCard}}</view>
+  </view>
+  <i-panel title="" class="{{show}}">
+      <view style="panel-p30">
+          <i-button bind:click="addVisitCard" type="ghost" size="large">初次使用，请办卡/绑卡</i-button>
+      </view>
+  </i-panel>
+</view>
+
+<view class='panel-m20'>
+  <i-cell-group>
+      <i-cell data-type="0" bindtap='registerLog' title="挂号记录">
+          <i-icon slot="icon" type="document" size="28" color="#1498d9" />
+      </i-cell>
+      <!-- <i-cell data-type="2" bindtap='registerLog' title="门诊缴费记录">
+          <i-icon slot="icon" type="coupons" size="28" color="#1498d9" />
+      </i-cell> -->
+      <i-cell data-type="3" bindtap='registerLog' title="住院缴费记录">
+          <i-icon slot="icon" type="task" size="28" color="#1498d9" />
+      </i-cell>
+  </i-cell-group>
+</view>
+<view class='panel-m20'>
+  <i-cell-group>
+      <i-cell title="我的收藏" is-link url="../collect/collect?type=0">
+          <i-icon slot="icon" type="collection_fill" size="28" color="#1498d9" />
+      </i-cell>
+  </i-cell-group>
+</view>

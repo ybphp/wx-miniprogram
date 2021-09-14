@@ -1,0 +1,42 @@
+<!--pages/reserve/reserve.wxml-->
+<import src="../component/calendar/calendar/index.wxml"/>
+
+<view>
+  <view class='flexRow'>
+    <view>{{day}}</view>
+    <view id='bookingWrapper'>
+      <!-- <i-button type="primary" bind:click="switchView"  size="small">按日期预约</i-button>
+      <i-button bind:click="doctorList" size="small">按医生预约</i-button> -->
+      <i-tabs current="{{ current }}" bindchange="handleChange">
+        <i-tab key="tab1" title="按日期预约" bind:click="switchView"></i-tab>
+        <i-tab key="tab2" title="按医生预约"></i-tab>
+      </i-tabs>
+
+    </view>
+  </view>
+  <view class="calendar-wrap" class="{{dateShow}}" bind:myevent="getfather">
+    <view><i-button size="small" bind:click="switchView">切换周月</i-button></view>
+    <template is="calendar" data="{{...calendar}}" />
+  </view>
+  <view>
+    <view wx:for="{{ doctors }}" wx:key="{{ item.ID }}" data-HM='{{ item.HM }}' data-doctor='{{ item }}' bindtap='toShowDoctorDetails' class='list-with-graphic'>
+        <view class='list-part-top'>
+            <view class='list-part-left'>
+                <image src="{{ item.imageurl }}"></image>
+            </view>
+            <view class='list-part-right'>
+                <view>
+                  <text class='doctor-name'>{{ item.YS }}</text> 
+                  <text class="price {{show}}">{{item.price}}</text>
+                  <text class="haveNumber {{show}}">{{item.type}}</text>
+                </view>
+                <view class='list-part-bottom'>
+                  <label>{{ item.ZC }}</label>
+                  <text class='doctor-field'>{{ item.HYMC }}</text>
+                </view>
+            </view>
+        </view>
+        
+    </view>
+</view>
+</view>

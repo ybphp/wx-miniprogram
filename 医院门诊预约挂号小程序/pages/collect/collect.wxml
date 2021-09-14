@@ -1,0 +1,25 @@
+<!--pages/reserve/reserve.wxml-->
+<import src="../component/calendar/calendar/index.wxml"/>
+
+<view>
+  <view>
+    <view wx:for="{{ doctors }}" wx:key="{{ item.id }}" data-doctor='{{ item }}' bindtap='toShowDoctorDetails' class='list-with-graphic'>
+        <view class='list-part-top'>
+            <view class='list-part-left'>
+                <image src="{{ item.imageurl }}"></image>
+            </view>
+            <view class='list-part-right'>
+                <view>
+                  <text class='doctor-name'>{{ item.name }}</text> 
+                  <text class="price {{show}}">{{item.price}}</text>
+                  <text class="haveNumber {{show}}">{{item.type}}</text>
+                </view>
+                <view class='list-part-bottom'>
+                  <label>{{ item.position }}</label>
+                  <text class='doctor-field'>{{ item.field }}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

@@ -1,0 +1,64 @@
+/* pages/info/info.wxss */
+.infoImg{
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.infoImg image{
+  width: 100%;
+}
+.infoCont{
+  position: relative;
+  margin: 500rpx 0 0;
+  background: #fff;
+  z-index: 1;
+}
+.nameTitle{
+  display: inline-block;
+  font-size: 1.25rem;
+}
+.nameTag{
+  display: inline-block;
+  border: solid 1px #999;
+  font-size: .75rem;
+  padding: 0 10rpx;
+  margin: 0 0 0 20rpx;
+  border-radius: 10rpx;
+}
+.panTitle{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx 0;
+}
+.titleName{
+  font-size: 1rem;
+}
+.titleMore{
+  font-size: .75rem;
+  color:#999;
+  display: flex;
+  align-items: center;
+}
+.infoText{
+  padding: 30rpx;
+  color: #999;
+  text-indent: 2em;
+  height: 96px;
+  overflow: hidden;
+}
+.infopanel{
+  padding: 20rpx 30rpx;
+}
+.j-list{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.j-list-lf{
+  color: #999;
+}
+.j-list-rt{
+  color:#008e76;
+}

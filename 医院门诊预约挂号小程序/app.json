@@ -1,0 +1,98 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/info/info",
+    "pages/common/footbar/footbar",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/department/department",
+    "pages/addcard/addcard",
+    "pages/myperson/myperson",
+    "pages/myresident/myresident",
+    "pages/addresident/addresident",
+    "pages/deposit/deposit",
+    "pages/departmentinfo/departmentinfo",
+    "pages/searchlist/searchlist",
+    "pages/doctor/doctor",
+    "pages/reserve/reserve",
+    "pages/pay/pay",
+    "pages/MZPay/MZPay",
+    "pages/inHSPay/inHSPay",
+    "pages/notPayList/notPayList",
+    "pages/registerLog/registerLog",
+    "pages/inHS/inHS",
+    "pages/branchInfo/branchInfo",
+    "pages/doctorList/doctorList",
+    "pages/tower/tower",
+    "pages/branchLocation/branchLocation",
+    "pages/collect/collect",
+    "pages/hospitalInfo/hospitalInfo",
+    "pages/GHDetail/GHDetail",
+    "pages/report/report",
+    "pages/dayLog/dayLog"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1498d8",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/tabar-1.png",
+        "selectedIconPath": "images/tabar-1-active.png",
+        "text": "院内服务"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "images/tabar-2.png",
+        "selectedIconPath": "images/tabar-2-active.png",
+        "text": "医院信息"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "images/tabar-3.png",
+        "selectedIconPath": "images/tabar-3-active.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#008e76",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "component": true,
+  "usingComponents": {
+    "j-footbar": "pages/common/footbar/footbar",
+    "j-searchComp": "pages/component/searchComp/searchComp",
+    "j-changeMan": "pages/component/changeMan/changeMan",
+    "i-row": "iview/row/index",
+    "i-col": "iview/col/index",
+    "i-icon": "iview/icon/index",
+    "i-panel": "iview/panel/index",
+    "i-button": "iview/button/index",
+    "i-cell-group": "iview/cell-group/index",
+    "i-cell": "iview/cell/index",
+    "i-grid": "iview/grid/index",
+    "i-grid-item": "iview/grid-item/index",
+    "i-grid-icon": "iview/grid-icon/index",
+    "i-grid-label": "iview/grid-label/index",
+    "i-avatar": "iview/avatar/index",
+    "i-input": "iview/input/index",
+    "i-tabs": "iview/tabs/index",
+    "i-tab": "iview/tab/index",
+    "i-checkbox-group": "iview/checkbox-group/index",
+    "i-checkbox": "iview/checkbox/index",
+    "i-switch": "iview/switch/index",
+    "i-collapse": "iview/collapse/index",
+    "i-collapse-item": "iview/collapse-item/index",
+    "i-modal": "iview/modal/index",
+    "i-action-sheet": "iview/action-sheet/index",
+    "i-radio-group": "iview/radio-group/index",
+    "i-radio": "iview/radio/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

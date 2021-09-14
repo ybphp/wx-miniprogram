@@ -1,0 +1,117 @@
+<!--pages/home/home.wxml-->
+<view>
+  
+  <i-row i-class="topSearch">
+      <i-col span="21" i-class="col-class">
+        <j-searchComp />
+      </i-col>
+      <i-col span="3" i-class="col-class msgIcon">
+        <i-icon size='24' type="remind" />
+      </i-col>
+  </i-row>
+
+  <view class='panel-m20'>
+
+    <i-panel title="">
+        <view class='panel-p30' id='{{pensorShowTop}}'>
+          <i-button bind:click="addVisitCard" type="ghost" size="large">初次使用，请办卡/绑卡</i-button>
+        </view>
+        <view class='personInfo'  id='{{pensorShowBottom}}'>
+            <view class="personInfoTop" >
+              <view>{{pensorName}}</view>
+              <view><j-changeMan/></view>
+              <view class='clearFloat'></view>
+              <view class='seeCard'>就诊卡：{{pensorNumber}}</view>
+            </view>
+            <view class='personInfoBottom'>
+              <view data-type="0" bindtap='registerLog'>挂号记录</view>
+              <view data-type="1" bindtap='registerLog'>门诊缴费记录</view>
+              <view bindtap="EWM">就诊码</view>
+            </view>
+        </view>
+    </i-panel>
+    <i-modal title="就诊码" class="erweimaWrapper" visible="{{ visible1 }}" actions="{{ actions4 }}" action-mode="{{ vertical }}"   bind:click="handleClose1">
+      <image class="erweima" src="http://qr.liantu.com/api.php?text={{pensorNumber}}" />
+    </i-modal>
+</view>
+ <view>
+    <i-panel title="快速办理">
+        <view class='panel-p10'>
+          <i-cell-group>
+              <i-cell title="预约挂号" label="实时查看医生情况" is-link url="../department/department?type=0">
+                <i-icon slot="icon" type="activity_fill" size='36' color="#1498d9" />
+              </i-cell>
+          </i-cell-group>
+          <i-cell-group>
+              <i-cell title="门诊缴费" label="实时查看医生情况" is-link url="../notPayList/notPayList">
+                <i-icon slot="icon" type="transaction_fill" size='36' color="#1498d9" />
+              </i-cell>
+          </i-cell-group>
+          <i-cell-group>
+              <i-cell title="住院服务" label="实时查看医生情况" is-link url="../inHS/inHS">
+                <i-icon slot="icon" type="tasklist_fill" size='36' color="#1498d9" />
+              </i-cell>
+          </i-cell-group>
+        </view>
+    </i-panel>
+
+    <i-panel title="常用功能">
+        <view class='panel-p10'>
+          <i-grid>
+              <i-grid-item bindtap="personList">
+                  <i-grid-icon>
+                      <image src="../../images/addMan.png" />
+                  </i-grid-icon>
+                  <i-grid-label>添加就诊人</i-grid-label>
+              </i-grid-item>
+              <i-grid-item bindtap="report">
+                  <i-grid-icon>
+                      <image src="../../images/talk.png" />
+                  </i-grid-icon>
+                  <i-grid-label>报告查询</i-grid-label>
+              </i-grid-item>
+              <i-grid-item bindtap="goDayLog">
+                  <i-grid-icon>
+                      <image src="../../images/bill.png" />
+                  </i-grid-icon>
+                  <i-grid-label>住院清单</i-grid-label>
+              </i-grid-item>
+              <i-grid-item bindtap="gotoDeposit">
+                  <i-grid-icon>
+                      <image src="../../images/pay.png" />
+                  </i-grid-icon>
+                  <i-grid-label>住院缴费</i-grid-label>
+              </i-grid-item>
+          </i-grid>
+          <i-grid>
+              <i-grid-item bindtap="residentList">
+                  <i-grid-icon>
+                      <image src="../../images/inHos.png" />
+                  </i-grid-icon>
+                  <i-grid-label>住院人信息</i-grid-label>
+              </i-grid-item>
+              <i-grid-item  bindtap="goInfo">
+                  <i-grid-icon>
+                      <image src="../../images/phone.png" />
+                  </i-grid-icon>
+                  <i-grid-label>微网站</i-grid-label>
+              </i-grid-item>
+              <i-grid-item data-type="0" bindtap='registerLog'>
+                  <i-grid-icon>
+                      <image src="../../images/log.png" />
+                  </i-grid-icon>
+                  <i-grid-label>挂号记录</i-grid-label>
+              </i-grid-item>
+              <i-grid-item>
+                  <i-grid-icon>
+                      <image src="../../images/all.png" />
+                  </i-grid-icon>
+                  <i-grid-label>全部</i-grid-label>
+              </i-grid-item>
+          </i-grid>
+        </view>
+    </i-panel>
+  </view>
+  <!-- table底部 -->
+  <!-- <j-footbar /> -->
+</view>

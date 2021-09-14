@@ -1,0 +1,29 @@
+
+.personInfoTop{
+  padding:10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center; 
+}
+.clearFloat{
+  clear: both;
+}
+.wrapper{
+  width: 100%;
+  display: block;
+  background: #fff;
+  padding:10px 0;
+  border-bottom: solid 1px #eee;
+}
+.wrapper>view>text:first-child{
+  color: #8f8f8f;
+  margin-right: 20px;
+}
+.wrapper>view{
+  width: 95%;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+  border-bottom: solid 1px #d9d9d9;
+}
+  

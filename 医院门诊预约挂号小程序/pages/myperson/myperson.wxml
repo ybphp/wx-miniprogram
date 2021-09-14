@@ -1,0 +1,10 @@
+<!--pages/myperson/myperson.wxml-->
+<i-panel title="">
+    <view class='panel-p10'>
+      <i-cell-group>
+          <i-cell title="添加就诊人" label="还可以添加5人" is-link url="../addcard/addcard">
+            <i-icon slot="icon" type="add" color="#1498d9" size='36' />
+          </i-cell>
+      </i-cell-group>
+    </view>
+</i-panel>

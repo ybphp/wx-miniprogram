@@ -1,0 +1,27 @@
+
+.personInfoTop{
+  padding:10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center; 
+}
+.personInfoTop>image{
+  width: 100%;
+  
+}
+.hospitalTital{
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background: #fff;
+  border-bottom:solid 1px #f5f5f5; 
+}  
+.panelWrapper{
+  
+}
+.hospitalInfo{
+  line-height: 2;
+  text-indent: 2em;
+  background: #fff;
+}

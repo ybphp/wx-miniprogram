@@ -1,0 +1,15 @@
+<!--pages/department/department.wxml-->
+<j-searchComp />
+<view class='container1'>
+    <view class='superior'>
+        <view wx:for='{{ superiorDepartments }}' wx:key='{{ item.id }}' data-departmentid='{{ item.id }}' bindtap='toShowOrdinateDepartments' class='superior-item' style='background-color: {{ item.backgroundColor }}'>
+            <text>{{ item.name }}</text>
+        </view>
+    </view>
+
+    <view class='subordinate'>
+        <view wx:for="{{ subordinateDepartments }}" wx:key="{{ item.id }}" data-department='{{ item }}'  bindtap='{{clickType}}' class='subordinate-item'>
+            <text>{{ item.name }}</text>
+        </view>
+    </view>
+</view>

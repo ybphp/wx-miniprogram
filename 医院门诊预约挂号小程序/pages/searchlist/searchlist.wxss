@@ -1,0 +1,56 @@
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.searchTop{
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 72rpx;
+  padding: 20rpx;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  z-index: 1;
+}
+.searchList{
+  position: relative;
+  margin: 112rpx 0 0;
+  flex: 1;
+  z-index: 0;
+}
+.cancelBtn{
+  width: 160rpx;
+  text-align: center;
+}
+.searchBody{
+  position: relative;
+  flex: 1;
+}
+.searchIcon{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events:none;
+    color: #ccc;
+}
+.searchInput{
+  /* border: solid 1px #1498d9; */
+  background: #f2f2f2;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  border-radius: 3px;
+  padding: 0 0 0 1.25rem;
+}
+.searchHolder{
+}
+.cellImage{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0 30rpx 0 0;
+}

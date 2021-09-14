@@ -1,0 +1,19 @@
+<view class='panel-m20'>
+  <view class="personInfoTop">
+    {{name}}
+  </view>
+
+  <view class="wrapper">
+    <view>
+      <text>科室地址</text>
+      <text>{{address}}</text>
+    </view>
+    <view>
+      <text>科室电话</text>
+      <text>{{phone}}</text>
+    </view>
+  </view>
+  <view class='panel'>
+    {{info}}
+  </view>
+</view>
