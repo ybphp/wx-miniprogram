@@ -41,7 +41,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.13.0",
   "appid": "touristappid",
-  "projectname": "miniprogram-1",
+  "projectname": "儿童看图识字小程序",
   "debugOptions": {
     "hidedInDevtools": []
   },
