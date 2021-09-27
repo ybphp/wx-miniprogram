@@ -40,7 +40,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.0",
-  "appid": "touristappid",
+  "appid": " ",
   "projectname": "%E5%8C%96%E5%A6%86%E5%93%81%E7%94%B5%E5%95%86",
   "debugOptions": {
     "hidedInDevtools": []
