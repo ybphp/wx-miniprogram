@@ -1,0 +1,167 @@
+/**index.wxss**/
+.swiper-wrapper {
+  width: 100%;
+  height: 400rpx;
+}
+/*覆盖image默认宽高*/
+.slider-image {
+  width: 100%;
+  height: 100% !important;
+}
+.nav-btn-list {
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  background: #fff;
+  justify-content: space-around;
+}
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-item image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 10rpx;
+}
+.btn-item text {
+  font-size: 13px;
+  color: #515151;
+}
+.bargain-wrapper,
+.special-topic-wrapper {
+  width: 100%;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.bargain-header,
+.topic-header {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2rpx solid #f8f8f8;
+  font-size: 14px;
+}
+.topic-header {
+  border-bottom: none;
+}
+.icon-right {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+.bargain-item {
+  height: 200rpx;
+  display: flex;
+  border-bottom: 2rpx solid #f8f8f8;
+  padding: 20rpx;
+}
+.bargain-img {  
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+.bargain-info {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.info-header {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10rpx;
+  font-size: 13px;
+}
+.desc {
+  font-size: 12px;
+  color: #707070;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.info-price {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100rpx;
+}
+.base-price,
+.original-price,
+.limit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.base-price .money {
+  font-size: 13px;
+  color: #ed4040;
+}
+.original-price,
+.limit {
+  color: #999;
+}
+.scroll-wrapper {
+  width: 100%;
+  white-space: nowrap;
+  overflow:hidden;
+  background: #fff;
+}
+.topic-item {
+  display: inline-block;
+  width: 600rpx;
+  padding-left: 20rpx;
+  background: #fff;
+  padding-bottom: 30rpx;
+}
+.topic-item:last-child {
+  margin-right: 20rpx;
+}
+.topic-img {
+  width: 600rpx;
+  height: 300rpx;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.topic-item-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+  font-size: 13px;
+  color: #515151;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.topic-item-price {
+  color: #ed4040;
+}
+.topic-item-sub-title {
+  font-size: 12px;
+  color: #999999;
+  padding-left: 20rpx;
+}
+
+/*到底提示*/
+.bottom-tip {
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #707070;
+  font-size: 12px;
+}
+

@@ -1,0 +1,50 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #515151;
+  overflow: hidden;
+}
+
+/*设置全局背景色  */
+page {
+  max-width: 100%;
+  background: #f8f8f8;
+}
+
+/*去掉button默认样式  */
+button::after {
+  border: none;
+}
+button {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-size: 13px;
+  color: #515151;
+  background: #fff;
+}
+
+/*下落动画*/
+/*@-webkit-keyframes drop {*/
+  /*0% {*/
+    /*width: 60px;*/
+    /*height: 60px;*/
+  /*}*/
+  /*100% {*/
+    /*width: 1.15rem;*/
+    /*height: 1.15rem;*/
+    /*left: 200px;*/
+    /*top: 700px;*/
+    /*border-radius: 50%;*/
+    /*-webkit-transform: rotate(180deg);*/
+    /*-moz-transform: rotate(180deg);*/
+    /*-o-transform: rotate(180deg);*/
+    /*-ms-transform: rotate(180deg);*/
+  /*}*/
+/*}*/
